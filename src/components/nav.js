@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-
+import NavButton from '../components/nav-button'
 import IconButton from './icon-button'
 
 const Wrapper = styled.nav`
@@ -17,13 +17,17 @@ const Container = styled.div`
 const NavLeft = styled.div``
 
 const NavRight = styled.div`
+ display:flex;
+ flex:1;
+ justify-content:flex-end;
 `
 
 const Logo = styled.img`
   width: 50px;
   height: 50px;
-  background: url('../../static/imgs/logo.svg')
+  background: url('../../static/imgs/logo.svg');
 `
+
 
 const Nav = () => (
   <Wrapper>
@@ -34,11 +38,25 @@ const Nav = () => (
         </Link>
       </NavLeft>
       <NavRight>
+        <NavButton>
+          <Link href="/about">
+            <a><IconButton style={{ image: '../../static/imgs/home.svg', width: '20px', height: '20px' }} /></a>
+          </Link>
+        </NavButton>
 
+        <NavButton>
+          <Link href="/about"><a>Artboards</a></Link>
+        </NavButton>
+        <NavButton>
+          <Link href="/about"><a>Blog</a></Link>
+        </NavButton>
+        <NavButton>
+          <Link href="/about"><a>Archive</a></Link>
+        </NavButton>
       </NavRight>
     </Container>
   </Wrapper>
 )
 
 export default Nav
-      
+

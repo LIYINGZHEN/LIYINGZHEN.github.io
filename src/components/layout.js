@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components';
-
 import Nav from './nav';
 
 injectGlobal`
@@ -12,7 +11,7 @@ injectGlobal`
   body {
     margin: 0;
     background: papayawhip;
-    width:100vw;
+    
     height:100vh;
   }
 `;
@@ -26,7 +25,8 @@ const withLayout = ComposedComponent => {
     render() {
       return (
         <Wrapper>
-          <Nav />
+          <Nav></Nav>
+
           <ComposedComponent />
         </Wrapper>
       )
