@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components';
 
+import Nav from './nav';
+
 injectGlobal`
   @font-face {
     font-family: 'Roboto', sans-serif;
@@ -24,6 +26,7 @@ const withLayout = ComposedComponent => {
     render() {
       return (
         <Wrapper>
+          <Nav />
           <ComposedComponent />
         </Wrapper>
       )
