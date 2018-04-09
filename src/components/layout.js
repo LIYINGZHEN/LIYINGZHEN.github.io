@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import styled, { injectGlobal } from 'styled-components';
-import Nav from './nav';
+import styled, { injectGlobal } from 'styled-components'
+import Nav from './nav'
 
 injectGlobal`
   @font-face {
@@ -11,21 +11,19 @@ injectGlobal`
   body {
     margin: 0;
     background: papayawhip;
-    
+    color: #333;
     height:100vh;
   }
-`;
+`
 
-const Wrapper = styled.nav`
-  
-`;
+const Wrapper = styled.nav``
 
 const withLayout = ComposedComponent => {
   return class Layout extends Component {
     render() {
       return (
         <Wrapper>
-          <Nav></Nav>
+          <Nav />
 
           <ComposedComponent />
         </Wrapper>
