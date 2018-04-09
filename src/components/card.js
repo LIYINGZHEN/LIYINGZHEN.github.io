@@ -1,15 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+
+
 const Warpper = styled.div`
+  flex:1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 200px;
-  height: 200px;
+  max-width: 600px;
+  height: 400px;
+  margin:10px;
   background: url(${props => props.style.image});
   background-size: cover;
+  @media(max-width :700px){
+    height: 200px;   
+  }
 `
+
 
 const Description = styled.div`
   width: fit-content;
