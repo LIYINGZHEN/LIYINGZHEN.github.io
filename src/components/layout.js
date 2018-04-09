@@ -9,17 +9,19 @@ injectGlobal`
 
   body {
     margin: 0;
+    background: papayawhip;
+    width:100vw;
+    height:100vh;
   }
 `;
 
 const Wrapper = styled.nav`
-  padding: 4em;
-  background: papayawhip;
+  
 `;
 
 const withLayout = ComposedComponent => {
   return class Layout extends Component {
-    render () {
+    render() {
       return (
         <Wrapper>
           <ComposedComponent />
