@@ -2,16 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-      display:flex;
-      padding:20px;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
 `
 
 export default class Row extends Component {
   render() {
-    return (
-      <Wrap>
-        {this.props.children}
-      </Wrap>
-    )
+    return <Wrap>{this.props.children}</Wrap>
   }
 }
