@@ -7,6 +7,9 @@ const IconButton = styled.div`
   height: ${props => props.style.height};
   background: url(${props => props.style.image});
   cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
 `
 
 export default IconButton
