@@ -44,7 +44,7 @@ const Nav = () => (
       </NavLeft>
       <NavRight>
         <NavButton>
-          <Link href="/about">
+          <Link href="/">
             <a>
               <IconButton
                 style={{
