@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
+
 import NavButton from '../components/nav-button'
 import IconButton from './icon-button'
+import Container from './container'
 
 const Wrapper = styled.nav`
   margin-top: 30px;
-`
-
-const Container = styled.div`
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
 `
 
 const NavLeft = styled.div``
@@ -20,6 +16,7 @@ const NavRight = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
+  align-items: center;
 `
 
 const Logo = styled.div`
@@ -30,7 +27,7 @@ const Logo = styled.div`
 
 const Nav = () => (
   <Wrapper>
-    <Container>
+    <Container style={{ display: 'flex' }}>
       <NavLeft>
         <Link href="/">
           <IconButton
@@ -42,6 +39,7 @@ const Nav = () => (
           />
         </Link>
       </NavLeft>
+
       <NavRight>
         <NavButton>
           <Link href="/">
@@ -56,7 +54,6 @@ const Nav = () => (
             </a>
           </Link>
         </NavButton>
-
         <NavButton>
           <Link href="/about">
             <a>About</a>

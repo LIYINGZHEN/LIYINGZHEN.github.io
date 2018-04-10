@@ -41,6 +41,7 @@ injectGlobal`
     margin: 0;
     color: #333;
     height:100vh;
+    font-size: 1.2rem;
   }
 
   a {
