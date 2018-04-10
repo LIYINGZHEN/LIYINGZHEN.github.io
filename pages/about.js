@@ -7,7 +7,7 @@ import Row from '../src/components/row'
 import Image from '../src/components/image'
 import Gallery from '../src/components/grally'
 const Header = styled.div`
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
 `
 
@@ -24,6 +24,7 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
 `
+
 const WrapStart = styled.div`
   flex: ${props => props.style.flex};
   display: flex;
@@ -54,6 +55,7 @@ const About = () => (
           }}
         />
       </Wrap>
+
       <Wrap style={{ flex: 3 }}>
         <Desc>
           <p>
