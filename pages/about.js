@@ -24,18 +24,17 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
 `
+const WrapStart = styled.div`
+  flex: ${props => props.style.flex};
+  display: flex;
+  justify-content: flex-start;
+`
+
 const Blockquote = styled.blockquote`
- display:block;
- background-color:#f3f3f3;
- padding:1.5rem 2rem;
- border-left:3px solid var(--lightGrey-color);
- & after:{
-  margin:1em;
-  background:#000;
-  padding-left:2px;
-  content:"123"
-  color:#000
- }
+  display: block;
+  background-color: #f3f3f3;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid #d2d6dd;
 `
 
 const About = () => (
@@ -93,7 +92,9 @@ const About = () => (
     </Row>
 
     <Row>
-      <small>test</small>
+      <WrapStart style={{ flex: 1 }}>
+        <small>test</small>
+      </WrapStart>
       <Blockquote cite="http://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html">
         Most people make the mistake of thinking design is what it looks like.
         People think it's this veneer — that the designers are handed this box
