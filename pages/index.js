@@ -17,7 +17,6 @@ const Index = () => (
       <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
       <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
     </Row>
-
     <Footer />
   </div>
 )

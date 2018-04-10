@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
-import Nav from './nav'
 import NProgress from 'nprogress'
+import dynamic from 'next/dynamic'
 import Router from 'next/router'
 import Head from 'next/head'
+
+import Nav from './nav'
+import sketch from '../components/sketch'
+
+const P5Wrapper = dynamic(import('react-p5-wrapper'), {
+  ssr: false,
+  loading: () => null
+})
 
 Router.onRouteChangeStart = url => {
   console.log(`Loading: ${url}`)
@@ -31,7 +39,6 @@ injectGlobal`
 
   body {
     margin: 0;
-    background: papayawhip;
     color: #333;
     height:100vh;
   }
@@ -46,6 +53,14 @@ injectGlobal`
     margin: .35em 0 .7em;
     font-size: 1.75em;
   }
+
+  #defaultCanvas0 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: .4;
+    z-index: -2;
+  }
 `
 
 const Wrapper = styled.nav``
@@ -55,6 +70,7 @@ const withLayout = ComposedComponent => {
     render() {
       return (
         <Wrapper>
+          <P5Wrapper sketch={sketch} />
           <Head>
             <link
               rel="stylesheet"
