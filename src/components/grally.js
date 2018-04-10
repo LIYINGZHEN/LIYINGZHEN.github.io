@@ -2,8 +2,14 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `
 
 let photoList = [
@@ -16,7 +22,6 @@ let CardBlock = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
-
   background: #999;
   padding: 20px;
   margin: 20px;
