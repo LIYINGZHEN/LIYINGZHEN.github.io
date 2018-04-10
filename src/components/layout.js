@@ -79,7 +79,6 @@ const withLayout = ComposedComponent => {
             />
           </Head>
           <Nav />
-
           <ComposedComponent />
         </Wrapper>
       )

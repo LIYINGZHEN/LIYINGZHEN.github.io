@@ -6,7 +6,7 @@ const IconButton = styled.div`
   width: ${props => props.style.width};
   height: ${props => props.style.height};
   background: url(${props => props.style.image});
-  border: none;
+  cursor: pointer;
 `
 
 export default IconButton
