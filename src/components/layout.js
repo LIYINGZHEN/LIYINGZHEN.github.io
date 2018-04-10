@@ -14,6 +14,17 @@ injectGlobal`
     color: #333;
     height:100vh;
   }
+
+  a {
+    text-decoration: none;
+    color: #555;
+  }
+
+  h2 {
+    font-weight: 500;
+    margin: .35em 0 .7em;
+    font-size: 1.75em;
+  }
 `
 
 const Wrapper = styled.nav``
