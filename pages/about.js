@@ -5,7 +5,7 @@ import layout from '../src/components/layout'
 import Container from '../src/components/container'
 import Row from '../src/components/row'
 import Image from '../src/components/image'
-
+import Gallery from '../src/components/grally'
 const Header = styled.div`
   padding: 4rem 0;
   text-align: center;
@@ -101,6 +101,9 @@ const About = () => (
         and told, 'Make it look good!' That's not what we think design is. It's
         not just what it looks like and feels like.
       </Blockquote>
+    </Row>
+    <Row>
+      <Gallery />
     </Row>
   </Container>
 )
