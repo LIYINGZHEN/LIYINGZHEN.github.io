@@ -1,6 +1,27 @@
 import React, { Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
 import Nav from './nav'
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import Head from 'next/head'
+
+Router.onRouteChangeStart = url => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+}
+Router.onRouteChangeComplete = () => NProgress.done()
+Router.onRouteChangeError = () => NProgress.done()
+
+const linkStyle = {
+  margin: '0 10px 0 0'
+}
+
+Router.onRouteChangeStart = url => {
+  console.log(`Loading: ${url}`)
+  NProgress.start()
+}
+Router.onRouteChangeComplete = () => NProgress.done()
+Router.onRouteChangeError = () => NProgress.done()
 
 injectGlobal`
   @font-face {
@@ -34,6 +55,13 @@ const withLayout = ComposedComponent => {
     render() {
       return (
         <Wrapper>
+          <Head>
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="/static/nprogress.css"
+            />
+          </Head>
           <Nav />
 
           <ComposedComponent />

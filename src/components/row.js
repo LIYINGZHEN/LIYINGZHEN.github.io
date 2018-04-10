@@ -5,6 +5,7 @@ const Wrap = styled.div`
   display: flex;
   padding: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 `
 
 export default class Row extends Component {
