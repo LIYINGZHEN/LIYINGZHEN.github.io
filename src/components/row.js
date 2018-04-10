@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const Wrap = styled.div`
@@ -8,8 +8,6 @@ const Wrap = styled.div`
   flex-wrap: wrap;
 `
 
-export default class Row extends Component {
-  render() {
-    return <Wrap>{this.props.children}</Wrap>
-  }
-}
+const Row = props => <Wrap>{props.children}</Wrap>
+
+export default Row
