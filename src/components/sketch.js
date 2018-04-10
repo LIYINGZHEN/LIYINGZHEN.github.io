@@ -3,7 +3,7 @@ const sketch = p => {
   p.windowResized = () => p.resizeCanvas(p.windowWidth, p.windowHeight)
 
   p.draw = () => {
-    p.background(255, 204, 0)
+    p.background(255, 255, 255)
   }
 }
 
