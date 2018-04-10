@@ -24,6 +24,19 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
 `
+const Blockquote = styled.blockquote`
+ display:block;
+ background-color:#f3f3f3;
+ padding:1.5rem 2rem;
+ border-left:3px solid var(--lightGrey-color);
+ & after:{
+  margin:1em;
+  background:#000;
+  padding-left:2px;
+  content:"123"
+  color:#000
+ }
+`
 
 const About = () => (
   <Container>
@@ -77,6 +90,16 @@ const About = () => (
           </p>
         </Desc>
       </Wrap>
+    </Row>
+
+    <Row>
+      <small>test</small>
+      <Blockquote cite="http://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html">
+        Most people make the mistake of thinking design is what it looks like.
+        People think it's this veneer — that the designers are handed this box
+        and told, 'Make it look good!' That's not what we think design is. It's
+        not just what it looks like and feels like.
+      </Blockquote>
     </Row>
   </Container>
 )
