@@ -22,7 +22,7 @@ const NavRight = styled.div`
   justify-content: flex-end;
 `
 
-const Logo = styled.img`
+const Logo = styled.div`
   width: 50px;
   height: 50px;
   background: url('../../static/imgs/logo.svg');

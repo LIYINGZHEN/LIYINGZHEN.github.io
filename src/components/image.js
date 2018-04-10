@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
-const Image = styled.img`
+const Image = styled.div`
   width: ${props => props.style.width};
   height: ${props => props.style.height};
   background: url(${props => props.style.image});
