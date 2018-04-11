@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-html": "next build && next export",
     "start": "next start",
     "precommit": "pretty-quick --staged"
   },
