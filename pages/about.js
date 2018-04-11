@@ -6,6 +6,7 @@ import Container from '../src/components/container'
 import Row from '../src/components/row'
 import Image from '../src/components/image'
 import Gallery from '../src/components/grally'
+
 const Header = styled.div`
   padding: 2rem 0;
   text-align: center;
@@ -18,6 +19,7 @@ const Photo = styled.img`
 
 const Desc = styled.div`
   padding: 0px 10px;
+  min-width: 450px;
 `
 const Wrap = styled.div`
   flex: ${props => props.style.flex};
@@ -38,6 +40,13 @@ const Blockquote = styled.blockquote`
   border-left: 3px solid #d2d6dd;
 `
 
+const ImageWrap = styled.div`
+  margin-bottom: 2rem;
+  @media (min-width: 1138px) {
+    margin-bottom: 0;
+  }
+`
+
 const About = () => (
   <Container>
     <Header>
@@ -47,13 +56,15 @@ const About = () => (
 
     <Row>
       <Wrap style={{ flex: 1 }}>
-        <Image
-          style={{
-            image: 'http://dummyimage.com/400x500',
-            width: '400px',
-            height: '500px'
-          }}
-        />
+        <ImageWrap>
+          <Image
+            style={{
+              image: 'http://dummyimage.com/400x500',
+              width: '400px',
+              height: '500px'
+            }}
+          />
+        </ImageWrap>
       </Wrap>
 
       <Wrap style={{ flex: 3 }}>
