@@ -7,6 +7,7 @@ import Head from 'next/head'
 
 import Nav from './nav'
 import sketch from '../components/sketch'
+import Footer from '../components/footer'
 
 const P5Wrapper = dynamic(import('react-p5-wrapper'), {
   ssr: false,
@@ -81,6 +82,7 @@ const withLayout = ComposedComponent => {
           </Head>
           <Nav />
           <ComposedComponent />
+          <Footer />
         </Wrapper>
       )
     }
