@@ -31,7 +31,7 @@ const Footer = () => (
         <a>
           <IconButton
             style={{
-              image: '../../static/imgs/github.svg',
+              image: 'static/imgs/github.svg',
               width: '1rem',
               height: '1rem'
             }}
@@ -42,7 +42,7 @@ const Footer = () => (
         <a>
           <IconButton
             style={{
-              image: '../../static/imgs/linkedin.svg',
+              image: 'static/imgs/linkedin.svg',
               width: '1rem',
               height: '1rem'
             }}

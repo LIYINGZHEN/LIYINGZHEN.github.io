@@ -35,7 +35,7 @@ Router.onRouteChangeError = () => NProgress.done()
 injectGlobal`
   @font-face {
     font-family: 'Roboto', sans-serif;
-    src: url('../../static/fonts/Roboto-Regular.ttf');
+    src: url('static/fonts/Roboto-Regular.ttf');
   }
 
   body {

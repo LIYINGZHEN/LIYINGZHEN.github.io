@@ -22,7 +22,7 @@ const NavRight = styled.div`
 const Logo = styled.div`
   width: 50px;
   height: 50px;
-  background: url('../../static/imgs/logo.svg');
+  background: url('static/imgs/logo.svg');
 `
 
 const Nav = () => (
@@ -32,7 +32,7 @@ const Nav = () => (
         <Link href="/">
           <IconButton
             style={{
-              image: '../../static/imgs/logo.svg',
+              image: 'static/imgs/logo.svg',
               width: '50px',
               height: '50px'
             }}
@@ -46,7 +46,7 @@ const Nav = () => (
             <a>
               <IconButton
                 style={{
-                  image: '../../static/imgs/home.svg',
+                  image: 'static/imgs/home.svg',
                   width: '20px',
                   height: '20px'
                 }}

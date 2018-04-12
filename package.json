@@ -4,25 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "build-html": "next build && next export",
-    "start": "next start",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "deploy": "rm -rf dist && npm run build-next && firebase deploy",
+    "build-next": "cd 'src/app' && npm i && npm run build",
+    "deps-copy": "cp -R 'src/app/static' 'dist/functions' && cp 'src/app/package.json' 'dist/functions' && cp -R src/functions dist/ && cp -R src/public dist/",
+    "build-funcs": "babel src/functions --out-dir dist/functions",
+    "deps-install": "cd 'dist/functions' && npm i"
   },
   "license": "MIT",
-  "dependencies": {
-    "next": "^5.1.0",
-    "nprogress": "^0.2.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-p5-wrapper": "0.0.4",
-    "styled-components": "^3.2.5"
-  },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.5.1",
-    "husky": "^0.14.3",
-    "prettier": "^1.11.1",
-    "pretty-quick": "^1.4.1"
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44"
+  },
+  "dependencies": {
+    "firebase-admin": "^5.11.0",
+    "firebase-functions": "^0.9.1"
   }
 }

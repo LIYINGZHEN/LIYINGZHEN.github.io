@@ -9,12 +9,12 @@ const Index = () => (
   <div>
     <Hero />
     <Row>
-      <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
-      <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
+      <Card image="static/imgs/calculating-bills.jpg">Hello</Card>
+      <Card image="static/imgs/calculating-bills.jpg">Hello</Card>
     </Row>
     <Row>
-      <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
-      <Card image="../static/imgs/calculating-bills.jpg">Hello</Card>
+      <Card image="static/imgs/calculating-bills.jpg">Hello</Card>
+      <Card image="static/imgs/calculating-bills.jpg">Hello</Card>
     </Row>
   </div>
 )
