@@ -3,15 +3,25 @@ import styled from 'styled-components'
 
 import Container from './container'
 
+const H2 = styled.h2`
+  font-weight: 300;
+  @media screen and (max-width: 48rem) {
+    font-size: 1.2em;
+  }
+`
+
 const Small = styled.small`
   display: block;
   font-size: 0.65em;
   line-height: 1.8;
+  @media screen and (max-width: 48rem) {
+    font-size: 0.75em;
+  }
 `
 
 const Hero = () => (
   <Container theme={{ minHeight: '200px', height: '50vh', width: '75vw' }}>
-    <h2 style={{ fontWeight: '300' }}>
+    <H2 style={{ fontWeight: '300' }}>
       Namaste 🙏
       <br />
       I'm Jenil, a{' '}
@@ -46,7 +56,7 @@ const Hero = () => (
           a Chrome extension
         </a>.
       </Small>
-    </h2>
+    </H2>
   </Container>
 )
 
