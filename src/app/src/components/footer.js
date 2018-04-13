@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import IconButton from './icon-button'
-import NavButton from '../components/nav-button'
+import NavButton from './nav/nav-button'
 
 const Wrap = styled.footer`
   flex: 1;

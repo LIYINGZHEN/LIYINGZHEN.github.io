@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  display: ${props => props.style && props.style.display};
-  max-width: 80%;
+  max-width: 120rem;
   margin: 0 auto;
+  padding: 0 1rem;
+  width: ${props => (props.theme && props.theme.width) || '96%'};
+  display: ${props => (props.theme && props.theme.display) || 'flex'};
 `
 
 export default Container

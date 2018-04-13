@@ -15,8 +15,9 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>Portfolio of Polo & Max</title>
           {this.props.styleTags}
+          <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />

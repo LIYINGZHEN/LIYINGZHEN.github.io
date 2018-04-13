@@ -33,16 +33,23 @@ Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
 
 injectGlobal`
-  @font-face {
-    font-family: 'Roboto', sans-serif;
-    src: url('static/fonts/Roboto-Regular.ttf');
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    line-height: 1.15;
   }
 
   body {
+    line-height: 1.6;
+    font-size: 1.6rem;
+    font-family: 'Inter UI', sans-serif;
     margin: 0;
     color: #333;
-    height:100vh;
-    font-size: 1.2rem;
+    letter-spacing: -.1px;
+    font-weight: 400;
   }
 
   a {
