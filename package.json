@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "cd src/app && npm run dev",
     "precommit": "pretty-quick --staged",
     "deploy": "rm -rf dist && npm run build-next && firebase deploy",
     "build-next": "cd 'src/app' && npm i && npm run build",
