@@ -5,8 +5,7 @@ import styled from 'styled-components'
 import HomeIcon from './home-icon'
 import Logo from './logo'
 
-import NavButton from './nav-button'
-import IconButton from '../icon-button'
+import LinkButton from '../link-button'
 import Container from '../container'
 
 const Wrapper = styled.nav`
@@ -29,31 +28,31 @@ const Nav = () => (
     <Container theme={{ width: '90%' }}>
       <NavLeft className="nav-left">
         <Link href="/">
-          <NavButton>
+          <LinkButton>
             <div className="logo">
               <Logo style={{ width: '5rem', fill: '#28a386' }} />
             </div>
-          </NavButton>
+          </LinkButton>
         </Link>
       </NavLeft>
 
       <NavRight className="nav-right nav-menu">
         <Link href="/">
-          <NavButton>
+          <LinkButton>
             <HomeIcon />
-          </NavButton>
+          </LinkButton>
         </Link>
         <Link href="/artboards">
-          <NavButton>🎨&nbsp; Artboards</NavButton>
+          <LinkButton>🎨&nbsp; Artboards</LinkButton>
         </Link>
         <Link href="/about">
-          <NavButton>🤓&nbsp; About</NavButton>
+          <LinkButton>🤓&nbsp; About</LinkButton>
         </Link>
         <Link href="/blog">
-          <NavButton>📝&nbsp; Blog</NavButton>
+          <LinkButton>📝&nbsp; Blog</LinkButton>
         </Link>
         <Link href="/archive">
-          <NavButton>📥&nbsp; Archive</NavButton>
+          <LinkButton>📥&nbsp; Archive</LinkButton>
         </Link>
       </NavRight>
     </Container>

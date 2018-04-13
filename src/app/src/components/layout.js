@@ -53,6 +53,7 @@ injectGlobal`
   }
 
   a {
+    transition: color .2s ease;
     text-decoration: none;
     color: #1a9f60;
     &:hover {
@@ -80,6 +81,10 @@ injectGlobal`
 
   h6 {
     font-size: .85em;
+  }
+
+  p {
+    margin-top: 0;
   }
 
   #defaultCanvas0 {
