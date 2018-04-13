@@ -31,8 +31,22 @@ const NavLeft = styled.p`
   justify-content: flex-start;
 `
 
+const Colophon = styled.p`
+  > * {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+`
+
+const P = styled.p`
+  display: block;
+`
+
 const Footer = () => (
-  <Container className="footer" theme={{ margin: '5rem auto', width: '90%' }}>
+  <Container
+    className="footer"
+    theme={{ display: 'block', margin: '5rem auto', width: '90%' }}
+  >
     <Nav>
       <NavLeft>
         <LinkButton theme={{ paddingLeft: 0 }}>hello at jgog.in</LinkButton>
@@ -55,31 +69,14 @@ const Footer = () => (
       </NavLeft>
     </Nav>
 
-    {/* <InnerBlock>
-      <Licence>Polo Max © 2018</Licence>
-      <NavButton style={{ padding: '0.5rem' }}>
-        <a>
-          <IconButton
-            style={{
-              image: 'static/imgs/github.svg',
-              width: '1rem',
-              height: '1rem'
-            }}
-          />
-        </a>
-      </NavButton>
-      <NavButton style={{ padding: 0 }}>
-        <a>
-          <IconButton
-            style={{
-              image: 'static/imgs/linkedin.svg',
-              width: '1rem',
-              height: '1rem'
-            }}
-          />
-        </a>
-      </NavButton>
-    </InnerBlock> */}
+    <Colophon className="colophon">
+      <P>
+        Crafted using <a>Chota</a>, <a>React.js</a>, <a>Next.js</a>,{' '}
+        <a>Simple Icons</a> and <a>Visual Studio Code</a>. Typeface is{' '}
+        <a>Inter UI</a>.
+      </P>
+      <P>Jenil Gogari © 2010 - 2018</P>
+    </Colophon>
   </Container>
 )
 
