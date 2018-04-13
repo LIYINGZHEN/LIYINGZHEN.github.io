@@ -30,29 +30,31 @@ const Nav = () => (
       <NavLeft className="nav-left">
         <Link href="/">
           <NavButton>
-            <Logo className="logo" style={{ width: '5rem', fill: '#28a386' }} />
+            <div className="logo">
+              <Logo style={{ width: '5rem', fill: '#28a386' }} />
+            </div>
           </NavButton>
         </Link>
       </NavLeft>
 
       <NavRight className="nav-right nav-menu">
-        <NavButton>
-          <Link href="/">
+        <Link href="/">
+          <NavButton>
             <HomeIcon />
-          </Link>
-        </NavButton>
-        <NavButton>
-          <Link href="/artboards">🎨&nbsp; Artboards</Link>
-        </NavButton>
-        <NavButton>
-          <Link href="/about">🤓&nbsp; About</Link>
-        </NavButton>
-        <NavButton>
-          <Link href="/blog">📝&nbsp; Blog</Link>
-        </NavButton>
-        <NavButton>
-          <Link href="/archive">📥&nbsp; Archive</Link>
-        </NavButton>
+          </NavButton>
+        </Link>
+        <Link href="/artboards">
+          <NavButton>🎨&nbsp; Artboards</NavButton>
+        </Link>
+        <Link href="/about">
+          <NavButton>🤓&nbsp; About</NavButton>
+        </Link>
+        <Link href="/blog">
+          <NavButton>📝&nbsp; Blog</NavButton>
+        </Link>
+        <Link href="/archive">
+          <NavButton>📥&nbsp; Archive</NavButton>
+        </Link>
       </NavRight>
     </Container>
   </Wrapper>

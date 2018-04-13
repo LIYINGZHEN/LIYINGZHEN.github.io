@@ -54,7 +54,10 @@ injectGlobal`
 
   a {
     text-decoration: none;
-    color: #555;
+    color: #1a9f60;
+    &:hover {
+      opacity: .6;
+    }
   }
 
   h2 {

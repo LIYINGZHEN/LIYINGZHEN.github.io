@@ -7,6 +7,8 @@ const Container = styled.div`
   padding: 0 1rem;
   width: ${props => (props.theme && props.theme.width) || '96%'};
   display: ${props => (props.theme && props.theme.display) || 'flex'};
+  height: ${props => props.theme && props.theme.height};
+  min-height: ${props => props.theme && props.theme.minHeight};
 `
 
 export default Container
