@@ -10,6 +10,7 @@ const Container = styled.div`
   height: ${props => props.theme && props.theme.height};
   min-height: ${props => props.theme && props.theme.minHeight};
   align-items: center;
+  justify-content: ${props => props.theme && props.theme.justifyContent};
 `
 
 export default Container

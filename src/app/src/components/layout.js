@@ -60,10 +60,26 @@ injectGlobal`
     }
   }
 
-  h2 {
+  h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     margin: .35em 0 .7em;
+  }
+
+  h2 {
     font-size: 1.75em;
+  }
+
+  hr {
+    width: 100px;
+    margin: 10px auto;
+    display: block;
+    border: 0;
+    background-color: #d2d6dd;
+    height: 1px;
+  }
+
+  h6 {
+    font-size: .85em;
   }
 
   #defaultCanvas0 {
