@@ -1,72 +1,76 @@
-var e = [],
-  n = [
-    'rgba(109,224,242,1)',
-    'rgba(69, 194, 100, 1)',
-    'rgba(249,168,54,1)',
-    'rgba(255,114,196,1)',
-    'rgba(139,64,169,1)'
-  ]
-var y = 100
+const e = []
+
+const colors = [
+  'rgba(109,224,242,1)',
+  'rgba(69, 194, 100, 1)',
+  'rgba(249,168,54,1)',
+  'rgba(255,114,196,1)',
+  'rgba(139,64,169,1)'
+]
 
 const sketch = p => {
-  p.getRandomInt = (t, e) => {
-    return Math.floor(Math.random() * (e - t + 1)) + t
-  }
+  p.getRandomInt = (t, e) => Math.floor(Math.random() * (e - t + 1)) + t
+
   p.setup = () => {
     let canvas = p.createCanvas(p.windowWidth, p.windowHeight)
-    p.stroke(255) // Set line drawing color to white
+    p.stroke(255)
     p.frameRate(30)
-    p.noLoop()
-    for (var t = 0; t < p.windowWidth; t += 50) {
-      for (var i = 0; i < p.windowHeight; i += 50) {
-        var a = n[p.getRandomInt(0, 4)]
-        e.push({ x: t, y: i, dotColour: a })
+
+    for (let x = 0; x < p.windowWidth; x += 50) {
+      for (let y = 0; y < p.windowHeight; y += 50) {
+        const a = colors[p.getRandomInt(0, 4)]
+        e.push({ x, y, dotColour: a })
         p.beginShape()
-        p.ellipse(t, i, 4, 4)
+        p.ellipse(x, y, 4, 4)
         p.noStroke()
         p.endShape()
       }
     }
+
     document.addEventListener('mousemove', p.reDraw)
   }
+
   p.draw = () => {
-    for (var t = 0, n = 0; n < p.windowWidth; n += 50) {
-      for (var i = 0; i < p.windowHeight; i += 50) {
+    let t = 0
+    for (let x = 0; x < p.windowWidth; x += 50) {
+      for (let y = 0; y < p.windowHeight; y += 50) {
         if (e[t]) {
           p.beginShape()
           p.fill(e[t].dotColour)
           p.noStroke()
-          p.ellipse(n, i, 4, 4)
+          p.ellipse(x, y, 4, 4)
           p.endShape()
           t++
         }
       }
     }
   }
+
   p.reDraw = t => {
     p.clear()
-    //console.log(t.clientY)
-    //console.log(e)
     p.beginShape()
-    let result = 0
-    for (var n = 0; n < e.length; n++) {
-      result = Math.sqrt(
-        (t.clientX - e[n].x) * (t.clientX - e[n].x) +
-          (t.clientY - e[n].y) * (t.clientY - e[n].y)
+
+    const clientX = t.clientX
+    const clientY = t.clientY
+
+    const dots = e.filter(
+      e =>
+        e.x <= clientX + 100 &&
+        e.x >= clientX - 100 &&
+        (e.y <= clientY + 100 && e.y >= clientY - 100)
+    )
+
+    for (let n = 0; n < dots.length; n++) {
+      const { x, y, dotColour } = dots[n]
+      const distance = Math.sqrt(
+        (clientX - x) * (clientX - x) + (clientY - y) * (clientY - y)
       )
-      if (result < 80) {
-        // console.log('result')
-        // console.log(result)
-        p.stroke(e[n].dotColour)
-        p.line(e[n].x, e[n].y, t.clientX, t.clientY)
-        p.endShape()
-      }
+      if (distance < 80) p.stroke(dotColour), p.line(x, y, clientX, clientY)
     }
-    p.draw()
+
+    p.endShape()
   }
 
-  p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight)
-  }
+  p.windowResized = () => p.resizeCanvas(p.windowWidth, p.windowHeight)
 }
 export default sketch
