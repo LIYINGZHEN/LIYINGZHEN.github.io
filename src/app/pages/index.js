@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 import Hero from '../src/components/hero'
@@ -12,8 +12,29 @@ const H6 = styled.h6`
   margin: 0 auto;
 `
 
+const P = styled.p`
+  text-align: center;
+`
+
+const A = styled.a`
+  color: #84868b;
+  background-color: transparent;
+  border: 1px solid #84868b;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: center;
+  transition: opacity 0.2s ease;
+  transform: scale(1);
+  display: inline-block;
+  &:hover {
+    opacity: 0.8;
+  }
+`
+
 const Index = () => (
-  <div>
+  <Fragment>
     <Hero />
     <hr />
     <br />
@@ -107,7 +128,13 @@ const Index = () => (
         </Col>
       </Row>
     </Container>
-  </div>
+    <P>
+      <A target="_blank" href="">
+        See more work on Behance
+      </A>
+    </P>
+    <br />
+  </Fragment>
 )
 
 export default layout(Index)
