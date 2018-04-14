@@ -69,6 +69,50 @@ const PhotoDesc = styled.p`
   margin-top: 1rem;
 `
 
+const photos = [
+  {
+    src: 'https://jgog.in/app/45b2b0fa61a3387ff07fb06cc6a284cf-750.jpg',
+    desc: "Volunteering at IxDa '17",
+    theme: { gridRow: '1/3' }
+  },
+  {
+    src: 'https://jgog.in/app/2afc0357d4e28f97d6c1aa5af7cca83a-1000.jpg',
+    desc: 'Planning the CPC research'
+  },
+  {
+    src: 'https://jgog.in/app/45907a93719c000c1f93ec7ce30eefa4-1000.jpg',
+    desc: 'Prototyping Super Co-mario'
+  },
+  {
+    src: 'https://jgog.in/app/1be7ce1e81e3149a080f5439d9d5a816-1000.jpg',
+    desc: 'Storyboarding'
+  },
+  {
+    src: 'https://jgog.in/app/06975d1e23b11b344289d2af2f98ec81-1000.jpg',
+    desc: 'User research for Cita'
+  },
+  {
+    src: 'https://jgog.in/app/197dba536e913c1be504dfb598349a88-1000.jpg',
+    desc: 'Paper prototyping'
+  },
+  {
+    src: 'https://jgog.in/app/0420f9a0afb36744ba9e9109dfcc6662-1000.jpg',
+    desc: 'Guest lecture with Jen Simmons'
+  },
+  {
+    src: 'https://jgog.in/app/d90fe69b9d0757a91de522f8553d8194-1000.jpg',
+    desc: 'Testing the prototype'
+  },
+  {
+    src: 'https://jgog.in/app/a3e5b763bac40b23b0fb05ed5d9bbd59-1000.jpg',
+    desc: 'Working on Biketinerary'
+  },
+  {
+    src: 'https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg',
+    desc: 'Shooting for Biketinerary'
+  }
+]
+
 const About = () => (
   <section className="about">
     <Container theme={{ width: '90%', display: 'block' }}>
@@ -134,46 +178,12 @@ const About = () => (
       <br />
 
       <Gallery>
-        <Figure theme={{ gridRow: '1/3' }}>
-          <Img src="https://jgog.in/app/45b2b0fa61a3387ff07fb06cc6a284cf-750.jpg" />
-          <PhotoDesc>Volunteering at IxDa '17</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/2afc0357d4e28f97d6c1aa5af7cca83a-1000.jpg" />
-          <PhotoDesc>Planning the CPC research</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/45907a93719c000c1f93ec7ce30eefa4-1000.jpg" />
-          <PhotoDesc>Prototyping Super Co-mario</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/1be7ce1e81e3149a080f5439d9d5a816-1000.jpg" />
-          <PhotoDesc>Storyboarding</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/06975d1e23b11b344289d2af2f98ec81-1000.jpg" />
-          <PhotoDesc>User research for Cita</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/197dba536e913c1be504dfb598349a88-1000.jpg" />
-          <PhotoDesc>Paper prototyping</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/0420f9a0afb36744ba9e9109dfcc6662-1000.jpg" />
-          <PhotoDesc>Guest lecture with Jen Simmons</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/d90fe69b9d0757a91de522f8553d8194-1000.jpg" />
-          <PhotoDesc>Testing the prototype</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/a3e5b763bac40b23b0fb05ed5d9bbd59-1000.jpg" />
-          <PhotoDesc>Working on Biketinerary</PhotoDesc>
-        </Figure>
-        <Figure>
-          <Img src="https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg" />
-          <PhotoDesc>Shooting for Biketinerary</PhotoDesc>
-        </Figure>
+        {photos.map(photo => (
+          <Figure key={photo.src} theme={photo.theme}>
+            <Img src={photo.src} />
+            <PhotoDesc>{photo.desc}</PhotoDesc>
+          </Figure>
+        ))}
       </Gallery>
     </Container>
   </section>
