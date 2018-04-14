@@ -92,6 +92,10 @@ injectGlobal`
     margin-top: 0;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   #defaultCanvas0 {
     position: fixed;
     top: 0;
