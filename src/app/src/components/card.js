@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import Tilt from 'react-tilt'
 
 const Warpper = styled.div`
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
   padding: 0;
   background-color: transparent;
-  transition: all 0.2s ease,
-    -webkit-transform 0.2s cubic-bezier(0.03, 0.98, 0.52, 0.99);
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   color: #ddd;
   position: relative;
@@ -75,18 +74,20 @@ const P = styled.p`
 `
 
 const Card = props => (
-  <Warpper>
-    <A>
-      <Figure>
-        <Img src={props.theme.img} />
-      </Figure>
-      <Footer>
-        <H4>{props.theme.title}</H4>
-        <Small>{props.theme.category}</Small>
-        <P>{props.theme.description}</P>
-      </Footer>
-    </A>
-  </Warpper>
+  <Tilt options={{ max: 10, scale: 1.02 }}>
+    <Warpper>
+      <A>
+        <Figure>
+          <Img src={props.theme.img} />
+        </Figure>
+        <Footer>
+          <H4>{props.theme.title}</H4>
+          <Small>{props.theme.category}</Small>
+          <P>{props.theme.description}</P>
+        </Footer>
+      </A>
+    </Warpper>
+  </Tilt>
 )
 
 export default Card

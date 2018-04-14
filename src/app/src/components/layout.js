@@ -112,7 +112,7 @@ const withLayout = ComposedComponent => {
     render() {
       return (
         <Wrapper>
-          <P5Wrapper sketch={sketch} />
+          {/* <P5Wrapper sketch={sketch} /> */}
           <Head>
             <link
               rel="stylesheet"
