@@ -49,8 +49,7 @@ const Index = () => (
             theme={{
               img:
                 'https://jgog.in/app/49c81bb12bf3c703634015e31d81812e-600.jpg',
-              title:
-                'An intensive study to find the painpoints on the CPC website.',
+              title: 'Reactive Particles',
               category: 'Interaction Design',
               description: 'A fun interactive installation for the SVA studio'
             }}
@@ -66,8 +65,6 @@ const Index = () => (
             }}
           />
         </Col>
-      </Row>
-      <Row>
         <Col>
           <Card
             theme={{
@@ -75,7 +72,7 @@ const Index = () => (
                 'https://jgog.in/app/3d25747b2317b4e57b23dfdb09722afc-800.png',
               title: 'Bill Splitter',
               category: 'Product Design',
-              p:
+              description:
                 'Making it easier to split the bill and tip with multiple people.'
             }}
           />
@@ -85,7 +82,8 @@ const Index = () => (
                 'https://jgog.in/app/3b439bd6b6433e2015f7f46aaff8f475-600.png',
               title: 'Mark43',
               category: 'Product Design • Design System',
-              p: 'A story of fighting crime with design at my internship.'
+              description:
+                'A story of fighting crime with design at my internship.'
             }}
           />
           <Card
@@ -94,7 +92,7 @@ const Index = () => (
                 'https://jgog.in/app/a81e2fefb16b3af58cdc884f78eaacc7-600.jpg',
               title: 'Cita',
               category: 'Concept Design',
-              p: 'A chatbot to make plans for your friend circle.'
+              description: 'A chatbot to make plans for your friend circle.'
             }}
           />
           <Card
@@ -103,7 +101,7 @@ const Index = () => (
                 'https://jgog.in/app/e4e024fcef6150e0e5c2a9adb70a0271-600.jpg',
               title: 'Cosine',
               category: 'Physical Computing',
-              p: 'A lighting installation.'
+              description: 'A lighting installation.'
             }}
           />
         </Col>
