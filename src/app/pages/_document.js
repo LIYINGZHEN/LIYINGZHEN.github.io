@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
           <title>Portfolio of Polo & Max</title>
           {this.props.styleTags}
           <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet" />
+          <meta content="width=device-width,initial-scale=1" name="viewport" />
         </Head>
         <body>
           <Main />
