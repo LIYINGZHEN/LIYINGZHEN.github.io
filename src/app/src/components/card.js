@@ -78,12 +78,12 @@ const Card = props => (
   <Warpper>
     <A>
       <Figure>
-        <Img src={props.src} />
+        <Img src={props.theme.img} />
       </Figure>
       <Footer>
-        <H4>Biketinerary</H4>
-        <Small>Product Design</Small>
-        <P>Explore a city using its bikeshare network.</P>
+        <H4>{props.theme.title}</H4>
+        <Small>{props.theme.category}</Small>
+        <P>{props.theme.description}</P>
       </Footer>
     </A>
   </Warpper>
