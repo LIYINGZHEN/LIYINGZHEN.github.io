@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import layout from '../src/components/layout'
 import Container from '../src/components/container'
 import Row from '../src/components/row'
-import Gallery from '../src/components/grally'
 
 const Header = styled.div`
   padding: 4rem 0;
@@ -42,12 +41,32 @@ const Col6 = styled.div`
 const Figure = styled.figure`
   overflow: hidden;
   margin: 0;
+  grid-row: ${props => props.theme && props.theme.gridRow};
 `
 
 const Img = styled.img`
   display: block;
   transition: all 0.3s ease;
   margin: auto;
+`
+
+const Blockquote = styled.blockquote`
+  background-color: #f3f3f3;
+  padding: 1.5rem 2rem;
+  border-left: 3px solid #d2d6dd;
+`
+
+const Gallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-gap: 1rem;
+`
+
+const PhotoDesc = styled.p`
+  font-style: italic;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 1rem;
 `
 
 const About = () => (
@@ -96,6 +115,66 @@ const About = () => (
           </p>
         </Col6>
       </Row>
+    </Container>
+
+    <hr />
+
+    <Container theme={{ width: '90%', display: 'block' }}>
+      <small>This quote summarizes the way I work,</small>
+      <Blockquote>
+        Most people make the mistake of thinking design is what it looks like.
+        People think it's this veneer — that the designers are handed this box
+        and told, 'Make it look good!' That's not what we think design is. It's
+        not just what it looks like and feels like.
+        <strong> Design is how it works.</strong>
+        <br />
+        <small>— Steve Jobs</small>
+      </Blockquote>
+
+      <br />
+
+      <Gallery>
+        <Figure theme={{ gridRow: '1/3' }}>
+          <Img src="https://jgog.in/app/45b2b0fa61a3387ff07fb06cc6a284cf-750.jpg" />
+          <PhotoDesc>Volunteering at IxDa '17</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/2afc0357d4e28f97d6c1aa5af7cca83a-1000.jpg" />
+          <PhotoDesc>Planning the CPC research</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/45907a93719c000c1f93ec7ce30eefa4-1000.jpg" />
+          <PhotoDesc>Prototyping Super Co-mario</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/1be7ce1e81e3149a080f5439d9d5a816-1000.jpg" />
+          <PhotoDesc>Storyboarding</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/06975d1e23b11b344289d2af2f98ec81-1000.jpg" />
+          <PhotoDesc>User research for Cita</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/197dba536e913c1be504dfb598349a88-1000.jpg" />
+          <PhotoDesc>Paper prototyping</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/0420f9a0afb36744ba9e9109dfcc6662-1000.jpg" />
+          <PhotoDesc>Guest lecture with Jen Simmons</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/d90fe69b9d0757a91de522f8553d8194-1000.jpg" />
+          <PhotoDesc>Testing the prototype</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/a3e5b763bac40b23b0fb05ed5d9bbd59-1000.jpg" />
+          <PhotoDesc>Working on Biketinerary</PhotoDesc>
+        </Figure>
+        <Figure>
+          <Img src="https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg" />
+          <PhotoDesc>Shooting for Biketinerary</PhotoDesc>
+        </Figure>
+      </Gallery>
     </Container>
   </section>
 )
