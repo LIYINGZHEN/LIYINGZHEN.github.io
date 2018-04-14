@@ -31,7 +31,7 @@ const NavLeft = styled.p`
   justify-content: flex-start;
 `
 
-const Colophon = styled.p`
+const Colophon = styled.div`
   > * {
     font-size: 1.3rem;
     margin-bottom: 1rem;
