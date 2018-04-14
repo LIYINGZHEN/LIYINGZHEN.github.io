@@ -70,6 +70,14 @@ injectGlobal`
     font-size: 1.75em;
   }
 
+  h4 {
+    font-size: 1.25em;
+  }
+
+  h6 {
+    font-size: .85em;
+  }
+
   hr {
     width: 100px;
     margin: 10px auto;
@@ -77,10 +85,6 @@ injectGlobal`
     border: 0;
     background-color: #d2d6dd;
     height: 1px;
-  }
-
-  h6 {
-    font-size: .85em;
   }
 
   p {
