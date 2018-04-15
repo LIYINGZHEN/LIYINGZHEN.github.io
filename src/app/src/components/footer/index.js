@@ -43,23 +43,37 @@ const Footer = () => (
   >
     <Nav>
       <NavLeft>
-        <LinkButton theme={{ paddingLeft: 0 }}>hello at jgog.in</LinkButton>
-        <LinkButton>@geekGogari</LinkButton>
-        <LinkButton>
-          <IG />
-        </LinkButton>
-        <LinkButton>
-          <LinkedIn />
-        </LinkButton>
-        <LinkButton>
-          <GitHub />
-        </LinkButton>
-        <LinkButton>
-          <Be />
-        </LinkButton>
-        <LinkButton>
-          <Medium />
-        </LinkButton>
+        <Link href="/">
+          <LinkButton theme={{ paddingLeft: 0 }}>hello at jgog.in</LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>@geekGogari</LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>
+            <IG />
+          </LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>
+            <LinkedIn />
+          </LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>
+            <GitHub />
+          </LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>
+            <Be />
+          </LinkButton>
+        </Link>
+        <Link href="/">
+          <LinkButton>
+            <Medium />
+          </LinkButton>
+        </Link>
       </NavLeft>
     </Nav>
 
