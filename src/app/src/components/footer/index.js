@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -9,16 +9,6 @@ import LinkedIn from './linkedIn'
 import GitHub from './github'
 import Be from './be'
 import Medium from './medium'
-
-const InnerBlock = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const Licence = styled.div`
-  font-size: 0.9rem;
-`
 
 const Nav = styled.div`
   display: flex;

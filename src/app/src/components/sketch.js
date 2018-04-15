@@ -12,7 +12,7 @@ const sketch = p => {
   p.getRandomInt = (t, e) => Math.floor(Math.random() * (e - t + 1)) + t
 
   p.setup = () => {
-    let canvas = p.createCanvas(p.windowWidth, p.windowHeight)
+    p.createCanvas(p.windowWidth, p.windowHeight)
     p.stroke(255)
     p.frameRate(30)
 

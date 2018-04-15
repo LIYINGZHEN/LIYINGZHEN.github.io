@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled, { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'styled-components'
 import NProgress from 'nprogress'
 import dynamic from 'next/dynamic'
 import Router from 'next/router'
@@ -20,10 +20,6 @@ Router.onRouteChangeStart = url => {
 }
 Router.onRouteChangeComplete = () => NProgress.done()
 Router.onRouteChangeError = () => NProgress.done()
-
-const linkStyle = {
-  margin: '0 10px 0 0'
-}
 
 Router.onRouteChangeStart = url => {
   console.log(`Loading: ${url}`)
@@ -105,14 +101,12 @@ injectGlobal`
   }
 `
 
-const Wrapper = styled.nav``
-
 const withLayout = ComposedComponent => {
   return class Layout extends Component {
     render() {
       return (
-        <Wrapper>
-          {/* <P5Wrapper sketch={sketch} /> */}
+        <div>
+          <P5Wrapper sketch={sketch} />
           <Head>
             <link
               rel="stylesheet"
@@ -123,7 +117,7 @@ const withLayout = ComposedComponent => {
           <Nav />
           <ComposedComponent />
           <Footer />
-        </Wrapper>
+        </div>
       )
     }
   }
