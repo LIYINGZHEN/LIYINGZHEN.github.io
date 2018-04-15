@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import Hero from '../src/components/hero'
@@ -34,7 +34,7 @@ const A = styled.a`
 `
 
 const Index = () => (
-  <Fragment>
+  <div>
     <Hero />
     <hr />
     <br />
@@ -134,7 +134,7 @@ const Index = () => (
       </A>
     </P>
     <br />
-  </Fragment>
+  </div>
 )
 
 export default layout(Index)

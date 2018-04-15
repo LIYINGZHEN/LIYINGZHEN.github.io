@@ -15,12 +15,28 @@ const Wrapper = styled.nav`
 
 const NavLeft = styled.div`
   justify-content: flex-start;
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 const NavRight = styled.div`
   display: flex;
   flex: 1 1 auto;
   justify-content: flex-end;
+  @media screen and (max-width: 480px) {
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+`
+
+const ArchiveButton = LinkButton.extend`
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 const Nav = () => (
@@ -52,7 +68,7 @@ const Nav = () => (
           <LinkButton>📝&nbsp; Blog</LinkButton>
         </Link>
         <Link href="/archive">
-          <LinkButton>📥&nbsp; Archive</LinkButton>
+          <ArchiveButton>📥&nbsp; Archive</ArchiveButton>
         </Link>
       </NavRight>
     </Container>

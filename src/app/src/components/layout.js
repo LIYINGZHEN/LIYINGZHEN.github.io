@@ -55,7 +55,7 @@ injectGlobal`
   a {
     transition: color .2s ease;
     text-decoration: none;
-    color: #1a9f60;
+    color: #28a386;
     cursor: pointer;
     &:hover {
       opacity: .6;

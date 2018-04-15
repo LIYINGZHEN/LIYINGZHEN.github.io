@@ -12,6 +12,9 @@ const Container = styled.div`
   min-height: ${props => props.theme && props.theme.minHeight};
   justify-content: ${props => props.theme && props.theme.justifyContent};
   margin-top: ${props => props.theme && props.theme.marginTop};
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `
 
 export default Container

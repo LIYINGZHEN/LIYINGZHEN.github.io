@@ -29,6 +29,10 @@ const NavLeft = styled.p`
   flex: 1;
   display: flex;
   justify-content: flex-start;
+  @media screen and (max-width: 480px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `
 
 const Colophon = styled.div`
