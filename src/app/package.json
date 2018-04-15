@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "firebase-admin": "^5.11.0",
@@ -20,6 +21,11 @@
     "styled-components": "^3.2.5"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.5.1"
+    "babel-plugin-styled-components": "^1.5.1",
+    "jest": "^22.4.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": ["test/"]
   }
 }
