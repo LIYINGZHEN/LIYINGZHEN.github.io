@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { injectGlobal } from 'styled-components'
 import NProgress from 'nprogress'
 import dynamic from 'next/dynamic'
@@ -101,26 +101,16 @@ injectGlobal`
   }
 `
 
-const withLayout = ComposedComponent => {
-  return class Layout extends Component {
-    render() {
-      return (
-        <div>
-          <P5Wrapper sketch={sketch} />
-          <Head>
-            <link
-              rel="stylesheet"
-              type="text/css"
-              href="/static/nprogress.css"
-            />
-          </Head>
-          <Nav />
-          <ComposedComponent />
-          <Footer />
-        </div>
-      )
-    }
-  }
-}
+const withLayout = ComposedComponent => props => (
+  <div>
+    <P5Wrapper sketch={sketch} />
+    <Head>
+      <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+    </Head>
+    <Nav />
+    <ComposedComponent />
+    <Footer />
+  </div>
+)
 
 export default withLayout
