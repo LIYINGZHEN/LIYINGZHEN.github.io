@@ -11,7 +11,8 @@
     "deps-copy":
       "cp -R 'src/app/static' 'dist/functions' && cp 'src/app/package.json' 'dist/functions' && cp -R src/functions dist/ && cp -R src/public dist/",
     "build-funcs": "babel src/functions --out-dir dist/functions",
-    "deps-install": "cd 'dist/functions' && npm i"
+    "deps-install": "cd 'dist/functions' && npm i",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
   "devDependencies": {
