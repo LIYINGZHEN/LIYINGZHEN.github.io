@@ -25,7 +25,7 @@ const setup = p =>
       }
     }
 
-    document.addEventListener('mousemove', p.reDraw)
+    // document.addEventListener('mousemove', p.reDraw)
   })
 
 const draw = p =>
