@@ -1,3 +1,5 @@
+import throttle from 'lodash/throttle'
+
 const e = []
 
 const setup = p =>
@@ -25,7 +27,7 @@ const setup = p =>
       }
     }
 
-    // document.addEventListener('mousemove', p.reDraw)
+    document.addEventListener('mousemove', throttle(p.reDraw, 200))
   })
 
 const draw = p =>
