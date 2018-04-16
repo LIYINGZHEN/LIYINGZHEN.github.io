@@ -2,20 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Tilt from 'react-tilt'
 
-const Warpper = styled.div`
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-  padding: 0;
-  background-color: transparent;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-  color: #ddd;
-  position: relative;
-  border-radius: 1rem;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  will-change: transform;
-  margin-bottom: 4rem;
-`
-
 const A = styled.a`
   display: block;
   transition: color 0.2s ease;
@@ -74,19 +60,36 @@ const P = styled.p`
 `
 
 const Card = props => (
-  <Tilt options={{ max: 10, scale: 1.02 }}>
-    <Warpper>
-      <A>
-        <Figure>
-          <Img src={props.theme.img} />
-        </Figure>
-        <Footer>
-          <H4>{props.theme.title}</H4>
-          <Small>{props.theme.category}</Small>
-          <P>{props.theme.description}</P>
-        </Footer>
-      </A>
-    </Warpper>
+  <Tilt
+    style={{
+      padding: '0',
+      backgroundColor: 'transparent',
+      boxShadow: '0 2px 15px rgba(0,0,0,.3)',
+      color: '#ddd',
+      position: 'relative',
+      borderRadius: '1rem',
+      transform: 'translateZ(0)',
+      transformStyle: 'preserve-3d',
+      backfaceVisibility: 'hidden',
+      willChange: 'transform',
+      marginBottom: '4rem'
+    }}
+    options={{
+      max: 10,
+      scale: 1.02,
+      easing: 'cubic-bezier(.02,1.59,.74,1.06)'
+    }}
+  >
+    <A>
+      <Figure>
+        <Img src={props.theme.img} />
+      </Figure>
+      <Footer>
+        <H4>{props.theme.title}</H4>
+        <Small>{props.theme.category}</Small>
+        <P>{props.theme.description}</P>
+      </Footer>
+    </A>
   </Tilt>
 )
 
