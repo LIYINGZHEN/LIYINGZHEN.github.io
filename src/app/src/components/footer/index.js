@@ -43,6 +43,50 @@ const Footer = () => (
   >
     <Nav>
       <NavLeft>
+        <LinkButton
+          href="mailto:maxlivinci@gmail.com"
+          theme={{ paddingLeft: 0 }}
+        >
+          hello at maxlivinci.com
+        </LinkButton>
+        <LinkButton
+          target="_blank"
+          href="https://www.linkedin.com/in/maxlivinci"
+        >
+          <LinkedIn />
+        </LinkButton>
+        <LinkButton target="_blank" href="https://github.com/LIYINGZHEN">
+          <GitHub />
+        </LinkButton>
+      </NavLeft>
+    </Nav>
+
+    <Colophon className="colophon">
+      <P>
+        Crafted using{' '}
+        <a target="_blank" href="https://reactjs.org/">
+          React.js
+        </a>,{' '}
+        <a target="_blank" href="https://github.com/zeit/next.js">
+          Next.js
+        </a>, and{' '}
+        <a target="_blank" href="https://code.visualstudio.com">
+          Visual Studio Code
+        </a>. Typeface is{' '}
+        <a target="_blank" href="https://rsms.me/inter">
+          Inter UI
+        </a>.
+      </P>
+      <P>Max Li © 2018</P>
+    </Colophon>
+  </Container>
+)
+
+export default Footer
+
+{
+  /* <Nav>
+      <NavLeft>
         <Link href="/">
           <LinkButton theme={{ paddingLeft: 0 }}>hello at jgog.in</LinkButton>
         </Link>
@@ -85,7 +129,5 @@ const Footer = () => (
       </P>
       <P>Jenil Gogari © 2010 - 2018</P>
     </Colophon>
-  </Container>
-)
-
-export default Footer
+  </Container> */
+}

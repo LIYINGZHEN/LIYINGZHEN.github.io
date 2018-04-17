@@ -58,18 +58,18 @@ const Nav = () => (
             <HomeIcon />
           </LinkButton>
         </Link>
-        <Link href="/artboards">
+        {/* <Link href="/artboards">
           <LinkButton>🎨&nbsp; Artboards</LinkButton>
-        </Link>
+        </Link> */}
         <Link href="/about">
           <LinkButton>🤓&nbsp; About</LinkButton>
         </Link>
-        <Link href="/blog">
+        {/* <Link href="/blog">
           <LinkButton>📝&nbsp; Blog</LinkButton>
         </Link>
         <Link href="/archive">
           <ArchiveButton>📥&nbsp; Archive</ArchiveButton>
-        </Link>
+        </Link> */}
       </NavRight>
     </Container>
   </Wrapper>

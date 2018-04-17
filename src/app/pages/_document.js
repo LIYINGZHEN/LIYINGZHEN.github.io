@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Portfolio of Polo & Max</title>
+          <title>Maxlivinci</title>
           {this.props.styleTags}
           <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet" />
           <meta content="width=device-width,initial-scale=1" name="viewport" />

@@ -125,7 +125,7 @@ const About = () => (
         <Col1 />
         <Col4>
           <Figure>
-            <Img src="https://jgog.in/app/b14bfa1f5510d755c8bb8c326d405d26-600.jpg" />
+            <Img src="static/imgs/self.jpg" />
           </Figure>
         </Col4>
         <Col6>

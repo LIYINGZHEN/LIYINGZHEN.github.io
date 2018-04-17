@@ -115,11 +115,11 @@ const Index = () => (
         <Col>{mapImg(images.slice(4, 8))}</Col>
       </Row>
     </Container>
-    <P>
+    {/* <P>
       <A target="_blank" href="">
         See more work on Behance
       </A>
-    </P>
+    </P> */}
     <br />
   </div>
 )

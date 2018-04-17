@@ -24,9 +24,9 @@ const Hero = () => (
     <H2 style={{ fontWeight: '300' }}>
       Namaste 🙏
       <br />
-      I'm Jenil, a{' '}
+      I'm Max, a{' '}
       <a href="" target="_blank">
-        computational designer
+        JavaScript developer
       </a>{' '}
       passionate about crafting great user experiences with a strong
       understanding of development.
@@ -40,7 +40,7 @@ const Hero = () => (
           design systems
         </a>.
       </Small>
-      <Small>
+      {/* <Small>
         Also, I've made{' '}
         <a href="" target="_blank">
           free website themes
@@ -55,7 +55,7 @@ const Hero = () => (
         <a href="" target="_blank">
           a Chrome extension
         </a>.
-      </Small>
+      </Small> */}
     </H2>
   </Container>
 )
