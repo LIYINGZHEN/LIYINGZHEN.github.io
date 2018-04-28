@@ -70,47 +70,47 @@ const PhotoDesc = styled.p`
 `
 
 const photos = [
-  {
-    src: 'https://jgog.in/app/45b2b0fa61a3387ff07fb06cc6a284cf-750.jpg',
-    desc: "Volunteering at IxDa '17",
-    theme: { gridRow: '1/3' }
-  },
-  {
-    src: 'https://jgog.in/app/2afc0357d4e28f97d6c1aa5af7cca83a-1000.jpg',
-    desc: 'Planning the CPC research'
-  },
-  {
-    src: 'https://jgog.in/app/45907a93719c000c1f93ec7ce30eefa4-1000.jpg',
-    desc: 'Prototyping Super Co-mario'
-  },
-  {
-    src: 'https://jgog.in/app/1be7ce1e81e3149a080f5439d9d5a816-1000.jpg',
-    desc: 'Storyboarding'
-  },
-  {
-    src: 'https://jgog.in/app/06975d1e23b11b344289d2af2f98ec81-1000.jpg',
-    desc: 'User research for Cita'
-  },
-  {
-    src: 'https://jgog.in/app/197dba536e913c1be504dfb598349a88-1000.jpg',
-    desc: 'Paper prototyping'
-  },
-  {
-    src: 'https://jgog.in/app/0420f9a0afb36744ba9e9109dfcc6662-1000.jpg',
-    desc: 'Guest lecture with Jen Simmons'
-  },
-  {
-    src: 'https://jgog.in/app/d90fe69b9d0757a91de522f8553d8194-1000.jpg',
-    desc: 'Testing the prototype'
-  },
-  {
-    src: 'https://jgog.in/app/a3e5b763bac40b23b0fb05ed5d9bbd59-1000.jpg',
-    desc: 'Working on Biketinerary'
-  },
-  {
-    src: 'https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg',
-    desc: 'Shooting for Biketinerary'
-  }
+  // {
+  //   src: 'https://jgog.in/app/45b2b0fa61a3387ff07fb06cc6a284cf-750.jpg',
+  //   desc: "Volunteering at IxDa '17",
+  //   theme: { gridRow: '1/3' }
+  // },
+  // {
+  //   src: 'https://jgog.in/app/2afc0357d4e28f97d6c1aa5af7cca83a-1000.jpg',
+  //   desc: 'Planning the CPC research'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/45907a93719c000c1f93ec7ce30eefa4-1000.jpg',
+  //   desc: 'Prototyping Super Co-mario'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/1be7ce1e81e3149a080f5439d9d5a816-1000.jpg',
+  //   desc: 'Storyboarding'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/06975d1e23b11b344289d2af2f98ec81-1000.jpg',
+  //   desc: 'User research for Cita'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/197dba536e913c1be504dfb598349a88-1000.jpg',
+  //   desc: 'Paper prototyping'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/0420f9a0afb36744ba9e9109dfcc6662-1000.jpg',
+  //   desc: 'Guest lecture with Jen Simmons'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/d90fe69b9d0757a91de522f8553d8194-1000.jpg',
+  //   desc: 'Testing the prototype'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/a3e5b763bac40b23b0fb05ed5d9bbd59-1000.jpg',
+  //   desc: 'Working on Biketinerary'
+  // },
+  // {
+  //   src: 'https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg',
+  //   desc: 'Shooting for Biketinerary'
+  // }
 ]
 
 const About = () => (
@@ -143,7 +143,7 @@ const About = () => (
             people share through interaction. Thinking about how technology
             could influence the way we live is my major interests.
           </p>
-          <p>
+          {/* <p>
             Currently I'm wrapping up my Master's degree at School of Visual
             Arts's <a>Interaction Design</a> program and searching for
             opportunities starting Summer 2018 and beyond. My experiences
@@ -151,11 +151,10 @@ const About = () => (
             <a>Baxi.taxi</a> (Bike-as-a-taxi service in India), Klip.in (Fashion
             discovery) & <a>BookMyShow.com</a> (India's #1 Entertainment
             Ticketing). Feel free to checkout my <a>resume</a>.
-          </p>
+          </p> */}
           <p>
-            When I’m not designing, I spend my time running, exploring the web,
-            experimenting, traveling, volunteering, watching movies and
-            listening to music.
+            When I’m not coding, I spend my time exercising, learning,
+            experimenting, traveling, watching movies and listening to music.
           </p>
         </Col6>
       </Row>

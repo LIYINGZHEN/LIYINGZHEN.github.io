@@ -3,7 +3,6 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import HomeIcon from './home-icon'
-import Logo from './logo'
 
 import LinkButton from '../link-button'
 import Container from '../container'
@@ -11,6 +10,10 @@ import Container from '../container'
 const Wrapper = styled.nav`
   margin-top: 3rem;
   display: flex;
+`
+
+const Logo = styled.img`
+  width: 8rem;
 `
 
 const NavLeft = styled.div`
@@ -45,9 +48,7 @@ const Nav = () => (
       <NavLeft className="nav-left">
         <Link href="/">
           <LinkButton>
-            <div className="logo">
-              <Logo style={{ width: '5rem', fill: '#28a386' }} />
-            </div>
+            <Logo src="static/imgs/logo.svg" />
           </LinkButton>
         </Link>
       </NavLeft>

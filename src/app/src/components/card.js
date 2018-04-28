@@ -80,7 +80,7 @@ const Card = props => (
       easing: 'cubic-bezier(.02,1.59,.74,1.06)'
     }}
   >
-    <A>
+    <A href={props.url} target="_blank">
       <Figure>
         <Img src={props.theme.img} />
       </Figure>

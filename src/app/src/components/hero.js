@@ -28,17 +28,16 @@ const Hero = () => (
       <a href="" target="_blank">
         JavaScript developer
       </a>{' '}
-      passionate about crafting great user experiences with a strong
-      understanding of development.
+      passionate about both frontend and backend development.
       <Small>
-        I'm enthusiastic about{' '}
+        {/* I'm enthusiastic about{' '}
         <a href="" target="_blank">
           design tools
         </a>{' '}
         and{' '}
         <a href="" target="_blank">
           design systems
-        </a>.
+        </a>. */}
       </Small>
       {/* <Small>
         Also, I've made{' '}
