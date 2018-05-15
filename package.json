@@ -1,18 +1,18 @@
 {
-  "name": "polo-max-portfolio",
+  "name": "maxlivinci.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "My Personal Website",
   "scripts": {
     "dev": "cd src/app && npm run dev",
-    "precommit": "pretty-quick --staged",
+    "precommit": "npm run pretty-quick",
+    "test": "cd src/app && npm i && npm run test",
+    "pretty-quick": "pretty-quick --staged",
     "deploy": "rm -rf dist && npm run build-next && firebase deploy",
     "build-next": "cd 'src/app' && npm i && npm run build",
     "deps-copy":
       "cp -R 'src/app/static' 'dist/functions' && cp 'src/app/package.json' 'dist/functions' && cp -R src/functions dist/ && cp -R src/public dist/",
     "build-funcs": "babel src/functions --out-dir dist/functions",
-    "deps-install": "cd 'dist/functions' && npm i",
-    "test": "cd src/app && npm i && npm run test"
+    "deps-install": "cd 'dist/functions' && npm i"
   },
   "license": "MIT",
   "devDependencies": {
