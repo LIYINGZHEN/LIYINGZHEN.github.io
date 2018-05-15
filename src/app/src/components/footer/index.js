@@ -49,13 +49,10 @@ const Footer = () => (
         >
           hello at maxlivinci.com
         </LinkButton>
-        <LinkButton
-          target="_blank"
-          href="https://www.linkedin.com/in/maxlivinci"
-        >
+        <LinkButton href="https://www.linkedin.com/in/maxlivinci">
           <LinkedIn />
         </LinkButton>
-        <LinkButton target="_blank" href="https://github.com/LIYINGZHEN">
+        <LinkButton href="https://github.com/LIYINGZHEN">
           <GitHub />
         </LinkButton>
       </NavLeft>
@@ -63,19 +60,10 @@ const Footer = () => (
 
     <Colophon className="colophon">
       <P>
-        Crafted using{' '}
-        <a target="_blank" href="https://reactjs.org/">
-          React.js
-        </a>,{' '}
-        <a target="_blank" href="https://github.com/zeit/next.js">
-          Next.js
-        </a>, and{' '}
-        <a target="_blank" href="https://code.visualstudio.com">
-          Visual Studio Code
-        </a>. Typeface is{' '}
-        <a target="_blank" href="https://rsms.me/inter">
-          Inter UI
-        </a>.
+        Crafted using <a href="https://reactjs.org/">React.js</a>,{' '}
+        <a href="https://github.com/zeit/next.js">Next.js</a>, and{' '}
+        <a href="https://code.visualstudio.com">Visual Studio Code</a>. Typeface
+        is <a href="https://rsms.me/inter">Inter UI</a>.
       </P>
       <P>Max Li © 2018</P>
     </Colophon>

@@ -24,34 +24,31 @@ const Hero = () => (
     <H2 style={{ fontWeight: '300' }}>
       Namaste 🙏
       <br />
-      I'm Max, a{' '}
-      <a href="" target="_blank">
-        JavaScript developer
-      </a>{' '}
-      passionate about both frontend and backend development.
+      I'm Max, a <a href="">JavaScript developer</a> passionate about both
+      frontend and backend development.
       <Small>
         {/* I'm enthusiastic about{' '}
-        <a href="" target="_blank">
+        <a href="">
           design tools
         </a>{' '}
         and{' '}
-        <a href="" target="_blank">
+        <a href="">
           design systems
         </a>. */}
       </Small>
       {/* <Small>
         Also, I've made{' '}
-        <a href="" target="_blank">
+        <a href="">
           free website themes
         </a>,{' '}
-        <a href="" target="_blank">
+        <a href="">
           a CSS framework
         </a>,{' '}
-        <a href="" target="_blank">
+        <a href="">
           a icon CDN
         </a>{' '}
         and{' '}
-        <a href="" target="_blank">
+        <a href="">
           a Chrome extension
         </a>.
       </Small> */}

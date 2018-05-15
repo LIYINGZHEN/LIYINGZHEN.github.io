@@ -130,19 +130,21 @@ const About = () => (
         </Col4>
         <Col6>
           <p>
-            I have always been keen on “how stuff works” ever since I was
-            little. I enjoy solving real and complex problems with design
-            solutions and also implement those solutions (thanks to my
-            engineering background). I've lead projects from start all the way
-            to shipping.
+            Hey, I'm Max. I'm a professional full-stack developer with 3+ years
+            of experience building complex and mobile-friendly websites like the
+            ones you can find in my portfolio. I specialize in front-end
+            development which includes building landing pages, React.js
+            websites, PSD to HTML, Sketch to HTML and building responsive and
+            mobile-friendly pages. I also have experience building CMS using
+            Express.js and Apollo framework.
           </p>
-          <p>
+          {/* <p>
             I believe that a well-delivered technology renders a new culture.
             Often in the beginning, the new culture is thought of as an
             alternative, but soon it transforms into the lived culture that many
             people share through interaction. Thinking about how technology
             could influence the way we live is my major interests.
-          </p>
+          </p> */}
           {/* <p>
             Currently I'm wrapping up my Master's degree at School of Visual
             Arts's <a>Interaction Design</a> program and searching for

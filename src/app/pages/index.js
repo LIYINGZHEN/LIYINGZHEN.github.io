@@ -35,21 +35,21 @@ const A = styled.a`
 
 const images = [
   {
-    url: 'https://goo.gl/PfWNCy',
+    url: 'https://github.com/codefun-io/traveltrip-landing-page',
     img: 'https://goo.gl/CcaeaJ',
     title: 'Travel Trip',
     category: 'Frotend',
     description: 'Landing page concept.'
   },
   {
-    url: 'https://goo.gl/uFw8bT',
+    url: 'https://github.com/codefun-io/portfolio-concept',
     img: 'https://goo.gl/39VPVM',
     title: 'Hexon Creative',
     category: 'Frotend',
     description: 'Portfolio concept for Hexon.'
   },
   {
-    url: 'https://goo.gl/gSqcMd',
+    url: 'https://github.com/codefun-io/love-travel',
     img: 'https://goo.gl/p33L7A',
     title: 'Love Travel',
     category: 'Frotend',
@@ -89,7 +89,7 @@ const Index = () => (
       </Row>
     </Container>
     {/* <P>
-      <A target="_blank" href="">
+      <A href="">
         See more work on Behance
       </A>
     </P> */}
