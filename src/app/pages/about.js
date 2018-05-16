@@ -118,7 +118,7 @@ const About = () => (
     <Container theme={{ width: '90%', display: 'block' }}>
       <Header>
         <h2>about me</h2>
-        <h4>design. code. experiment.</h4>
+        <h4>design. code. automation.</h4>
       </Header>
 
       <Row>
@@ -130,20 +130,22 @@ const About = () => (
         </Col4>
         <Col6>
           <p>
-            Hey, I'm Max. I'm a professional full-stack developer with 3+ years
-            of experience building complex and mobile-friendly websites like the
-            ones you can find in my portfolio. I specialize in front-end
-            development which includes building landing pages, React.js
-            websites, PSD to HTML, Sketch to HTML and building responsive and
-            mobile-friendly pages. I also have experience building CMS using
-            Express.js and Apollo framework.
+            Hey, I'm Max. I am a professional frontend and backend developer
+            with 3+ years of experience, working with and launching production
+            grade projects. Strong background in developing React.js and
+            cross-platform full-stack Node.js apps helps me to create optimized
+            architecture for various types of projects.
           </p>
           <p>
-            I believe that a well-delivered technology renders a new culture.
-            Often in the beginning, the new culture is thought of as an
-            alternative, but soon it transforms into the lived culture that many
-            people share through interaction. Thinking about how technology
-            could influence the way we live is my major interests.
+            I am flexible to project demands and shifting of priorities. I
+            thrive in unfamiliar situations and enjoy opportunities to learn and
+            gain exposure to new ideas and experiences. I am open and willing to
+            learn whatever is necessary to accomplish my client's goals.
+          </p>
+          <p>
+            To sum up briefly I would say that I'm a passionate explorer willing
+            to change the world and to make it more comfortable with the idea of
+            automation in each aspect of life.
           </p>
           {/* <p>
             Currently I'm wrapping up my Master's degree at School of Visual
@@ -156,7 +158,7 @@ const About = () => (
           </p> */}
           <p>
             When I’m not coding, I spend my time exercising, learning,
-            experimenting, traveling, watching movies and listening to music.
+            experimenting, traveling, and listening to music.
           </p>
         </Col6>
       </Row>
@@ -165,13 +167,13 @@ const About = () => (
     <hr />
 
     <Container theme={{ width: '90%', display: 'block' }}>
-      <small>This quote summarizes the way I work,</small>
+      {/* <small>This quote summarizes the way I work,</small> */}
+      <small>My favorite quote</small>
       <Blockquote>
-        Most people make the mistake of thinking design is what it looks like.
-        People think it's this veneer — that the designers are handed this box
-        and told, 'Make it look good!' That's not what we think design is. It's
-        not just what it looks like and feels like.
-        <strong> Design is how it works.</strong>
+        That's been one of my mantras – focus and simplicity. Simple can be
+        harder than complex: You have to work hard to get your thinking clean to
+        make it simple. But it’s worth it in the end because once you get there,
+        you can move mountains.
         <br />
         <small>— Steve Jobs</small>
       </Blockquote>

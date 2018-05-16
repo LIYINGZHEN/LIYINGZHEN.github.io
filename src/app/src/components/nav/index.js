@@ -48,7 +48,7 @@ const Nav = () => (
       <NavLeft className="nav-left">
         <Link href="/">
           <LinkButton>
-            <Logo src="static/imgs/logo.svg" />
+            <Logo src="static/imgs/logo.png" />
           </LinkButton>
         </Link>
       </NavLeft>
