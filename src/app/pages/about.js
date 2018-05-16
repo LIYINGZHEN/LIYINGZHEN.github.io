@@ -138,13 +138,13 @@ const About = () => (
             mobile-friendly pages. I also have experience building CMS using
             Express.js and Apollo framework.
           </p>
-          {/* <p>
+          <p>
             I believe that a well-delivered technology renders a new culture.
             Often in the beginning, the new culture is thought of as an
             alternative, but soon it transforms into the lived culture that many
             people share through interaction. Thinking about how technology
             could influence the way we live is my major interests.
-          </p> */}
+          </p>
           {/* <p>
             Currently I'm wrapping up my Master's degree at School of Visual
             Arts's <a>Interaction Design</a> program and searching for
