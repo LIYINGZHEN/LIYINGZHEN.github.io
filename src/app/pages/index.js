@@ -54,6 +54,13 @@ const images = [
     title: 'Love Travel',
     category: 'Frotend',
     description: 'Travel website concept.'
+  },
+  {
+    url: 'https://github.com/polo13999/nextAnt',
+    img: 'https://goo.gl/UFiFXw',
+    title: 'Next Ant',
+    category: 'Backend',
+    description: 'Content Management System.'
   }
 ]
 
@@ -85,7 +92,7 @@ const Index = () => (
     <Container theme={{ marginTop: '2rem', width: '90%' }}>
       <Row>
         <Col>{mapImg(images.slice(0, 2))}</Col>
-        <Col>{mapImg(images.slice(2, 3))}</Col>
+        <Col>{mapImg(images.slice(2, 4))}</Col>
       </Row>
     </Container>
     {/* <P>
