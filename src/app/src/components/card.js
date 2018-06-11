@@ -33,6 +33,7 @@ const Footer = styled.footer`
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  max-width: 85%;
 `
 
 const H4 = styled.h4`
