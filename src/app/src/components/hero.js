@@ -27,30 +27,16 @@ const Hero = () => (
       I'm Max, a <a href="">JavaScript developer</a> passionate about both
       frontend and backend development.
       <Small>
-        I specialize in building <a href="https://reactjs.org">React.js</a> and{' '}
-        <a href="https://nodejs.org">Node.js</a> apps.
+        I specialize in building <a href="https://reactjs.org">React.js</a>,{' '}
+        <a href="https://facebook.github.io/react-native">React Native</a>,{' '}
+        <a href="https://nodejs.org">Node.js</a> and{' '}
+        <a href="https://www.apollographql.com">GraphQL</a> apps.
       </Small>
       <Small>
-        Recently, I'm learning
-        <a href="https://www.apollographql.com"> Apollo GraphQL</a>
-        ,
-        <a href="https://developers.google.com/web/progressive-web-apps">
-          {' '}
-          Progressive Web App{' '}
-        </a>
-        and
-        <a href="https://www.docker.com"> Docker</a> containerization.
-      </Small>
-      {/* <Small>
         I'm enthusiastic about{' '}
-        <a href="">
-          design tools
-        </a>{' '}
-        and{' '}
-        <a href="">
-          design systems
-        </a>.
-      </Small> */}
+        <a href="https://goo.gl/amLg1Y">End-to-End Testing</a> and{' '}
+        <a href="https://goo.gl/uJh1qC">Automation</a>.
+      </Small>
       {/* <Small>
         Also, I've made{' '}
         <a href="">

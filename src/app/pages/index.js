@@ -35,11 +35,11 @@ const A = styled.a`
 
 const images = [
   {
-    url: 'https://github.com/codefun-io/traveltrip-landing-page',
-    img: 'https://goo.gl/CcaeaJ',
-    title: 'Travel Trip',
+    url: 'https://github.com/codefun-io/love-travel',
+    img: 'https://goo.gl/p33L7A',
+    title: 'Love Travel',
     category: 'Frotend',
-    description: 'Landing page concept.'
+    description: 'Travel website concept.'
   },
   {
     url: 'https://github.com/codefun-io/portfolio-concept',
@@ -49,18 +49,25 @@ const images = [
     description: 'Portfolio concept for Hexon.'
   },
   {
-    url: 'https://github.com/codefun-io/love-travel',
-    img: 'https://goo.gl/p33L7A',
-    title: 'Love Travel',
+    url: 'https://github.com/codefun-io/traveltrip-landing-page',
+    img: 'https://goo.gl/CcaeaJ',
+    title: 'Travel Trip',
     category: 'Frotend',
-    description: 'Travel website concept.'
+    description: 'Landing page concept.'
   },
   {
     url: 'https://github.com/polo13999/nextAnt',
     img: 'https://goo.gl/UFiFXw',
     title: 'Next Ant',
-    category: 'Backend',
+    category: 'Frotend & Backend',
     description: 'Content Management System.'
+  },
+  {
+    url: 'https://github.com/LIYINGZHEN/awesome-places',
+    img: 'https://goo.gl/CwSVqf',
+    title: 'Awesome Places',
+    category: 'React Native',
+    description: 'An app for sharing your favorite places.'
   }
 ]
 
@@ -91,8 +98,8 @@ const Index = () => (
     <br />
     <Container theme={{ marginTop: '2rem', width: '90%' }}>
       <Row>
-        <Col>{mapImg(images.slice(0, 2))}</Col>
-        <Col>{mapImg(images.slice(2, 4))}</Col>
+        <Col>{mapImg(images.slice(0, 3))}</Col>
+        <Col>{mapImg(images.slice(3, 5))}</Col>
       </Row>
     </Container>
     {/* <P>
