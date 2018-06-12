@@ -42,6 +42,13 @@ const images = [
     description: 'Travel website concept.'
   },
   {
+    url: 'https://github.com/LIYINGZHEN/kickstarter-smart-contarct',
+    img: 'https://goo.gl/xVQ2mt',
+    title: 'Kickstarter Smart Contarct',
+    category: 'Blockchain',
+    description: 'Create campaigns on the blockchain.'
+  },
+  {
     url: 'https://github.com/codefun-io/portfolio-concept',
     img: 'https://goo.gl/39VPVM',
     title: 'Hexon Creative',
@@ -59,7 +66,7 @@ const images = [
     url: 'https://github.com/polo13999/nextAnt',
     img: 'https://goo.gl/UFiFXw',
     title: 'Next Ant',
-    category: 'Frotend & Backend',
+    category: 'Fullstack GraphQL',
     description: 'Content Management System.'
   },
   {
@@ -68,6 +75,20 @@ const images = [
     title: 'Awesome Places',
     category: 'React Native',
     description: 'An app for sharing your favorite places.'
+  },
+  {
+    url: 'https://github.com/LIYINGZHEN/tasky',
+    img: 'https://goo.gl/sjb1Vc',
+    title: 'Tasky',
+    category: 'Electron',
+    description: 'A desktop app to track your tasks.'
+  },
+  {
+    url: 'https://github.com/LIYINGZHEN/video-converter',
+    img: 'https://goo.gl/tiADri',
+    title: 'Video Converter',
+    category: 'Electron',
+    description: 'A desktop app to convert videos.'
   }
 ]
 
@@ -98,8 +119,8 @@ const Index = () => (
     <br />
     <Container theme={{ marginTop: '2rem', width: '90%' }}>
       <Row>
-        <Col>{mapImg(images.slice(0, 3))}</Col>
-        <Col>{mapImg(images.slice(3, 5))}</Col>
+        <Col>{mapImg(images.slice(0, 4))}</Col>
+        <Col>{mapImg(images.slice(4, 8))}</Col>
       </Row>
     </Container>
     {/* <P>

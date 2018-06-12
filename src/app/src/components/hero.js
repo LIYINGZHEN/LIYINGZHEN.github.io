@@ -24,17 +24,17 @@ const Hero = () => (
     <H2 style={{ fontWeight: '300' }}>
       Namaste 🙏
       <br />
-      I'm Max, a <a href="">JavaScript developer</a> passionate about both
-      frontend and backend development.
+      I'm Max, a <a href="">JavaScript developer</a> passionate about full stack
+      and blockchain development.
       <Small>
-        I specialize in building <a href="https://reactjs.org">React.js</a>,{' '}
+        I specialize in building <a href="https://reactjs.org">React</a>,{' '}
         <a href="https://facebook.github.io/react-native">React Native</a>,{' '}
-        <a href="https://nodejs.org">Node.js</a> and{' '}
+        <a href="https://solidity.readthedocs.io/">Solidity</a>,{' '}
+        <a href="https://nodejs.org">Node</a> and{' '}
         <a href="https://www.apollographql.com">GraphQL</a> apps.
       </Small>
       <Small>
-        I'm enthusiastic about{' '}
-        <a href="https://goo.gl/amLg1Y">End-to-End Testing</a> and{' '}
+        I'm enthusiastic about <a href="https://goo.gl/amLg1Y">Testing</a> and{' '}
         <a href="https://goo.gl/uJh1qC">Automation</a>.
       </Small>
       {/* <Small>

@@ -130,11 +130,11 @@ const About = () => (
         </Col4>
         <Col6>
           <p>
-            Hey, I'm Max. I am a professional frontend and backend developer
-            with 3+ years of experience, working with and launching production
-            grade projects. Strong background in developing React.js and
-            cross-platform full-stack Node.js apps helps me to create optimized
-            architecture for various types of projects.
+            Hey, I'm Max. I am a professional full stack and blockchain
+            developer with 3+ years of experience, working with and launching
+            production grade projects. Strong background in developing React.js
+            and cross-platform full-stack Node.js apps helps me to create
+            optimized architecture for various types of projects.
           </p>
           <p>
             I am flexible to project demands and shifting of priorities. I
