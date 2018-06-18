@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { injectGlobal } from 'styled-components'
 import NProgress from 'nprogress'
 import dynamic from 'next/dynamic'
@@ -8,6 +8,7 @@ import Head from 'next/head'
 import Nav from './nav'
 import sketch from '../components/sketch'
 import Footer from '../components/footer'
+import { initGA, logPageView } from '../utils/analytics'
 
 const P5Wrapper = dynamic(import('react-p5-wrapper'), {
   ssr: false,
@@ -101,16 +102,33 @@ injectGlobal`
   }
 `
 
-const withLayout = ComposedComponent => props => (
-  <div>
-    <P5Wrapper sketch={sketch} />
-    <Head>
-      <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-    </Head>
-    <Nav />
-    <ComposedComponent />
-    <Footer />
-  </div>
-)
+const withLayout = ComposedComponent =>
+  class Layout extends Component {
+    componentDidMount() {
+      if (!window.GA_INITIALIZED) {
+        initGA()
+        window.GA_INITIALIZED = true
+      }
+      logPageView()
+    }
+
+    render() {
+      return (
+        <div>
+          <P5Wrapper sketch={sketch} />
+          <Head>
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="/static/nprogress.css"
+            />
+          </Head>
+          <Nav />
+          <ComposedComponent />
+          <Footer />
+        </div>
+      )
+    }
+  }
 
 export default withLayout
