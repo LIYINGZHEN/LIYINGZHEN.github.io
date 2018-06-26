@@ -35,6 +35,14 @@ const A = styled.a`
 
 const images = [
   {
+    url: 'https://github.com/LIYINGZHEN/codeanywhere',
+    img:
+      'https://user-images.githubusercontent.com/11765228/41900695-dd867282-7961-11e8-91ff-01f36a68c372.png',
+    title: 'CodeAnywhere',
+    category: 'Fullstack',
+    description: 'A coding bootcamp website built with React and Saga.'
+  },
+  {
     url: 'https://github.com/codefun-io/love-travel',
     img: 'https://goo.gl/p33L7A',
     title: 'Love Travel',
@@ -42,11 +50,11 @@ const images = [
     description: 'Travel website concept.'
   },
   {
-    url: 'https://github.com/LIYINGZHEN/kickstarter-smart-contarct',
-    img: 'https://goo.gl/xVQ2mt',
-    title: 'Kickstarter Smart Contarct',
-    category: 'Blockchain',
-    description: 'Create campaigns on the blockchain.'
+    url: 'https://github.com/LIYINGZHEN/awesome-places',
+    img: 'https://goo.gl/CwSVqf',
+    title: 'Awesome Places',
+    category: 'React Native',
+    description: 'An app for sharing your favorite places.'
   },
   {
     url: 'https://github.com/codefun-io/portfolio-concept',
@@ -70,11 +78,11 @@ const images = [
     description: 'Content Management System.'
   },
   {
-    url: 'https://github.com/LIYINGZHEN/awesome-places',
-    img: 'https://goo.gl/CwSVqf',
-    title: 'Awesome Places',
-    category: 'React Native',
-    description: 'An app for sharing your favorite places.'
+    url: 'https://github.com/LIYINGZHEN/kickstarter-smart-contarct',
+    img: 'https://goo.gl/xVQ2mt',
+    title: 'Kickstarter Smart Contarct',
+    category: 'Blockchain',
+    description: 'Create campaigns on the blockchain.'
   },
   {
     url: 'https://github.com/LIYINGZHEN/tasky',
@@ -119,8 +127,8 @@ const Index = () => (
     <br />
     <Container theme={{ marginTop: '2rem', width: '90%' }}>
       <Row>
-        <Col>{mapImg(images.slice(0, 4))}</Col>
-        <Col>{mapImg(images.slice(4, 8))}</Col>
+        <Col>{mapImg(images.slice(0, 5))}</Col>
+        <Col>{mapImg(images.slice(5, 9))}</Col>
       </Row>
     </Container>
     {/* <P>

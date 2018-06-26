@@ -28,6 +28,7 @@ const Hero = () => (
       and blockchain development.
       <Small>
         I specialize in building <a href="https://reactjs.org">React</a>,{' '}
+        <a href="https://redux.js.org/">Redux</a>,{' '}
         <a href="https://facebook.github.io/react-native">React Native</a>,{' '}
         <a href="https://solidity.readthedocs.io/">Solidity</a>,{' '}
         <a href="https://nodejs.org">Node</a> and{' '}
