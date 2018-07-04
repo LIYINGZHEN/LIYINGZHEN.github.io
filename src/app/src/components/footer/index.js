@@ -44,7 +44,7 @@ const Footer = () => (
     <Nav>
       <NavLeft>
         <LinkButton
-          href="mailto:maxlivinci@gmail.com"
+          href="mailto:hello@maxlivinci.com"
           theme={{ paddingLeft: 0 }}
         >
           hello at maxlivinci.com
