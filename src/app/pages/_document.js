@@ -1,25 +1,23 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import Document, { Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
-    const sheet = new ServerStyleSheet()
+    const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)
-    )
-    const styleTags = sheet.getStyleElement()
-    return { ...page, styleTags }
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
     return (
       <html>
         <Head>
-          <title>Maxlivinci</title>
           {this.props.styleTags}
           <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet" />
           <meta content="width=device-width,initial-scale=1" name="viewport" />
-
           <link
             rel="apple-touch-icon-precomposed"
             sizes="57x57"
@@ -115,6 +113,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

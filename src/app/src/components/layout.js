@@ -1,33 +1,33 @@
-import React, { Component } from 'react'
-import { injectGlobal } from 'styled-components'
-import NProgress from 'nprogress'
-import dynamic from 'next/dynamic'
-import Router from 'next/router'
-import Head from 'next/head'
+import React, { Component } from 'react';
+import { injectGlobal } from 'styled-components';
+import NProgress from 'nprogress';
+import dynamic from 'next/dynamic';
+import Router from 'next/router';
+import Head from 'next/head';
 
-import Nav from './nav'
-import sketch from '../components/sketch'
-import Footer from '../components/footer'
-import { initGA, logPageView } from '../utils/analytics'
+import Nav from './nav';
+import sketch from '../components/sketch';
+import Footer from '../components/footer';
+import { initGA, logPageView } from '../utils/analytics';
 
 const P5Wrapper = dynamic(import('react-p5-wrapper'), {
   ssr: false,
   loading: () => null
-})
+});
 
 Router.onRouteChangeStart = url => {
-  console.log(`Loading: ${url}`)
-  NProgress.start()
-}
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
+  console.log(`Loading: ${url}`);
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 Router.onRouteChangeStart = url => {
-  console.log(`Loading: ${url}`)
-  NProgress.start()
-}
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
+  console.log(`Loading: ${url}`);
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 injectGlobal`
   * {
@@ -100,16 +100,23 @@ injectGlobal`
     opacity: .4;
     z-index: -2;
   }
-`
+`;
 
 const withLayout = ComposedComponent =>
   class Layout extends Component {
     componentDidMount() {
       if (!window.GA_INITIALIZED) {
-        initGA()
-        window.GA_INITIALIZED = true
+        initGA();
+        window.GA_INITIALIZED = true;
       }
-      logPageView()
+      logPageView();
+
+      window.onblur = () => {
+        document.title = 'Hi 👋🏻 Max here!';
+      };
+      window.onfocus = () => {
+        document.title = 'Maxlivinci';
+      };
     }
 
     render() {
@@ -117,6 +124,7 @@ const withLayout = ComposedComponent =>
         <div>
           <P5Wrapper sketch={sketch} />
           <Head>
+            <title>Maxlivinci</title>
             <link
               rel="stylesheet"
               type="text/css"
@@ -127,8 +135,8 @@ const withLayout = ComposedComponent =>
           <ComposedComponent />
           <Footer />
         </div>
-      )
+      );
     }
-  }
+  };
 
-export default withLayout
+export default withLayout;
