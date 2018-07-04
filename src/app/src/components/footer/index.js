@@ -8,6 +8,7 @@ import IG from './ig';
 import LinkedIn from './linkedIn';
 import GitHub from './github';
 import Be from './be';
+import Dribbble from './dribbble';
 import Medium from './medium';
 
 const Nav = styled.div`
@@ -49,17 +50,20 @@ const Footer = () => (
         >
           hello at maxlivinci.com
         </LinkButton>
-        <LinkButton href="https://www.instagram.com/maxlivinci.me">
-          <IG />
+        <LinkButton href="https://github.com/LIYINGZHEN">
+          <GitHub />
         </LinkButton>
         <LinkButton href="https://www.linkedin.com/in/maxlivinci">
           <LinkedIn />
         </LinkButton>
-        <LinkButton href="https://github.com/LIYINGZHEN">
-          <GitHub />
+        <LinkButton href="https://www.instagram.com/maxlivinci.me">
+          <IG />
         </LinkButton>
         <LinkButton href="https://www.behance.net/maxlivinci">
           <Be />
+        </LinkButton>
+        <LinkButton href="https://dribbble.com/maxlivinci">
+          <Dribbble />
         </LinkButton>
       </NavLeft>
     </Nav>
