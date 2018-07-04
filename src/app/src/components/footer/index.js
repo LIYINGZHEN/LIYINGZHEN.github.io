@@ -26,6 +26,10 @@ const NavLeft = styled.p`
   }
 `;
 
+const SocialLinks = styled.div`
+  display: flex;
+`;
+
 const Colophon = styled.div`
   > * {
     font-size: 1.3rem;
@@ -50,21 +54,23 @@ const Footer = () => (
         >
           hello at maxlivinci.com
         </LinkButton>
-        <LinkButton href="https://github.com/LIYINGZHEN">
-          <GitHub />
-        </LinkButton>
-        <LinkButton href="https://www.linkedin.com/in/maxlivinci">
-          <LinkedIn />
-        </LinkButton>
-        <LinkButton href="https://www.instagram.com/maxlivinci.me">
-          <IG />
-        </LinkButton>
-        <LinkButton href="https://www.behance.net/maxlivinci">
-          <Be />
-        </LinkButton>
-        <LinkButton href="https://dribbble.com/maxlivinci">
-          <Dribbble />
-        </LinkButton>
+        <SocialLinks>
+          <LinkButton href="https://github.com/LIYINGZHEN">
+            <GitHub />
+          </LinkButton>
+          <LinkButton href="https://www.linkedin.com/in/maxlivinci">
+            <LinkedIn />
+          </LinkButton>
+          <LinkButton href="https://www.instagram.com/maxlivinci.me">
+            <IG />
+          </LinkButton>
+          <LinkButton href="https://www.behance.net/maxlivinci">
+            <Be />
+          </LinkButton>
+          <LinkButton href="https://dribbble.com/maxlivinci">
+            <Dribbble />
+          </LinkButton>
+        </SocialLinks>
       </NavLeft>
     </Nav>
 
