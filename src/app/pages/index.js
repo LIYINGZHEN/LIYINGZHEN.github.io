@@ -1,20 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import Hero from '../src/components/hero'
-import layout from '../src/components/layout'
-import Container from '../src/components/container'
-import Row from '../src/components/row'
-import Col from '../src/components/col'
-import Card from '../src/components/card'
+import Hero from '../src/components/hero';
+import layout from '../src/components/layout';
+import Container from '../src/components/container';
+import Row from '../src/components/row';
+import Col from '../src/components/col';
+import Card from '../src/components/card';
 
 const H6 = styled.h6`
   margin: 0 auto;
-`
+`;
 
 const P = styled.p`
   text-align: center;
-`
+`;
 
 const A = styled.a`
   color: #84868b;
@@ -31,7 +31,7 @@ const A = styled.a`
   &:hover {
     opacity: 0.8;
   }
-`
+`;
 
 const images = [
   {
@@ -98,7 +98,7 @@ const images = [
     category: 'Electron',
     description: 'A desktop app to convert videos.'
   }
-]
+];
 
 const mapImg = images =>
   images.map(({ url, img, title, category, description }) => (
@@ -112,7 +112,7 @@ const mapImg = images =>
         description
       }}
     />
-  ))
+  ));
 
 const Index = () => (
   <div>
@@ -131,13 +131,11 @@ const Index = () => (
         <Col>{mapImg(images.slice(5, 9))}</Col>
       </Row>
     </Container>
-    {/* <P>
-      <A href="">
-        See more work on Behance
-      </A>
-    </P> */}
+    <P>
+      <A href="https://www.behance.net/maxlivinci">See more work on Behance</A>
+    </P>
     <br />
   </div>
-)
+);
 
-export default layout(Index)
+export default layout(Index);
