@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import layout from '../src/components/layout'
-import Container from '../src/components/container'
-import Row from '../src/components/row'
+import layout from "../src/components/layout";
+import Container from "../src/components/container";
+import Row from "../src/components/row";
 
 const Header = styled.div`
   padding: 4rem 0;
   text-align: center;
-`
+`;
 
 const Col1 = styled.div`
   flex: calc(8.33333% - 2rem);
@@ -18,7 +18,7 @@ const Col1 = styled.div`
     flex: 0 1 100%;
     max-width: 100%;
   }
-`
+`;
 const Col4 = styled.div`
   flex: calc(33.33333% - 2rem);
   max-width: calc(33.33333% - 2rem);
@@ -27,7 +27,7 @@ const Col4 = styled.div`
     flex: 0 1 100%;
     max-width: 100%;
   }
-`
+`;
 const Col6 = styled.div`
   flex: calc(50% - 2rem);
   max-width: calc(50% - 2rem);
@@ -36,38 +36,38 @@ const Col6 = styled.div`
     flex: 0 1 100%;
     max-width: 100%;
   }
-`
+`;
 
 const Figure = styled.figure`
   overflow: hidden;
   margin: 0;
   grid-row: ${props => props.theme && props.theme.gridRow};
-`
+`;
 
 const Img = styled.img`
   display: block;
   transition: all 0.3s ease;
   margin: auto;
-`
+`;
 
 const Blockquote = styled.blockquote`
   background-color: #f3f3f3;
   padding: 1.5rem 2rem;
   border-left: 3px solid #d2d6dd;
-`
+`;
 
 const Gallery = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
   grid-gap: 1rem;
-`
+`;
 
 const PhotoDesc = styled.p`
   font-style: italic;
   text-align: center;
   font-size: 90%;
   margin-top: 1rem;
-`
+`;
 
 const photos = [
   // {
@@ -111,11 +111,11 @@ const photos = [
   //   src: 'https://jgog.in/app/bcce55a1630b88f53c5178c2ecfe855c-1000.jpg',
   //   desc: 'Shooting for Biketinerary'
   // }
-]
+];
 
 const About = () => (
   <section className="about">
-    <Container theme={{ width: '90%', display: 'block' }}>
+    <Container theme={{ width: "90%", display: "block" }}>
       <Header>
         <h2>about me</h2>
         <h4>design. code. automation.</h4>
@@ -130,11 +130,11 @@ const About = () => (
         </Col4>
         <Col6>
           <p>
-            Hey, I'm Max. I am a professional full stack and blockchain
-            developer with 3+ years of experience, working with and launching
-            production grade projects. Strong background in developing React.js
-            and cross-platform full-stack Node.js apps helps me to create
-            optimized architecture for various types of projects.
+            Hey, I'm Max. I am a professional full stack developer with 3+ years
+            of experience, working with and launching production grade projects.
+            Strong background in developing React.js and cross-platform
+            full-stack Node.js apps helps me to create optimized architecture
+            for various types of projects.
           </p>
           <p>
             I am flexible to project demands and shifting of priorities. I
@@ -166,7 +166,7 @@ const About = () => (
 
     <hr />
 
-    <Container theme={{ width: '90%', display: 'block' }}>
+    <Container theme={{ width: "90%", display: "block" }}>
       {/* <small>This quote summarizes the way I work,</small> */}
       <small>My favorite quote</small>
       <Blockquote>
@@ -190,6 +190,6 @@ const About = () => (
       </Gallery>
     </Container>
   </section>
-)
+);
 
-export default layout(About)
+export default layout(About);

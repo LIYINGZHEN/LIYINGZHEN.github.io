@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
+import React from "react";
+import styled from "styled-components";
+import Link from "next/link";
 
-import Container from '../container';
-import LinkButton from '../link-button';
-import IG from './ig';
-import LinkedIn from './linkedIn';
-import GitHub from './github';
-import Be from './be';
-import Dribbble from './dribbble';
-import Medium from './medium';
+import Container from "../container";
+import LinkButton from "../link-button";
+import IG from "./ig";
+import LinkedIn from "./linkedIn";
+import GitHub from "./github";
+import Be from "./be";
+import Dribbble from "./dribbble";
+import Medium from "./medium";
 
 const Nav = styled.div`
   display: flex;
@@ -44,14 +44,11 @@ const P = styled.p`
 const Footer = () => (
   <Container
     className="footer"
-    theme={{ display: 'block', margin: '5rem auto', width: '90%' }}
+    theme={{ display: "block", margin: "5rem auto", width: "90%" }}
   >
     <Nav>
       <NavLeft>
-        <LinkButton
-          href="mailto:hello@maxlivinci.com"
-          theme={{ paddingLeft: 0 }}
-        >
+        <LinkButton href="mailto:ml@maxlivinci.com" theme={{ paddingLeft: 0 }}>
           hello at maxlivinci.com
         </LinkButton>
         <SocialLinks>
@@ -76,8 +73,8 @@ const Footer = () => (
 
     <Colophon className="colophon">
       <P>
-        Crafted using <a href="https://reactjs.org/">React.js</a>,{' '}
-        <a href="https://github.com/zeit/next.js">Next.js</a>, and{' '}
+        Crafted using <a href="https://reactjs.org/">React.js</a>,{" "}
+        <a href="https://github.com/zeit/next.js">Next.js</a>, and{" "}
         <a href="https://code.visualstudio.com">Visual Studio Code</a>. Typeface
         is <a href="https://rsms.me/inter">Inter UI</a>.
       </P>
