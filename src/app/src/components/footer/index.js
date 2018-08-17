@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
 
 import Container from "../container";
 import LinkButton from "../link-button";
 import IG from "./ig";
 import LinkedIn from "./linkedIn";
 import GitHub from "./github";
-import Be from "./be";
-import Dribbble from "./dribbble";
 import Medium from "./medium";
 
 const Nav = styled.div`
@@ -60,12 +57,6 @@ const Footer = () => (
           </LinkButton>
           <LinkButton href="https://www.instagram.com/maxlivinci.me">
             <IG />
-          </LinkButton>
-          <LinkButton href="https://www.behance.net/maxlivinci">
-            <Be />
-          </LinkButton>
-          <LinkButton href="https://dribbble.com/maxlivinci">
-            <Dribbble />
           </LinkButton>
         </SocialLinks>
       </NavLeft>

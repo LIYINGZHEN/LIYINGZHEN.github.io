@@ -42,7 +42,7 @@ const images = [
     description: "A starter project for React that uses Next.js."
   },
   {
-    url: "https://github.com/codefun-io/love-travel",
+    url: "https://github.com/LIYINGZHEN/love-travel",
     img: "https://goo.gl/p33L7A",
     title: "Love Travel",
     category: "Frotend",
@@ -85,9 +85,9 @@ const images = [
     description: "Content Management System."
   },
   {
-    url: "https://github.com/LIYINGZHEN/kickstarter-smart-contarct",
+    url: "https://github.com/LIYINGZHEN/kickstarter-smart-contract",
     img: "https://goo.gl/xVQ2mt",
-    title: "Kickstarter Smart Contarct",
+    title: "Kickstarter Smart Contract",
     category: "Blockchain",
     description: "Create campaigns on the blockchain."
   },
@@ -139,7 +139,7 @@ const Index = () => (
       </Row>
     </Container>
     <P>
-      <A href="https://www.behance.net/maxlivinci">See more work on Behance</A>
+      <A href="https://github.com/LIYINGZHEN">See more work on GitHub</A>
     </P>
     <br />
   </div>
