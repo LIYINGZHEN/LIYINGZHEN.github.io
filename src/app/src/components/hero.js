@@ -27,10 +27,10 @@ const Hero = () => (
       I'm Max, a <a href="">JavaScript developer</a> passionate about both
       frontend and backend development.
       <Small>
-        I specialize in building <a href="https://reactjs.org">React</a>,{" "}
-        <a href="https://redux.js.org/">Redux</a>,{" "}
-        <a href="https://facebook.github.io/react-native">React Native</a>,{" "}
-        <a href="https://nodejs.org">Node</a> and{" "}
+        I specialize in building{" "}
+        <a href="https://www.typescriptlang.org/">TypeScript</a>,{" "}
+        <a href="https://reactjs.org">React.js</a>,{" "}
+        <a href="https://nodejs.org">Node.js</a> and{" "}
         <a href="https://www.apollographql.com">GraphQL</a> apps.
       </Small>
       <Small>
