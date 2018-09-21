@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 import Container from "../container";
 import LinkButton from "../link-button";
-import IG from "./ig";
 import LinkedIn from "./linkedIn";
 import GitHub from "./github";
-import Medium from "./medium";
+import Twitter from "./twitter";
+// import Medium from "./medium";
 
 const Nav = styled.div`
   display: flex;
@@ -55,8 +55,8 @@ const Footer = () => (
           <LinkButton href="https://www.linkedin.com/in/maxlivinci">
             <LinkedIn />
           </LinkButton>
-          <LinkButton href="https://www.instagram.com/maxlivinci.me">
-            <IG />
+          <LinkButton href="https://twitter.com/maxlivinci">
+            <Twitter />
           </LinkButton>
         </SocialLinks>
       </NavLeft>
