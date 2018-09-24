@@ -24,8 +24,8 @@ const Hero = () => (
     <H2 style={{ fontWeight: "300" }}>
       Namaste 🙏
       <br />
-      I'm Max, a <a href="">JavaScript developer</a> passionate about both
-      frontend and backend development.
+      I'm Max, a <a href="">software engineer</a> passionate about both frontend
+      and backend development.
       <Small>
         I specialize in building{" "}
         <a href="https://www.typescriptlang.org/">TypeScript</a>,{" "}

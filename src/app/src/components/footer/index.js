@@ -6,7 +6,7 @@ import LinkButton from "../link-button";
 import LinkedIn from "./linkedIn";
 import GitHub from "./github";
 import Twitter from "./twitter";
-// import Medium from "./medium";
+import Facebook from "./facebook";
 
 const Nav = styled.div`
   display: flex;
@@ -54,6 +54,9 @@ const Footer = () => (
           </LinkButton>
           <LinkButton href="https://www.linkedin.com/in/maxlivinci">
             <LinkedIn />
+          </LinkButton>
+          <LinkButton href="https://www.facebook.com/codingwithmaxli">
+            <Facebook />
           </LinkButton>
           <LinkButton href="https://twitter.com/maxlivinci">
             <Twitter />
