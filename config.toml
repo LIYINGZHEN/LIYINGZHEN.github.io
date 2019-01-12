@@ -16,3 +16,12 @@ paginate = 5 #frontpage pagination
 
   featured_tags = true 
   featured_condition_size = 1 
+
+  [params.social]
+    email          = "maxlivinci@gmail.com"
+    linkedin       = "https://www.linkedin.com/in/maxlivinci"
+    github         = "https://github.com/LIYINGZHEN"
+
+  [[params.addtional_menus]]
+    title =  "ABOUT"
+    href =  "/top/about/"
