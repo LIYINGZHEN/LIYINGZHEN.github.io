@@ -1,7 +1,11 @@
 ---
+layout: post
 title: "How to Create a File in Go"
 date: 2019-01-12T11:17:49+01:00
-draft: false
+author: "Max"
+published: true
+tags:
+    - Golang
 ---
 
 ```go

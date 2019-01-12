@@ -1,4 +1,17 @@
 baseURL = "http://maxlivinci.netlify.com"
 languageCode = "en-us"
-title = "Maxlivinci.com"
-theme = "ananke"
+title = "Max Blog"
+theme = "hugo-theme-cleanwhite"
+
+[params]
+  slogan = "Discipline Equals Freedom"
+
+  image_404 = "img/404-bg.jpg"
+  title_404 = "你来到了没有知识的荒原 :("
+
+  # Sidebar settings
+  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
+  sidebar_avatar = "img/max.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+  featured_tags = true 
+  featured_condition_size = 1 

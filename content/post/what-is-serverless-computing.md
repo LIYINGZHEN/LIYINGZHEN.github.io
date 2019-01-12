@@ -1,7 +1,9 @@
 ---
+layout: post
 title: "What Is Serverless Computing"
 date: 2019-01-12T11:45:19+01:00
-draft: false
+author: "Max"
+published: true
 ---
 
 Take your mind off infrastructure and build apps faster

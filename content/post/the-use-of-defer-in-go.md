@@ -1,7 +1,11 @@
 ---
+layout: post
 title: "The Use of Defer in Go"
 date: 2019-01-12T14:01:17+01:00
-draft: false
+author: "Max"
+published: true
+tags:
+    - Golang
 ---
 
 Defer will always be triggered at the end of a function. So even if the code panics in some location of the executing code it will guarantee the deferred code will be executed. A panic in Go is an unhandled error and causes the program execution to get halted. After a panic a defer will be executed. Panic is not recommended to use it for exception handling. It is better to handle exceptions using Golang `error` object. 
