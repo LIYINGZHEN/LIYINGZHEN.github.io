@@ -5,7 +5,11 @@ theme = "hugo-theme-cleanwhite"
 paginate = 5 #frontpage pagination
 
 [params]
-  slogan = "Discipline Equals Freedom"
+  header_image = "img/home-bg.jpg"
+  SEOTitle = "Max Blog"
+  description = ""
+  keyword = "Max, Golang"
+  slogan = "Discipline equals Freedom"
 
   image_404 = "img/404-bg.jpg"
   title_404 = "你来到了没有知识的荒原 :("
