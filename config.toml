@@ -2,6 +2,7 @@ baseURL = "http://maxlivinci.netlify.com"
 languageCode = "en-us"
 title = "Max Blog"
 theme = "hugo-theme-cleanwhite"
+paginate = 5 #frontpage pagination
 
 [params]
   slogan = "Discipline Equals Freedom"
