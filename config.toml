@@ -2,7 +2,7 @@ baseURL = "http://maxlivinci.netlify.com"
 languageCode = "en-us"
 title = "Max Blog"
 theme = "hugo-theme-cleanwhite"
-paginate = 5 #frontpage pagination
+paginate = 10 #frontpage pagination
 
 [params]
   header_image = "img/home-bg.jpg"
@@ -12,7 +12,7 @@ paginate = 5 #frontpage pagination
   slogan = "Discipline equals Freedom"
 
   image_404 = "img/404-bg.jpg"
-  title_404 = "你来到了没有知识的荒原 :("
+  title_404 = "This is not the web page you are looking for."
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
