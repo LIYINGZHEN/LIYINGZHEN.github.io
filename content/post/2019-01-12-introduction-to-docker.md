@@ -1,5 +1,5 @@
 ---
-title:       "Docker"
+title:       "Introduction to Docker"
 subtitle:    ""
 description: ""
 date:        2019-01-12T20:34:17+01:00
@@ -8,6 +8,14 @@ published:   true
 image:       ""
 tags:        ["docker"]
 ---
+
+## Introducing Docker
+
+Docker is a container tool that utilizes Linux kernel features such as cgroups and namespaces to provide isolation of network, file, and memory resources without resorting to a full virtual machine.
+
+## Why use Docker?
+
+Docker gives us the ability to create an immutable release that will run anywhere, regardless of what is or is not installed on the target environment.
 
 ```bash
 docker run -it --rm -v $(pwd):/src -p 8080:8080 -w /src golang:alpine /bin/sh
