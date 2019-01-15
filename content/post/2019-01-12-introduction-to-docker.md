@@ -15,13 +15,27 @@ Docker is a container tool that utilizes Linux kernel features such as cgroups a
 
 ## Why use Docker?
 
-Docker gives us the ability to create an immutable release that will run anywhere, regardless of what is or is not installed on the target environment.
+Docker gives us the ability to create an immutable release that will run anywhere, regardless of what is or is not installed on the target environxment.
+
+## Commands
+
+Delete all Docker containers:
+
+```
+docker rm $(docker ps -a -q)
+```
+
+Delete all Docker images
+
+```
+docker rmi $(docker images -q)
+```
 
 ```bash
 docker run -it --rm -v $(pwd):/src -p 8080:8080 -w /src golang:alpine /bin/sh
 ```
 
-- `--rm` The --rm flag tells the Docker engine to remove the container and delete any resources such as volumes it was using on exit.
+- `--rm` The --rm flag tells the Docker engine to remove the container and delete any resources such as volumes it was using on exit.w
 - `--it` The -it flags stand for interactive terminal it maps the standard in from your terminal to the input of the running container.
 - `-v` The -v, or --volume parameter allows you to specify a pair of values corresponding to the file system you wish to mount on the host and the path where you would like to mount the volume inside the container.
 - `-p`
