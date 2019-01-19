@@ -6,7 +6,7 @@ date:        2019-01-15T19:41:00+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["Golang"]
+tags:        ["golang"]
 ---
 
 ## File Structures

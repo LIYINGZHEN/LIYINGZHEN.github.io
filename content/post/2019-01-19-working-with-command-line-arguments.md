@@ -1,3 +1,15 @@
+---
+title:       "Working with command-line arguments"
+subtitle:    ""
+description: ""
+date:        2019-01-19T15:39:00+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["golang"]
+---
+
+```go
 package main
 
 import (
@@ -29,3 +41,4 @@ func main() {
 	fmt.Println("Min:", min)
 	fmt.Println("Max:", max)
 }
+```

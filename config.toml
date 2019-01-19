@@ -2,7 +2,7 @@ baseURL = "http://maxlivinci.netlify.com"
 languageCode = "en-us"
 title = "Max Blog"
 theme = "hugo-theme-cleanwhite"
-paginate = 10 #frontpage pagination
+paginate = 15 #frontpage pagination
 
 [params]
   header_image = "img/home-bg.jpg"

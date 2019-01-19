@@ -6,7 +6,7 @@ date:        2019-01-19T07:42:05+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["Message Queue"]
+tags:        ["message-queue"]
 ---
 
 ## Sending

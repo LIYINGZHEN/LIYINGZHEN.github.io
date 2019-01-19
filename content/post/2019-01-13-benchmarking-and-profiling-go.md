@@ -6,7 +6,7 @@ date:        2019-01-13T09:18:00+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["Golang", "Testing"]
+tags:        ["golang", "testing"]
 ---
 
 > "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%." - Donald Knuth

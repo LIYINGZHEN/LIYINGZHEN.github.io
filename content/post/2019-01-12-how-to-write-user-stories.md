@@ -1,9 +1,12 @@
 ---
-layout: post
-title: "How to Write User Stories"
-date: 2019-01-12T10:17:40+01:00
-author: "Max"
-published: true
+title:       "How to Write User Stories"
+subtitle:    ""
+description: ""
+date:        2019-01-12T10:17:40+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["agile"]
 ---
 
 User stories are part of an agile approach that helps shift the focus from writing about requirements to talking about them. All agile user stories include a written sentence or two and, more importantly, a series of conversations about the desired functionality.

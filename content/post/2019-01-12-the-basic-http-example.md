@@ -6,7 +6,7 @@ date:        2019-01-12T15:37:17+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["Golang"]
+tags:        ["golang"]
 ---
 
 Building a web server in Go is incredibly easy thanks to the HTTP package, which is distributed as part of the standard library.

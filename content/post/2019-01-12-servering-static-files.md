@@ -6,7 +6,7 @@ date:        2019-01-12T17:15:17+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["Golang"]
+tags:        ["golang"]
 ---
 
 ```go

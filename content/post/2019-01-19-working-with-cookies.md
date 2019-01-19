@@ -5,7 +5,7 @@ description: ""
 date:        2019-01-19T08:18:00+01:00
 author:      "Max"
 image:       ""
-tags:        ["Golang"]
+tags:        ["golang"]
 ---
 
 ## Writing Cookies

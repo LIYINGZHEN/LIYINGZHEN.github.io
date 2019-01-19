@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Hashing and Validating Passwords With Bcrypt"
-date: 2019-01-12T13:29:56+01:00
-author: "Max"
-published: true
-tags:
-    - Golang
+title:       "Hashing and Validating Passwords With Bcrypt"
+subtitle:    ""
+description: ""
+date:        2019-01-12T13:29:56+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["golang", "bcrypt"]
 ---
 
 The point of our service is to ensure that passwords never need to be stored in a database, since that's a security risk if anyone is ever able to get unauthorized access to the database. Instead, you can generate a one-way hash (it cannot be decoded) that can safely be stored, and when users attempt to authenticate, you can perform a check to see whether the password generates the same hash or not. If the hashes match, the passwords are the same; otherwise, they are not. 

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "How to Implement CORS in Go"
-date: 2019-01-12T10:42:23+01:00
-author: "Max"
-published: true
-tags:
-    - Golang
+title:       "How to Implement CORS in Go"
+subtitle:    ""
+description: ""
+date:        2019-01-12T10:17:40+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["golang"]
 ---
 
 CORS is a mechanism that uses additional HTTP headers to tell a browser to let a web application running at one origin (domain) have permission to access selected resources from a server at a different origin.

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "How to Create a File in Go"
-date: 2019-01-12T11:17:49+01:00
-author: "Max"
-published: true
-tags:
-    - Golang
+title:       "How to Create a File in Go"
+subtitle:    ""
+description: ""
+date:        2019-01-12T11:17:49+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["golang"]
 ---
 
 ```go
