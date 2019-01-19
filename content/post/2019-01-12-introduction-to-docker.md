@@ -6,7 +6,7 @@ date:        2019-01-12T20:34:17+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["docker"]
+tags:        ["DevOps", "Docker"]
 ---
 
 ## Introducing Docker

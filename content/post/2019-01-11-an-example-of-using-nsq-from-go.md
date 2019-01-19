@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "An Example of Using Nsq From Go"
-date: 2019-01-11T10:27:05+01:00
-author: "Max"
-published: true
-tags:
-    - Golang
+title:       "An Example of Using Nsq From Go"
+subtitle:    ""
+description: ""
+date:        2019-01-11T10:27:05+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["Message Queue"]
 ---
 
 [NSQ](https://nsq.io/) is a message queue, similar to RabbitMQ. I decided I’d give it a whirl.
