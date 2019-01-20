@@ -1,20 +1,32 @@
+---
+title:       "Binary trees in Go"
+subtitle:    ""
+description: ""
+date:        2019-01-20T15:41:00+01:00
+author:      "Max"
+published:   true
+image:       ""
+tags:        ["golang", "data-structures"]
+---
+
+```go
 package main 
  
 import ( 
-    "fmt" 
-    "math/rand" 
-    "time" 
+	"fmt" 
+	"math/rand" 
+	"time" 
 ) 
  
 type Tree struct { 
-    Left  *Tree 
-    Value int 
-    Right *Tree 
+	Left  *Tree 
+	Value int 
+	Right *Tree 
 }
 
 func traverse(t *Tree) { 
 	if t == nil { 
-			return 
+		return 
 	} 
 	traverse(t.Left) 
 	fmt.Print(t.Value, " ") 
@@ -25,8 +37,8 @@ func create(n int) *Tree {
 	var t *Tree 
 	rand.Seed(time.Now().Unix()) 
 	for i := 0; i < 2*n; i++ { 
-			temp := rand.Intn(n * 2) 
-			t = insert(t, temp) 
+		temp := rand.Intn(n * 2) 
+		t = insert(t, temp) 
 	} 
 	return t 
 } 
@@ -58,4 +70,15 @@ func main() {
 	traverse(tree) 
 	fmt.Println() 
 	fmt.Println("The value of the root of the tree is", tree.Value) 
-} 
+}
+```
+
+Executing binTree.go will generate the following type of output:
+
+```bash
+$ go run binTree.go
+The value of the root of the tree is 18
+0 3 4 5 7 8 9 10 11 14 16 17 18 19
+-10 -2 0 3 4 5 7 8 9 10 11 14 16 17 18 19
+The value of the root of the tree is 18
+```
