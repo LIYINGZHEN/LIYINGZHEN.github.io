@@ -6,7 +6,7 @@ date:        2019-01-21T16:43:00+01:00
 author:      "Max"
 published:   true
 image:       ""
-tags:        ["golang"]
+tags:        ["golang", "fundamental"]
 ---
 
 ## Notes
@@ -14,9 +14,11 @@ tags:        ["golang"]
 - When variables are being declared to their zero value, use the keyword var.
 - When variables are being declared and initialized, use the short variable declaration operator.
 
-## Example Code
+## Code Review
 
-- [Go Playground](https://play.golang.org/p/xD_6ghgB7wm)
+### Declare and initialize variables
+
+[Go Playground](https://play.golang.org/p/xD_6ghgB7wm)
 
 ```go
 // Sample program to show how to declare variables.
