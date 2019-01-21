@@ -13,10 +13,10 @@ tags:        ["golang", "testing"]
 
 ---
 
-## Benchmarks
+# Benchmarks
 
 Benchmarking is a way of measuring the performance of your code by executing it multiple times with a fixed workload.
 
-## Profiling
+# Profiling
 
 When we wish to take a look at the speed of our program, the best technique we can employ is profiling.

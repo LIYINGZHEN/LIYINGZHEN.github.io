@@ -12,7 +12,7 @@ tags:        ["golang"]
 The constant generator iota is used for declaring a sequence of related values that uses incrementing numbers without the need to type each one of them explicitly.
 
 ```go
-const ( 
+const (
   Zero Digit = iota
   One
   Two

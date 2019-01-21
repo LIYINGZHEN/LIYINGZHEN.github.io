@@ -9,14 +9,14 @@ image:       ""
 tags:        ["golang", "fundamental"]
 ---
 
-## Notes
+# Notes
 
 - When variables are being declared to their zero value, use the keyword var.
 - When variables are being declared and initialized, use the short variable declaration operator.
 
-## Code Review
+# Code Review
 
-### Declare and initialize variables
+## Declare and initialize variables
 
 [Go Playground](https://play.golang.org/p/xD_6ghgB7wm)
 

@@ -38,7 +38,7 @@ func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-## Reading JSON
+# Reading JSON
 
 ```go
 package main

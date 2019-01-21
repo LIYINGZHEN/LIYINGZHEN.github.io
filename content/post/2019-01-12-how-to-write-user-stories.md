@@ -13,13 +13,13 @@ User stories are part of an agile approach that helps shift the focus from writi
 
 ---
 
-## What is a user story?
+# What is a user story?
 
 User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
 
 > As a < type of user >, I want < some goal > so that < some reason >.
 
-## Can you show some user story examples?
+# Can you show some user story examples?
 
 - **As a** traveler, **I want** to see the different types of journeys I can get recommendations for **so that** I can decide what kind of evening to take my partner on.
 - **As a** traveler, **I want** to see a random recommendation for my selected journey type **so that** I know where to go and what the evening will entail.

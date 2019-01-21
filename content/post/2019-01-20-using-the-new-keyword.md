@@ -25,5 +25,5 @@ After executing the new statement, you are ready to work with your fresh variabl
 The next statement will create a slice with new that points to nil:
 
 ```
-sP := new([]aStructure) 
+sP := new([]aStructure)
 ```

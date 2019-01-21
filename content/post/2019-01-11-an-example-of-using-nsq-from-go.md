@@ -13,27 +13,27 @@ tags:        ["message-queue"]
 
 ---
 
-## Install Nsq
+# Install Nsq
 
 ```bash
 brew install nsq
 ```
 
-## Launch Nsq
+# Launch Nsq
 
 ```bash
-nsqlookupd & 
+nsqlookupd &
 nsqd --lookupd-tcp-address=127.0.0.1:4160 &
 nsqadmin --lookupd-http-address=127.0.0.1:4161 &
 ```
 
-## Get Go client library
+# Get Go client library
 
 ```
 go get github.com/nsqio/go-nsq
 ```
 
-## Create a producer
+# Create a producer
 
 
 ```go
@@ -65,7 +65,7 @@ go run main.go
 
 If you go to your NSQAdmin at http://localhost:4171, you should see a single message in the `write_test` topic.
 
-## Create a consumer
+# Create a consumer
 
 ```go
 package main
@@ -101,7 +101,7 @@ func main() {
 and then run it with:
 
 
-```go 
+```go
 run main.go
 ```
 

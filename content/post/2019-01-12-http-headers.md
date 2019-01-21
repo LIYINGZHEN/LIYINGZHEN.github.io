@@ -9,6 +9,6 @@ image:       ""
 tags:        ["REST"]
 ---
 
-## Authorization - string
+# Authorization - string
 
 Authorization is one of the most commonly used request headers, even if you have a public read only API I advise you to ask the user to authorize their requests.
