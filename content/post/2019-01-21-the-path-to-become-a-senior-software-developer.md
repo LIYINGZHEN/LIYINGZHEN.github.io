@@ -6,7 +6,7 @@ date:        2019-01-21T20:31:00+01:00
 author:      "Max"
 published:   false
 image:       ""
-tags:        ["personal-growth"]
+tags:        ["personal"]
 ---
 
 # 1. Read Books
