@@ -1,7 +1,7 @@
 ---
 title:       "Event-Driven Architecture"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-13T13:44:00+01:00
 author:      "Max"
 published:   true

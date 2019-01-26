@@ -1,11 +1,11 @@
 ---
 title:       "Panic and Recover in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-12T14:16:34+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

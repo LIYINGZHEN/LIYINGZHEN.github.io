@@ -1,11 +1,11 @@
 ---
 title:       "Reflection in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-25T19:40:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "fundamental"]
 ---
 

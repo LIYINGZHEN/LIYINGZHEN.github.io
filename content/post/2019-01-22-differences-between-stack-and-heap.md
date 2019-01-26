@@ -1,11 +1,11 @@
 ---
 title:       "Differences between Stack and Heap"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-22T09:50:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        [""]
 ---
 

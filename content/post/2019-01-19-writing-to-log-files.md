@@ -1,10 +1,10 @@
 ---
 title:       "Writing to log files"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-19T15:44:00+01:00
 author:      "Max"
-image:       ""
+
 tags:        ["golang"]
 ---
 

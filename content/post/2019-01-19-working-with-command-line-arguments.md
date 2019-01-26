@@ -1,11 +1,11 @@
 ---
 title:       "Working with command-line arguments"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-19T15:39:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

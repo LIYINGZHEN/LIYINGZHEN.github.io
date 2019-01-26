@@ -1,11 +1,11 @@
 ---
 title:       "The select keyword"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-26T09:24:00+01:00
 author:      "Max"
 published:   false
-image:       ""
+
 tags:        ["golang"]
 ---
 

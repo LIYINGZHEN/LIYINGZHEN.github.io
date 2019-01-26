@@ -1,11 +1,11 @@
 ---
 title:       "Struct in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-22T09:34:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "fundamental"]
 ---
 

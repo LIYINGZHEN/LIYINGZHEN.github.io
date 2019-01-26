@@ -1,11 +1,11 @@
 ---
 title:       "Understanding Docker"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-26T11:39:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["docker"]
 ---
 

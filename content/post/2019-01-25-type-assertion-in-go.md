@@ -1,11 +1,11 @@
 ---
 title:       "Type assertion in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-25T19:31:00+01:00
 author:      "Max"
 published:   false
-image:       ""
+
 tags:        ["golang", "fundamental"]
 ---
 

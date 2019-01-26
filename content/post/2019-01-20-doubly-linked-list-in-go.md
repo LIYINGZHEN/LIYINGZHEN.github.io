@@ -1,11 +1,11 @@
 ---
 title:       "Doubly linked list in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-20T15:41:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "data-structures"]
 ---
 

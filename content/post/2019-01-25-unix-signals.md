@@ -1,11 +1,11 @@
 ---
 title:       "Unix Signals"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-25T20:34:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["cs"]
 ---
 

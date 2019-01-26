@@ -1,11 +1,11 @@
 ---
 title:       "An Example of Using RabbitMQ From Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-19T07:42:05+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["message-queue"]
 ---
 

@@ -1,11 +1,11 @@
 ---
 title:       "Go Environment"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-26T11:20:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

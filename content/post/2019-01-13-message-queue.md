@@ -1,11 +1,11 @@
 ---
 title:       "Message Queue"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-13T09:44:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["message-queue"]
 ---
 

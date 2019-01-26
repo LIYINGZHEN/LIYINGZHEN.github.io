@@ -1,11 +1,11 @@
 ---
 title:       "General Go coding advices"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-19T17:05:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

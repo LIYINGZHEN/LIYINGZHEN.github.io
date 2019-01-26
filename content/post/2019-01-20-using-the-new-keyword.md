@@ -1,11 +1,11 @@
 ---
 title:       "Using the new keyword"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-20T10:28:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

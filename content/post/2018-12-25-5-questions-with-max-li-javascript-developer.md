@@ -1,11 +1,11 @@
 ---
 title:       "5 Questions With Max Li Javascript Developer"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2018-12-25T21:20:42+08:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["personal"]
 ---
 

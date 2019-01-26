@@ -1,10 +1,10 @@
 ---
 title:       "Error in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-19T15:57:00+01:00
 author:      "Max"
-image:       ""
+
 tags:        ["golang"]
 ---
 

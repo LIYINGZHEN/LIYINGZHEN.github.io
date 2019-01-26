@@ -1,11 +1,11 @@
 ---
 title:       "Hashing and Validating Passwords With Bcrypt"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-12T13:29:56+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "bcrypt"]
 ---
 

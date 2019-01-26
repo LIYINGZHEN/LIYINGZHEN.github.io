@@ -1,11 +1,11 @@
 ---
 title:       "Linked list in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-20T15:50:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "data-structures"]
 ---
 

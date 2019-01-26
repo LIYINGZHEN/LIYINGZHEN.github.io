@@ -1,15 +1,14 @@
 ---
-title:       "Channels"
-subtitle:    ""
-description: ""
+title:       "Channels in Go"
+description: " "
 date:        2019-01-25T21:39:00+01:00
 author:      "Max"
 published:   true
-image:       ""
 tags:        ["golang"]
+categories:  [ Go ]
 ---
 
-- A channel is a communication mechanism that allows goroutines to exchange data, among other things.
+A channel is a communication mechanism that allows us to pass data between goroutines. It is an in-built data type in Go. Data can be passed using one of the primitive data types or we can create our own complex data type using structs.
 
 # Writing to a channel
 

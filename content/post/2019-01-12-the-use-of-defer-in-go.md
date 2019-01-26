@@ -1,11 +1,11 @@
 ---
 title:       "The Use of Defer in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-12T14:01:17+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang"]
 ---
 

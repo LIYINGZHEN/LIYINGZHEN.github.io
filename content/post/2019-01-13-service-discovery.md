@@ -1,11 +1,11 @@
 ---
 title:       "Service discovery"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-13T10:19:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["Microservices"]
 ---
 

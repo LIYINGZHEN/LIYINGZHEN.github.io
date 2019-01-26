@@ -1,11 +1,11 @@
 ---
 title:       "How to Write User Stories"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-12T10:17:40+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["agile"]
 ---
 

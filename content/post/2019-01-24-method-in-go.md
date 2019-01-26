@@ -1,11 +1,11 @@
 ---
 title:       "Method in Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-24T07:07:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["golang", "fundamental"]
 ---
 

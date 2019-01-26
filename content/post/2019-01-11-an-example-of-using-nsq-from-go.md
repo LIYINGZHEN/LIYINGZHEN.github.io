@@ -1,11 +1,11 @@
 ---
 title:       "An Example of Using Nsq From Go"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-11T10:27:05+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["message-queue"]
 ---
 

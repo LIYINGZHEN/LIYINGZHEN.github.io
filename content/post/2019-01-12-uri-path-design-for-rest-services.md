@@ -1,11 +1,11 @@
 ---
 title:       "URI path design for REST services"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-12T19:37:17+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["REST"]
 ---
 

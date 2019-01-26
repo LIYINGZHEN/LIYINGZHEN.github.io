@@ -1,11 +1,11 @@
 ---
 title:       "Worker pools"
-subtitle:    ""
-description: ""
+
+description: " "
 date:        2019-01-26T09:52:00+01:00
 author:      "Max"
 published:   true
-image:       ""
+
 tags:        ["cs"]
 ---
 
