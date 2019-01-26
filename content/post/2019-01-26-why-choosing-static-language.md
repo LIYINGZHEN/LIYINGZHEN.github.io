@@ -1,12 +1,11 @@
 ---
 title:       "Why Choosing Static Language"
-
 description: " "
 date:        2019-01-26T10:43:00+01:00
 author:      "Max"
 published:   true
-
 tags:        ["personal"]
+categories:  ["personal"]
 ---
 
 Writing applications in dynamic languages makes you productive quickly because there are no intermediate steps between writing code and executing it.

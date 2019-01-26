@@ -4,7 +4,7 @@ title:       "The Use of Defer in Go"
 description: " "
 date:        2019-01-12T14:01:17+01:00
 author:      "Max"
-published:   true
+published:   false
 
 tags:        ["golang"]
 ---

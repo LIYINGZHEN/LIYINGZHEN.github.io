@@ -1,12 +1,11 @@
 ---
 title:       "Understanding Docker"
-
 description: " "
 date:        2019-01-26T11:39:00+01:00
 author:      "Max"
 published:   true
-
 tags:        ["docker"]
+categories:  ["docker"]
 ---
 
 Before we start using Docker, let's take a brief look at how the Docker is meant to be used, how it is structured, and what are the major components of the complete system.

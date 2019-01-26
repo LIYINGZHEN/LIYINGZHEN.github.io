@@ -4,8 +4,8 @@ description: " "
 date:        2019-01-26T18:40:48+01:00
 author:      "Max"
 published:   true
-tags:        ["golang"]
-categories:  ["Go"]
+tags:        ["rest"]
+categories:  [""]
 ---
 
 OpenAPI lets us define RESTful APIs in a standardized manner, and they can be defined without being tied down to any particular programming language or framework being used.

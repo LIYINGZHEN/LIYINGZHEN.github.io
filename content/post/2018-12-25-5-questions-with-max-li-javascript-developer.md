@@ -1,12 +1,11 @@
 ---
 title:       "5 Questions With Max Li Javascript Developer"
-
 description: " "
 date:        2018-12-25T21:20:42+08:00
 author:      "Max"
 published:   true
-
 tags:        ["personal"]
+categories:  ["personal"]
 ---
 
 **1. How did you find programming?**
