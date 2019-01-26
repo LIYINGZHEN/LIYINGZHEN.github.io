@@ -1,12 +1,11 @@
 ---
 title:       "Docker Commands"
-
 description: " "
 date:        2019-01-26T11:47:00+01:00
 author:      "Max"
 published:   true
-
-tags:        ["docker"]
+tags:        ["docker", "commands"]
+categories:  ["docker"]
 ---
 
 ```bash
