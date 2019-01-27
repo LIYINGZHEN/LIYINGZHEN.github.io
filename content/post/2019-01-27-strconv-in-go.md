@@ -8,6 +8,12 @@ tags:        ["golang"]
 categories:  ["Go"]
 ---
 
+# ParseFloat
+
+```go
+strconv.ParseFloat(amount, 64)
+```
+
 # ParseInt
 
 ```go
