@@ -12,7 +12,7 @@ categories:  ["docker"]
 # Build and name our docker image
 docker build . -t hello-uncle
 # Run the docker image with environment variables
-docker run hello-uncle -e NAME=Sam
+docker run --name pg -e NAME=Sam -p 5432:5432 -d postgres
 # Remove old images
 docker rmi -f 'docker images -q -f dangling=true'
 # Stop all containers
