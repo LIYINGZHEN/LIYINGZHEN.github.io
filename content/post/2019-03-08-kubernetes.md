@@ -5,34 +5,40 @@ date:        2019-03-08T12:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["kubernetes"]
-categories:  ["kubernetes"]
+categories:  ["notes"]
 ---
 
 # Terminology
 
-**Minikube**:
+**Minikube**: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
 
 **Kubelet**:
 
-**Master**:
+**Master Node**: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.
+
+**Node**: Worker nodes that run the actual applications you deploy.
 
 **Pod**: A Pod is a group of one or more application containers (such as Docker or rkt) and includes shared storage (volumes), IP address and information about how to run them.
-
-**Node**: A node is a worker machine in Kubernetes and may be a VM or physical machine, depending on the cluster. Multiple Pods can run on one Node.
 
 **Service**: A Kubernetes Service is an abstraction layer which defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery for those Pods.
 
 # Command
 
 ```bash
-#
-kubectl
+# Starting a Minikube virtual machine.
+minikube start
+
+# Displaying cluster information.
+kubectl cluster-info
+
+# Using kubectl explain to discover possible API object fields.
+kubectl explain pods
 
 #
 cat ~/.kube/config
 
 #
-kubectl run <deployment-name> --image=katacoda/docker-http-server:latest --replicas=<number> --port=<port> --hostport=<hostport>
+kubectl run <deployment-name> --image=<image-name> --replicas=<number> --port=<port> --hostport=<hostport>
 
 #
 kubectl expose deployment <deployment-name> --external-ip="172.17.0.42" --port=<port> --target-port=<target-port>
@@ -50,16 +56,24 @@ kubectl apply -f service-deployment.yaml
 kubectl rollout status deployment/service
 
 # Look for existing Pods.
-kubectl get pods -o wide
-# List the current Services
+kubectl get pods <pod-name> -o wide
+kubectl get pods <pod-name> --show-labels
+# See the full descriptor of the pod.
+kubectl get pods <pod-name> -o yaml
+# Listing pods using a label selector
+kubectl get pods -l <label-name>=<label-value>
+
+# List the current Services.
 kubectl get services | svc
 # List deployments.
 kubectl get deployments
-#
+# Listing cluster nodes.
 kubectl get nodes
+# Listing name spaces.
+kubectl get ns
 
-#
-kubectl port-forward my-pod 8000:3000
+# Forwarding a local network port to a port in the pod.
+kubectl port-forward <pod-name> 8888:8080
 
 # View the container logs
 kubectl logs -f <pod-name>
@@ -78,14 +92,22 @@ kubectl describe services/<service-name>
 #
 kubectl describe deployment
 kubectl describe deployments/<deployments-name>
+#
+kubectl describe node
+kubectl describe node/<node-name>
 
 # Apply a new label
 kubectl label pod <pod-name> app=v1
 
 # Delete service.
 kubectl delete service <service-name>
+
 # Delete pod.
 kubectl delete pod <pod-name>
+# Deleting pods using label selectors
+kubectl delete po -l rel=canary
+# Deleting pods by deleting the whole namespace
+kubectl delete ns custom-namespace
 ```
 
 # YAML
@@ -93,19 +115,33 @@ kubectl delete pod <pod-name>
 ## Pod
 
 ```yaml
-# my-first-pod.yaml
 apiVersion: v1
 kind: Pod
+# Metadata includes the name, namespace, labels, and other information about the pod.
 metadata:
+  # The name of the pod
   name: my-pod
   labels:
     app: webserver
+# Spec contains the actual description of the pod’s contents, such as the pod’s con- tainers, volumes, and other data.
 spec:
   containers:
+  # Name of the containe
   - name: pod-demo
-    image: zxcvbnius/docker-demo
+    # Container image to create the container from
+    image: <image-name>
     ports:
+    # The port the app is listening on
     - containerPort: 3000
+      protocol: TCP
+    livenessProbe:
+      # A liveness probe that will perform an HTTP GET
+      httpGet:
+        # The path to request in the HTTP request
+        path: /api/health
+        port: 8080
+      # Kubernetes will wait 15 seconds before executing the first probe.
+      initialDelaySeconds: 30
 ```
 
 `kubectl apply -f max-backend-deployment.yaml`
@@ -120,7 +156,9 @@ metadata:
   labels:
     app: max-backend
 spec:
+  # The desired number of pod instances.
   replicas: 5
+  # The pod selector determining what pods the RC is operating on.
   selector:
     matchLabels:
       app: max-backend
@@ -129,6 +167,9 @@ spec:
       labels:
         app: max-backend
     spec:
+      # nodeSelector tells Kubernetes to deploy this pod only to nodes containing the gpu=true label.
+      nodeSelector:
+        gpu: "true"
       containers:
       - name: max-backend
         image: max-docker-registry.system:5000/appbackend:<commit-hash>
@@ -143,8 +184,10 @@ spec:
         #
         livenessProbe:
           httpGet:
+            # A liveness probe that will perform an HTTP GET
             path: /api/health
             port: 3030
+          # Kubernetes will wait 15 seconds before executing the first probe.
           initialDelaySeconds: 30
           periodSeconds: 60
           failureThreshold: 2
@@ -195,4 +238,13 @@ spec:
         backend:
           serviceName: max-backend
           servicePort: 3030
+```
+
+## Namespace
+
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: custom-namespace
 ```
