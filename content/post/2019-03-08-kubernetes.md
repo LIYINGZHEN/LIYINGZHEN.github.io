@@ -18,11 +18,13 @@ categories:  ["notes"]
 
 **Node**: Worker nodes that run the actual applications you deploy.
 
-**Pod**: A Pod is a group of one or more application containers (such as Docker or rkt) and includes shared storage (volumes), IP address and information about how to run them.
+**Pod**: Running containers in Kubernetes.
 
-**Service**: A Kubernetes Service is an abstraction layer which defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery for those Pods.
+**Service**: Enabling clients to discover and talk to pods.
 
-# Command
+# Commands
+
+## General Commands
 
 ```bash
 # Starting a Minikube virtual machine.
@@ -37,43 +39,46 @@ kubectl explain pods
 #
 cat ~/.kube/config
 
-#
-kubectl run <deployment-name> --image=<image-name> --replicas=<number> --port=<port> --hostport=<hostport>
-
-#
-kubectl expose deployment <deployment-name> --external-ip="172.17.0.42" --port=<port> --target-port=<target-port>
-
-#
-kubectl scale --replicas=<number> deployment <deployment-name>
-
 # Connect between our host and the kubernetes cluster.
 kubectl proxy
 
-#
-kubectl apply -f service-deployment.yaml
+# Forwarding a local network port to a port in the pod.
+kubectl port-forward <pod-name> 8888:8080
+```
+
+## Deployment Commands
+
+```bash
+# List deployments.
+kubectl get deployments
 
 # Show the status of the rollout.
 kubectl rollout status deployment/service
 
-# Look for existing Pods.
-kubectl get pods <pod-name> -o wide
-kubectl get pods <pod-name> --show-labels
+#
+kubectl describe deployment
+kubectl describe deployments/<deployments-name>
+```
+
+## Pod Commands
+
+```bash
+# Apply pod config.
+kubectl apply -f pod.yaml
+
 # See the full descriptor of the pod.
-kubectl get pods <pod-name> -o yaml
+kubectl get po <pod-name> -o yaml
+# Look for existing Pods.
+kubectl get po <pod-name> -o wide
+kubectl get po <pod-name> --show-labels
 # Listing pods using a label selector
-kubectl get pods -l <label-name>=<label-value>
+kubectl get po -l <label-name>=<label-value>
+# List all pods (include completed pods)
+kubectl get po -a
 
-# List the current Services.
-kubectl get services | svc
-# List deployments.
-kubectl get deployments
-# Listing cluster nodes.
-kubectl get nodes
-# Listing name spaces.
-kubectl get ns
-
-# Forwarding a local network port to a port in the pod.
-kubectl port-forward <pod-name> 8888:8080
+# Check application configuration.
+kubectl describe po
+kubectl describe po/<pod-name>
 
 # View the container logs
 kubectl logs -f <pod-name>
@@ -82,69 +87,67 @@ kubectl logs -f <pod-name>
 kubectl exec <pod-name> env
 # Get a shell to a running pod.
 kubectl exec -it <pod-name> sh | bash
+#
+kubectl exec <pod-name> -- curl -s http://10.111.249.153
 
-# Check application configuration.
-kubectl describe pods
-kubectl describe pods/<pod-name>
+# Delete pod.
+kubectl delete po <pod-name>
+# Deleting pods using label selectors
+kubectl delete po -l rel=canary
+```
+
+## Ingress Commands
+
+```bash
+kubectl get ingresses
+```
+
+## Service Commands
+
+```bash
+# Apply service config.
+kubectl apply -f service.yaml
+
+# List the current Services.
+kubectl get svc
+kubectl get svc/<service-name>
+
 #
-kubectl describe services
-kubectl describe services/<service-name>
+kubectl describe svc
+kubectl describe svc/<service-name>
+
 #
-kubectl describe deployment
-kubectl describe deployments/<deployments-name>
+kubectl get endpoints <service-name>
+
+# Delete service.
+kubectl delete svc <service-name>
+```
+
+## Node Commands
+
+```bash
+# Using JSONPath to get the IPs of all your nodes
+kubectl get nodes -o jsonpath='{.items[*].status. ➥ addresses[?(@.type=="ExternalIP")].address}'
+
+# Listing cluster nodes.
+kubectl get nodes
+
 #
 kubectl describe node
 kubectl describe node/<node-name>
+```
 
-# Apply a new label
-kubectl label pod <pod-name> app=v1
+## Namespace Commands
 
-# Delete service.
-kubectl delete service <service-name>
+```bash
+# Listing name spaces.
+kubectl get ns
 
-# Delete pod.
-kubectl delete pod <pod-name>
-# Deleting pods using label selectors
-kubectl delete po -l rel=canary
-# Deleting pods by deleting the whole namespace
+# Deleting pods by deleting the whole namespace.
 kubectl delete ns custom-namespace
 ```
 
 # YAML
-
-## Pod
-
-```yaml
-apiVersion: v1
-kind: Pod
-# Metadata includes the name, namespace, labels, and other information about the pod.
-metadata:
-  # The name of the pod
-  name: my-pod
-  labels:
-    app: webserver
-# Spec contains the actual description of the pod’s contents, such as the pod’s con- tainers, volumes, and other data.
-spec:
-  containers:
-  # Name of the containe
-  - name: pod-demo
-    # Container image to create the container from
-    image: <image-name>
-    ports:
-    # The port the app is listening on
-    - containerPort: 3000
-      protocol: TCP
-    livenessProbe:
-      # A liveness probe that will perform an HTTP GET
-      httpGet:
-        # The path to request in the HTTP request
-        path: /api/health
-        port: 8080
-      # Kubernetes will wait 15 seconds before executing the first probe.
-      initialDelaySeconds: 30
-```
-
-`kubectl apply -f max-backend-deployment.yaml`
 
 ## Deployment
 
@@ -202,27 +205,9 @@ spec:
           failureThreshold: 2
 ```
 
-## Service
-
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: max-backend
-spec:
-  type: NodePort
-  ports:
-    # Port is the port number which makes a service visible to other services running within the same K8s cluster
-  - port: 8080
-    # Target port is the port on the POD where the service is running.
-    targetPort: 80
-    # Node port is the port on which the service can be accessed from external users using Kube-Proxy.
-    nodePort: 30001
-  selector:
-    app: max-backend
-```
-
 ## Ingress
+
+> Exposes one or more services to external clients through a single externally reachable IP address.
 
 ```yaml
 apiVersion: extensions/v1beta1
@@ -231,6 +216,7 @@ metadata:
   name: max-backend
 spec:
   rules:
+  # This Ingress maps the api.my-app.com domain name to your service.
   - host: api.my-app.com
     http:
       paths:
@@ -240,6 +226,69 @@ spec:
           servicePort: 3030
 ```
 
+
+## Service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-backend
+spec:
+  clusterIP: None # This makes the service headless.
+  ports:
+  - name: api
+    # Port is the port number which makes a service visible to other services running within the same K8s cluster
+    port: 3030
+    # Target port is the port on the POD where the service is running.
+    targetPort: 3030
+  selector:
+    # All pods with the app=max-backend label will be part of this service.
+    app: max-backend
+```
+
+**Exposing services to external clients.**
+
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-backend
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    port: 80         # This is the port of the service’s internal cluster IP.
+    targetPort: 8080 # This is the target port of the backing pods.
+  selector:
+    # All pods with the app=max-backend label will be part of this service.
+    app: max-backend
+```
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: max-backend
+spec:
+  type: NodePort
+  ports:
+  - name: http
+    port: 8080 # This is the port of the service’s internal cluster IP.
+    targetPort: 80 # This is the target port of the backing pods.
+    # Node port is the port on which the service can be accessed from external users using Kube-Proxy.
+    nodePort: 30001
+  - name: https
+    port: 443
+    targetPort: 8443
+  selector:
+    # All pods with the app=max-backend label will be part of this service.
+    app: max-backend
+```
+
+---
+
 ## Namespace
 
 ```yaml
@@ -248,3 +297,94 @@ kind: Namespace
 metadata:
   name: custom-namespace
 ```
+
+## Job
+
+> Runs pods that perform a completable task
+
+```yaml
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-job
+spec:
+  # Setting completions to 5 makes this Job run five pods sequentially.
+  completions: 5
+  # Up to two pods can run in parallel.
+  parallelism: 2
+  template:
+    metadata:
+      labels:
+        app: batch-job
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: main
+        image: luksa/batch-job
+```
+
+## CronJob
+
+> Runs a scheduled job once or periodically
+
+```yaml
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+    name: batch-job-every-fifteen-minutes
+spec:
+  schedule: "0,15,30,45 * * * *"
+  # At the latest, the pod must start running at 15 seconds past the scheduled time.
+  startingDeadlineSeconds: 15
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: periodic-batch-job
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: main
+            image: luksa/batch-job
+```
+
+---
+
+> Pods shouldn’t be created directly, because they will not be re-created if they’re deleted by mistake, if the node they’re running on fails, or if they’re evicted from the node.
+
+## Pod
+
+```yaml
+apiVersion: v1
+kind: Pod
+# Metadata includes the name, namespace, labels, and other information about the pod.
+metadata:
+  # The name of the pod
+  name: my-pod
+  labels:
+    app: webserver
+# Spec contains the actual description of the pod’s contents, such as the pod’s con- tainers, volumes, and other data.
+spec:
+  containers:
+  # Name of the containe
+  - name: pod-demo
+    # Container image to create the container from
+    image: <image-name>
+    ports:
+    # The port the app is listening on
+    - containerPort: 3000
+      protocol: TCP
+    livenessProbe:
+      # A liveness probe that will perform an HTTP GET
+      httpGet:
+        # The path to request in the HTTP request
+        path: /api/health
+        port: 8080
+      # Kubernetes will wait 15 seconds before executing the first probe.
+      initialDelaySeconds: 30
+```
+
+## ReplicationControllers
+
+> ReplicationControllers should be replaced with ReplicaSets and Deployments, which provide the same functionality, but with additional powerful features.
