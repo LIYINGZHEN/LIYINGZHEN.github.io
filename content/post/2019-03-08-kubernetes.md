@@ -22,6 +22,15 @@ categories:  ["notes"]
 
 **Service**: Enabling clients to discover and talk to pods.
 
+
+
+
+
+
+
+
+
+
 # Commands
 
 ## General Commands
@@ -146,6 +155,15 @@ kubectl get ns
 # Deleting pods by deleting the whole namespace.
 kubectl delete ns custom-namespace
 ```
+
+
+
+
+
+
+
+
+
 
 # YAML
 
