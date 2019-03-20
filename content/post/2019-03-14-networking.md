@@ -50,4 +50,16 @@ The IP, or Internet Protocol, is what provides the host-to-host routing and addr
 
 ## Three-Way Handshake
 
+The delay imposed by the three-way handshake makes new TCP connections expensive to create, and is one of the big reasons why connection reuse is a critical optimization for any application running over TCP.
 
+
+
+
+
+
+
+
+
+# Resources
+
+1. [High Performance Browser Networking](https://hpbn.co/)

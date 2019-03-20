@@ -1,12 +1,11 @@
 ---
 title:       "HTTP Response codes"
-
 description: " "
-date:        2019-01-12T19:50:17+01:00
+date:        2019-03-17T07:00:00+00:00
 author:      "Max"
 published:   true
-
-tags:        ["REST"]
+tags:        ["rest"]
+categories:  ["notes"]
 ---
 
 # 400 Bad Request
