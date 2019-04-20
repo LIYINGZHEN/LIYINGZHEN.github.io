@@ -13,10 +13,10 @@
     
     <item>
       <title>Docker</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-08-docker/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-08-docker/</link>
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-08-docker/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-08-docker/</guid>
       <description>Docker Terminology Image - Images are the building blocks of the Docker world. You launch your containers from images.
 Container - Docker helps you build and deploy containers inside of which you can package your applications and services.
 Docker Compose - Allows you to run stacks of containers to represent application stacks.

@@ -13,10 +13,10 @@
     
     <item>
       <title>Kubernetes</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-08-kubernetes/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-08-kubernetes/</link>
       <pubDate>Fri, 08 Mar 2019 12:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-08-kubernetes/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-08-kubernetes/</guid>
       <description>Terminology Minikube: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
 Kubelet:
 Master Node: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.

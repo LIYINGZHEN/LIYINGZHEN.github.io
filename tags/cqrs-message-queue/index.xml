@@ -13,10 +13,10 @@
     
     <item>
       <title>CQRS</title>
-      <link>https://liyingzhen.github.io/blog/2019-01-19-cqrs/</link>
+      <link>https://liyingzhen.github.io/old/2019-01-19-cqrs/</link>
       <pubDate>Sat, 19 Jan 2019 07:00:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-01-19-cqrs/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-01-19-cqrs/</guid>
       <description>Introducing Command Query Responsibility Segregation CQRS is a fancy pattern name that means decoupling the input and the output of your system.</description>
     </item>
     

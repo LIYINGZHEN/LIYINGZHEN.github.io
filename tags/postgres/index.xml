@@ -13,10 +13,10 @@
     
     <item>
       <title>PostgreSQL</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-25-postgres/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-25-postgres/</link>
       <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-25-postgres/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-25-postgres/</guid>
       <description>Setting up a password for the postgres role By default, local connections to PostgreSQL use the peer authentication sys- tem. That means that instead of asking for a password, they check to see if we are currently logged into a user (a linux user) that matches a user name in Postgres. We are going to change the way we do authentication and instead tell Postgres to use an encrypted password, but first we need to actually set a password for the postgres user.</description>
     </item>
     

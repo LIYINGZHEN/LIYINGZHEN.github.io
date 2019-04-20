@@ -13,10 +13,10 @@
     
     <item>
       <title>Redis</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-13-redis/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-13-redis/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-13-redis/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-13-redis/</guid>
       <description>Commands redis-cli # Local redis-cli -h host -p port -a password # Run Commands on the Remote Server redis-cli INFO memory  Data Types  Strings Lists Hashes Sets Sorted Sets  Strings # SET first &amp;quot;First Key value&amp;quot; GET first # EXPIRE command adds an expiration time (in seconds) to a given key. EXPIRE first 10 # TTL (Time To Live) command returns the amount of seconds a given key has left to live.</description>
     </item>
     

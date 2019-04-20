@@ -13,10 +13,10 @@
     
     <item>
       <title>ELK Stack</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-17-elk-stack/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-17-elk-stack/</link>
       <pubDate>Sun, 17 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-17-elk-stack/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-17-elk-stack/</guid>
       <description>Elasticsearch, Logstash, and Kibana are pretty much the industry standard when it comes to logging verbose data. All of the output which would traditionally be streamed to a log file is stored in a central location which you can query with a graphical interface tool, Kibana.
 Elasticsearch is our datastore for our logging data, Kibana is the application we will use for querying this data, and Logstash is used for reading the data from your application logs and storing it in Elasticsearch.</description>
     </item>

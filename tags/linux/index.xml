@@ -13,10 +13,10 @@
     
     <item>
       <title>Linux</title>
-      <link>https://liyingzhen.github.io/blog/2019-03-14-linux/</link>
+      <link>https://liyingzhen.github.io/old/2019-03-14-linux/</link>
       <pubDate>Thu, 14 Mar 2019 07:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/blog/2019-03-14-linux/</guid>
+      <guid>https://liyingzhen.github.io/old/2019-03-14-linux/</guid>
       <description> Commands ls -l # Changes the working directory to your home directory. cd # Changes the working directory to the previous working directory. cd - # i - interactive # v - verbose cp -iv /etc/passwd . # i - interactive # r - recursive rm -ir fun  </description>
     </item>
     
