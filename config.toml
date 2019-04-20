@@ -1,4 +1,4 @@
-baseURL = "http://maxlivinci.netlify.com"
+baseURL = "https://liyingzhen.github.io/"
 title   = "Maxlivinci.com"
 languageCode = "en-us"
 theme = "hello-friend-ng"
