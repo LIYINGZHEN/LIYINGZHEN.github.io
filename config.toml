@@ -1,31 +1,82 @@
 baseURL = "http://maxlivinci.netlify.com"
+title   = "Maxlivinci.com"
 languageCode = "en-us"
-title = "Max Blog"
-theme = "hugo-theme-cleanwhite"
-paginate = 15 #frontpage pagination
+theme = "hello-friend-ng"
+
+[author]
+  name = "Max Li"
 
 [params]
-  header_image = "img/home-bg.jpg"
-  SEOTitle = "Max Blog"
-  description = ""
-  keyword = "Max, Golang"
-  slogan = "Discipline equals Freedom"
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
 
-  image_404 = "img/404-bg.jpg"
-  title_404 = "This is not the web page you are looking for."
+  # Metadata mostly used in document's head
+  description = "Homepage and blog by Djordje Atlialp"
+  keywords = "homepage, blog, science, informatics, development, programming"
+  images = [""]
 
-  # Sidebar settings
-  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
-  sidebar_avatar = "img/max.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
 
-  featured_tags = true 
-  featured_condition_size = 1 
+  [params.logo]
+  logoText     = "$ cd /home/"
+  logoHomeLink = "/"
 
-  [params.social]
-    email          = "maxlivinci@gmail.com"
-    linkedin       = "https://www.linkedin.com/in/maxlivinci"
-    github         = "https://github.com/LIYINGZHEN"
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/maxlivinci"
 
-  [[params.addtional_menus]]
-    title =  "ABOUT"
-    href =  "/top/about/"
+  [[params.social]]
+    name = "email"
+    url  = "mailto:maxlivinci@gamil.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/LIYINGZHEN"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/maxlivinci"
+
+[languages]
+  [languages.en]
+    title = "YING ZHEN LI"
+    homeSubtitle = "Backend Developer"
+    keywords = ""
+    copyright = ""
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "cd $HOME"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+	# You can create a language based menu
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/blog"
+
+# And you can even create generic menu
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
