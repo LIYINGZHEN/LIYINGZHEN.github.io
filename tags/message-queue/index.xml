@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Message Queue on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/tags/message-queue/</link>
+    <description>Recent content in Message Queue on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2019 07:42:05 +0100</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Example of Using RabbitMQ From Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-19-an-example-of-using-rabbitmq-from-go/</link>
+      <pubDate>Sat, 19 Jan 2019 07:42:05 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-19-an-example-of-using-rabbitmq-from-go/</guid>
+      <description>Sending We&amp;rsquo;ll call our message publisher (sender) send.go and our message consumer (receiver) receive.go. The publisher will connect to RabbitMQ, send a single message, then exit.
+package main import ( &amp;quot;log&amp;quot; &amp;quot;github.com/streadway/amqp&amp;quot; ) func failOnError(err error, msg string) { if err != nil { log.Fatalf(&amp;quot;%s: %s&amp;quot;, msg, err) } } func main() { conn, err := amqp.Dial(&amp;quot;amqp://guest:guest@localhost:5672/&amp;quot;) failOnError(err, &amp;quot;Failed to connect to RabbitMQ&amp;quot;) defer conn.Close() ch, err := conn.Channel() failOnError(err, &amp;quot;Failed to open a channel&amp;quot;) defer ch.</description>
+    </item>
+    
+    <item>
+      <title>An Example of Using Nsq From Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-11-an-example-of-using-nsq-from-go/</link>
+      <pubDate>Fri, 11 Jan 2019 10:27:05 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-11-an-example-of-using-nsq-from-go/</guid>
+      <description>NSQ is a message queue, similar to RabbitMQ. I decided I’d give it a whirl.
+Install Nsq brew install nsq  Launch Nsq nsqlookupd &amp;amp; nsqd --lookupd-tcp-address=127.0.0.1:4160 &amp;amp; nsqadmin --lookupd-http-address=127.0.0.1:4161 &amp;amp;  Get Go client library go get github.com/nsqio/go-nsq  Create a producer package main import ( &amp;quot;log&amp;quot; &amp;quot;github.com/bitly/go-nsq&amp;quot; ) func main() { config := nsq.NewConfig() w, _ := nsq.NewProducer(&amp;quot;127.0.0.1:4150&amp;quot;, config) err := w.Publish(&amp;quot;write_test&amp;quot;, []byte(&amp;quot;test&amp;quot;)) if err != nil { log.</description>
+    </item>
+    
+  </channel>
+</rss>

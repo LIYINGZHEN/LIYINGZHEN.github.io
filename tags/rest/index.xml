@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rest on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/tags/rest/</link>
+    <description>Recent content in Rest on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Mar 2019 07:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP Response codes</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-17-http-response-codes/</link>
+      <pubDate>Sun, 17 Mar 2019 07:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-17-http-response-codes/</guid>
+      <description>400 Bad Request This response indicates that the request could not be understood by the client due to a malformed request or due to a failure of domain validation (missing data, or an operation that would cause invalid state).
+401 Unauthorized This indicates that the request requires user authentication and will include a WWWAuthenticate header containing a challenge applicable to the requested resource. If the user has included the required credentials in the WWW-Authenticate header, then the response should include an error object that may contain relevant diagnostic information.</description>
+    </item>
+    
+    <item>
+      <title>OpenAPI Specification</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-26-open-api-specification/</link>
+      <pubDate>Sat, 26 Jan 2019 18:40:48 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-26-open-api-specification/</guid>
+      <description>OpenAPI lets us define RESTful APIs in a standardized manner, and they can be defined without being tied down to any particular programming language or framework being used.
+Let&amp;rsquo;s list the general structure of an OpenAPI specification and use it to redefine the Books API described in Chapter 4, The RESTful Web.
+If we look at the Books API title, we can define the following elements to describe the API:</description>
+    </item>
+    
+    <item>
+      <title>HTTP headers</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-12-http-headers/</link>
+      <pubDate>Sat, 12 Jan 2019 19:52:17 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-12-http-headers/</guid>
+      <description>Authorization - string Authorization is one of the most commonly used request headers, even if you have a public read only API I advise you to ask the user to authorize their requests.</description>
+    </item>
+    
+    <item>
+      <title>URI path design for REST services</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-12-uri-path-design-for-rest-services/</link>
+      <pubDate>Sat, 12 Jan 2019 19:37:17 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-12-uri-path-design-for-rest-services/</guid>
+      <description>Collections A collection is a directory of resources typically broken by parameters to access an individual document. For example:
+GET /cats -&amp;gt; All cats in the collection GET /cats/1 -&amp;gt; Single document for a cat 1  When defining a collection, we should always use a plural noun such as cats or people for the collection name.
+Documents A document is a resource pointing to a single object, similar to a row in a database.</description>
+    </item>
+    
+  </channel>
+</rss>

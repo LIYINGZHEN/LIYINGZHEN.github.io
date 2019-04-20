@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/tags/nginx/</link>
+    <description>Recent content in Nginx on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Mar 2019 06:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nginx</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-13-nginx/</link>
+      <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-13-nginx/</guid>
+      <description> Preserve the default nginx.conf cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original  cp global.conf /etc/nginx/conf.d/
+server { listen 0.0.0.0:80; server_name _; root /var/www/html/website; index index.html index.htm; access_log /var/log/nginx/default_access.log; error_log /var/log/nginx/default_error.log; }  cp nginx.conf /etc/nginx/nginx.conf
+user www-data; worker_processes 4; pid /run/nginx.pid; daemon off; events { } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; gzip on; gzip_disable &amp;quot;msie6&amp;quot;; include /etc/nginx/conf.d/*.conf; }  </description>
+    </item>
+    
+  </channel>
+</rss>

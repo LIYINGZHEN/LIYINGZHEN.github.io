@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/categories/go/</link>
+    <description>Recent content in Go on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Jan 2019 16:48:37 +0100</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Table Driven Tests</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-table-driven-tests/</link>
+      <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-table-driven-tests/</guid>
+      <description>package main import &amp;quot;testing&amp;quot; func TestCoverage(t *testing.T) { type args struct { condition bool } tests := []struct { name string args args wantErr bool }{ // TODO: Add test cases. } for _, tt := range tests { t.Run(tt.name, func(t *testing.T) { if err := Coverage(tt.args.condition); (err != nil) != tt.wantErr { t.Errorf(&amp;quot;Coverage() error = %v, wantErr %v&amp;quot;, err, tt.wantErr) } }) } }  </description>
+    </item>
+    
+    <item>
+      <title>Middleware in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-middleware-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 16:40:32 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-middleware-in-go/</guid>
+      <description>package middleware import ( &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;time&amp;quot; ) // Middleware is what all middleware functions will return type Middleware func(http.HandlerFunc) http.HandlerFunc // ApplyMiddleware will apply all middleware, the last // arguments will be the // outer wrap for context passing purposes func ApplyMiddleware(h http.HandlerFunc, middleware ...Middleware) http.HandlerFunc { applied := h for _, m := range middleware { applied = m(applied) } return applied } // Logger logs requests, this will use an id passed in via // SetID() func Logger(l *log.</description>
+    </item>
+    
+    <item>
+      <title>Strconv in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-strconv-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 11:03:14 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-strconv-in-go/</guid>
+      <description> ParseFloat strconv.ParseFloat(amount, 64)  ParseInt strconv.ParseInt(result, 10, 64)  FormatInt strconv.FormatInt(amount, 10)  ParseInt s := &amp;quot;1234&amp;quot; if res, err := strconv.ParseInt(s, 10, 64); err != nil { return err }  </description>
+    </item>
+    
+    <item>
+      <title>Btyes in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-btyes-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 10:01:57 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-btyes-in-go/</guid>
+      <description> NewBuffer bytes.NewBuffer(secrets)  NewBufferString bytes.NewBufferString(secrets).Bytes()  </description>
+    </item>
+    
+    <item>
+      <title>JSON in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-json-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 09:59:40 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-json-in-go/</guid>
+      <description> JSONData type JSONData struct { Name string `json:&amp;quot;name&amp;quot;` Age int `json:&amp;quot;age&amp;quot;` }  Marshal if d, err := json.Marshal(t); err != nil { return nil, err } return bytes.NewBuffer(d), nil  Unmarshal res := make(map[string]string) if err := json.Unmarshal([]byte(`{&amp;quot;key&amp;quot;: &amp;quot;value&amp;quot;}`), &amp;amp;res); err != nil { return err }  NewDecoder Working with streams
+res := make(map[string]string) b := bytes.NewReader([]byte(`{&amp;quot;key2&amp;quot;: &amp;quot;value2&amp;quot;}`)) decoder := json.NewDecoder(b) if err := decoder.Decode(&amp;amp;res); err != nil { return err }  </description>
+    </item>
+    
+    <item>
+      <title>Ioutil in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-ioutil-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 09:53:14 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-ioutil-in-go/</guid>
+      <description> ReadAll payload, err := ioutil.ReadAll(recorder.Body); err != nil { t.Errorf(&amp;quot;Error parsing response body: %v&amp;quot;, err) }  </description>
+    </item>
+    
+    <item>
+      <title>Bufio in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-27-bufio-in-go/</link>
+      <pubDate>Sun, 27 Jan 2019 09:33:26 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-27-bufio-in-go/</guid>
+      <description> NewScanner scanner := bufio.NewScanner(r) // r io.Reader scanner.Split(bufio.ScanWords) for scanner.Scan() { result[scanner.Text()]++ }  NewReader r := bufio.NewReader(f) line, err := r.ReadString(&#39;\n&#39;)  </description>
+    </item>
+    
+    <item>
+      <title>Channels in Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-25-channels-in-go/</link>
+      <pubDate>Fri, 25 Jan 2019 21:39:00 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-25-channels-in-go/</guid>
+      <description>A channel is a communication mechanism that allows us to pass data between goroutines. It is an in-built data type in Go. Data can be passed using one of the primitive data types or we can create our own complex data type using structs.
+Writing to a channel The code in this subsection will teach you how to write to a channel. Writing the x value to the c channel is as easy as writing c &amp;lt;- x.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency and parallelism</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-01-25-concurrency-and-parallelism/</link>
+      <pubDate>Fri, 25 Jan 2019 21:08:00 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-01-25-concurrency-and-parallelism/</guid>
+      <description>Computer and software programs are useful because they do a lot of laborious work very fast and can also do multiple things at once. We want our programs to be able to do multiple things simultaneously, that is, multitask, and the success of a programming language can depend on how easy it is to write and understand multitasking programs.
+Concurrency and parallelism are two terms that we are bound to come across often when looking into multitasking and they are often used interchangeably.</description>
+    </item>
+    
+  </channel>
+</rss>

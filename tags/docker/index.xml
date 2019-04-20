@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/tags/docker/</link>
+    <description>Recent content in Docker on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Mar 2019 13:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-08-docker/</link>
+      <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-08-docker/</guid>
+      <description>Docker Terminology Image - Images are the building blocks of the Docker world. You launch your containers from images.
+Container - Docker helps you build and deploy containers inside of which you can package your applications and services.
+Docker Compose - Allows you to run stacks of containers to represent application stacks.
+Commands # Checking that the docker binary works. docker info # Build a docker image. docker build -t &amp;lt;image-name&amp;gt;:&amp;lt;tag&amp;gt; # name docker image --no-cache # do not use cache .</description>
+    </item>
+    
+  </channel>
+</rss>

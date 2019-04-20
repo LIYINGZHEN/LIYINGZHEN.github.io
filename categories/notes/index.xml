@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on YING ZHEN LI</title>
+    <link>http://maxlivinci.netlify.com/categories/notes/</link>
+    <description>Recent content in Notes on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Mar 2019 18:02:49 +0100</lastBuildDate>
+    
+	<atom:link href="http://maxlivinci.netlify.com/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PostgreSQL</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-25-postgres/</link>
+      <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-25-postgres/</guid>
+      <description>Setting up a password for the postgres role By default, local connections to PostgreSQL use the peer authentication sys- tem. That means that instead of asking for a password, they check to see if we are currently logged into a user (a linux user) that matches a user name in Postgres. We are going to change the way we do authentication and instead tell Postgres to use an encrypted password, but first we need to actually set a password for the postgres user.</description>
+    </item>
+    
+    <item>
+      <title>HTTP Response codes</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-17-http-response-codes/</link>
+      <pubDate>Sun, 17 Mar 2019 07:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-17-http-response-codes/</guid>
+      <description>400 Bad Request This response indicates that the request could not be understood by the client due to a malformed request or due to a failure of domain validation (missing data, or an operation that would cause invalid state).
+401 Unauthorized This indicates that the request requires user authentication and will include a WWWAuthenticate header containing a challenge applicable to the requested resource. If the user has included the required credentials in the WWW-Authenticate header, then the response should include an error object that may contain relevant diagnostic information.</description>
+    </item>
+    
+    <item>
+      <title>ELK Stack</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-17-elk-stack/</link>
+      <pubDate>Sun, 17 Mar 2019 06:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-17-elk-stack/</guid>
+      <description>Elasticsearch, Logstash, and Kibana are pretty much the industry standard when it comes to logging verbose data. All of the output which would traditionally be streamed to a log file is stored in a central location which you can query with a graphical interface tool, Kibana.
+Elasticsearch is our datastore for our logging data, Kibana is the application we will use for querying this data, and Logstash is used for reading the data from your application logs and storing it in Elasticsearch.</description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-16-go/</link>
+      <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-16-go/</guid>
+      <description>2.3. Zero Value https://play.golang.org/p/yb6qYVZKYKR
+2.6.2. Package Initialization Programs initialize and begin execution from the main package. If the main package imports other packages, they will be imported in the compile time. If one package is imported many times, it will be only compiled once. After importing packages, programs will initialize the constants and variables within the imported packages, then execute the init function if it exists, and so on. After all the other packages are initialized, programs will initialize constants and variables in the main package, then execute the init function inside the package if it exists.</description>
+    </item>
+    
+    <item>
+      <title>Drone</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-14-drone/</link>
+      <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-14-drone/</guid>
+      <description> The .drone.yml file  </description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-14-linux/</link>
+      <pubDate>Thu, 14 Mar 2019 07:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-14-linux/</guid>
+      <description> Commands ls -l # Changes the working directory to your home directory. cd # Changes the working directory to the previous working directory. cd - # i - interactive # v - verbose cp -iv /etc/passwd . # i - interactive # r - recursive rm -ir fun  </description>
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-14-networking/</link>
+      <pubDate>Thu, 14 Mar 2019 06:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-14-networking/</guid>
+      <description>Primer on Latency and Bandwidth  Latency - The time from the source sending a packet to the destination receiving it
+ Bandwidth - Maximum throughput of a logical or physical communication path
+  Notes
+ Network data rates are typically measured in bits per second (bps), whereas data rates for non-network equipment are typically shown in bytes per second (Bps). This is a common source of confusion, pay close attention to the units.</description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-13-nginx/</link>
+      <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-13-nginx/</guid>
+      <description> Preserve the default nginx.conf cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original  cp global.conf /etc/nginx/conf.d/
+server { listen 0.0.0.0:80; server_name _; root /var/www/html/website; index index.html index.htm; access_log /var/log/nginx/default_access.log; error_log /var/log/nginx/default_error.log; }  cp nginx.conf /etc/nginx/nginx.conf
+user www-data; worker_processes 4; pid /run/nginx.pid; daemon off; events { } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; gzip on; gzip_disable &amp;quot;msie6&amp;quot;; include /etc/nginx/conf.d/*.conf; }  </description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-13-redis/</link>
+      <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-13-redis/</guid>
+      <description>Commands redis-cli # Local redis-cli -h host -p port -a password # Run Commands on the Remote Server redis-cli INFO memory  Data Types  Strings Lists Hashes Sets Sorted Sets  Strings # SET first &amp;quot;First Key value&amp;quot; GET first # EXPIRE command adds an expiration time (in seconds) to a given key. EXPIRE first 10 # TTL (Time To Live) command returns the amount of seconds a given key has left to live.</description>
+    </item>
+    
+    <item>
+      <title>MongoDB</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-09-mongodb/</link>
+      <pubDate>Sun, 10 Mar 2019 16:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-09-mongodb/</guid>
+      <description>Indexing and query optimization  Indexes in MongoDB are very important. Indexes that use more than one key like this are called compound indexes. The order of keys in a compound index matters. Aa query where one term demands an exact match and another specifies a range requires a compound index where the range key comes second.  For example:
+If we have this query, then the manufacturer shoud be the first index.</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-08-docker/</link>
+      <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-08-docker/</guid>
+      <description>Docker Terminology Image - Images are the building blocks of the Docker world. You launch your containers from images.
+Container - Docker helps you build and deploy containers inside of which you can package your applications and services.
+Docker Compose - Allows you to run stacks of containers to represent application stacks.
+Commands # Checking that the docker binary works. docker info # Build a docker image. docker build -t &amp;lt;image-name&amp;gt;:&amp;lt;tag&amp;gt; # name docker image --no-cache # do not use cache .</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://maxlivinci.netlify.com/blog/2019-03-08-kubernetes/</link>
+      <pubDate>Fri, 08 Mar 2019 12:00:00 +0000</pubDate>
+      
+      <guid>http://maxlivinci.netlify.com/blog/2019-03-08-kubernetes/</guid>
+      <description>Terminology Minikube: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
+Kubelet:
+Master Node: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.
+Node: Worker nodes that run the actual applications you deploy.
+Pod: Running containers in Kubernetes.
+Service: Enabling clients to discover and talk to pods.
+Commands General Commands # Starting a Minikube virtual machine.</description>
+    </item>
+    
+  </channel>
+</rss>
