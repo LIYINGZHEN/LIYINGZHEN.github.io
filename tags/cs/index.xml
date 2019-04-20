@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cs on YING ZHEN LI</title>
-    <link>http://maxlivinci.netlify.com/tags/cs/</link>
+    <link>https://liyingzhen.github.io/tags/cs/</link>
     <description>Recent content in Cs on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Jan 2019 09:52:00 +0100</lastBuildDate>
     
-	<atom:link href="http://maxlivinci.netlify.com/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://liyingzhen.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Worker pools</title>
-      <link>http://maxlivinci.netlify.com/blog/2019-01-26-worker-pools/</link>
+      <link>https://liyingzhen.github.io/blog/2019-01-26-worker-pools/</link>
       <pubDate>Sat, 26 Jan 2019 09:52:00 +0100</pubDate>
       
-      <guid>http://maxlivinci.netlify.com/blog/2019-01-26-worker-pools/</guid>
+      <guid>https://liyingzhen.github.io/blog/2019-01-26-worker-pools/</guid>
       <description>A worker pool is a set of threads that are about to process jobs assigned to them.  Example package main import ( &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; &amp;quot;strconv&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) type Client struct { id int integer int } type Data struct { job Client square int } var ( size = 10 clients = make(chan Client, size) data = make(chan Data, size) ) func worker(w *sync.WaitGroup) { for c := range clients { square := c.</description>
     </item>
     
     <item>
       <title>Unix Signals</title>
-      <link>http://maxlivinci.netlify.com/blog/2019-01-25-unix-signals/</link>
+      <link>https://liyingzhen.github.io/blog/2019-01-25-unix-signals/</link>
       <pubDate>Fri, 25 Jan 2019 20:34:00 +0100</pubDate>
       
-      <guid>http://maxlivinci.netlify.com/blog/2019-01-25-unix-signals/</guid>
+      <guid>https://liyingzhen.github.io/blog/2019-01-25-unix-signals/</guid>
       <description>Ctrl + C sends the SIGINT signal
  number 1 SIGTERM
  number 9 SIGKILL

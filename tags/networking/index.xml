@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on YING ZHEN LI</title>
-    <link>http://maxlivinci.netlify.com/tags/networking/</link>
+    <link>https://liyingzhen.github.io/tags/networking/</link>
     <description>Recent content in Networking on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Mar 2019 06:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://maxlivinci.netlify.com/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://liyingzhen.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Networking</title>
-      <link>http://maxlivinci.netlify.com/blog/2019-03-14-networking/</link>
+      <link>https://liyingzhen.github.io/blog/2019-03-14-networking/</link>
       <pubDate>Thu, 14 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>http://maxlivinci.netlify.com/blog/2019-03-14-networking/</guid>
+      <guid>https://liyingzhen.github.io/blog/2019-03-14-networking/</guid>
       <description>Primer on Latency and Bandwidth  Latency - The time from the source sending a packet to the destination receiving it
  Bandwidth - Maximum throughput of a logical or physical communication path
   Notes
