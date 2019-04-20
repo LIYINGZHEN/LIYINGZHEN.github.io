@@ -1,25 +1,100 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blogs on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/blog/</link>
-    <description>Recent content in Blogs on YING ZHEN LI</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://liyingzhen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Building a website</title>
-      <link>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</guid>
-      <description>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.
+    <channel>
+        <title>Blogs on YING ZHEN LI</title>
+        <link>https://liyingzhen.github.io/blog/</link>
+        <description>Recent content in Blogs on YING ZHEN LI</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://liyingzhen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Building a website</title>
+            <link>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</link>
+            <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</guid>
+            <description>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.
 I have tried several frameworks: Bootstrap, React, and a few more. I admit I enjoy way more developing something with React than doing plain HTML/CSS/JS, but let’s face it, it’s just not my cup of tea. Sometimes I have to work on front-end projects, but whenever I can avoid it, I do it.</description>
-    </item>
-    
-  </channel>
+            <content type="html"><![CDATA[<p>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.</p>
+
+<p>I have tried several frameworks: <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://reactjs.org/">React</a>, and a few more. I admit I enjoy way more developing something with <code>React</code> than doing plain <code>HTML</code>/<code>CSS</code>/<code>JS</code>, but let’s face it, it’s just not my cup of tea. Sometimes I have to work on front-end projects, but whenever I can avoid it, I do it.</p>
+
+<p>So, when I decided to built this website, I made a list of required properties:</p>
+
+<ul>
+<li>Write the less code possible</li>
+<li>Don’t write any CSS</li>
+<li>Have both a Dark and Light mode</li>
+<li>Build something responsive</li>
+<li>Build something deployable as a static web page</li>
+</ul>
+
+<p>With those constraints, I quickly found out I needed a <code>static site generator</code> and learnt about <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://gohugo.io/">Hugo</a>. For the hosting part, a <a href="https://pages.github.com/">Github</a> Page with enforced HTTPS (because who releases a plain HTTP website in 2019 ?).</p>
+
+<p><img src="https://d33wubrfki0l68.cloudfront.net/30790d6888bd8af863fb2b5c33a7f337cdbda243/4e867/images/hugo-logo-wide.svg" alt="" /></p>
+
+<p>As for the choice of a <code>static site generator</code>, I decided to go with <code>Hugo</code>. The reason ? <a href="https://themes.gohugo.io/hugo-theme-hello-friend-ng/">The theme I liked the most</a> was built for it, and as I really didn’t want to write any <code>CSS</code>, that was a major factor. Also, I’m more familiar with the <code>Go</code> environment than the <code>Ruby</code> one, that might have been another factor.</p>
+
+<p>Even if <code>Hugo</code>’s documentation is very complete, I still experienced a few issues while deploying the website to <code>GitHub Pages</code>.</p>
+
+<p>The way I handled the situation:</p>
+
+<ul>
+<li>My <code>GitHub</code> repository is private</li>
+<li>My website’s files are on a <code>develop</code> branch</li>
+<li>The website’s content is on the <code>master</code> branch</li>
+<li>I’m using a custom domain name</li>
+</ul>
+
+<p>All my development happens on the <code>develop</code> branch, and I deploy to <code>master</code> using this script:</p>
+
+<pre><code class="language-bash">#!/usr/bin/env sh
+
+DIR=$(dirname &quot;$0&quot;)
+
+echo &quot;Deleting old publication&quot;
+rm -rf public
+
+if [[ $(git status -s) ]]
+then
+    echo &quot;The working directory is dirty. Please commit any pending changes.&quot;
+    exit 1;
+fi
+
+mkdir public
+git worktree prune
+rm -rf .git/worktrees/public/
+
+echo &quot;Checking out gh-pages branch into public&quot;
+git worktree add -B master public origin/master
+
+echo &quot;Removing existing files&quot;
+rm -rf public/*
+
+echo &quot;Generating site&quot;
+hugo
+
+echo &quot;Updating master branch&quot;
+cd public &amp;&amp; git add --all &amp;&amp; git commit -m &quot;Publishing to master (publish.sh)&quot;
+git push origin master
+cd ..
+rm -rf public
+</code></pre>
+
+<p>In order to resolve any issues with the custom domain, I had to create <code>CNAME</code> file, as described <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain">here</a></p>
+
+<pre><code>echo &quot;antoine-bache.com&quot; &gt; static/CNAME
+</code></pre>
+
+<blockquote>
+<p>Heavily inspired by: <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1">https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1</a></p>
+</blockquote>
+
+<p>I hope this will be useful to anyone experiencing any difficulties with deploying a <code>Hugo</code>-generated website to <code>GitHub Pages</code>!</p>
+]]></content>
+        </item>
+        
+    </channel>
 </rss>
