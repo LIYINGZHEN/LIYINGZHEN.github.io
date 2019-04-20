@@ -46,7 +46,7 @@ theme = "hello-friend-ng"
 [languages]
   [languages.en]
     title = "YING ZHEN LI"
-    homeSubtitle = "Backend Developer"
+    homeSubtitle = "Backend Developer & Golang Enthusiast"
     keywords = ""
     copyright = ""
     readOtherPosts = "Read other posts"

@@ -1,3 +1,7 @@
+---
+title: "About"
+---
+
 Hey, I'm Max. I am a software engineer with 3+ years of experience
 working on-site and remotely. I have worked on and launched several
 production-grade applications. I have a strong background in
@@ -15,3 +19,21 @@ automation in each aspect of life.
 
 When I’m not coding, I spend my time exercising, learning,
 experimenting, traveling, and listening to music.
+
+## Experiences
+
+#### Backend Developer, November 2018 - present
+
+<details>
+  <summary>Rspective, <em>Katowice</em>, <em>Poland</em></summary>
+  <ul>
+    <li>Development of a REST API (Node.js, Redis, MongoDB, PostgreSQL)</li>
+    <li>CI/CD via Jenkins, Slack integrations</li>
+    <li>Unit tests</li>
+    <li>Fully remote work</li>
+  </ul>
+</details>
+
+## Education
+
+- Bachelor’s degree, Aerospace Engineering, Taiwan, 2016

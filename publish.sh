@@ -26,6 +26,6 @@ hugo
 
 echo "Updating master branch"
 cd public && git add --all && git commit -m "Publishing to master (publish.sh)"
-git push origin master
+git push origin master -f
 cd ..
 rm -rf public
