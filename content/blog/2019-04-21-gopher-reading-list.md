@@ -59,7 +59,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Organization and Style
 
-- [] [Less is exponentially more](https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html)
+- [ ] [Less is exponentially more](https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html)
 - [x] [Go Proverbs](https://go-proverbs.github.io/)
 - [x] [Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
 - [x] [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go)
