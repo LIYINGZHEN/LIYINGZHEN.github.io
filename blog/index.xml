@@ -82,7 +82,7 @@ with a link to the post.</p>
 <h3 id="organization-and-style">Organization and Style</h3>
 
 <ul class="task-list">
-<li>[] <a href="https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html">Less is exponentially more</a></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html">Less is exponentially more</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://go-proverbs.github.io/">Go Proverbs</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://github.com/golang/go/wiki/CodeReviewComments">Code Review Comments</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://dmitri.shuralyov.com/idiomatic-go">Idiomatic Go</a></label></li>
