@@ -6,10 +6,21 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gopher Reading List</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-21-gopher-reading-list/</link>
+      <pubDate>Sun, 21 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-21-gopher-reading-list/</guid>
+      <description>Here is a reading list of blog posts about Go. It aspires to include only the most useful and relevant material that anyone writing Go should eventually read. By definition, the list is a work in progress.
+Rather than being comprehensive, the list is a curated selection fixed at 200 entries.
+Go is growing fast and so are the number of blog posts about it. If an interested reader knows of a great post not on this list, please open an issue with a link to the post.</description>
+    </item>
     
     <item>
       <title>Building a website</title>
