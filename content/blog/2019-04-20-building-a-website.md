@@ -72,7 +72,7 @@ rm -rf public
 In order to resolve any issues with the custom domain, I had to create `CNAME` file, as described [here](https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain)
 
 ```
-echo "maxlivinci.com" > static/CNAME
+echo "www.maxlivinci.com" > static/CNAME
 ```
 
 > Heavily inspired by: https://gohugo.io/hosting-and-deployment/hosting-on-github/#put-it-into-a-script-1

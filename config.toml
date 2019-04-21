@@ -1,4 +1,4 @@
-baseURL = "https://liyingzhen.github.io/"
+baseURL = "https://www.maxlivinci.com"
 title   = "Maxlivinci.com"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -13,8 +13,8 @@ theme = "hello-friend-ng"
   dateformNumTime = "2006-01-02 15:04 -0700"
 
   # Metadata mostly used in document's head
-  description = "Homepage and blog by Djordje Atlialp"
-  keywords = "homepage, blog, science, informatics, development, programming"
+  description = "Homepage and blog by Max Li"
+  keywords = "homepage, blog, informatics, development, programming, golang"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
@@ -70,7 +70,6 @@ theme = "hello-friend-ng"
         name = "Blog"
         url = "/blog"
 
-# And you can even create generic menu
 [menu]
   [[menu.main]]
     identifier = "about"
