@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drone on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/tags/drone/</link>
+    <link>https://www.maxlivinci.com/tags/drone/</link>
     <description>Recent content in Drone on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Mar 2019 08:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://liyingzhen.github.io/tags/drone/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.maxlivinci.com/tags/drone/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Drone</title>
-      <link>https://liyingzhen.github.io/old/2019-03-14-drone/</link>
+      <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
       <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-03-14-drone/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-03-14-drone/</guid>
       <description> The .drone.yml file  </description>
     </item>
     

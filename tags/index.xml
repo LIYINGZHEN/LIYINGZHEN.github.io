@@ -2,183 +2,183 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/tags/</link>
+    <link>https://www.maxlivinci.com/tags/</link>
     <description>Recent content in Tags on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 19 Jan 2019 07:00:00 +0100</lastBuildDate>
     
-	<atom:link href="https://liyingzhen.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.maxlivinci.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cqrs Message Queue</title>
-      <link>https://liyingzhen.github.io/tags/cqrs-message-queue/</link>
+      <link>https://www.maxlivinci.com/tags/cqrs-message-queue/</link>
       <pubDate>Sat, 19 Jan 2019 07:00:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/cqrs-message-queue/</guid>
+      <guid>https://www.maxlivinci.com/tags/cqrs-message-queue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cs</title>
-      <link>https://liyingzhen.github.io/tags/cs/</link>
+      <link>https://www.maxlivinci.com/tags/cs/</link>
       <pubDate>Sat, 26 Jan 2019 09:52:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/cs/</guid>
+      <guid>https://www.maxlivinci.com/tags/cs/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://liyingzhen.github.io/tags/docker/</link>
+      <link>https://www.maxlivinci.com/tags/docker/</link>
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/docker/</guid>
+      <guid>https://www.maxlivinci.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Drone</title>
-      <link>https://liyingzhen.github.io/tags/drone/</link>
+      <link>https://www.maxlivinci.com/tags/drone/</link>
       <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/drone/</guid>
+      <guid>https://www.maxlivinci.com/tags/drone/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elk</title>
-      <link>https://liyingzhen.github.io/tags/elk/</link>
+      <link>https://www.maxlivinci.com/tags/elk/</link>
       <pubDate>Sun, 17 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/elk/</guid>
+      <guid>https://www.maxlivinci.com/tags/elk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fundamental</title>
-      <link>https://liyingzhen.github.io/tags/fundamental/</link>
+      <link>https://www.maxlivinci.com/tags/fundamental/</link>
       <pubDate>Thu, 24 Jan 2019 18:28:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/fundamental/</guid>
+      <guid>https://www.maxlivinci.com/tags/fundamental/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://liyingzhen.github.io/tags/golang/</link>
+      <link>https://www.maxlivinci.com/tags/golang/</link>
       <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/golang/</guid>
+      <guid>https://www.maxlivinci.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://liyingzhen.github.io/tags/hugo/</link>
+      <link>https://www.maxlivinci.com/tags/hugo/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/hugo/</guid>
+      <guid>https://www.maxlivinci.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://liyingzhen.github.io/tags/kubernetes/</link>
+      <link>https://www.maxlivinci.com/tags/kubernetes/</link>
       <pubDate>Fri, 08 Mar 2019 12:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/kubernetes/</guid>
+      <guid>https://www.maxlivinci.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://liyingzhen.github.io/tags/linux/</link>
+      <link>https://www.maxlivinci.com/tags/linux/</link>
       <pubDate>Thu, 14 Mar 2019 07:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/linux/</guid>
+      <guid>https://www.maxlivinci.com/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Message Queue</title>
-      <link>https://liyingzhen.github.io/tags/message-queue/</link>
+      <link>https://www.maxlivinci.com/tags/message-queue/</link>
       <pubDate>Sat, 19 Jan 2019 07:42:05 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/message-queue/</guid>
+      <guid>https://www.maxlivinci.com/tags/message-queue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Microservices</title>
-      <link>https://liyingzhen.github.io/tags/microservices/</link>
+      <link>https://www.maxlivinci.com/tags/microservices/</link>
       <pubDate>Sun, 13 Jan 2019 13:44:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/microservices/</guid>
+      <guid>https://www.maxlivinci.com/tags/microservices/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mongodb</title>
-      <link>https://liyingzhen.github.io/tags/mongodb/</link>
+      <link>https://www.maxlivinci.com/tags/mongodb/</link>
       <pubDate>Sun, 10 Mar 2019 16:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/mongodb/</guid>
+      <guid>https://www.maxlivinci.com/tags/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Networking</title>
-      <link>https://liyingzhen.github.io/tags/networking/</link>
+      <link>https://www.maxlivinci.com/tags/networking/</link>
       <pubDate>Thu, 14 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/networking/</guid>
+      <guid>https://www.maxlivinci.com/tags/networking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nginx</title>
-      <link>https://liyingzhen.github.io/tags/nginx/</link>
+      <link>https://www.maxlivinci.com/tags/nginx/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/nginx/</guid>
+      <guid>https://www.maxlivinci.com/tags/nginx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Postgres</title>
-      <link>https://liyingzhen.github.io/tags/postgres/</link>
+      <link>https://www.maxlivinci.com/tags/postgres/</link>
       <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/postgres/</guid>
+      <guid>https://www.maxlivinci.com/tags/postgres/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Redis</title>
-      <link>https://liyingzhen.github.io/tags/redis/</link>
+      <link>https://www.maxlivinci.com/tags/redis/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/redis/</guid>
+      <guid>https://www.maxlivinci.com/tags/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rest</title>
-      <link>https://liyingzhen.github.io/tags/rest/</link>
+      <link>https://www.maxlivinci.com/tags/rest/</link>
       <pubDate>Sun, 17 Mar 2019 07:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/rest/</guid>
+      <guid>https://www.maxlivinci.com/tags/rest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Testing</title>
-      <link>https://liyingzhen.github.io/tags/testing/</link>
+      <link>https://www.maxlivinci.com/tags/testing/</link>
       <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/tags/testing/</guid>
+      <guid>https://www.maxlivinci.com/tags/testing/</guid>
       <description></description>
     </item>
     

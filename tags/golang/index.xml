@@ -2,95 +2,95 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/tags/golang/</link>
+    <link>https://www.maxlivinci.com/tags/golang/</link>
     <description>Recent content in Golang on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Mar 2019 19:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://liyingzhen.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.maxlivinci.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go</title>
-      <link>https://liyingzhen.github.io/old/2019-03-16-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-03-16-go/</link>
       <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-03-16-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-03-16-go/</guid>
       <description>2.3. Zero Value https://play.golang.org/p/yb6qYVZKYKR
 2.6.2. Package Initialization Programs initialize and begin execution from the main package. If the main package imports other packages, they will be imported in the compile time. If one package is imported many times, it will be only compiled once. After importing packages, programs will initialize the constants and variables within the imported packages, then execute the init function if it exists, and so on. After all the other packages are initialized, programs will initialize constants and variables in the main package, then execute the init function inside the package if it exists.</description>
     </item>
     
     <item>
       <title>Table Driven Tests</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-table-driven-tests/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</link>
       <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-table-driven-tests/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</guid>
       <description>package main import &amp;quot;testing&amp;quot; func TestCoverage(t *testing.T) { type args struct { condition bool } tests := []struct { name string args args wantErr bool }{ // TODO: Add test cases. } for _, tt := range tests { t.Run(tt.name, func(t *testing.T) { if err := Coverage(tt.args.condition); (err != nil) != tt.wantErr { t.Errorf(&amp;quot;Coverage() error = %v, wantErr %v&amp;quot;, err, tt.wantErr) } }) } }  </description>
     </item>
     
     <item>
       <title>Middleware in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-middleware-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-middleware-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 16:40:32 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-middleware-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-middleware-in-go/</guid>
       <description>package middleware import ( &amp;quot;log&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;time&amp;quot; ) // Middleware is what all middleware functions will return type Middleware func(http.HandlerFunc) http.HandlerFunc // ApplyMiddleware will apply all middleware, the last // arguments will be the // outer wrap for context passing purposes func ApplyMiddleware(h http.HandlerFunc, middleware ...Middleware) http.HandlerFunc { applied := h for _, m := range middleware { applied = m(applied) } return applied } // Logger logs requests, this will use an id passed in via // SetID() func Logger(l *log.</description>
     </item>
     
     <item>
       <title>Strconv in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-strconv-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 11:03:14 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-strconv-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</guid>
       <description> ParseFloat strconv.ParseFloat(amount, 64)  ParseInt strconv.ParseInt(result, 10, 64)  FormatInt strconv.FormatInt(amount, 10)  ParseInt s := &amp;quot;1234&amp;quot; if res, err := strconv.ParseInt(s, 10, 64); err != nil { return err }  </description>
     </item>
     
     <item>
       <title>Btyes in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-btyes-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-btyes-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 10:01:57 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-btyes-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-btyes-in-go/</guid>
       <description> NewBuffer bytes.NewBuffer(secrets)  NewBufferString bytes.NewBufferString(secrets).Bytes()  </description>
     </item>
     
     <item>
       <title>JSON in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-json-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 09:59:40 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-json-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</guid>
       <description> JSONData type JSONData struct { Name string `json:&amp;quot;name&amp;quot;` Age int `json:&amp;quot;age&amp;quot;` }  Marshal if d, err := json.Marshal(t); err != nil { return nil, err } return bytes.NewBuffer(d), nil  Unmarshal res := make(map[string]string) if err := json.Unmarshal([]byte(`{&amp;quot;key&amp;quot;: &amp;quot;value&amp;quot;}`), &amp;amp;res); err != nil { return err }  NewDecoder Working with streams
 res := make(map[string]string) b := bytes.NewReader([]byte(`{&amp;quot;key2&amp;quot;: &amp;quot;value2&amp;quot;}`)) decoder := json.NewDecoder(b) if err := decoder.Decode(&amp;amp;res); err != nil { return err }  </description>
     </item>
     
     <item>
       <title>Ioutil in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-ioutil-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 09:53:14 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-ioutil-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</guid>
       <description> ReadAll payload, err := ioutil.ReadAll(recorder.Body); err != nil { t.Errorf(&amp;quot;Error parsing response body: %v&amp;quot;, err) }  </description>
     </item>
     
     <item>
       <title>Bufio in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-bufio-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</link>
       <pubDate>Sun, 27 Jan 2019 09:33:26 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-bufio-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</guid>
       <description> NewScanner scanner := bufio.NewScanner(r) // r io.Reader scanner.Split(bufio.ScanWords) for scanner.Scan() { result[scanner.Text()]++ }  NewReader r := bufio.NewReader(f) line, err := r.ReadString(&#39;\n&#39;)  </description>
     </item>
     
     <item>
       <title>Go Environment</title>
-      <link>https://liyingzhen.github.io/old/2019-01-26-go-environment/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-26-go-environment/</link>
       <pubDate>Sat, 26 Jan 2019 11:20:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-26-go-environment/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-26-go-environment/</guid>
       <description>GOROOT To access to the Go binary and its libraries
 GOPATH To tell the Go compiler where to find the source code for the project and its dependencies.
 src/ Contain the source code of our projects and their dependencies.
@@ -100,49 +100,49 @@ bin/ Go compiles and builds our projects into executable binaries and places the
     
     <item>
       <title>Channels in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-25-channels-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</link>
       <pubDate>Fri, 25 Jan 2019 21:39:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-25-channels-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</guid>
       <description>A channel is a communication mechanism that allows us to pass data between goroutines. It is an in-built data type in Go. Data can be passed using one of the primitive data types or we can create our own complex data type using structs.
 Writing to a channel The code in this subsection will teach you how to write to a channel. Writing the x value to the c channel is as easy as writing c &amp;lt;- x.</description>
     </item>
     
     <item>
       <title>Concurrency and parallelism</title>
-      <link>https://liyingzhen.github.io/old/2019-01-25-concurrency-and-parallelism/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</link>
       <pubDate>Fri, 25 Jan 2019 21:08:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-25-concurrency-and-parallelism/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</guid>
       <description>Computer and software programs are useful because they do a lot of laborious work very fast and can also do multiple things at once. We want our programs to be able to do multiple things simultaneously, that is, multitask, and the success of a programming language can depend on how easy it is to write and understand multitasking programs.
 Concurrency and parallelism are two terms that we are bound to come across often when looking into multitasking and they are often used interchangeably.</description>
     </item>
     
     <item>
       <title>Interfaces in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-24-interface-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-24-interface-in-go/</link>
       <pubDate>Thu, 24 Jan 2019 18:28:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-24-interface-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-24-interface-in-go/</guid>
       <description>Interfaces provide a way to declare types that define only behavior. This behavior can be implemented by concrete types, such as struct or named types, via methods. When a concrete type implements the set of methods for an interface, values of the concrete type can be assigned to variables of the interface type. Then method calls against the interface value actually call into the equivalent method of the concrete value.</description>
     </item>
     
     <item>
       <title>Struct in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-22-pointers-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-22-pointers-in-go/</link>
       <pubDate>Tue, 22 Jan 2019 09:34:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-22-pointers-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-22-pointers-in-go/</guid>
       <description>Pointers provide a way to share data across function boundaries. Having the ability to share and reference data with a pointer provides flexbility. It also helps our programs minimize the amount of memory they need and can add some extra performance.
 Notes  Use pointers to share data. Values in Go are always pass by value. &amp;ldquo;Value of&amp;rdquo;, what&amp;rsquo;s in the box. &amp;ldquo;Address of&amp;rdquo; ( &amp;amp; ), where is the box.</description>
     </item>
     
     <item>
       <title>rune in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-20-rune-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-20-rune-in-go/</link>
       <pubDate>Sun, 20 Jan 2019 10:41:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-20-rune-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-20-rune-in-go/</guid>
       <description>A rune is an int32 value, and therefore it is a Go type that is used for representing a Unicode code point. A Unicode code point or code position is a numerical value that is usually used for representing single Unicode characters.
  NOTE: You can consider a string as a collection of runes.
  A rune literal is a character in single quotes. You may also consider a rune literal as a rune constant.</description>
@@ -150,10 +150,10 @@ Notes  Use pointers to share data. Values in Go are always pass by value. &amp;l
     
     <item>
       <title>The constant generator iota</title>
-      <link>https://liyingzhen.github.io/old/2019-01-20-the-constant-generator-iota/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</link>
       <pubDate>Sun, 20 Jan 2019 10:05:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-20-the-constant-generator-iota/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</guid>
       <description>The constant generator iota is used for declaring a sequence of related values that uses incrementing numbers without the need to type each one of them explicitly.
 const ( Zero Digit = iota One Two Three Four )  Here you see the definition of a constant generator iota based on Digit, which is equivalent to the following declaration of four constants:
 const ( Zero = 0 One = 1 Two = 2 Three = 3 Four = 4 )  </description>
@@ -161,40 +161,40 @@ const ( Zero = 0 One = 1 Two = 2 Three = 3 Four = 4 )  </description>
     
     <item>
       <title>Byte Slices</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-byte-slices/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</link>
       <pubDate>Sat, 19 Jan 2019 17:20:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-byte-slices/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</guid>
       <description>A byte slice is a slice where its type is byte. You can create a new byte slice named s as follows:
 s := make([]byte, 5)  There is nothing special in the way that you can access a byte slice compared to the other types of slices. It is just that byte slices are used in file input and output operations.</description>
     </item>
     
     <item>
       <title>General Go coding advices</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-general-go-coding-advices/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-general-go-coding-advices/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</guid>
       <description>The following list offers practical advices that will help you write better Go code:
  If you have an error in a Go function, either log it or return it, do not do both unless you have a really good reason for doing so! Go interfaces define behaviors, not data and data structures. Use the io.Reader and io.Writer interfaces because they make your code more extensible. Make sure that you pass a pointer to a variable of a function only when needed.</description>
     </item>
     
     <item>
       <title>Find out Go Environment</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-find-out-go-environment/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/</link>
       <pubDate>Sat, 19 Jan 2019 17:02:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-find-out-go-environment/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/</guid>
       <description>package main import ( &amp;quot;fmt&amp;quot; &amp;quot;runtime&amp;quot; ) func main() { fmt.Print(&amp;quot;You are using &amp;quot;, runtime.Compiler, &amp;quot; &amp;quot;) fmt.Println(&amp;quot;on a&amp;quot;, runtime.GOARCH, &amp;quot;machine&amp;quot;) fmt.Println(&amp;quot;Using Go version&amp;quot;, runtime.Version()) fmt.Println(&amp;quot;Number of CPUs:&amp;quot;, runtime.NumCPU()) fmt.Println(&amp;quot;Number of Goroutines:&amp;quot;, runtime.NumGoroutine()) }  xecuting goEnv.go on a macOS High Sierra machine with Go version 1.9.2 will create the following output:
 $ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 Number of CPUs: 8 Number of Goroutines: 1  </description>
     </item>
     
     <item>
       <title>Writing to log files</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-writing-to-log-files/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-writing-to-log-files/</link>
       <pubDate>Sat, 19 Jan 2019 15:44:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-writing-to-log-files/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-writing-to-log-files/</guid>
       <description>Generally speaking, using a log file to write some information is considered a better practice than writing the same output on the screen for two reasons:
  The output does not get lost as it is stored in a file
  You can search and process log files using Unix tools such as grep(1), awk(1), and sed(1), which cannot be done when messages are printed on a Terminal window</description>
@@ -202,84 +202,84 @@ $ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 N
     
     <item>
       <title>Working with command-line arguments</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-working-with-command-line-arguments/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</link>
       <pubDate>Sat, 19 Jan 2019 15:39:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-working-with-command-line-arguments/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</guid>
       <description>package main import ( &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; &amp;quot;strconv&amp;quot; ) func main() { if len(os.Args) == 1 { fmt.Println(&amp;quot;Please give one or more floats.&amp;quot;) os.Exit(1) } arguments := os.Args min, _ := strconv.ParseFloat(arguments[1], 64) max, _ := strconv.ParseFloat(arguments[1], 64) for i := 2; i &amp;lt; len(arguments); i++ { n, _ := strconv.ParseFloat(arguments[i], 64) if n &amp;lt; min { min = n } if n &amp;gt; max { max = n } } fmt.</description>
     </item>
     
     <item>
       <title>Reading from Standard Input</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-reading-from-standard-input/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</link>
       <pubDate>Sat, 19 Jan 2019 15:33:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-reading-from-standard-input/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</guid>
       <description>package main import ( &amp;quot;bufio&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; ) func main() { var f *os.File f = os.Stdin defer f.Close() scanner := bufio.NewScanner(f) for scanner.Scan() { fmt.Println(&amp;quot;&amp;gt;&amp;quot;, scanner.Text()) } }  The execution of stdIN.go will produce the following type of output:
 $ go run stdIN.go 21 &amp;gt; 21 This is Mihalis! &amp;gt; This is Mihalis!  In Unix, you can tell a program to stop reading data from standard input by pressing Ctrl + D.</description>
     </item>
     
     <item>
       <title>Working with Cokkies</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-working-with-cookies/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</link>
       <pubDate>Sat, 19 Jan 2019 08:18:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-working-with-cookies/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</guid>
       <description>Code Review Writing Cookies func cookieWriteHandler(formatter *render.Render) http.HandlerFunc { return func(w http.ResponseWriter, req *http.Request) { expiration := time.Now().Add(2 * 24 * time.Hour) cookie := http.Cookie{ Name: &amp;quot;sample&amp;quot;, Value: &amp;quot;this is a cookie&amp;quot;, Expires: expiration, } http.SetCookie(w, &amp;amp;cookie) formatter.JSON(w, http.StatusOK, &amp;quot;cookie set&amp;quot;) } }  Reading Cookies func cookieReadHandler(formatter *render.Render) http.HandlerFunc { return func(w http.ResponseWriter, req *http.Request) { cookie, err := req.Cookie(&amp;quot;sample&amp;quot;) if err == nil { fmt.Fprint(w, cookie.Value) } else { fmt.</description>
     </item>
     
     <item>
       <title>Building an API server with Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-15-building-an-api-server-with-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-15-building-an-api-server-with-go/</link>
       <pubDate>Tue, 15 Jan 2019 19:41:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-15-building-an-api-server-with-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-15-building-an-api-server-with-go/</guid>
       <description>File Structures main.go service/ handlers_test.go handlers.go server.go middleware.go types.go  Libraries introduction  gorilla/mux -&amp;gt; A powerful URL router and dispatcher for golang unrolled/render -&amp;gt; Go package for easily rendering JSON responses. codegangsta/negroni -&amp;gt; Idiomatic HTTP Middleware for Golang  Install Dependencies go get github.com/urfave/negroni go get github.com/gorilla/mux go get github.com/unrolled/render  Create our types In service folder create types.go
 package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&amp;quot;` ShipsWithin int `json:&amp;quot;ships_within&amp;quot;` QuantityInStock int `json:&amp;quot;qty_in_stock&amp;quot;` }  TDD In service folder create handlers_test.</description>
     </item>
     
     <item>
       <title>Benchmarking and profiling in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-benchmarking-and-profiling-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</link>
       <pubDate>Sun, 13 Jan 2019 09:18:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-benchmarking-and-profiling-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</guid>
       <description>&amp;ldquo;Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.&amp;rdquo; - Donald Knuth</description>
     </item>
     
     <item>
       <title>Testing in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-testing-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</link>
       <pubDate>Sun, 13 Jan 2019 08:50:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-testing-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</guid>
       <description>Source files and associated test files are placed in the same package/folder The name of the test file for any given source file is &amp;lt;source-file-name&amp;gt;_test.go Test functions need to have the &amp;ldquo;Test&amp;rdquo; prefix, and the next character in the function name should be capitalized  func TestSearchHandlerReturnsBadRequestWhenBlankSearchCriteriaIsSent(t *testing.T) { handler := SearchHandler{} data, _ := json.Marshal(searchRequest{}) request := httptest.NewRequest(&amp;quot;POST&amp;quot;, &amp;quot;/search&amp;quot;, bytes.NewReader(data)) response := httptest.NewRecorder() handler.ServeHTTP(response, request) if response.Code != http.</description>
     </item>
     
     <item>
       <title>Serving Static Files In Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-12-servering-static-files/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</link>
       <pubDate>Sat, 12 Jan 2019 17:15:17 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-12-servering-static-files/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</guid>
       <description>func main() { port := 8080 cathandler := http.FileServer(http.Dir(&amp;quot;./images&amp;quot;)) // images/... http.Handle(&amp;quot;/cat/&amp;quot;, http.StripPrefix(&amp;quot;/cat/&amp;quot;, cathandler)) // images/cat/... http.Handle(&amp;quot;/cat/&amp;quot;, cathandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) }  </description>
     </item>
     
     <item>
       <title>Reading and writing JSON</title>
-      <link>https://liyingzhen.github.io/old/2019-01-12-reading-and-writing-json/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</link>
       <pubDate>Sat, 12 Jan 2019 15:43:17 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-12-reading-and-writing-json/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</guid>
       <description>Writing JSON func main() { port := 8080 http.HandleFunc(&amp;quot;/&amp;quot;, helloWorldHandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) } type HelloWorldResponse struct { // change the output field to be &amp;quot;message&amp;quot; Message string `json:&amp;quot;message&amp;quot;` // do not output this field Author string `json:&amp;quot;-&amp;quot;` // do not output the field if the value is empty Date string `json:&amp;quot;,omitempty&amp;quot;` // convert output to a string and rename &amp;quot;id&amp;quot; Id int `json:&amp;quot;id, string&amp;quot;` } func helloWorldHandler(w http.</description>
     </item>
     
     <item>
       <title>Panic and Recover in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-19-panic-and-recover-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</link>
       <pubDate>Sat, 12 Jan 2019 14:16:34 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-19-panic-and-recover-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</guid>
       <description>Strictly speaking, panic() is a built-in Go function that terminates the current flow of a Go program and starts panicking!
 On the other hand, the recover() function, which is also a built-in Go function, allows you to take back the control of a goroutine that just panicked using panic().
 package main import ( &amp;quot;fmt&amp;quot; ) func a() { fmt.Println(&amp;quot;Inside a()&amp;quot;) defer func() { if c := recover(); c != nil { fmt.</description>

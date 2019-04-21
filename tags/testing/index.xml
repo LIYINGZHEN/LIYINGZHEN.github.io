@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/tags/testing/</link>
+    <link>https://www.maxlivinci.com/tags/testing/</link>
     <description>Recent content in Testing on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Jan 2019 16:48:37 +0100</lastBuildDate>
     
-	<atom:link href="https://liyingzhen.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.maxlivinci.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Table Driven Tests</title>
-      <link>https://liyingzhen.github.io/old/2019-01-27-table-driven-tests/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</link>
       <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-27-table-driven-tests/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</guid>
       <description>package main import &amp;quot;testing&amp;quot; func TestCoverage(t *testing.T) { type args struct { condition bool } tests := []struct { name string args args wantErr bool }{ // TODO: Add test cases. } for _, tt := range tests { t.Run(tt.name, func(t *testing.T) { if err := Coverage(tt.args.condition); (err != nil) != tt.wantErr { t.Errorf(&amp;quot;Coverage() error = %v, wantErr %v&amp;quot;, err, tt.wantErr) } }) } }  </description>
     </item>
     
     <item>
       <title>Benchmarking and profiling in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-benchmarking-and-profiling-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</link>
       <pubDate>Sun, 13 Jan 2019 09:18:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-benchmarking-and-profiling-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</guid>
       <description>&amp;ldquo;Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.&amp;rdquo; - Donald Knuth</description>
     </item>
     
     <item>
       <title>Testing in Go</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-testing-in-go/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</link>
       <pubDate>Sun, 13 Jan 2019 08:50:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-testing-in-go/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</guid>
       <description>Source files and associated test files are placed in the same package/folder The name of the test file for any given source file is &amp;lt;source-file-name&amp;gt;_test.go Test functions need to have the &amp;ldquo;Test&amp;rdquo; prefix, and the next character in the function name should be capitalized  func TestSearchHandlerReturnsBadRequestWhenBlankSearchCriteriaIsSent(t *testing.T) { handler := SearchHandler{} data, _ := json.Marshal(searchRequest{}) request := httptest.NewRequest(&amp;quot;POST&amp;quot;, &amp;quot;/search&amp;quot;, bytes.NewReader(data)) response := httptest.NewRecorder() handler.ServeHTTP(response, request) if response.Code != http.</description>
     </item>
     

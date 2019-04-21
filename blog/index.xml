@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Blogs on YING ZHEN LI</title>
-        <link>https://liyingzhen.github.io/blog/</link>
+        <link>https://www.maxlivinci.com/blog/</link>
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://liyingzhen.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
             <title>Building a website</title>
-            <link>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</link>
+            <link>https://www.maxlivinci.com/blog/2019-04-20-building-a-website/</link>
             <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
             
-            <guid>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</guid>
+            <guid>https://www.maxlivinci.com/blog/2019-04-20-building-a-website/</guid>
             <description>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.
 I have tried several frameworks: Bootstrap, React, and a few more. I admit I enjoy way more developing something with React than doing plain HTML/CSS/JS, but let’s face it, it’s just not my cup of tea. Sometimes I have to work on front-end projects, but whenever I can avoid it, I do it.</description>
             <content type="html"><![CDATA[<p>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.</p>

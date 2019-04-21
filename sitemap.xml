@@ -3,417 +3,417 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://liyingzhen.github.io/blog/2019-04-20-building-a-website/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-04-20-building-a-website/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-25-postgres/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-25-postgres/</loc>
     <lastmod>2019-03-25T18:02:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-17-http-response-codes/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</loc>
     <lastmod>2019-03-17T07:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-17-elk-stack/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</loc>
     <lastmod>2019-03-17T06:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-16-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-16-go/</loc>
     <lastmod>2019-03-16T19:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-14-drone/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-14-drone/</loc>
     <lastmod>2019-03-14T08:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-14-linux/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-14-linux/</loc>
     <lastmod>2019-03-14T07:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-14-networking/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-14-networking/</loc>
     <lastmod>2019-03-14T06:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-13-nginx/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-13-nginx/</loc>
     <lastmod>2019-03-13T06:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-13-redis/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-13-redis/</loc>
     <lastmod>2019-03-13T06:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-09-mongodb/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-09-mongodb/</loc>
     <lastmod>2019-03-10T16:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-08-docker/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-08-docker/</loc>
     <lastmod>2019-03-08T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-03-08-kubernetes/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</loc>
     <lastmod>2019-03-08T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-table-driven-tests/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</loc>
     <lastmod>2019-01-27T16:48:37+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-middleware-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-middleware-in-go/</loc>
     <lastmod>2019-01-27T16:40:32+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-strconv-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</loc>
     <lastmod>2019-01-27T11:03:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-btyes-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-btyes-in-go/</loc>
     <lastmod>2019-01-27T10:01:57+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-json-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</loc>
     <lastmod>2019-01-27T09:59:40+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-ioutil-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</loc>
     <lastmod>2019-01-27T09:53:14+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-27-bufio-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</loc>
     <lastmod>2019-01-27T09:33:26+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-26-open-api-specification/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-26-open-api-specification/</loc>
     <lastmod>2019-01-26T18:40:48+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-26-go-environment/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-26-go-environment/</loc>
     <lastmod>2019-01-26T11:20:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-26-worker-pools/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-26-worker-pools/</loc>
     <lastmod>2019-01-26T09:52:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-25-channels-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</loc>
     <lastmod>2019-01-25T21:39:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-25-concurrency-and-parallelism/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</loc>
     <lastmod>2019-01-25T21:08:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-25-unix-signals/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-25-unix-signals/</loc>
     <lastmod>2019-01-25T20:34:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-24-interface-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-24-interface-in-go/</loc>
     <lastmod>2019-01-24T18:28:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-22-pointers-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-22-pointers-in-go/</loc>
     <lastmod>2019-01-22T09:34:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-20-rune-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-20-rune-in-go/</loc>
     <lastmod>2019-01-20T10:41:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-20-the-constant-generator-iota/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</loc>
     <lastmod>2019-01-20T10:05:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-byte-slices/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</loc>
     <lastmod>2019-01-19T17:20:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-general-go-coding-advices/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</loc>
     <lastmod>2019-01-19T17:05:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-find-out-go-environment/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/</loc>
     <lastmod>2019-01-19T17:02:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-writing-to-log-files/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-writing-to-log-files/</loc>
     <lastmod>2019-01-19T15:44:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-working-with-command-line-arguments/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</loc>
     <lastmod>2019-01-19T15:39:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-reading-from-standard-input/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</loc>
     <lastmod>2019-01-19T15:33:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-working-with-cookies/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</loc>
     <lastmod>2019-01-19T08:18:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-an-example-of-using-rabbitmq-from-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-an-example-of-using-rabbitmq-from-go/</loc>
     <lastmod>2019-01-19T07:42:05+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-cqrs/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-cqrs/</loc>
     <lastmod>2019-01-19T07:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-15-building-an-api-server-with-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-15-building-an-api-server-with-go/</loc>
     <lastmod>2019-01-15T19:41:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-13-event-driven-architecture/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-13-event-driven-architecture/</loc>
     <lastmod>2019-01-13T13:44:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-13-service-discovery/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</loc>
     <lastmod>2019-01-13T10:19:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-13-benchmarking-and-profiling-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</loc>
     <lastmod>2019-01-13T09:18:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-13-testing-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</loc>
     <lastmod>2019-01-13T08:50:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-12-http-headers/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-12-http-headers/</loc>
     <lastmod>2019-01-12T19:52:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-12-uri-path-design-for-rest-services/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-12-uri-path-design-for-rest-services/</loc>
     <lastmod>2019-01-12T19:37:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-12-servering-static-files/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</loc>
     <lastmod>2019-01-12T17:15:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-12-reading-and-writing-json/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</loc>
     <lastmod>2019-01-12T15:43:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-19-panic-and-recover-in-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</loc>
     <lastmod>2019-01-12T14:16:34+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/2019-01-11-an-example-of-using-nsq-from-go/</loc>
+    <loc>https://www.maxlivinci.com/old/2019-01-11-an-example-of-using-nsq-from-go/</loc>
     <lastmod>2019-01-11T10:27:05+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/categories/</loc>
+    <loc>https://www.maxlivinci.com/categories/</loc>
     <lastmod>2019-01-26T18:40:48+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/about/</loc>
+    <loc>https://www.maxlivinci.com/about/</loc>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/blog/</loc>
+    <loc>https://www.maxlivinci.com/blog/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/categories/</loc>
+    <loc>https://www.maxlivinci.com/categories/</loc>
     <lastmod>2019-01-26T18:40:48+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/cqrs-message-queue/</loc>
+    <loc>https://www.maxlivinci.com/tags/cqrs-message-queue/</loc>
     <lastmod>2019-01-19T07:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/cs/</loc>
+    <loc>https://www.maxlivinci.com/tags/cs/</loc>
     <lastmod>2019-01-26T09:52:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/docker/</loc>
+    <loc>https://www.maxlivinci.com/tags/docker/</loc>
     <lastmod>2019-03-08T13:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/drone/</loc>
+    <loc>https://www.maxlivinci.com/tags/drone/</loc>
     <lastmod>2019-03-14T08:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/elk/</loc>
+    <loc>https://www.maxlivinci.com/tags/elk/</loc>
     <lastmod>2019-03-17T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/fundamental/</loc>
+    <loc>https://www.maxlivinci.com/tags/fundamental/</loc>
     <lastmod>2019-01-24T18:28:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/categories/go/</loc>
+    <loc>https://www.maxlivinci.com/categories/go/</loc>
     <lastmod>2019-01-27T16:48:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/golang/</loc>
+    <loc>https://www.maxlivinci.com/tags/golang/</loc>
     <lastmod>2019-03-16T19:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/hugo/</loc>
+    <loc>https://www.maxlivinci.com/tags/hugo/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/kubernetes/</loc>
+    <loc>https://www.maxlivinci.com/tags/kubernetes/</loc>
     <lastmod>2019-03-08T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/linux/</loc>
+    <loc>https://www.maxlivinci.com/tags/linux/</loc>
     <lastmod>2019-03-14T07:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/message-queue/</loc>
+    <loc>https://www.maxlivinci.com/tags/message-queue/</loc>
     <lastmod>2019-01-19T07:42:05+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/microservices/</loc>
+    <loc>https://www.maxlivinci.com/tags/microservices/</loc>
     <lastmod>2019-01-13T13:44:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/mongodb/</loc>
+    <loc>https://www.maxlivinci.com/tags/mongodb/</loc>
     <lastmod>2019-03-10T16:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/networking/</loc>
+    <loc>https://www.maxlivinci.com/tags/networking/</loc>
     <lastmod>2019-03-14T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/nginx/</loc>
+    <loc>https://www.maxlivinci.com/tags/nginx/</loc>
     <lastmod>2019-03-13T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/categories/notes/</loc>
+    <loc>https://www.maxlivinci.com/categories/notes/</loc>
     <lastmod>2019-03-25T18:02:49+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/old/</loc>
+    <loc>https://www.maxlivinci.com/old/</loc>
     <lastmod>2019-03-25T18:02:49+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/postgres/</loc>
+    <loc>https://www.maxlivinci.com/tags/postgres/</loc>
     <lastmod>2019-03-25T18:02:49+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/redis/</loc>
+    <loc>https://www.maxlivinci.com/tags/redis/</loc>
     <lastmod>2019-03-13T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/rest/</loc>
+    <loc>https://www.maxlivinci.com/tags/rest/</loc>
     <lastmod>2019-03-17T07:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/</loc>
+    <loc>https://www.maxlivinci.com/tags/</loc>
     <lastmod>2019-01-19T07:00:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/tags/testing/</loc>
+    <loc>https://www.maxlivinci.com/tags/testing/</loc>
     <lastmod>2019-01-27T16:48:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://liyingzhen.github.io/</loc>
+    <loc>https://www.maxlivinci.com/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

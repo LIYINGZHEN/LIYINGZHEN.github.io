@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on YING ZHEN LI</title>
-    <link>https://liyingzhen.github.io/tags/microservices/</link>
+    <link>https://www.maxlivinci.com/tags/microservices/</link>
     <description>Recent content in Microservices on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Jan 2019 13:44:00 +0100</lastBuildDate>
     
-	<atom:link href="https://liyingzhen.github.io/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.maxlivinci.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Event-Driven Architecture</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-event-driven-architecture/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-event-driven-architecture/</link>
       <pubDate>Sun, 13 Jan 2019 13:44:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-event-driven-architecture/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-event-driven-architecture/</guid>
       <description>Asynchronous processing With asynchronous processing, all the communication to the downstream application happens out of process leveraging a queue or a message broker as an intermediary.</description>
     </item>
     
     <item>
       <title>Service discovery</title>
-      <link>https://liyingzhen.github.io/old/2019-01-13-service-discovery/</link>
+      <link>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</link>
       <pubDate>Sun, 13 Jan 2019 10:19:00 +0100</pubDate>
       
-      <guid>https://liyingzhen.github.io/old/2019-01-13-service-discovery/</guid>
+      <guid>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</guid>
       <description> Server-side service discovery Client-side discovery </description>
     </item>
     
