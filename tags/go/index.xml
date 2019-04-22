@@ -6,10 +6,20 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Slices from the ground up</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-22-slices-from-the-ground-up/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-22-slices-from-the-ground-up/</guid>
+      <description>Arrays Arrays in Go have two relevant properties:
+ They have a fixed size; [5]int is is distinct from [3]int. They are value types. Consider this example:  package main import &amp;quot;fmt&amp;quot; func main() { var a [5]int b := a b[2] = 7 fmt.Println(a, b) // prints [0 0 0 0 0] [0 0 7 0 0] }  The statement b := a declares a new variable, b, of type [5]int, and copies the contents of a to b.</description>
+    </item>
     
     <item>
       <title>Gopher Reading List</title>

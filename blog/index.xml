@@ -6,8 +6,80 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 21 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Slices from the ground up</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-22-slices-from-the-ground-up/</link>
+            <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-22-slices-from-the-ground-up/</guid>
+            <description>Arrays Arrays in Go have two relevant properties:
+ They have a fixed size; [5]int is is distinct from [3]int. They are value types. Consider this example:  package main import &amp;quot;fmt&amp;quot; func main() { var a [5]int b := a b[2] = 7 fmt.Println(a, b) // prints [0 0 0 0 0] [0 0 7 0 0] }  The statement b := a declares a new variable, b, of type [5]int, and copies the contents of a to b.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="arrays">Arrays</h2>
+
+<p>Arrays in Go have two relevant properties:</p>
+
+<ul>
+<li><strong>They have a fixed size</strong>; [5]int is is distinct from [3]int.</li>
+<li><strong>They are value types</strong>. Consider this example:</li>
+</ul>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+  var a [5]int
+  b := a
+  b[2] = 7
+  fmt.Println(a, b) // prints [0 0 0 0 0] [0 0 7 0 0]
+}
+</code></pre>
+
+<p>The statement <code>b := a</code> declares a new variable, b, of type <code>[5]int</code>, and copies the contents of <code>a</code> to <code>b</code>. Updating <code>b</code> has no effect on the contents of <code>a</code> because <code>a</code> and <code>b</code> are independent values.</p>
+
+<h2 id="slices">Slices</h2>
+
+<p>Go’s slice type differs from its array counterpart in two important ways:</p>
+
+<ul>
+<li>Slices do not have a fixed length.</li>
+<li>Assigning one slice variable to another does not make a copy of the slices contents.</li>
+</ul>
+
+<h2 id="the-slice-header-value">The slice header value</h2>
+
+<pre><code class="language-go">package runtime
+
+type slice struct {
+  ptr   unsafe.Pointer
+  len   int
+  cap   int
+}
+</code></pre>
+
+<p>This is important because unlike <code>map</code> and <code>chan</code> types <strong><code>slices</code> are <code>value types</code></strong> and are copied when assigned or passed as arguments to functions.</p>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func double(s []int) {
+  s = append(s, s...)
+}
+
+func main() {
+  s := []int{1, 2, 3}
+  double(s)
+  fmt.Println(s, len(s)) // prints [1 2 3] 3
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Gopher Reading List</title>
