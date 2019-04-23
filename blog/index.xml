@@ -10,6 +10,104 @@
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Working with Files in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-23-working-with-files-in-go/</link>
+            <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-23-working-with-files-in-go/</guid>
+            <description>One of the fundamental aspects of UNIX is that everything is a file. We don&amp;rsquo;t necessarily know what the file descriptor maps to, that is abstracted by the operating system&amp;rsquo;s device drivers. The operating system provides us an interface to the device in the form of a file.
+The reader and writer interfaces in Go are similar abstractions. We simply read and write bytes, without the need to understand where or how the reader gets its data or where the writer is sending the data.</description>
+            <content type="html"><![CDATA[
+
+<p>One of the fundamental aspects of UNIX is that everything is a file. We don&rsquo;t necessarily know what the file descriptor maps to, that is abstracted by the operating system&rsquo;s device drivers. The operating system provides us an interface to the device in the form of a file.</p>
+
+<p>The reader and writer interfaces in Go are similar abstractions. We simply read and write bytes, without the need to understand where or how the reader gets its data or where the writer is sending the data. Look in /dev to find available devices. Some will require elevated privileges to access.`</p>
+
+<h2 id="create-empty-file">Create Empty File</h2>
+
+<pre><code class="language-go">newFile, err = os.Create(&quot;test.txt&quot;)
+if err != nil {
+		log.Fatal(err)
+}
+</code></pre>
+
+<h2 id="get-file-info">Get File Info</h2>
+
+<pre><code class="language-go">fileInfo, err = os.Stat(&quot;test.txt&quot;)
+if err != nil {
+	log.Fatal(err)
+}
+</code></pre>
+
+<h2 id="delete-a-file">Delete a File</h2>
+
+<pre><code class="language-go">err := os.Remove(&quot;test.txt&quot;)
+if err != nil {
+		log.Fatal(err)
+}
+</code></pre>
+
+<h2 id="open-and-close-files">Open and Close Files</h2>
+
+<pre><code class="language-go">file, err := os.Open(&quot;test.txt&quot;)
+if err != nil {
+		log.Fatal(err)
+}
+file.Close()
+
+
+// OpenFile with more options. Last param is the permission mode
+// Second param is the attributes when opening
+file, err = os.OpenFile(&quot;test.txt&quot;, os.O_APPEND, 0666)
+if err != nil {
+	log.Fatal(err)
+}
+file.Close()
+
+// Use these attributes individually or combined
+// with an OR for second arg of OpenFile()
+// e.g. os.O_CREATE|os.O_APPEND
+// or os.O_CREATE|os.O_TRUNC|os.O_WRONLY
+
+// os.O_RDONLY // Read only
+// os.O_WRONLY // Write only
+// os.O_RDWR // Read and write
+// os.O_APPEND // Append to end of file
+// os.O_CREATE // Create is none exist
+// os.O_TRUNC // Truncate file when opening
+</code></pre>
+
+<h2 id="check-if-file-exists">Check if File Exists</h2>
+
+<pre><code class="language-go">fileInfo, err := os.Stat(&quot;test.txt&quot;)
+if err != nil {
+		if os.IsNotExist(err) {
+				log.Fatal(&quot;File does not exist.&quot;)
+		}
+}
+</code></pre>
+
+<h2 id="quick-write-to-file">Quick Write to File</h2>
+
+<p>The ioutil package has a useful function called <code>WriteFile()</code> that will handle creating/opening, writing a slice of bytes, and closing. It is useful if you just need a quick way to dump a slice of bytes to a file.</p>
+
+<pre><code class="language-go">err := ioutil.WriteFile(&quot;test.txt&quot;, []byte(&quot;Hi\n&quot;), 0666)
+if err != nil {
+		log.Fatal(err)
+}
+</code></pre>
+
+<h2 id="quick-read-whole-file-to-memory">Quick Read Whole File to Memory</h2>
+
+<pre><code class="language-go">data, err := ioutil.ReadFile(&quot;test.txt&quot;)
+if err != nil {
+	log.Fatal(err)
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
             <title>Writing middleware in Golang</title>
             <link>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</link>
             <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
