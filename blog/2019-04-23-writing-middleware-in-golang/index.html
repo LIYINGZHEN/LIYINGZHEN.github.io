@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/" />
+
+
+<title>
+    
+    Writing middleware in Golang :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.6a7678f40434c7781747ffdd224a984179b2a3c81c81f19ccf845fdffbe80b7c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Writing middleware in Golang">
+<meta itemprop="description" content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place.">
+
+
+<meta itemprop="datePublished" content="2019-04-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="401">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Writing middleware in Golang"/>
+<meta name="twitter:description" content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place."/>
+
+
+
+
+<meta property="article:published_time" content="2019-04-23 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/">Writing middleware in Golang</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<h2 id="adapter-type">Adapter type</h2>
+
+<pre><code class="language-go">type Adapter func(http.Handler) http.Handler
+</code></pre>
+
+<p>The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place. So far this is not much different from just wrapping http.HandlerFunc types, however, now, we can instead write functions that themselves return an Adapter.</p>
+
+<p>The following example is going to allow us to specify the log.Logger (from the standard package) that we want our “before” and “after” strings written to.</p>
+
+<pre><code class="language-go">func Notify(logger *log.Logger) Adapter {
+  return func(h http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+      logger.Println(&quot;before&quot;)
+      defer logger.Println(&quot;after&quot;)
+      h.ServeHTTP(w, r)
+    }
+  }
+}
+</code></pre>
+
+<p>Now, thanks to closures, we can capture the logger object inside our functions without spoiling the Adapter interface (it still takes and returns a single http.Handler).</p>
+
+<h2 id="using-the-adapters">Using the Adapters</h2>
+
+<p>The simplest way (albeit somewhat confusing to read) to make use of an adapter is to get the Adapter function and immediately call it:</p>
+
+<pre><code class="language-go">logger := log.New(os.Stdout, &quot;server: &quot;, log.Lshortfile)
+http.Handle(&quot;/&quot;, Notify(logger)(indexHandler))
+</code></pre>
+
+<p>A cleaner approach is to provide yourself an Adapt function, that can do all your adapting for you.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler
+</code></pre>
+
+<p>Our Adapt function takes the handler you want to adapt, and a list of our Adapter types. The result of our Notify function is an acceptable Adapter. Our Adapt function will simply iterate over all adapters, calling them one by one (in reverse order) in a chained manner, returning the result of the first adapter.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler {
+  for i := len(adapters); i &gt; 0; i-- {
+    h = adapter[i](h)
+  }
+  return h
+}
+</code></pre>
+
+<p>Assuming we have several suitable functions that return Adapters, we can then implement middleware on our handlers by calling the Adapt function:</p>
+
+<pre><code class="language-go">http.Handle(&quot;/&quot;,
+  Adapt(
+    indexHandler,
+    Notify(logger),
+    CopyMgoSession(db),
+    CheckAuth(providers),
+    AddHeader(&quot;Server&quot;, &quot;Mine&quot;),
+  )
+</code></pre>
+
+<p>The execution for indexHandler would then run like this:</p>
+
+<ul>
+<li>Notify (log “before” string — maybe with some other bits)</li>
+<li>CopyMgoSession (copy db session and make it available to handler)</li>
+<li>CheckAuth (check auth cresds and bail if failed)</li>
+<li>AddHeader (add response header)</li>
+<li>indexHandler</li>
+<li>Any AddHeader deferred functions</li>
+<li>Any CheckAuth deferred functions</li>
+<li>CopyMgoSession deferred function (probably closing the database copy)</li>
+<li>Notify deferred function (writing “after” string)</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>401 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-04-23 02:00 &#43;0200</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://www.maxlivinci.com/blog/2019-04-22-slices-from-the-ground-up/">
+                                <span class="button__text">Slices from the ground up</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>

@@ -6,8 +6,90 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 23 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Writing middleware in Golang</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</link>
+            <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</guid>
+            <description>Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="adapter-type">Adapter type</h2>
+
+<pre><code class="language-go">type Adapter func(http.Handler) http.Handler
+</code></pre>
+
+<p>The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place. So far this is not much different from just wrapping http.HandlerFunc types, however, now, we can instead write functions that themselves return an Adapter.</p>
+
+<p>The following example is going to allow us to specify the log.Logger (from the standard package) that we want our “before” and “after” strings written to.</p>
+
+<pre><code class="language-go">func Notify(logger *log.Logger) Adapter {
+  return func(h http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+      logger.Println(&quot;before&quot;)
+      defer logger.Println(&quot;after&quot;)
+      h.ServeHTTP(w, r)
+    }
+  }
+}
+</code></pre>
+
+<p>Now, thanks to closures, we can capture the logger object inside our functions without spoiling the Adapter interface (it still takes and returns a single http.Handler).</p>
+
+<h2 id="using-the-adapters">Using the Adapters</h2>
+
+<p>The simplest way (albeit somewhat confusing to read) to make use of an adapter is to get the Adapter function and immediately call it:</p>
+
+<pre><code class="language-go">logger := log.New(os.Stdout, &quot;server: &quot;, log.Lshortfile)
+http.Handle(&quot;/&quot;, Notify(logger)(indexHandler))
+</code></pre>
+
+<p>A cleaner approach is to provide yourself an Adapt function, that can do all your adapting for you.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler
+</code></pre>
+
+<p>Our Adapt function takes the handler you want to adapt, and a list of our Adapter types. The result of our Notify function is an acceptable Adapter. Our Adapt function will simply iterate over all adapters, calling them one by one (in reverse order) in a chained manner, returning the result of the first adapter.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler {
+  for i := len(adapters); i &gt; 0; i-- {
+    h = adapter[i](h)
+  }
+  return h
+}
+</code></pre>
+
+<p>Assuming we have several suitable functions that return Adapters, we can then implement middleware on our handlers by calling the Adapt function:</p>
+
+<pre><code class="language-go">http.Handle(&quot;/&quot;,
+  Adapt(
+    indexHandler,
+    Notify(logger),
+    CopyMgoSession(db),
+    CheckAuth(providers),
+    AddHeader(&quot;Server&quot;, &quot;Mine&quot;),
+  )
+</code></pre>
+
+<p>The execution for indexHandler would then run like this:</p>
+
+<ul>
+<li>Notify (log “before” string — maybe with some other bits)</li>
+<li>CopyMgoSession (copy db session and make it available to handler)</li>
+<li>CheckAuth (check auth cresds and bail if failed)</li>
+<li>AddHeader (add response header)</li>
+<li>indexHandler</li>
+<li>Any AddHeader deferred functions</li>
+<li>Any CheckAuth deferred functions</li>
+<li>CopyMgoSession deferred function (probably closing the database copy)</li>
+<li>Notify deferred function (writing “after” string)</li>
+</ul>
+]]></content>
+        </item>
         
         <item>
             <title>Slices from the ground up</title>
@@ -162,10 +244,10 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://morsmachine.dk/error-handling">Effective error handling in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://davidnix.io/post/error-handling-in-go/">Go&rsquo;s Error Handling is Elegant</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.calhoun.io/one-liner-if-statements-with-errors/">When Should I Use One Liner if&hellip;else Statements in Go?</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project">Five Suggestions for Setting up a Go project</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.elliotdwright.com/2018/02/27/how-i-structure-some-of-my-projects/">The One with the Directory Structure and Manual Wiring</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-tests-in-go-46ddee7a25c">Structuring Tests in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/organizing-go-code">Organizing Go Code</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project">Five Suggestions for Setting up a Go project</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.elliotdwright.com/2018/02/27/how-i-structure-some-of-my-projects/">The One with the Directory Structure and Manual Wiring</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-tests-in-go-46ddee7a25c">Structuring Tests in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/organizing-go-code">Organizing Go Code</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://darian.af/post/the-anatomy-of-a-golang-project/">The anatomy of a Go project</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1">Standard Package Layout</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091">Structuring Applications in Go</a></label></li>
@@ -178,13 +260,13 @@ with a link to the post.</p>
 <h3 id="web">Web</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://rosalita.github.io/building-a-web-app-with-go/">Creating My First Web Application with Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://thenewstack.io/make-a-restful-json-api-go/">Making a RESTful JSON API in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@ScullWM/golang-http-server-for-pro-69034c276355">Golang HTTP server for pro</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.alexedwards.net/blog/serving-static-sites-with-go">Serving Static Sites with Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.calhoun.io/an-intro-to-templates-in-go-part-1-of-3/">An Intro To Templates in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://rosalita.github.io/building-a-web-app-with-go/">Creating My First Web Application with Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://thenewstack.io/make-a-restful-json-api-go/">Making a RESTful JSON API in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@ScullWM/golang-http-server-for-pro-69034c276355">Golang HTTP server for pro</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.alexedwards.net/blog/serving-static-sites-with-go">Serving Static Sites with Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.calhoun.io/an-intro-to-templates-in-go-part-1-of-3/">An Intro To Templates in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.calhoun.io/apis-are-just-web-applications/">JSON APIs Are Just Web Applications</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81">Writing middleware in #golang and how Go makes it so much fun</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81">Writing middleware in #golang and how Go makes it so much fun</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://eager.io/blog/go-and-json/">Go and JSON</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://gowebexamples.com/">Learn Web Programming in Go by Examples</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://husio.github.io/blog/post/accessing-data-in-go/">Accessing data in Go</a></label></li>
