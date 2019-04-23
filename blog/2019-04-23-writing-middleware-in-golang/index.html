@@ -7,7 +7,7 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place." />
+    content="When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/" />
@@ -38,12 +38,12 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Writing middleware in Golang">
-<meta itemprop="description" content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place.">
+<meta itemprop="description" content="When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.">
 
 
 <meta itemprop="datePublished" content="2019-04-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-04-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="401">
+<meta itemprop="wordCount" content="542">
 
 
 
@@ -52,7 +52,7 @@
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Writing middleware in Golang"/>
-<meta name="twitter:description" content="Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place."/>
+<meta name="twitter:description" content="When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable."/>
 
 
 
@@ -113,7 +113,7 @@
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
 
             
 
@@ -127,6 +127,12 @@
 
             <div class="post-content">
                 
+
+<p>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</p>
+
+<p>Keeping HTTP handling code to a simple signature (w http.ResponseWriter, r *http.Request) means that any Go programmer can come to your code, and jump right in without having to learn too much about the code.</p>
+
+<p>Rather than writing functions or types that take in an http.HandlerFunc (or http.Handler) and return a wrapper alternative, we are going to represent this idea in a type of its own.</p>
 
 <h2 id="adapter-type">Adapter type</h2>
 
@@ -209,7 +215,7 @@ http.Handle(&quot;/&quot;, Notify(logger)(indexHandler))
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>401 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>542 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-04-23 02:00 &#43;0200</p>
         </div>

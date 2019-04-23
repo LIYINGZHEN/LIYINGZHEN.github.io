@@ -15,8 +15,14 @@
             <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
             
             <guid>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</guid>
-            <description>Adapter type type Adapter func(http.Handler) http.Handler  The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place.</description>
+            <description>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</description>
             <content type="html"><![CDATA[
+
+<p>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</p>
+
+<p>Keeping HTTP handling code to a simple signature (w http.ResponseWriter, r *http.Request) means that any Go programmer can come to your code, and jump right in without having to learn too much about the code.</p>
+
+<p>Rather than writing functions or types that take in an http.HandlerFunc (or http.Handler) and return a wrapper alternative, we are going to represent this idea in a type of its own.</p>
 
 <h2 id="adapter-type">Adapter type</h2>
 
