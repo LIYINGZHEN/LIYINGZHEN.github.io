@@ -3,17 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-04-24-writing-middleware-in-golang/</loc>
     <lastmod>2019-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.maxlivinci.com/blog/2019-04-23-working-with-files-in-go/</loc>
-    <lastmod>2019-04-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</loc>
     <lastmod>2019-04-23T00:00:00+00:00</lastmod>
   </url>
   

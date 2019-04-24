@@ -10,99 +10,90 @@
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Efficient String Concatenation in Go</title>
-            <link>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</link>
+            <title>Writing middleware in Golang</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-24-writing-middleware-in-golang/</link>
             <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
             
-            <guid>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</guid>
-            <description>In this article I investigate the computational performance of various string concatenation methods in the Go programming language.
-To evaluate the options, I prepared some typical Go benchmarks using the Go testing package. A benchmark looks something like this:
-func BenchmarkNative(b *testing.B) { var s string next := nextString() for i := 0; i &amp;lt; b.N; i++ { s += next() } }  For the purposes of these benchmarks, I imagined having a process that returns string segments one by one, and these segments need to be concatenated to form one string.</description>
+            <guid>https://www.maxlivinci.com/blog/2019-04-24-writing-middleware-in-golang/</guid>
+            <description>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</description>
             <content type="html"><![CDATA[
 
-<p>In this article I investigate the computational performance of various string concatenation methods in the Go programming language.</p>
+<p>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</p>
 
-<p>To evaluate the options, I prepared some typical Go benchmarks using the Go testing package. A benchmark looks something like this:</p>
+<p>Keeping HTTP handling code to a simple signature (w http.ResponseWriter, r *http.Request) means that any Go programmer can come to your code, and jump right in without having to learn too much about the code.</p>
 
-<pre><code class="language-go">func BenchmarkNative(b *testing.B) {
-	var s string
-	next := nextString()
-	for i := 0; i &lt; b.N; i++ {
-		s += next()
-	}
-}
+<p>Rather than writing functions or types that take in an http.HandlerFunc (or http.Handler) and return a wrapper alternative, we are going to represent this idea in a type of its own.</p>
+
+<h2 id="adapter-type">Adapter type</h2>
+
+<pre><code class="language-go">type Adapter func(http.Handler) http.Handler
 </code></pre>
 
-<p>For the purposes of these benchmarks, I imagined having a process that returns string segments one by one, and these segments need to be concatenated to form one string. To represent such a process, I created a simple iterator that returns the string version of its current index on each call:</p>
+<p>The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place. So far this is not much different from just wrapping http.HandlerFunc types, however, now, we can instead write functions that themselves return an Adapter.</p>
 
-<pre><code class="language-go">// nextString is an iterator we use to represent a process
-// that returns strings that we want to concatenate in order.
-func nextString() func() string {
-    n := 0
-    // closure captures variable n
-    return func() string {
-        n += 1
-        return strconv.Itoa(n)
+<p>The following example is going to allow us to specify the log.Logger (from the standard package) that we want our “before” and “after” strings written to.</p>
+
+<pre><code class="language-go">func Notify(logger *log.Logger) Adapter {
+  return func(h http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+      logger.Println(&quot;before&quot;)
+      defer logger.Println(&quot;after&quot;)
+      h.ServeHTTP(w, r)
     }
+  }
 }
 </code></pre>
 
-<p>Every method we evaluate will call this function in a loop so that the fully concatenated string looks something like <code>0123456789101112131415....</code> There is function call overhead to take into account in this, but since all the benchmarks will have the same overhead, the comparison is still fair. Now that we have the basic setup for the benchmark, let’s see what the methods are we’ll be evaluating.</p>
+<p>Now, thanks to closures, we can capture the logger object inside our functions without spoiling the Adapter interface (it still takes and returns a single http.Handler).</p>
 
-<h2 id="method-1-naive-appending-with">Method 1: Naive Appending with +=</h2>
+<h2 id="using-the-adapters">Using the Adapters</h2>
 
-<pre><code class="language-go">func BenchmarkNaiveConcat(b *testing.B) {
-	var s string
-	next := nextString()
-	for i := 0; i &lt; b.N; i++ {
-		s += next()
-	}
+<p>The simplest way (albeit somewhat confusing to read) to make use of an adapter is to get the Adapter function and immediately call it:</p>
+
+<pre><code class="language-go">logger := log.New(os.Stdout, &quot;server: &quot;, log.Lshortfile)
+http.Handle(&quot;/&quot;, Notify(logger)(indexHandler))
+</code></pre>
+
+<p>A cleaner approach is to provide yourself an Adapt function, that can do all your adapting for you.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler
+</code></pre>
+
+<p>Our Adapt function takes the handler you want to adapt, and a list of our Adapter types. The result of our Notify function is an acceptable Adapter. Our Adapt function will simply iterate over all adapters, calling them one by one (in reverse order) in a chained manner, returning the result of the first adapter.</p>
+
+<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler {
+  for i := len(adapters); i &gt; 0; i-- {
+    h = adapter[i](h)
+  }
+  return h
 }
 </code></pre>
 
-<h2 id="method-2-strings-join">Method 2: strings.Join</h2>
+<p>Assuming we have several suitable functions that return Adapters, we can then implement middleware on our handlers by calling the Adapt function:</p>
 
-<pre><code class="language-go">func BenchmarkJoin(b *testing.B) {
-	var s string
-	next := nextString()
-	for i := 0; i &lt; b.N; i++ {
-		s = strings.Join([]string{s, next()}, &quot;&quot;)
-	}
-}
+<pre><code class="language-go">http.Handle(&quot;/&quot;,
+  Adapt(
+    indexHandler,
+    Notify(logger),
+    CopyMgoSession(db),
+    CheckAuth(providers),
+    AddHeader(&quot;Server&quot;, &quot;Mine&quot;),
+  )
 </code></pre>
 
-<h2 id="method-3-sprintf">Method 3: Sprintf</h2>
+<p>The execution for indexHandler would then run like this:</p>
 
-<pre><code class="language-go">func BenchmarkSprintf(b *testing.B) {
-	var s string
-	next := nextString()
-	for i := 0; i &lt; b.N; i++ {
-		s = fmt.Sprintf(&quot;%s%s&quot;, s, next())
-	}
-}
-</code></pre>
-
-<h2 id="method-4-bytes-buffer">Method 4: bytes.Buffer</h2>
-
-<pre><code class="language-go">func BenchmarkBufferString(b *testing.B) {
-	buffer := bytes.NewBufferString(&quot;&quot;)
-	next := nextString()
-	for i := 0; i &lt; b.N; i++ {
-		buffer.WriteString(next())
-	}
-	buffer.String()
-}
-</code></pre>
-
-<h2 id="the-result">The result</h2>
-
-<p><code>Method #4 (bytes.Buffer)</code> is the winner!</p>
-
-<pre><code class="language-go">BenchmarkNaiveConcat    	  300000	    166993 ns/op	    809751 B/op	    2 allocs/op
-BenchmarkJoin           	  200000	    150370 ns/op	    518121 B/op	    2 allocs/op
-BenchmarkSprintf        	  100000	    104652 ns/op	    481905 B/op	    5 allocs/op
-BenchmarkBufferString   	20000000	      89.0 ns/op	        44 B/op     0 allocs/op
-</code></pre>
+<ul>
+<li>Notify (log “before” string — maybe with some other bits)</li>
+<li>CopyMgoSession (copy db session and make it available to handler)</li>
+<li>CheckAuth (check auth cresds and bail if failed)</li>
+<li>AddHeader (add response header)</li>
+<li>indexHandler</li>
+<li>Any AddHeader deferred functions</li>
+<li>Any CheckAuth deferred functions</li>
+<li>CopyMgoSession deferred function (probably closing the database copy)</li>
+<li>Notify deferred function (writing “after” string)</li>
+</ul>
 ]]></content>
         </item>
         
@@ -201,94 +192,6 @@ if err != nil {
 	log.Fatal(err)
 }
 </code></pre>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Writing middleware in Golang</title>
-            <link>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</link>
-            <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
-            
-            <guid>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</guid>
-            <description>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</description>
-            <content type="html"><![CDATA[
-
-<p>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</p>
-
-<p>Keeping HTTP handling code to a simple signature (w http.ResponseWriter, r *http.Request) means that any Go programmer can come to your code, and jump right in without having to learn too much about the code.</p>
-
-<p>Rather than writing functions or types that take in an http.HandlerFunc (or http.Handler) and return a wrapper alternative, we are going to represent this idea in a type of its own.</p>
-
-<h2 id="adapter-type">Adapter type</h2>
-
-<pre><code class="language-go">type Adapter func(http.Handler) http.Handler
-</code></pre>
-
-<p>The Adapter type (it gets its name from the adapter pattern — also known as the decorator pattern) above is a function that both takes in and returns an http.Handler. This is the essence of the wrapper; we will pass in an existing http.Handler, the Adapter will adapt it, and return a new (probably wrapped) http.Handler for us to use in its place. So far this is not much different from just wrapping http.HandlerFunc types, however, now, we can instead write functions that themselves return an Adapter.</p>
-
-<p>The following example is going to allow us to specify the log.Logger (from the standard package) that we want our “before” and “after” strings written to.</p>
-
-<pre><code class="language-go">func Notify(logger *log.Logger) Adapter {
-  return func(h http.Handler) http.Handler {
-    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-      logger.Println(&quot;before&quot;)
-      defer logger.Println(&quot;after&quot;)
-      h.ServeHTTP(w, r)
-    }
-  }
-}
-</code></pre>
-
-<p>Now, thanks to closures, we can capture the logger object inside our functions without spoiling the Adapter interface (it still takes and returns a single http.Handler).</p>
-
-<h2 id="using-the-adapters">Using the Adapters</h2>
-
-<p>The simplest way (albeit somewhat confusing to read) to make use of an adapter is to get the Adapter function and immediately call it:</p>
-
-<pre><code class="language-go">logger := log.New(os.Stdout, &quot;server: &quot;, log.Lshortfile)
-http.Handle(&quot;/&quot;, Notify(logger)(indexHandler))
-</code></pre>
-
-<p>A cleaner approach is to provide yourself an Adapt function, that can do all your adapting for you.</p>
-
-<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler
-</code></pre>
-
-<p>Our Adapt function takes the handler you want to adapt, and a list of our Adapter types. The result of our Notify function is an acceptable Adapter. Our Adapt function will simply iterate over all adapters, calling them one by one (in reverse order) in a chained manner, returning the result of the first adapter.</p>
-
-<pre><code class="language-go">func Adapt(h http.Handler, adapters ...Adapter) http.Handler {
-  for i := len(adapters); i &gt; 0; i-- {
-    h = adapter[i](h)
-  }
-  return h
-}
-</code></pre>
-
-<p>Assuming we have several suitable functions that return Adapters, we can then implement middleware on our handlers by calling the Adapt function:</p>
-
-<pre><code class="language-go">http.Handle(&quot;/&quot;,
-  Adapt(
-    indexHandler,
-    Notify(logger),
-    CopyMgoSession(db),
-    CheckAuth(providers),
-    AddHeader(&quot;Server&quot;, &quot;Mine&quot;),
-  )
-</code></pre>
-
-<p>The execution for indexHandler would then run like this:</p>
-
-<ul>
-<li>Notify (log “before” string — maybe with some other bits)</li>
-<li>CopyMgoSession (copy db session and make it available to handler)</li>
-<li>CheckAuth (check auth cresds and bail if failed)</li>
-<li>AddHeader (add response header)</li>
-<li>indexHandler</li>
-<li>Any AddHeader deferred functions</li>
-<li>Any CheckAuth deferred functions</li>
-<li>CopyMgoSession deferred function (probably closing the database copy)</li>
-<li>Notify deferred function (writing “after” string)</li>
-</ul>
 ]]></content>
         </item>
         
@@ -468,8 +371,8 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.calhoun.io/an-intro-to-templates-in-go-part-1-of-3/">An Intro To Templates in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.calhoun.io/apis-are-just-web-applications/">JSON APIs Are Just Web Applications</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81">Writing middleware in #golang and how Go makes it so much fun</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://eager.io/blog/go-and-json/">Go and JSON</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://gowebexamples.com/">Learn Web Programming in Go by Examples</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://eager.io/blog/go-and-json/">Go and JSON</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://gowebexamples.com/">Learn Web Programming in Go by Examples</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://husio.github.io/blog/post/accessing-data-in-go/">Accessing data in Go</a></label></li>
 </ul>
 

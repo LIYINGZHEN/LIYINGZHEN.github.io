@@ -12,14 +12,12 @@
     
     
     <item>
-      <title>Efficient String Concatenation in Go</title>
-      <link>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</link>
+      <title>Writing middleware in Golang</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-24-writing-middleware-in-golang/</link>
       <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</guid>
-      <description>In this article I investigate the computational performance of various string concatenation methods in the Go programming language.
-To evaluate the options, I prepared some typical Go benchmarks using the Go testing package. A benchmark looks something like this:
-func BenchmarkNative(b *testing.B) { var s string next := nextString() for i := 0; i &amp;lt; b.N; i++ { s += next() } }  For the purposes of these benchmarks, I imagined having a process that returns string segments one by one, and these segments need to be concatenated to form one string.</description>
+      <guid>https://www.maxlivinci.com/blog/2019-04-24-writing-middleware-in-golang/</guid>
+      <description>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</description>
     </item>
     
     <item>
@@ -30,15 +28,6 @@ func BenchmarkNative(b *testing.B) { var s string next := nextString() for i := 
       <guid>https://www.maxlivinci.com/blog/2019-04-23-working-with-files-in-go/</guid>
       <description>One of the fundamental aspects of UNIX is that everything is a file. We don&amp;rsquo;t necessarily know what the file descriptor maps to, that is abstracted by the operating system&amp;rsquo;s device drivers. The operating system provides us an interface to the device in the form of a file.
 The reader and writer interfaces in Go are similar abstractions. We simply read and write bytes, without the need to understand where or how the reader gets its data or where the writer is sending the data.</description>
-    </item>
-    
-    <item>
-      <title>Writing middleware in Golang</title>
-      <link>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</link>
-      <pubDate>Tue, 23 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-04-23-writing-middleware-in-golang/</guid>
-      <description>When we talk about Middleware in Go, at its simplest, we are really talking about running code before and/or after our handler code in a HTTP request lifecycle. For example, logging middleware might write the incoming request details to a log, then call the handler code, before writing details about the response to the log. One of the cool things about middleware, if implemented correctly, is that these units are extremely flexible, reusable, and sharable.</description>
     </item>
     
     <item>
