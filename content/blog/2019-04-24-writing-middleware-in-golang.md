@@ -1,6 +1,6 @@
 ---
 title:       "Writing middleware in Golang"
-date:        2019-04-23T00:00:00+00:00
+date:        2019-04-24T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["go"]

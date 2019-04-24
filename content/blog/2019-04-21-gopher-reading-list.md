@@ -88,8 +88,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [An Intro To Templates in Go](https://www.calhoun.io/an-intro-to-templates-in-go-part-1-of-3/)
 - [ ] [JSON APIs Are Just Web Applications](https://www.calhoun.io/apis-are-just-web-applications/)
 - [x] [Writing middleware in #golang and how Go makes it so much fun](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
-- [ ] [Go and JSON](https://eager.io/blog/go-and-json/)
-- [ ] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
+- [x] [Go and JSON](https://eager.io/blog/go-and-json/)
+- [x] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
 - [ ] [Accessing data in Go](https://husio.github.io/blog/post/accessing-data-in-go/)
 
 ### Concurrency
