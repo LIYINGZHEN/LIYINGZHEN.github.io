@@ -37,7 +37,7 @@ with a link to the post.
 - [x] [Go Defer Simplified with Practical Visuals](https://blog.learngoprogramming.com/golang-defer-simplified-77d3b2b817ff)
 - [x] [Understanding Go panic output](https://joeshaw.org/understanding-go-panic-output/)
 - [ ] [How to avoid Go gotchas](https://divan.github.io/posts/avoid_gotchas/)
-- [ ] [Common Gotchas in Go](https://deadbeef.me/2018/01/go-gotchas)
+- [x] [Common Gotchas in Go](https://deadbeef.me/2018/01/go-gotchas)
 - [x] [50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
 - [ ] [Slices from the ground up](https://dave.cheney.net/2018/07/12/slices-from-the-ground-up)
 - [x] [6 Tips for Using Strings in Go](https://www.calhoun.io/6-tips-for-using-strings-in-go/)
@@ -129,10 +129,10 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Concurrency
 
-- [ ] [Concurrency Patterns](https://medium.com/@thejasbabu/concurrency-patterns-golang-5c5e1bcd0833)
-- [ ] [Stopping goroutines](https://medium.com/@matryer/stopping-goroutines-golang-1bf28799c1cb)
-- [ ] [Ways to limit concurrent resource use](https://pocketgophers.com/limit-concurrent-use/)
-- [ ] [Make Ctrl+C cancel the context.Context](https://medium.com/@matryer/make-ctrl-c-cancel-the-context-context-bd006a8ad6ff)
+- [x] [Concurrency Patterns](https://medium.com/@thejasbabu/concurrency-patterns-golang-5c5e1bcd0833)
+- [x] [Stopping goroutines](https://medium.com/@matryer/stopping-goroutines-golang-1bf28799c1cb)
+- [x] [Ways to limit concurrent resource use](https://pocketgophers.com/limit-concurrent-use/)
+- [x] [Make Ctrl+C cancel the context.Context](https://medium.com/@matryer/make-ctrl-c-cancel-the-context-context-bd006a8ad6ff)
 - [ ] [How to correctly use context.Context in Go 1.7](https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.bdz5qnna7)
 - [ ] [Using contexts to avoid leaking goroutines](https://rakyll.org/leakingctx/)
 - [ ] [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
@@ -158,8 +158,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Interfaces and Composition for Effective Unit Testing in Golang](https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/)
 - [ ] [Go Testing Technique: Testing JSON HTTP Requests](https://medium.com/@xoen/go-testing-technique-testing-json-http-requests-76d9ce0e11f#.95p1r8n16)
 - [ ] [Acceptance Testing Go Web Applications with Cookies](http://www.meetspaceapp.com/2016/05/16/acceptance-testing-go-webapps-with-cookies.html)
-- [ ] [Testing Your (HTTP) Handlers in Go](http://blog.questionable.services/article/testing-http-handlers-go/)
-- [ ] [Go test your tests in Go with go test](https://deadbeef.me/2018/05/go-test)
+- [x] [Testing Your (HTTP) Handlers in Go](http://blog.questionable.services/article/testing-http-handlers-go/)
+- [x] [Go test your tests in Go with go test](https://deadbeef.me/2018/05/go-test)
 - [ ] [Learn Go with tests](https://github.com/quii/learn-go-with-tests)
 - [ ] [Unit Testing Golang HTTP Middleware](https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea)
 - [ ] [Lesser-Known Features of Go Test](https://splice.com/blog/lesser-known-features-go-test/)
@@ -168,11 +168,11 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Web
 
 - [x] [Exposing Go on the Internet](https://blog.gopheracademy.com/advent-2016/exposing-go-on-the-internet/)
-- [ ] [The complete guide to Go net/http timeouts](https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/)
+- [x] [The complete guide to Go net/http timeouts](https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/)
 - [ ] [HTTP(S) Proxy in Golang in less than 100 lines of code](https://medium.com/@mlowicki/http-s-proxy-in-golang-in-less-than-100-lines-of-code-6a51c2f2c38c)
-- [ ] [Deploying Go apps on Docker scratch images](https://weberc2.bitbucket.io/posts/golang-docker-scratch-app.html)
-- [ ] [Write a Kubernetes-ready service from zero step-by-step](https://blog.gopheracademy.com/advent-2017/kubernetes-ready-service/)
-- [ ] [How To Write Router Tests in Go](http://eng.tapjoy.com/blog-list/how-to-write-router-tests-in-go)
+- [x] [Deploying Go apps on Docker scratch images](https://weberc2.bitbucket.io/posts/golang-docker-scratch-app.html)
+- [x] [Write a Kubernetes-ready service from zero step-by-step](https://blog.gopheracademy.com/advent-2017/kubernetes-ready-service/)
+- [x] [How To Write Router Tests in Go](http://eng.tapjoy.com/blog-list/how-to-write-router-tests-in-go)
 - [ ] [A brief intro of TCP keep-alive in Go’s HTTP implementation](http://nanxiao.me/en/a-brief-intro-of-tcp-keep-alive-in-gos-http-implementation/)
 - [ ] [Build a Web Crawler in Go](https://jackcanty.com/build-a-web-crawler-in-go.html)
 - [ ] [Your pprof is showing: IPv4 scans reveal exposed net/http/pprof endpoints:](http://mmcloughlin.com/posts/your-pprof-is-showing)
@@ -188,7 +188,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Using Functions Inside Go Templates](https://www.calhoun.io/intro-to-templates-p3-functions/)
 - [ ] [Writing a Data Mapper in Go without an ORM](http://www.meetspaceapp.com/2016/05/23/writing-a-data-mapper-in-go-without-an-orm.html)
 - [ ] [Practical Persistence in Go: Organising Database Access](http://www.alexedwards.net/blog/organising-database-access)
-- [ ] [How I write Go HTTP services after seven years](https://medium.com/statuscode/how-i-write-go-http-services-after-seven-years-37c208122831)
+- [x] [How I write Go HTTP services after seven years](https://medium.com/statuscode/how-i-write-go-http-services-after-seven-years-37c208122831)
 
 ### Tools
 
@@ -214,7 +214,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Language
 
 - [ ] [Golang: pass by pointer vs pass by value](http://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/)
-- [ ] [There is no pass-by-reference in Go](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
+- [x] [There is no pass-by-reference in Go](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
 - [ ] [Variadic functions in Go](https://medium.com/golangspec/variadic-functions-in-go-13c33182b851)
 - [ ] [Crossing Streams: a Love Letter to io.Reader](http://jmoiron.net/blog/crossing-streams-a-love-letter-to-ioreader/)
 - [ ] [Function Types in Go (golang)](http://jordanorelli.com/post/42369331748/function-types-in-go-golang)
@@ -224,7 +224,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Miscellaneous
 
 - [ ] [Always Be Closing](https://medium.com/square-corner-blog/always-be-closing-3d5fda0e00da)
-- [ ] [Don't defer Close() on writable files](https://joeshaw.org/dont-defer-close-on-writable-files/)
+- [x] [Don't defer Close() on writable files](https://joeshaw.org/dont-defer-close-on-writable-files/)
 - [ ] [Examples For Using io.Pipe in Go](https://zupzup.org/io-pipe-go/)
 - [ ] [How to Use go:generate](https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/)
 - [ ] [Writing worker queues, in Go](http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html)
