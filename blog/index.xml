@@ -6,8 +6,105 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 23 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 24 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Efficient String Concatenation in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</link>
+            <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-24-efficient-string-concatenation-in-go/</guid>
+            <description>In this article I investigate the computational performance of various string concatenation methods in the Go programming language.
+To evaluate the options, I prepared some typical Go benchmarks using the Go testing package. A benchmark looks something like this:
+func BenchmarkNative(b *testing.B) { var s string next := nextString() for i := 0; i &amp;lt; b.N; i++ { s += next() } }  For the purposes of these benchmarks, I imagined having a process that returns string segments one by one, and these segments need to be concatenated to form one string.</description>
+            <content type="html"><![CDATA[
+
+<p>In this article I investigate the computational performance of various string concatenation methods in the Go programming language.</p>
+
+<p>To evaluate the options, I prepared some typical Go benchmarks using the Go testing package. A benchmark looks something like this:</p>
+
+<pre><code class="language-go">func BenchmarkNative(b *testing.B) {
+	var s string
+	next := nextString()
+	for i := 0; i &lt; b.N; i++ {
+		s += next()
+	}
+}
+</code></pre>
+
+<p>For the purposes of these benchmarks, I imagined having a process that returns string segments one by one, and these segments need to be concatenated to form one string. To represent such a process, I created a simple iterator that returns the string version of its current index on each call:</p>
+
+<pre><code class="language-go">// nextString is an iterator we use to represent a process
+// that returns strings that we want to concatenate in order.
+func nextString() func() string {
+    n := 0
+    // closure captures variable n
+    return func() string {
+        n += 1
+        return strconv.Itoa(n)
+    }
+}
+</code></pre>
+
+<p>Every method we evaluate will call this function in a loop so that the fully concatenated string looks something like <code>0123456789101112131415....</code> There is function call overhead to take into account in this, but since all the benchmarks will have the same overhead, the comparison is still fair. Now that we have the basic setup for the benchmark, let’s see what the methods are we’ll be evaluating.</p>
+
+<h2 id="method-1-naive-appending-with">Method 1: Naive Appending with +=</h2>
+
+<pre><code class="language-go">func BenchmarkNaiveConcat(b *testing.B) {
+	var s string
+	next := nextString()
+	for i := 0; i &lt; b.N; i++ {
+		s += next()
+	}
+}
+</code></pre>
+
+<h2 id="method-2-strings-join">Method 2: strings.Join</h2>
+
+<pre><code class="language-go">func BenchmarkJoin(b *testing.B) {
+	var s string
+	next := nextString()
+	for i := 0; i &lt; b.N; i++ {
+		s = strings.Join([]string{s, next()}, &quot;&quot;)
+	}
+}
+</code></pre>
+
+<h2 id="method-3-sprintf">Method 3: Sprintf</h2>
+
+<pre><code class="language-go">func BenchmarkSprintf(b *testing.B) {
+	var s string
+	next := nextString()
+	for i := 0; i &lt; b.N; i++ {
+		s = fmt.Sprintf(&quot;%s%s&quot;, s, next())
+	}
+}
+</code></pre>
+
+<h2 id="method-4-bytes-buffer">Method 4: bytes.Buffer</h2>
+
+<pre><code class="language-go">func BenchmarkBufferString(b *testing.B) {
+	buffer := bytes.NewBufferString(&quot;&quot;)
+	next := nextString()
+	for i := 0; i &lt; b.N; i++ {
+		buffer.WriteString(next())
+	}
+	buffer.String()
+}
+</code></pre>
+
+<h2 id="the-result">The result</h2>
+
+<p><code>Method #4 (bytes.Buffer)</code> is the winner!</p>
+
+<pre><code class="language-go">BenchmarkNaiveConcat    	  300000	    166993 ns/op	    809751 B/op	    2 allocs/op
+BenchmarkJoin           	  200000	    150370 ns/op	    518121 B/op	    2 allocs/op
+BenchmarkSprintf        	  100000	    104652 ns/op	    481905 B/op	    5 allocs/op
+BenchmarkBufferString   	20000000	      89.0 ns/op	        44 B/op     0 allocs/op
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Working with Files in Go</title>
