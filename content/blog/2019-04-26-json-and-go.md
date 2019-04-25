@@ -1,5 +1,5 @@
 ---
-title:       "Go and JSON"
+title:       "JSON and Go"
 date:        2019-04-26T00:00:00+00:00
 author:      "Max"
 published:   true
@@ -29,6 +29,30 @@ data := []byte(`
 
 var app App
 err := json.Unmarshal(data, &app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf("%+v \n", app)
+```
+
+or you can use `json` package
+
+```go
+type App struct {
+    Id    string `json:"id"`
+    Title string `json:"title"`
+}
+
+r := bytes.NewReader([]byte(`{"id": "k34rAT4", "title": "My Awesome App"}`))
+
+var app App
+err := json.NewDecoder(r).Decode(&app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf("%+v \n", app)
 ```
 
 What you’re left with is `app` populated with the parsed JSON that was in `data`. You’ll also notice that the go term for parsing json is "Unmarshalling".

@@ -177,8 +177,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Build a Web Crawler in Go](https://jackcanty.com/build-a-web-crawler-in-go.html)
 - [ ] [Your pprof is showing: IPv4 scans reveal exposed net/http/pprof endpoints:](http://mmcloughlin.com/posts/your-pprof-is-showing)
 - [ ] [HTTP Request Contexts & Go](http://blog.questionable.services/article/map-string-interface/)
-- [ ] [Using Object-Oriented Web Servers in Go](https://blog.codeship.com/using-object-oriented-web-servers-go/)
-- [ ] [Handle HTTP Request Errors in Go](http://pliutau.com/handle-http-request-errors-in-go/)
+- [x] [Using Object-Oriented Web Servers in Go](https://blog.codeship.com/using-object-oriented-web-servers-go/)
+- [x] [Handle HTTP Request Errors in Go](http://pliutau.com/handle-http-request-errors-in-go/)
 - [ ] [Go json.Decoder Considered Harmful](https://ahmet.im/blog/golang-json-decoder-pitfalls/)
 - [ ] [Building High Performance APIs In Go Using gRPC And Protocol Buffers](https://medium.com/@shijuvar/building-high-performance-apis-in-go-using-grpc-and-protocol-buffers-2eda5b80771b)
 - [ ] [Implementing UDP vs TCP in Golang](http://www.minaandrawos.com/2016/05/14/udp-vs-tcp-in-golang/)
@@ -192,7 +192,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Tools
 
-- [ ] [Go tooling essentials](https://rakyll.org/go-tool-flags/)
+- [x] [Go tooling essentials](https://rakyll.org/go-tool-flags/)
 - [ ] [Profiling Go Programs](https://blog.golang.org/profiling-go-programs)
 - [ ] [Go Tooling in Action](https://medium.com/google-cloud/go-tooling-in-action-eca6882ff3bc#.d9ob4wyj4)
 - [ ] [Using Go as a scripting language in Linux](https://blog.cloudflare.com/using-go-as-a-scripting-language-in-linux/)
@@ -213,12 +213,12 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Language
 
-- [ ] [Golang: pass by pointer vs pass by value](http://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/)
+- [x] [Golang: pass by pointer vs pass by value](http://goinbigdata.com/golang-pass-by-pointer-vs-pass-by-value/)
 - [x] [There is no pass-by-reference in Go](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
-- [ ] [Variadic functions in Go](https://medium.com/golangspec/variadic-functions-in-go-13c33182b851)
-- [ ] [Crossing Streams: a Love Letter to io.Reader](http://jmoiron.net/blog/crossing-streams-a-love-letter-to-ioreader/)
+- [x] [Variadic functions in Go](https://medium.com/golangspec/variadic-functions-in-go-13c33182b851)
+- [x] [Crossing Streams: a Love Letter to io.Reader](http://jmoiron.net/blog/crossing-streams-a-love-letter-to-ioreader/)
 - [ ] [Function Types in Go (golang)](http://jordanorelli.com/post/42369331748/function-types-in-go-golang)
-- [ ] [research!rsc: Go Data Structures](https://research.swtch.com/godata)
+- [x] [research!rsc: Go Data Structures](https://research.swtch.com/godata)
 - [ ] [The Relationship Between Interfaces and Reflection](https://blog.gopheracademy.com/advent-2018/interfaces-and-reflect/)
 
 ### Miscellaneous
