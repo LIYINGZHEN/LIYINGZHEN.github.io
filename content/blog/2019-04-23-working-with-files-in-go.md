@@ -40,11 +40,12 @@ if err != nil {
 ## Open and Close Files
 
 ```go
-file, err := os.Open("test.txt")
+file, err := os.Open("filetoread.txt")
 if err != nil {
-		log.Fatal(err)
+  fmt.Println(err)
+  return
 }
-file.Close()
+defer file.Close()
 
 
 // OpenFile with more options. Last param is the permission mode

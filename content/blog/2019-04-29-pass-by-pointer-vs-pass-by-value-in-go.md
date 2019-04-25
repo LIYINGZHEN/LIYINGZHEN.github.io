@@ -1,6 +1,6 @@
 ---
 title:       "Pass by pointer vs pass by value in Go"
-date:        2019-04-28T00:00:00+00:00
+date:        2019-04-29T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["go"]
