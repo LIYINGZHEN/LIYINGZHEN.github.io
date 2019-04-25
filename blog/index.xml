@@ -234,11 +234,12 @@ if err != nil {
 
 <h2 id="open-and-close-files">Open and Close Files</h2>
 
-<pre><code class="language-go">file, err := os.Open(&quot;test.txt&quot;)
+<pre><code class="language-go">file, err := os.Open(&quot;filetoread.txt&quot;)
 if err != nil {
-		log.Fatal(err)
+  fmt.Println(err)
+  return
 }
-file.Close()
+defer file.Close()
 
 
 // OpenFile with more options. Last param is the permission mode
@@ -505,7 +506,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.calhoun.io/pitfalls-of-context-values-and-how-to-avoid-or-mitigate-them/">Pitfalls of context values and how to avoid or mitigate them in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@felipedutratine/how-to-organize-the-go-struct-in-order-to-save-memory-c78afcf59ec2">How to organize the go struct, in order to save memory</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.oreilly.com/ideas/how-to-ship-production-grade-go">How to ship production-grade Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://8thlight.com/blog/javier-saldana/2015/02/06/loose-coupling-in-go-lang.html">Loose Coupling in Go lang</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://8thlight.com/blog/javier-saldana/2015/02/06/loose-coupling-in-go-lang.html">Loose Coupling in Go lang</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://commandcenter.blogspot.co.nz/2014/01/self-referential-functions-and-design.html">Self-referential functions and the design of options</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis">Functional Options for Friendly APIs</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://hackthology.com/object-oriented-inheritance-in-go.html">Object Oriented Inheritance in Go</a></label></li>
@@ -524,27 +525,27 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.bdz5qnna7">How to correctly use context.Context in Go 1.7</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://rakyll.org/leakingctx/">Using contexts to avoid leaking goroutines</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/pipelines">Go Concurrency Patterns: Pipelines and cancellation</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://kylewbanks.com/blog/tutorial-synchronizing-state-with-mutexes-golang">Tutorial: Synchronizing State with Mutexes in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://dahernan.github.io/2015/02/04/context-and-cancellation-of-goroutines/">Context and Cancellation of goroutines</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://hackernoon.com/dancing-with-go-s-mutexes-92407ae927bf">Dancing with Go&rsquo;s Mutexes</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://rabarar.github.io/blog/2015/02/17/goroutines-channels/">GoRoutines, Channels, and Proper Exits</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.rapidloop.com/blog/golang-channels-tips-tricks.html">Buffered channels in Go: Tips &amp; Tricks</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://blog.sgmansfield.com/2016/06/how-to-block-forever-in-go/">How to Block Forever in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://rakyll.org/mutexprofile/">Mutex Profile</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://kylewbanks.com/blog/tutorial-synchronizing-state-with-mutexes-golang">Tutorial: Synchronizing State with Mutexes in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://dahernan.github.io/2015/02/04/context-and-cancellation-of-goroutines/">Context and Cancellation of goroutines</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://hackernoon.com/dancing-with-go-s-mutexes-92407ae927bf">Dancing with Go&rsquo;s Mutexes</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://rabarar.github.io/blog/2015/02/17/goroutines-channels/">GoRoutines, Channels, and Proper Exits</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.rapidloop.com/blog/golang-channels-tips-tricks.html">Buffered channels in Go: Tips &amp; Tricks</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://blog.sgmansfield.com/2016/06/how-to-block-forever-in-go/">How to Block Forever in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://rakyll.org/mutexprofile/">Mutex Profile</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.mozilla.org/services/2014/03/12/sane-concurrency-with-go/">Sane Concurrency with Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://mijailovic.net/2017/05/09/error-handling-patterns-in-go/">Error handling patterns in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@val_deleplace/does-the-race-detector-catch-all-data-races-1afed51d57fb">Does the race detector catch all data races?</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://mijailovic.net/2017/05/09/error-handling-patterns-in-go/">Error handling patterns in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@val_deleplace/does-the-race-detector-catch-all-data-races-1afed51d57fb">Does the race detector catch all data races?</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://nomad.uk.net/articles/interesting-ways-of-using-go-channels.html">Interesting ways of using Go channels</a></label></li>
 </ul>
 
 <h3 id="testing">Testing</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://markjberger.com/testing-web-apps-in-golang/">Testing Web Apps in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://tutorialedge.net/golang/intro-testing-in-go/">An Introduction to Testing in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742">5 simple tips and tricks for writing unit tests in #golang</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://markjberger.com/testing-web-apps-in-golang/">Testing Web Apps in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://tutorialedge.net/golang/intro-testing-in-go/">An Introduction to Testing in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742">5 simple tips and tricks for writing unit tests in #golang</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://segment.com/blog/5-advanced-testing-techniques-in-go/">5 Advanced Testing Techniques in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://danmux.com/posts/the_cult_of_go_test/">The Cult of Go Test</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://danmux.com/posts/the_cult_of_go_test/">The Cult of Go Test</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/">Interfaces and Composition for Effective Unit Testing in Golang</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@xoen/go-testing-technique-testing-json-http-requests-76d9ce0e11f#.95p1r8n16">Go Testing Technique: Testing JSON HTTP Requests</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://www.meetspaceapp.com/2016/05/16/acceptance-testing-go-webapps-with-cookies.html">Acceptance Testing Go Web Applications with Cookies</a></label></li>
@@ -598,7 +599,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://talks.golang.org/2012/10things.slide">10 things you (probably) don&rsquo;t know about Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://talks.godoc.org/github.com/davecheney/presentations/gopher-puzzlers.slide">Gopher Puzzlers</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://scene-si.org/2016/06/13/advanced-go-tips-and-tricks/">Advanced Go Tips And Tricks</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://allegro.tech/2017/07/golang-slices-gotcha.html">Golang slices gotcha</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://allegro.tech/2017/07/golang-slices-gotcha.html">Golang slices gotcha</a></label></li>
 </ul>
 
 <h3 id="diagnostics">Diagnostics</h3>
@@ -795,6 +796,53 @@ rm -rf public
 </blockquote>
 
 <p>I hope this will be useful to anyone experiencing any difficulties with deploying a <code>Hugo</code>-generated website to <code>GitHub Pages</code>!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Context and Cancellation of goroutines</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</guid>
+            <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+var ( wg sync.WaitGroup ) func work(ctx context.Context) error { defer wg.Done() for i := 0; i &amp;lt; 1000; i++ { select { case &amp;lt;-time.After(2 * time.Second): fmt.Println(&amp;quot;Doing some work &amp;quot;, i) // we received the signal of cancelation in this channel case &amp;lt;-ctx.</description>
+            <content type="html"><![CDATA[<p>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.</p>
+
+<pre><code class="language-go">var (
+    wg sync.WaitGroup
+)
+
+func work(ctx context.Context) error {
+    defer wg.Done()
+
+    for i := 0; i &lt; 1000; i++ {
+        select {
+        case &lt;-time.After(2 * time.Second):
+            fmt.Println(&quot;Doing some work &quot;, i)
+
+        // we received the signal of cancelation in this channel
+        case &lt;-ctx.Done():
+            fmt.Println(&quot;Cancel the context &quot;, i)
+            return ctx.Err()
+        }
+    }
+    return nil
+}
+
+func main() {
+    ctx, cancel := context.WithTimeout(context.Background(), 6*time.Second)
+    defer cancel()
+
+    fmt.Println(&quot;Hey, I'm going to do some work&quot;)
+
+    wg.Add(1)
+    go work(ctx)
+    wg.Wait()
+
+    fmt.Println(&quot;Finished. I'm going home&quot;)
+}
+</code></pre>
 ]]></content>
         </item>
         

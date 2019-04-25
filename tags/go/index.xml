@@ -62,5 +62,15 @@ Rather than being comprehensive, the list is a curated selection fixed at 200 en
 Go is growing fast and so are the number of blog posts about it. If an interested reader knows of a great post not on this list, please open an issue with a link to the post.</description>
     </item>
     
+    <item>
+      <title>Context and Cancellation of goroutines</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</guid>
+      <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+var ( wg sync.WaitGroup ) func work(ctx context.Context) error { defer wg.Done() for i := 0; i &amp;lt; 1000; i++ { select { case &amp;lt;-time.After(2 * time.Second): fmt.Println(&amp;quot;Doing some work &amp;quot;, i) // we received the signal of cancelation in this channel case &amp;lt;-ctx.</description>
+    </item>
+    
   </channel>
 </rss>
