@@ -20,11 +20,11 @@ with a link to the post.
 ## Start Here
 
 - [x] [Why should you learn Go?](https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65)
-- [ ] [How to Write Go Code](https://golang.org/doc/code.html)
+- [x] [How to Write Go Code](https://golang.org/doc/code.html)
 - [x] [A Tour of Go](https://tour.golang.org/welcome/1)
 - [x] [Frequently Asked Questions](https://golang.org/doc/faq)
-- [ ] [Go Koans](https://github.com/cdarwin/go-koans)
-- [ ] [Go by Example](https://gobyexample.com/)
+- [x] [Go Koans](https://github.com/cdarwin/go-koans)
+- [x] [Go by Example](https://gobyexample.com/)
 
 ## Beginner
 
@@ -36,10 +36,10 @@ with a link to the post.
 - [x] [(Now You're) Thinking With Channels](http://blog.mergermarket.it/now-youre-thinking-with-channels/)
 - [x] [Go Defer Simplified with Practical Visuals](https://blog.learngoprogramming.com/golang-defer-simplified-77d3b2b817ff)
 - [x] [Understanding Go panic output](https://joeshaw.org/understanding-go-panic-output/)
-- [ ] [How to avoid Go gotchas](https://divan.github.io/posts/avoid_gotchas/)
+- [x] [How to avoid Go gotchas](https://divan.github.io/posts/avoid_gotchas/)
 - [x] [Common Gotchas in Go](https://deadbeef.me/2018/01/go-gotchas)
 - [x] [50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/)
-- [ ] [Slices from the ground up](https://dave.cheney.net/2018/07/12/slices-from-the-ground-up)
+- [x] [Slices from the ground up](https://dave.cheney.net/2018/07/12/slices-from-the-ground-up)
 - [x] [6 Tips for Using Strings in Go](https://www.calhoun.io/6-tips-for-using-strings-in-go/)
 - [x] [Unofficial Go FAQ](http://www.tapirgames.com/blog/golang-unofficial-faq)
 
@@ -47,12 +47,12 @@ with a link to the post.
 
 - [x] [Effective Go](https://golang.org/doc/effective_go.html)
 - [x] [Visualizing Concurrency in Go](https://divan.github.io/posts/go_concurrency_visualize/)
-- [ ] [Strings, bytes, runes and characters in Go](https://blog.golang.org/strings)
+- [x] [Strings, bytes, runes and characters in Go](https://blog.golang.org/strings)
 - [x] [Arrays, slices (and strings): The mechanics of 'append'](https://blog.golang.org/slices)
 
 ### Online Books
 
-- [ ] [Go Bootcamp](http://www.golangbootcamp.com/book/)
+- [x] [Go Bootcamp](http://www.golangbootcamp.com/book/)
 - [x] [Go 101](https://go101.org/article/101.html)
 
 See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, both free and paid.
@@ -65,19 +65,19 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go)
 - [x] [Error handling and Go](https://blog.golang.org/error-handling-and-go)
 - [x] [Effective error handling in Go](https://morsmachine.dk/error-handling)
-- [ ] [Go's Error Handling is Elegant](https://davidnix.io/post/error-handling-in-go/)
+- [x] [Go's Error Handling is Elegant](https://davidnix.io/post/error-handling-in-go/)
 - [x] [When Should I Use One Liner if...else Statements in Go?](https://www.calhoun.io/one-liner-if-statements-with-errors/)
 - [x] [Five Suggestions for Setting up a Go project](https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project)
 - [x] [The One with the Directory Structure and Manual Wiring](https://www.elliotdwright.com/2018/02/27/how-i-structure-some-of-my-projects/)
 - [x] [Structuring Tests in Go](https://medium.com/@benbjohnson/structuring-tests-in-go-46ddee7a25c)
 - [x] [Organizing Go Code](https://blog.golang.org/organizing-go-code)
-- [ ] [The anatomy of a Go project](http://darian.af/post/the-anatomy-of-a-golang-project/)
+- [x] [The anatomy of a Go project](http://darian.af/post/the-anatomy-of-a-golang-project/)
 - [x] [Standard Package Layout](https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1)
-- [ ] [Structuring Applications in Go](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)
-- [ ] [Style guideline for Go packages](https://rakyll.org/style-packages/)
-- [ ] [Package names](https://blog.golang.org/package-names)
-- [ ] [For Range Semantics](https://www.ardanlabs.com/blog/2017/06/for-range-semantics.html)
-- [ ] [How to use interfaces in Go](http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
+- [x] [Structuring Applications in Go](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)
+- [x] [Style guideline for Go packages](https://rakyll.org/style-packages/)
+- [x] [Package names](https://blog.golang.org/package-names)
+- [x] [For Range Semantics](https://www.ardanlabs.com/blog/2017/06/for-range-semantics.html)
+- [x] [How to use interfaces in Go](http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
 
 ### Web
 
@@ -90,7 +90,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Writing middleware in #golang and how Go makes it so much fun](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
 - [x] [Go and JSON](https://eager.io/blog/go-and-json/)
 - [x] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
-- [ ] [Accessing data in Go](https://husio.github.io/blog/post/accessing-data-in-go/)
+- [x] [Accessing data in Go](https://husio.github.io/blog/post/accessing-data-in-go/)
 
 ### Concurrency
 
@@ -161,9 +161,9 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Testing Your (HTTP) Handlers in Go](http://blog.questionable.services/article/testing-http-handlers-go/)
 - [x] [Go test your tests in Go with go test](https://deadbeef.me/2018/05/go-test)
 - [ ] [Learn Go with tests](https://github.com/quii/learn-go-with-tests)
-- [ ] [Unit Testing Golang HTTP Middleware](https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea)
-- [ ] [Lesser-Known Features of Go Test](https://splice.com/blog/lesser-known-features-go-test/)
-- [ ] [When Writing Unit Tests, Don’t Use Mocks](https://sendgrid.com/blog/when-writing-unit-tests-dont-use-mocks/)
+- [x] [Unit Testing Golang HTTP Middleware](https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea)
+- [x] [Lesser-Known Features of Go Test](https://splice.com/blog/lesser-known-features-go-test/)
+- [x] [When Writing Unit Tests, Don’t Use Mocks](https://sendgrid.com/blog/when-writing-unit-tests-dont-use-mocks/)
 
 ### Web
 
@@ -229,9 +229,9 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [How to Use go:generate](https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/)
 - [ ] [Writing worker queues, in Go](http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html)
 - [ ] [Job Queues in Go - OpsDash](https://www.opsdash.com/blog/job-queues-in-go.html)
-- [ ] [Reading files in Go](http://kgrz.io/reading-files-in-go-an-overview.html)
-- [ ] [Vanity Go Import Paths](https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/)
-- [ ] [Tags in Golang](https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e)
+- [x] [Reading files in Go](http://kgrz.io/reading-files-in-go-an-overview.html)
+- [x] [Vanity Go Import Paths](https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/)
+- [x] [Tags in Golang](https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e)
 
 ## Advanced
 
