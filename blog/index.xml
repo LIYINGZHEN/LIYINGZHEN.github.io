@@ -854,8 +854,8 @@ with a link to the post.</p>
 <h3 id="json-encoding-and-decoding">JSON Encoding and Decoding</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.gopheracademy.com/advent-2016/advanced-encoding-decoding/">Advanced Encoding and Decoding Techniques</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://choly.ca/post/go-json-marshalling/">Custom JSON Marshalling in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.gopheracademy.com/advent-2016/advanced-encoding-decoding/">Advanced Encoding and Decoding Techniques</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://choly.ca/post/go-json-marshalling/">Custom JSON Marshalling in Go</a></label></li>
 </ul>
 
 <h3 id="miscellaneous-1">Miscellaneous</h3>
