@@ -282,8 +282,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### JSON Encoding and Decoding
 
-- [ ] [Advanced Encoding and Decoding Techniques](https://blog.gopheracademy.com/advent-2016/advanced-encoding-decoding/)
-- [ ] [Custom JSON Marshalling in Go](http://choly.ca/post/go-json-marshalling/)
+- [x] [Advanced Encoding and Decoding Techniques](https://blog.gopheracademy.com/advent-2016/advanced-encoding-decoding/)
+- [x] [Custom JSON Marshalling in Go](http://choly.ca/post/go-json-marshalling/)
 
 ### Miscellaneous
 
