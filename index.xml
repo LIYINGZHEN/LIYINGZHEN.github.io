@@ -6,10 +6,20 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSON and Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-26-json-and-go/</link>
+      <pubDate>Fri, 26 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-26-json-and-go/</guid>
+      <description>Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?
+There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined.</description>
+    </item>
     
     <item>
       <title>Efficient String Concatenation in Go</title>

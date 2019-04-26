@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?
+There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-04-26-json-and-go/" />
+
+
+<title>
+    
+    JSON and Go :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.6a7678f40434c7781747ffdd224a984179b2a3c81c81f19ccf845fdffbe80b7c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="JSON and Go">
+<meta itemprop="description" content="Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?
+There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined.">
+
+
+<meta itemprop="datePublished" content="2019-04-26T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-26T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="779">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="JSON and Go"/>
+<meta name="twitter:description" content="Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?
+There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined."/>
+
+
+
+
+<meta property="article:published_time" content="2019-04-26 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-04-26-json-and-go/">JSON and Go</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?</p>
+
+<p>There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined. Any field which doesn’t fit in the struct will just be ignored. We’ll cover that option first.</p>
+
+<h2 id="parsing-into-a-struct">Parsing into a Struct</h2>
+
+<p>Here’s an example of parsing into a struct:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+    Title string `json:&quot;title&quot;`
+}
+
+data := []byte(`
+    {
+        &quot;id&quot;: &quot;k34rAT4&quot;,
+        &quot;title&quot;: &quot;My Awesome App&quot;
+    }
+`)
+
+var app App
+err := json.Unmarshal(data, &amp;app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf(&quot;%+v \n&quot;, app)
+</code></pre>
+
+<p>or you can use <code>json</code> package</p>
+
+<pre><code class="language-go">type App struct {
+    Id    string `json:&quot;id&quot;`
+    Title string `json:&quot;title&quot;`
+}
+
+r := bytes.NewReader([]byte(`{&quot;id&quot;: &quot;k34rAT4&quot;, &quot;title&quot;: &quot;My Awesome App&quot;}`))
+
+var app App
+err := json.NewDecoder(r).Decode(&amp;app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf(&quot;%+v \n&quot;, app)
+</code></pre>
+
+<p>What you’re left with is <code>app</code> populated with the parsed JSON that was in <code>data</code>. You’ll also notice that the go term for parsing json is &ldquo;Unmarshalling&rdquo;.</p>
+
+<h2 id="rendering-from-a-struct">Rendering from a Struct</h2>
+
+<p>Outputting from a struct works exactly as parsing but in reverse:</p>
+
+<pre><code class="language-go">data, err := json.Marshal(app)
+</code></pre>
+
+<p>As with all structs in Go, it’s important to remember that only fields with a capital first letter are visible to external programs like the JSON Marshaller.</p>
+
+<h2 id="struct-tags">Struct Tags</h2>
+
+<p>One thing you’ll notice is the “tagged” data included in our struct between backticks. The JSON parser reads from that several clues about how to parse that value.</p>
+
+<h3 id="the-field-name">THE FIELD NAME</h3>
+
+<p>As you might know, Go requires all exported fields to start with a capitalized letter. It’s not common to use that style in JSON however. We use the tag to let the parser know where to actually look for the value.</p>
+
+<p>You can see an example of that in the example above, but as a refresher this is what it looks like:</p>
+
+<pre><code class="language-go">type MyStruct struct {
+    SomeField string `json:&quot;some_field&quot;`
+}
+</code></pre>
+
+<h3 id="what-to-do-if-the-field-is-empty">WHAT TO DO IF THE FIELD IS EMPTY</h3>
+
+<p>The JSON parser also accepts a flag in the tag to let it know what to do if the field is empty. The <code>omitempty</code> flag tells it to not include the JSON value in the output if it’s the “zero-value” for that type.</p>
+
+<p>The “zero-value” for numbers is 0, for strings it’s the empty string, for maps, slices and pointers it’s nil. This is how you include the <code>omitempty</code> flag.</p>
+
+<pre><code class="language-go">type MyStruct struct {
+    SomeField string `json:&quot;some_field,omitempty&quot;`
+}
+</code></pre>
+
+<p>Notice that the flag goes inside the quotes.</p>
+
+<p>If the <code>SomeField</code> was an empty string, and you converted it to JSON, some_field wouldn’t be included in the output at all.</p>
+
+<p>In other words, if <code>some_field == &quot;&quot;</code>:</p>
+
+<ul>
+<li>With <code>omitempty</code> the JSON value would be <code>{}</code></li>
+<li>Without <code>omitempty</code> the JSON value would be <code>{&quot;some_field&quot;: &quot;&quot;}</code></li>
+</ul>
+
+<p><code>omitempty</code> is valuable when you deprecate a field and no longer want it to be included in output, when you have a flag which defaults to false so there’s no need to include it, or when you are only ever operating on your data with Go, so there’s no harm in using the built-in “zero-value” as the default.</p>
+
+<h3 id="skipping-fields">SKIPPING FIELDS</h3>
+
+<p>To have the JSON parser/writer skip a field, just give it the name &ldquo;-&rdquo;. For example:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+    Password string `json:&quot;-&quot;`
+}
+</code></pre>
+
+<p>It can also make sense to have a field which will be parsed if it’s available, but will never be outputted.</p>
+
+<h2 id="nested-fields">Nested Fields</h2>
+
+<p>Nested fields refers to structs which are properties of other structs. In short, nested fields work exactly as you’d expect. You can nest a slice, map or other struct inside your struct and the JSON will recursively parse everything correctly. If you have a field which can be anything, you can always use the <code>interface{}</code> type.</p>
+
+<p>Go also supports nesting one struct in another. For example:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+}
+
+type Org struct {
+    Name string `json:&quot;name&quot;`
+}
+
+type AppWithOrg struct {
+    App
+    Org
+}
+</code></pre>
+
+<p>You can parse into a value with the <code>AppWithOrg</code> type, and it will have all the properties. You can also pull the <code>.App</code> or <code>.Org</code> out of it. For example:</p>
+
+<pre><code class="language-go">data := []byte(`
+    {
+        &quot;id&quot;: &quot;k34rAT4&quot;,
+        &quot;name&quot;: &quot;My Awesome Org&quot;
+    }
+`)
+
+var appWithOrg AppWithOrg
+err := json.Unmarshal(data, &amp;appWithOrg)
+
+app := appWithOrg.App
+org := appWithOrg.Org
+</code></pre>
+
+<p>Combining structs like this might seem strange, but it’s very valuable if you, for example, have an API which includes some extra data with your actual value.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>779 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-04-26 02:00 &#43;0200</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://www.maxlivinci.com/blog/2019-04-25-efficient-string-concatenation-in-go/">
+                                <span class="button__text">Efficient String Concatenation in Go</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>

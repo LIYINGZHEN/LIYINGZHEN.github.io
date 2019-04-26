@@ -6,8 +6,167 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 26 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>JSON and Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-26-json-and-go/</link>
+            <pubDate>Fri, 26 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-26-json-and-go/</guid>
+            <description>Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?
+There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined.</description>
+            <content type="html"><![CDATA[
+
+<p>Parsing a format like JSON in a statically typed language like Go presents a bit of a problem. If anything could show up in the JSON body, how does the compiler know how to setup memory to have a spot to place everything?</p>
+
+<p>There are two answers to this. The easy option, for when you know what your data will look like, is to parse the JSON into a struct you’ve defined. Any field which doesn’t fit in the struct will just be ignored. We’ll cover that option first.</p>
+
+<h2 id="parsing-into-a-struct">Parsing into a Struct</h2>
+
+<p>Here’s an example of parsing into a struct:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+    Title string `json:&quot;title&quot;`
+}
+
+data := []byte(`
+    {
+        &quot;id&quot;: &quot;k34rAT4&quot;,
+        &quot;title&quot;: &quot;My Awesome App&quot;
+    }
+`)
+
+var app App
+err := json.Unmarshal(data, &amp;app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf(&quot;%+v \n&quot;, app)
+</code></pre>
+
+<p>or you can use <code>json</code> package</p>
+
+<pre><code class="language-go">type App struct {
+    Id    string `json:&quot;id&quot;`
+    Title string `json:&quot;title&quot;`
+}
+
+r := bytes.NewReader([]byte(`{&quot;id&quot;: &quot;k34rAT4&quot;, &quot;title&quot;: &quot;My Awesome App&quot;}`))
+
+var app App
+err := json.NewDecoder(r).Decode(&amp;app)
+if err != nil {
+    panic(err)
+}
+
+fmt.Printf(&quot;%+v \n&quot;, app)
+</code></pre>
+
+<p>What you’re left with is <code>app</code> populated with the parsed JSON that was in <code>data</code>. You’ll also notice that the go term for parsing json is &ldquo;Unmarshalling&rdquo;.</p>
+
+<h2 id="rendering-from-a-struct">Rendering from a Struct</h2>
+
+<p>Outputting from a struct works exactly as parsing but in reverse:</p>
+
+<pre><code class="language-go">data, err := json.Marshal(app)
+</code></pre>
+
+<p>As with all structs in Go, it’s important to remember that only fields with a capital first letter are visible to external programs like the JSON Marshaller.</p>
+
+<h2 id="struct-tags">Struct Tags</h2>
+
+<p>One thing you’ll notice is the “tagged” data included in our struct between backticks. The JSON parser reads from that several clues about how to parse that value.</p>
+
+<h3 id="the-field-name">THE FIELD NAME</h3>
+
+<p>As you might know, Go requires all exported fields to start with a capitalized letter. It’s not common to use that style in JSON however. We use the tag to let the parser know where to actually look for the value.</p>
+
+<p>You can see an example of that in the example above, but as a refresher this is what it looks like:</p>
+
+<pre><code class="language-go">type MyStruct struct {
+    SomeField string `json:&quot;some_field&quot;`
+}
+</code></pre>
+
+<h3 id="what-to-do-if-the-field-is-empty">WHAT TO DO IF THE FIELD IS EMPTY</h3>
+
+<p>The JSON parser also accepts a flag in the tag to let it know what to do if the field is empty. The <code>omitempty</code> flag tells it to not include the JSON value in the output if it’s the “zero-value” for that type.</p>
+
+<p>The “zero-value” for numbers is 0, for strings it’s the empty string, for maps, slices and pointers it’s nil. This is how you include the <code>omitempty</code> flag.</p>
+
+<pre><code class="language-go">type MyStruct struct {
+    SomeField string `json:&quot;some_field,omitempty&quot;`
+}
+</code></pre>
+
+<p>Notice that the flag goes inside the quotes.</p>
+
+<p>If the <code>SomeField</code> was an empty string, and you converted it to JSON, some_field wouldn’t be included in the output at all.</p>
+
+<p>In other words, if <code>some_field == &quot;&quot;</code>:</p>
+
+<ul>
+<li>With <code>omitempty</code> the JSON value would be <code>{}</code></li>
+<li>Without <code>omitempty</code> the JSON value would be <code>{&quot;some_field&quot;: &quot;&quot;}</code></li>
+</ul>
+
+<p><code>omitempty</code> is valuable when you deprecate a field and no longer want it to be included in output, when you have a flag which defaults to false so there’s no need to include it, or when you are only ever operating on your data with Go, so there’s no harm in using the built-in “zero-value” as the default.</p>
+
+<h3 id="skipping-fields">SKIPPING FIELDS</h3>
+
+<p>To have the JSON parser/writer skip a field, just give it the name &ldquo;-&rdquo;. For example:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+    Password string `json:&quot;-&quot;`
+}
+</code></pre>
+
+<p>It can also make sense to have a field which will be parsed if it’s available, but will never be outputted.</p>
+
+<h2 id="nested-fields">Nested Fields</h2>
+
+<p>Nested fields refers to structs which are properties of other structs. In short, nested fields work exactly as you’d expect. You can nest a slice, map or other struct inside your struct and the JSON will recursively parse everything correctly. If you have a field which can be anything, you can always use the <code>interface{}</code> type.</p>
+
+<p>Go also supports nesting one struct in another. For example:</p>
+
+<pre><code class="language-go">type App struct {
+    Id string `json:&quot;id&quot;`
+}
+
+type Org struct {
+    Name string `json:&quot;name&quot;`
+}
+
+type AppWithOrg struct {
+    App
+    Org
+}
+</code></pre>
+
+<p>You can parse into a value with the <code>AppWithOrg</code> type, and it will have all the properties. You can also pull the <code>.App</code> or <code>.Org</code> out of it. For example:</p>
+
+<pre><code class="language-go">data := []byte(`
+    {
+        &quot;id&quot;: &quot;k34rAT4&quot;,
+        &quot;name&quot;: &quot;My Awesome Org&quot;
+    }
+`)
+
+var appWithOrg AppWithOrg
+err := json.Unmarshal(data, &amp;appWithOrg)
+
+app := appWithOrg.App
+org := appWithOrg.Org
+</code></pre>
+
+<p>Combining structs like this might seem strange, but it’s very valuable if you, for example, have an API which includes some extra data with your actual value.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Efficient String Concatenation in Go</title>
@@ -391,11 +550,11 @@ with a link to the post.</p>
 
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65">Why should you learn Go?</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://golang.org/doc/code.html">How to Write Go Code</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://golang.org/doc/code.html">How to Write Go Code</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://tour.golang.org/welcome/1">A Tour of Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://golang.org/doc/faq">Frequently Asked Questions</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://github.com/cdarwin/go-koans">Go Koans</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://gobyexample.com/">Go by Example</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://github.com/cdarwin/go-koans">Go Koans</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://gobyexample.com/">Go by Example</a></label></li>
 </ul>
 
 <h2 id="beginner">Beginner</h2>
@@ -409,10 +568,10 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://blog.mergermarket.it/now-youre-thinking-with-channels/">(Now You&rsquo;re) Thinking With Channels</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.learngoprogramming.com/golang-defer-simplified-77d3b2b817ff">Go Defer Simplified with Practical Visuals</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://joeshaw.org/understanding-go-panic-output/">Understanding Go panic output</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://divan.github.io/posts/avoid_gotchas/">How to avoid Go gotchas</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://divan.github.io/posts/avoid_gotchas/">How to avoid Go gotchas</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://deadbeef.me/2018/01/go-gotchas">Common Gotchas in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/">50 Shades of Go: Traps, Gotchas, and Common Mistakes for New Golang Devs</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://dave.cheney.net/2018/07/12/slices-from-the-ground-up">Slices from the ground up</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://dave.cheney.net/2018/07/12/slices-from-the-ground-up">Slices from the ground up</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.calhoun.io/6-tips-for-using-strings-in-go/">6 Tips for Using Strings in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://www.tapirgames.com/blog/golang-unofficial-faq">Unofficial Go FAQ</a></label></li>
 </ul>
@@ -422,14 +581,14 @@ with a link to the post.</p>
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://golang.org/doc/effective_go.html">Effective Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://divan.github.io/posts/go_concurrency_visualize/">Visualizing Concurrency in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/slices">Arrays, slices (and strings): The mechanics of &lsquo;append&rsquo;</a></label></li>
 </ul>
 
 <h3 id="online-books">Online Books</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://www.golangbootcamp.com/book/">Go Bootcamp</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://www.golangbootcamp.com/book/">Go Bootcamp</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://go101.org/article/101.html">Go 101</a></label></li>
 </ul>
 
@@ -444,19 +603,19 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://dmitri.shuralyov.com/idiomatic-go">Idiomatic Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/error-handling-and-go">Error handling and Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://morsmachine.dk/error-handling">Effective error handling in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://davidnix.io/post/error-handling-in-go/">Go&rsquo;s Error Handling is Elegant</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://davidnix.io/post/error-handling-in-go/">Go&rsquo;s Error Handling is Elegant</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.calhoun.io/one-liner-if-statements-with-errors/">When Should I Use One Liner if&hellip;else Statements in Go?</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project">Five Suggestions for Setting up a Go project</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.elliotdwright.com/2018/02/27/how-i-structure-some-of-my-projects/">The One with the Directory Structure and Manual Wiring</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-tests-in-go-46ddee7a25c">Structuring Tests in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/organizing-go-code">Organizing Go Code</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://darian.af/post/the-anatomy-of-a-golang-project/">The anatomy of a Go project</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://darian.af/post/the-anatomy-of-a-golang-project/">The anatomy of a Go project</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/standard-package-layout-7cdbc8391fc1">Standard Package Layout</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091">Structuring Applications in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://rakyll.org/style-packages/">Style guideline for Go packages</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/package-names">Package names</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.ardanlabs.com/blog/2017/06/for-range-semantics.html">For Range Semantics</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go">How to use interfaces in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091">Structuring Applications in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://rakyll.org/style-packages/">Style guideline for Go packages</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/package-names">Package names</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://www.ardanlabs.com/blog/2017/06/for-range-semantics.html">For Range Semantics</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go">How to use interfaces in Go</a></label></li>
 </ul>
 
 <h3 id="web">Web</h3>
@@ -471,7 +630,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81">Writing middleware in #golang and how Go makes it so much fun</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://eager.io/blog/go-and-json/">Go and JSON</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://gowebexamples.com/">Learn Web Programming in Go by Examples</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://husio.github.io/blog/post/accessing-data-in-go/">Accessing data in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://husio.github.io/blog/post/accessing-data-in-go/">Accessing data in Go</a></label></li>
 </ul>
 
 <h3 id="concurrency">Concurrency</h3>
@@ -552,9 +711,9 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://blog.questionable.services/article/testing-http-handlers-go/">Testing Your (HTTP) Handlers in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://deadbeef.me/2018/05/go-test">Go test your tests in Go with go test</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://github.com/quii/learn-go-with-tests">Learn Go with tests</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea">Unit Testing Golang HTTP Middleware</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://splice.com/blog/lesser-known-features-go-test/">Lesser-Known Features of Go Test</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://sendgrid.com/blog/when-writing-unit-tests-dont-use-mocks/">When Writing Unit Tests, Don’t Use Mocks</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea">Unit Testing Golang HTTP Middleware</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://splice.com/blog/lesser-known-features-go-test/">Lesser-Known Features of Go Test</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://sendgrid.com/blog/when-writing-unit-tests-dont-use-mocks/">When Writing Unit Tests, Don’t Use Mocks</a></label></li>
 </ul>
 
 <h3 id="web-1">Web</h3>
@@ -632,9 +791,9 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/">How to Use go:generate</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html">Writing worker queues, in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.opsdash.com/blog/job-queues-in-go.html">Job Queues in Go - OpsDash</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://kgrz.io/reading-files-in-go-an-overview.html">Reading files in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/">Vanity Go Import Paths</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e">Tags in Golang</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://kgrz.io/reading-files-in-go-an-overview.html">Reading files in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/">Vanity Go Import Paths</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e">Tags in Golang</a></label></li>
 </ul>
 
 <h2 id="advanced">Advanced</h2>
