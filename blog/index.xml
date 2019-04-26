@@ -636,7 +636,7 @@ with a link to the post.</p>
 <h3 id="concurrency">Concurrency</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3">Learning Go&rsquo;s Concurrency Through Illustrations</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3">Learning Go&rsquo;s Concurrency Through Illustrations</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/">Data races in Go(Golang) and how to fix them</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://pragmacoders.com/multithreading-go-tutorial/">Multithreading in Go - A Tutorial</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@cep21/gos-append-is-not-always-thread-safe-a3034db7975">Go’s append is not always thread safe</a></label></li>
@@ -646,8 +646,8 @@ with a link to the post.</p>
 <h3 id="go-modules">Go Modules</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://roberto.selbach.ca/intro-to-go-modules/">Introduction to Go modules</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/using-go-modules">Using Go Modules</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://roberto.selbach.ca/intro-to-go-modules/">Introduction to Go modules</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/using-go-modules">Using Go Modules</a></label></li>
 </ul>
 
 <h2 id="intermediate">Intermediate</h2>
@@ -779,7 +779,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://jmoiron.net/blog/crossing-streams-a-love-letter-to-ioreader/">Crossing Streams: a Love Letter to io.Reader</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://jordanorelli.com/post/42369331748/function-types-in-go-golang">Function Types in Go (golang)</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://research.swtch.com/godata">research!rsc: Go Data Structures</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.gopheracademy.com/advent-2018/interfaces-and-reflect/">The Relationship Between Interfaces and Reflection</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.gopheracademy.com/advent-2018/interfaces-and-reflect/">The Relationship Between Interfaces and Reflection</a></label></li>
 </ul>
 
 <h3 id="miscellaneous">Miscellaneous</h3>
