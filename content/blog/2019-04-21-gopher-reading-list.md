@@ -183,7 +183,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Building High Performance APIs In Go Using gRPC And Protocol Buffers](https://medium.com/@shijuvar/building-high-performance-apis-in-go-using-grpc-and-protocol-buffers-2eda5b80771b)
 - [ ] [Implementing UDP vs TCP in Golang](http://www.minaandrawos.com/2016/05/14/udp-vs-tcp-in-golang/)
 - [x] [Don't use Go's default HTTP client (in production)](https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779)
-- [ ] [Writing an API Client in Go](https://blog.gopheracademy.com/advent-2016/http-client/)
+- [x] [Writing an API Client in Go](https://blog.gopheracademy.com/advent-2016/http-client/)
 - [ ] [Seeking around in an HTTP object](https://blog.gopheracademy.com/advent-2017/seekable-http/)
 - [ ] [Using Functions Inside Go Templates](https://www.calhoun.io/intro-to-templates-p3-functions/)
 - [ ] [Writing a Data Mapper in Go without an ORM](http://www.meetspaceapp.com/2016/05/23/writing-a-data-mapper-in-go-without-an-orm.html)
@@ -200,8 +200,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Trivia
 
 - [x] [10 things you (probably) don't know about Go](https://talks.golang.org/2012/10things.slide)
-- [ ] [Gopher Puzzlers](https://talks.godoc.org/github.com/davecheney/presentations/gopher-puzzlers.slide)
-- [ ] [Advanced Go Tips And Tricks](https://scene-si.org/2016/06/13/advanced-go-tips-and-tricks/)
+- [x] [Gopher Puzzlers](https://talks.godoc.org/github.com/davecheney/presentations/gopher-puzzlers.slide)
+- [x] [Advanced Go Tips And Tricks](https://scene-si.org/2016/06/13/advanced-go-tips-and-tricks/)
 - [x] [Golang slices gotcha](https://allegro.tech/2017/07/golang-slices-gotcha.html)
 
 ### Diagnostics
@@ -217,7 +217,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [There is no pass-by-reference in Go](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
 - [x] [Variadic functions in Go](https://medium.com/golangspec/variadic-functions-in-go-13c33182b851)
 - [x] [Crossing Streams: a Love Letter to io.Reader](http://jmoiron.net/blog/crossing-streams-a-love-letter-to-ioreader/)
-- [ ] [Function Types in Go (golang)](http://jordanorelli.com/post/42369331748/function-types-in-go-golang)
+- [x] [Function Types in Go (golang)](http://jordanorelli.com/post/42369331748/function-types-in-go-golang)
 - [x] [research!rsc: Go Data Structures](https://research.swtch.com/godata)
 - [x] [The Relationship Between Interfaces and Reflection](https://blog.gopheracademy.com/advent-2018/interfaces-and-reflect/)
 
@@ -228,7 +228,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Examples For Using io.Pipe in Go](https://zupzup.org/io-pipe-go/)
 - [x] [How to Use go:generate](https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/)
 - [ ] [Writing worker queues, in Go](http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html)
-- [ ] [Job Queues in Go - OpsDash](https://www.opsdash.com/blog/job-queues-in-go.html)
+- [x] [Job Queues in Go - OpsDash](https://www.opsdash.com/blog/job-queues-in-go.html)
 - [x] [Reading files in Go](http://kgrz.io/reading-files-in-go-an-overview.html)
 - [x] [Vanity Go Import Paths](https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/)
 - [x] [Tags in Golang](https://medium.com/golangspec/tags-in-golang-3e5db0b8ef3e)
@@ -240,7 +240,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Go's work-stealing scheduler](https://rakyll.org/scheduler/)
 - [ ] [The Go scheduler](http://morsmachine.dk/go-scheduler)
 - [ ] [Go Assembly by Example](http://davidwong.fr/goasm/)
-- [ ] [Address Alignments in Go](http://www.tapirgames.com/blog/golang-memory-alignment)
+- [x] [Address Alignments in Go](http://www.tapirgames.com/blog/golang-memory-alignment)
 - [ ] [Hacking the Scheduler](https://github.com/golang/go/blob/master/src/runtime/HACKING.md)
 - [ ] [Scheduling In Go - Part II](https://www.ardanlabs.com/blog/2018/08/scheduling-in-go-part2.html)
 - [ ] [Anatomy of a function call in Go](https://syslog.ravelin.com/anatomy-of-a-function-call-in-go-f6fc81b80ecc)
@@ -250,7 +250,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Looking at your program’s structure in Go 1.7](https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html)
 - [ ] [Managing Syscall Overhead with crypto/rand](http://blog.sgmansfield.com/2016/06/managing-syscall-overhead-with-crypto-rand/)
 - [ ] [Optimized abs() for int64 in Go](http://cavaliercoder.com/blog/optimized-abs-for-int64-in-go.html)
-- [ ] [Golang escape analysis](http://www.agardner.me/golang/garbage/collection/gc/escape/analysis/2015/10/18/go-escape-analysis.html)
+- [x] [Golang escape analysis](http://www.agardner.me/golang/garbage/collection/gc/escape/analysis/2015/10/18/go-escape-analysis.html)
 
 ### Performance
 
@@ -264,7 +264,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 - [ ] [Allocation Efficiency in High-Performance Go Services](https://segment.com/blog/allocation-efficiency-in-high-performance-go-services/)
 - [ ] [Golang's Real-time GC in Theory and Practice](https://making.pusher.com/golangs-real-time-gc-in-theory-and-practice/)
-- [ ] [How to Optimize Garbage Collection in Go](https://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/)
+- [x] [How to Optimize Garbage Collection in Go](https://www.cockroachlabs.com/blog/how-to-optimize-garbage-collection-in-go/)
 - [ ] [Go memory ballast: How I learned to stop worrying and love the heap](https://blog.twitch.tv/go-memory-ballast-how-i-learnt-to-stop-worrying-and-love-the-heap-26c2462549a2)
 
 ### Concurrency
@@ -278,7 +278,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Go Concurrency Patterns: Timing out, moving on](https://blog.golang.org/go-concurrency-patterns-timing-out-and)
 - [ ] [Concurrency, Goroutines and GOMAXPROCS](https://www.ardanlabs.com/blog/2014/01/concurrency-goroutines-and-gomaxprocs.html)
 - [ ] [Locking in crypto/rand](http://blog.sgmansfield.com/2016/01/locking-in-crypto-rand/)
-- [ ] [Stateful locks in Go](https://scene-si.org/2016/10/12/stateful-locks-in-go/)
+- [x] [Stateful locks in Go](https://scene-si.org/2016/10/12/stateful-locks-in-go/)
 
 ### JSON Encoding and Decoding
 
@@ -287,8 +287,8 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Miscellaneous
 
-- [ ] [Text normalization in Go](https://blog.golang.org/normalization)
-- [ ] [Minimal Perfect Hash Functions](https://blog.gopheracademy.com/advent-2017/mphf/)
+- [x] [Text normalization in Go](https://blog.golang.org/normalization)
+- [x] [Minimal Perfect Hash Functions](https://blog.gopheracademy.com/advent-2017/mphf/)
 - [ ] [Go Experience Report for Generics: Google metrics API](https://medium.com/@sameer_74231/go-experience-report-for-generics-google-metrics-api-b019d597aaa4)
 - [ ] [go-internals](https://github.com/teh-cmc/go-internals)
 - [ ] [go-fuzz github.com/arolek/ase](https://medium.com/@dgryski/go-fuzz-github-com-arolek-ase-3c74d5a3150c)
