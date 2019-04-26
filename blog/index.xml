@@ -788,7 +788,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/square-corner-blog/always-be-closing-3d5fda0e00da">Always Be Closing</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://joeshaw.org/dont-defer-close-on-writable-files/">Don&rsquo;t defer Close() on writable files</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://zupzup.org/io-pipe-go/">Examples For Using io.Pipe in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/">How to Use go:generate</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/">How to Use go:generate</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html">Writing worker queues, in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.opsdash.com/blog/job-queues-in-go.html">Job Queues in Go - OpsDash</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://kgrz.io/reading-files-in-go-an-overview.html">Reading files in Go</a></label></li>
@@ -801,7 +801,7 @@ with a link to the post.</p>
 <h3 id="low-level-concerns">Low Level Concerns</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://rakyll.org/scheduler/">Go&rsquo;s work-stealing scheduler</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://rakyll.org/scheduler/">Go&rsquo;s work-stealing scheduler</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://morsmachine.dk/go-scheduler">The Go scheduler</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://davidwong.fr/goasm/">Go Assembly by Example</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://www.tapirgames.com/blog/golang-memory-alignment">Address Alignments in Go</a></label></li>
@@ -955,53 +955,6 @@ rm -rf public
 </blockquote>
 
 <p>I hope this will be useful to anyone experiencing any difficulties with deploying a <code>Hugo</code>-generated website to <code>GitHub Pages</code>!</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Context and Cancellation of goroutines</title>
-            <link>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://www.maxlivinci.com/blog/2019-04-31-context-and-cancellation-of-goroutines/</guid>
-            <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
-var ( wg sync.WaitGroup ) func work(ctx context.Context) error { defer wg.Done() for i := 0; i &amp;lt; 1000; i++ { select { case &amp;lt;-time.After(2 * time.Second): fmt.Println(&amp;quot;Doing some work &amp;quot;, i) // we received the signal of cancelation in this channel case &amp;lt;-ctx.</description>
-            <content type="html"><![CDATA[<p>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.</p>
-
-<pre><code class="language-go">var (
-    wg sync.WaitGroup
-)
-
-func work(ctx context.Context) error {
-    defer wg.Done()
-
-    for i := 0; i &lt; 1000; i++ {
-        select {
-        case &lt;-time.After(2 * time.Second):
-            fmt.Println(&quot;Doing some work &quot;, i)
-
-        // we received the signal of cancelation in this channel
-        case &lt;-ctx.Done():
-            fmt.Println(&quot;Cancel the context &quot;, i)
-            return ctx.Err()
-        }
-    }
-    return nil
-}
-
-func main() {
-    ctx, cancel := context.WithTimeout(context.Background(), 6*time.Second)
-    defer cancel()
-
-    fmt.Println(&quot;Hey, I'm going to do some work&quot;)
-
-    wg.Add(1)
-    go work(ctx)
-    wg.Wait()
-
-    fmt.Println(&quot;Finished. I'm going home&quot;)
-}
-</code></pre>
 ]]></content>
         </item>
         
