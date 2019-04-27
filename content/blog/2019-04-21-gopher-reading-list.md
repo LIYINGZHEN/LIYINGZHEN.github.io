@@ -96,9 +96,9 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 - [x] [Learning Go's Concurrency Through Illustrations](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)
 - [x] [Data races in Go(Golang) and how to fix them](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
-- [ ] [Multithreading in Go - A Tutorial](https://pragmacoders.com/multithreading-go-tutorial/)
-- [ ] [Go’s append is not always thread safe](https://medium.com/@cep21/gos-append-is-not-always-thread-safe-a3034db7975)
-- [ ] [Golang channels tutorial](https://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
+- [x] [Multithreading in Go - A Tutorial](https://pragmacoders.com/multithreading-go-tutorial/)
+- [x] [Go’s append is not always thread safe](https://medium.com/@cep21/gos-append-is-not-always-thread-safe-a3034db7975)
+- [x] [Golang channels tutorial](https://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
 
 ### Go Modules
 
@@ -112,20 +112,20 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/)
 - [x] [Aspects of a good Go library](https://medium.com/@cep21/aspects-of-a-good-go-library-7082beabb403)
 - [x] [Solid Go Design](https://dave.cheney.net/2016/08/20/solid-go-design)
-- [ ] [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/)
+- [x] [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/)
 - [x] [Failure is your Domain](https://middlemost.com/failure-is-your-domain/)
 - [x] [What “accept interfaces, return structs” means in Go](https://medium.com/@cep21/what-accept-interfaces-return-structs-means-in-go-2fe879e25ee8)
-- [ ] [How to Use Go Interfaces](https://blog.chewxy.com/2018/03/18/golang-interfaces/)
-- [ ] [Pitfalls of context values and how to avoid or mitigate them in Go](https://www.calhoun.io/pitfalls-of-context-values-and-how-to-avoid-or-mitigate-them/)
-- [ ] [How to organize the go struct, in order to save memory](https://medium.com/@felipedutratine/how-to-organize-the-go-struct-in-order-to-save-memory-c78afcf59ec2)
+- [x] [How to Use Go Interfaces](https://blog.chewxy.com/2018/03/18/golang-interfaces/)
+- [x] [Pitfalls of context values and how to avoid or mitigate them in Go](https://www.calhoun.io/pitfalls-of-context-values-and-how-to-avoid-or-mitigate-them/)
+- [x] [How to organize the go struct, in order to save memory](https://medium.com/@felipedutratine/how-to-organize-the-go-struct-in-order-to-save-memory-c78afcf59ec2)
 - [x] [How to ship production-grade Go](https://www.oreilly.com/ideas/how-to-ship-production-grade-go)
 - [x] [Loose Coupling in Go lang](https://8thlight.com/blog/javier-saldana/2015/02/06/loose-coupling-in-go-lang.html)
-- [ ] [Self-referential functions and the design of options](https://commandcenter.blogspot.co.nz/2014/01/self-referential-functions-and-design.html)
-- [ ] [Functional Options for Friendly APIs](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)
-- [ ] [Object Oriented Inheritance in Go](http://hackthology.com/object-oriented-inheritance-in-go.html)
-- [ ] [Error handling in Upsin](https://commandcenter.blogspot.com/2017/12/error-handling-in-upspin.html)
-- [ ] [Iterators in Go](https://ewencp.org/blog/golang-iterators/index.html)
-- [ ] [Stop writing broken Go libraries](https://0x46.net/thoughts/2018/12/29/go-libraries/)
+- [x] [Self-referential functions and the design of options](https://commandcenter.blogspot.co.nz/2014/01/self-referential-functions-and-design.html)
+- [x] [Functional Options for Friendly APIs](https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis)
+- [x] [Object Oriented Inheritance in Go](http://hackthology.com/object-oriented-inheritance-in-go.html)
+- [x] [Error handling in Upsin](https://commandcenter.blogspot.com/2017/12/error-handling-in-upspin.html)
+- [x] [Iterators in Go](https://ewencp.org/blog/golang-iterators/index.html)
+- [x] [Stop writing broken Go libraries](https://0x46.net/thoughts/2018/12/29/go-libraries/)
 
 ### Concurrency
 
@@ -133,9 +133,9 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Stopping goroutines](https://medium.com/@matryer/stopping-goroutines-golang-1bf28799c1cb)
 - [x] [Ways to limit concurrent resource use](https://pocketgophers.com/limit-concurrent-use/)
 - [x] [Make Ctrl+C cancel the context.Context](https://medium.com/@matryer/make-ctrl-c-cancel-the-context-context-bd006a8ad6ff)
-- [ ] [How to correctly use context.Context in Go 1.7](https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.bdz5qnna7)
-- [ ] [Using contexts to avoid leaking goroutines](https://rakyll.org/leakingctx/)
-- [ ] [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
+- [x] [How to correctly use context.Context in Go 1.7](https://medium.com/@cep21/how-to-correctly-use-context-context-in-go-1-7-8f2c0fafdf39#.bdz5qnna7)
+- [x] [Using contexts to avoid leaking goroutines](https://rakyll.org/leakingctx/)
+- [x] [Go Concurrency Patterns: Pipelines and cancellation](https://blog.golang.org/pipelines)
 - [x] [Tutorial: Synchronizing State with Mutexes in Go](https://kylewbanks.com/blog/tutorial-synchronizing-state-with-mutexes-golang)
 - [x] [Context and Cancellation of goroutines](http://dahernan.github.io/2015/02/04/context-and-cancellation-of-goroutines/)
 - [x] [Dancing with Go's Mutexes](https://hackernoon.com/dancing-with-go-s-mutexes-92407ae927bf)
@@ -146,14 +146,14 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Sane Concurrency with Go](https://blog.mozilla.org/services/2014/03/12/sane-concurrency-with-go/)
 - [x] [Error handling patterns in Go](https://mijailovic.net/2017/05/09/error-handling-patterns-in-go/)
 - [x] [Does the race detector catch all data races?](https://medium.com/@val_deleplace/does-the-race-detector-catch-all-data-races-1afed51d57fb)
-- [ ] [Interesting ways of using Go channels](http://nomad.uk.net/articles/interesting-ways-of-using-go-channels.html)
+- [x] [Interesting ways of using Go channels](http://nomad.uk.net/articles/interesting-ways-of-using-go-channels.html)
 
 ### Testing
 
 - [x] [Testing Web Apps in Go](http://markjberger.com/testing-web-apps-in-golang/)
 - [x] [An Introduction to Testing in Go](https://tutorialedge.net/golang/intro-testing-in-go/)
 - [x] [5 simple tips and tricks for writing unit tests in #golang](https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742)
-- [ ] [5 Advanced Testing Techniques in Go](https://segment.com/blog/5-advanced-testing-techniques-in-go/)
+- [x] [5 Advanced Testing Techniques in Go](https://segment.com/blog/5-advanced-testing-techniques-in-go/)
 - [x] [The Cult of Go Test](http://danmux.com/posts/the_cult_of_go_test/)
 - [ ] [Interfaces and Composition for Effective Unit Testing in Golang](https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/)
 - [ ] [Go Testing Technique: Testing JSON HTTP Requests](https://medium.com/@xoen/go-testing-technique-testing-json-http-requests-76d9ce0e11f#.95p1r8n16)

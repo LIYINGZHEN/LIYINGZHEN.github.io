@@ -4,6 +4,7 @@ date:        2019-05-06T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["go"]
+ref: https://medium.com/@felipedutratine/how-to-organize-the-go-struct-in-order-to-save-memory-c78afcf59ec2
 ---
 
 ## How memory works internally
