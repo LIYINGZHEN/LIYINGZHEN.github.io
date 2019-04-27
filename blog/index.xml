@@ -6,8 +6,98 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 26 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Unit Testing HTTP Servers</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-27-unit-testing-http-servers/</link>
+            <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-27-unit-testing-http-servers/</guid>
+            <description>You’re building a web (HTTP) service in Go, and you want to unit test your handler functions. You’ve got a grip on Go’s net/http package, but you’re not sure where to start with testing that your handlers return the correct HTTP status codes, HTTP headers or response bodies.
+Let’s walk through how you go about this, injecting the necessary dependencies, and mocking the rest.
+A Basic Handler We’ll start by writing a basic test: we want to make sure our handler returns a HTTP 200 (OK) status code.</description>
+            <content type="html"><![CDATA[
+
+<p>You’re building a web (HTTP) service in Go, and you want to unit test your handler functions. You’ve got a grip on Go’s <code>net/http</code> package, but you’re not sure where to start with testing that your handlers return the correct HTTP status codes, HTTP headers or response bodies.</p>
+
+<p>Let’s walk through how you go about this, injecting the necessary dependencies, and mocking the rest.</p>
+
+<h2 id="a-basic-handler">A Basic Handler</h2>
+
+<p>We’ll start by writing a basic test: we want to make sure our handler returns a HTTP 200 (OK) status code. This is our handler:</p>
+
+<pre><code class="language-go">package handlers
+
+func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
+    w.WriteHeader(http.StatusOK)
+    w.Header().Set(&quot;Content-Type&quot;, &quot;application/json&quot;)
+    io.WriteString(w, `{&quot;alive&quot;: true}`)
+}
+</code></pre>
+
+<p>And this is our test:</p>
+
+<pre><code class="language-go">package handlers
+
+import (
+    &quot;net/http&quot;
+    &quot;net/http/httptest&quot;
+    &quot;testing&quot;
+)
+
+func TestHealthCheckHandler(t *testing.T) {
+    req, err := http.NewRequest(&quot;GET&quot;, &quot;/health-check&quot;, nil)
+
+	checkError(err, t)
+
+	rr := httptest.NewRecorder()
+
+    handler := http.HandlerFunc(HealthCheckHandler)
+
+    handler.ServeHTTP(rr, req)
+
+    if status := rr.Code; status != http.StatusOK {
+        t.Errorf(&quot;handler returned wrong status code: got %v want %v&quot;,
+            status, http.StatusOK)
+    }
+}
+</code></pre>
+
+<h2 id="middleware-test">Middleware Test</h2>
+
+<pre><code class="language-go">func RequestIDMiddleware(h http.Handler) http.Handler {
+	fn := func(w http.ResponseWriter, r *http.Request) {
+		ctx := context.WithValue(r.Context(), &quot;app.req.id&quot;, &quot;12345&quot;)
+		h.ServeHTTP(w, r.WithContext(ctx))
+	}
+	return http.HandlerFunc(fn)
+}
+</code></pre>
+
+<p>And the test:</p>
+
+<pre><code class="language-go">func TestPopulateContext(t *testing.T) {
+	req, err := http.NewRequest(&quot;GET&quot;, &quot;/api/users&quot;, nil)
+
+	checkError(err, t)
+
+	testHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if val, ok := r.Context().Value(&quot;app.req.id&quot;).(string); !ok {
+			t.Errorf(&quot;app.req.id not in request context: got %q&quot;, val)
+		}
+	})
+
+	rr := httptest.NewRecorder()
+
+	handler := RequestIDMiddleware(testHandler)
+
+	handler.ServeHTTP(rr, req)
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>JSON and Go</title>
@@ -731,7 +821,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://blog.questionable.services/article/map-string-interface/">HTTP Request Contexts &amp; Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.codeship.com/using-object-oriented-web-servers-go/">Using Object-Oriented Web Servers in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://pliutau.com/handle-http-request-errors-in-go/">Handle HTTP Request Errors in Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://ahmet.im/blog/golang-json-decoder-pitfalls/">Go json.Decoder Considered Harmful</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://ahmet.im/blog/golang-json-decoder-pitfalls/">Go json.Decoder Considered Harmful</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@shijuvar/building-high-performance-apis-in-go-using-grpc-and-protocol-buffers-2eda5b80771b">Building High Performance APIs In Go Using gRPC And Protocol Buffers</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://www.minaandrawos.com/2016/05/14/udp-vs-tcp-in-golang/">Implementing UDP vs TCP in Golang</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@nate510/don-t-use-go-s-default-http-client-4804cb19f779">Don&rsquo;t use Go&rsquo;s default HTTP client (in production)</a></label></li>

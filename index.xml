@@ -6,10 +6,21 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unit Testing HTTP Servers</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-27-unit-testing-http-servers/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-27-unit-testing-http-servers/</guid>
+      <description>You’re building a web (HTTP) service in Go, and you want to unit test your handler functions. You’ve got a grip on Go’s net/http package, but you’re not sure where to start with testing that your handlers return the correct HTTP status codes, HTTP headers or response bodies.
+Let’s walk through how you go about this, injecting the necessary dependencies, and mocking the rest.
+A Basic Handler We’ll start by writing a basic test: we want to make sure our handler returns a HTTP 200 (OK) status code.</description>
+    </item>
     
     <item>
       <title>JSON and Go</title>
