@@ -160,16 +160,6 @@ const ( Zero = 0 One = 1 Two = 2 Three = 3 Four = 4 )  </description>
     </item>
     
     <item>
-      <title>Byte Slices</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</link>
-      <pubDate>Sat, 19 Jan 2019 17:20:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</guid>
-      <description>A byte slice is a slice where its type is byte. You can create a new byte slice named s as follows:
-s := make([]byte, 5)  There is nothing special in the way that you can access a byte slice compared to the other types of slices. It is just that byte slices are used in file input and output operations.</description>
-    </item>
-    
-    <item>
       <title>General Go coding advices</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>

@@ -33,15 +33,6 @@ If we look at the Books API title, we can define the following elements to descr
     </item>
     
     <item>
-      <title>HTTP headers</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-http-headers/</link>
-      <pubDate>Sat, 12 Jan 2019 19:52:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-http-headers/</guid>
-      <description>Authorization - string Authorization is one of the most commonly used request headers, even if you have a public read only API I advise you to ask the user to authorize their requests.</description>
-    </item>
-    
-    <item>
       <title>URI path design for REST services</title>
       <link>https://www.maxlivinci.com/old/2019-01-12-uri-path-design-for-rest-services/</link>
       <pubDate>Sat, 12 Jan 2019 19:37:17 +0100</pubDate>

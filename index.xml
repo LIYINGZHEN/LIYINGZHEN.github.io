@@ -198,10 +198,7 @@ If we have this query, then the manufacturer shoud be the first index.</descript
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Docker Terminology Image - Images are the building blocks of the Docker world. You launch your containers from images.
-Container - Docker helps you build and deploy containers inside of which you can package your applications and services.
-Docker Compose - Allows you to run stacks of containers to represent application stacks.
-Commands # Checking that the docker binary works. docker info # Build a docker image. docker build -t &amp;lt;image-name&amp;gt;:&amp;lt;tag&amp;gt; # name docker image --no-cache # do not use cache .</description>
+      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove old images. docker rmi -f &#39;docker images -q -f dangling=true&#39; # Deleting all images sudo docker rmi `docker images -a -q` # Stop a container.</description>
     </item>
     
     <item>
@@ -390,16 +387,6 @@ const ( Zero = 0 One = 1 Two = 2 Three = 3 Four = 4 )  </description>
     </item>
     
     <item>
-      <title>Byte Slices</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</link>
-      <pubDate>Sat, 19 Jan 2019 17:20:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-byte-slices/</guid>
-      <description>A byte slice is a slice where its type is byte. You can create a new byte slice named s as follows:
-s := make([]byte, 5)  There is nothing special in the way that you can access a byte slice compared to the other types of slices. It is just that byte slices are used in file input and output operations.</description>
-    </item>
-    
-    <item>
       <title>General Go coding advices</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
@@ -521,15 +508,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
       
       <guid>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</guid>
       <description>Source files and associated test files are placed in the same package/folder The name of the test file for any given source file is &amp;lt;source-file-name&amp;gt;_test.go Test functions need to have the &amp;ldquo;Test&amp;rdquo; prefix, and the next character in the function name should be capitalized  func TestSearchHandlerReturnsBadRequestWhenBlankSearchCriteriaIsSent(t *testing.T) { handler := SearchHandler{} data, _ := json.Marshal(searchRequest{}) request := httptest.NewRequest(&amp;quot;POST&amp;quot;, &amp;quot;/search&amp;quot;, bytes.NewReader(data)) response := httptest.NewRecorder() handler.ServeHTTP(response, request) if response.Code != http.</description>
-    </item>
-    
-    <item>
-      <title>HTTP headers</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-http-headers/</link>
-      <pubDate>Sat, 12 Jan 2019 19:52:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-http-headers/</guid>
-      <description>Authorization - string Authorization is one of the most commonly used request headers, even if you have a public read only API I advise you to ask the user to authorize their requests.</description>
     </item>
     
     <item>

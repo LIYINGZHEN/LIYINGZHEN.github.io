@@ -7,10 +7,7 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Docker Terminology Image - Images are the building blocks of the Docker world. You launch your containers from images.
-Container - Docker helps you build and deploy containers inside of which you can package your applications and services.
-Docker Compose - Allows you to run stacks of containers to represent application stacks.
-Commands # Checking that the docker binary works. docker info # Build a docker image. docker build -t &amp;lt;image-name&amp;gt;:&amp;lt;tag&amp;gt; # name docker image --no-cache # do not use cache ." />
+    content="Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove old images. docker rmi -f &#39;docker images -q -f dangling=true&#39; # Deleting all images sudo docker rmi `docker images -a -q` # Stop a container." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/old/2019-03-08-docker/" />
@@ -46,7 +43,7 @@ Commands # Checking that the docker binary works. docker info # Build a docker i
 
 <meta itemprop="datePublished" content="2019-03-08T13:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-08T13:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="796">
+<meta itemprop="wordCount" content="606">
 
 
 
@@ -129,49 +126,15 @@ Commands # Checking that the docker binary works. docker info # Build a docker i
             <div class="post-content">
                 
 
-<h1 id="docker">Docker</h1>
-
-<h2 id="terminology">Terminology</h2>
-
-<p><strong>Image</strong> - Images are the building blocks of the Docker world. You launch your containers from images.</p>
-
-<p><strong>Container</strong> - Docker helps you build and deploy containers inside of which you can package your applications and services.</p>
-
-<p><strong>Docker Compose</strong> - Allows you to run stacks of containers to represent application stacks.</p>
-
 <h2 id="commands">Commands</h2>
 
 <pre><code class="language-bash"># Checking that the docker binary works.
 docker info
 
-# Build a docker image.
-docker build
-  -t &lt;image-name&gt;:&lt;tag&gt; # name docker image
-  --no-cache            # do not use cache
-  .
-
-#
-docker run
-  -v &lt;source&gt;:&lt;destination&gt; # create a volume in our container from a directory on the host
-  --net=&lt;NETWORK&gt;           # Creating a container inside a Docker network
-  --volumes-from            # 
-  -i                        # keeps STDIN open
-  -t                        # asllocates a pseudo terminal (TTY)
-  --name &lt;CONTAINER&gt;        # name the container
-  -e NAME=Sam               # environment variable
-  -p 5432:5432              # ports
-  -d                        # run in the background
-  --rm                      #
-  --restart=always          #
-  &lt;image&gt;:&lt;tag&gt;
-
 # Getting additional information about a container.
 docker inspect
   -f '{{ .NetworkSettings.IPAddress }}'   # selectively query.
   &lt;CONTAINER&gt;
-
-# Listing Docker images
-docker images
 
 # Running a shell inside an existing container.
 docker exec
@@ -180,8 +143,6 @@ docker exec
   &lt;CONTAINER&gt;
   sh | bash
 
-# Remove an old image.
-docker rmi &lt;image-name&gt;
 # Remove old images.
 docker rmi -f 'docker images -q -f dangling=true'
 # Deleting all images
@@ -194,8 +155,6 @@ docker stop $(docker ps -a -q)
 
 # Remove a container.
 docker remove &lt;CONTAINER&gt;
-# Remove all containers.
-docker rm $(docker ps -a -q)
 
 # Remove unused data.
 docker system prune -a -f
@@ -265,23 +224,11 @@ docker network create &lt;NETWORK&gt;
 # Inspecting network.
 docker network inspect &lt;NETWORK&gt;
 
-# List all current networks.
-sudo docker network ls
-
 # Adding a new container to the network.
 docker network connect &lt;NETWORK&gt; &lt;CONTAINER&gt;
 
 # Disconnecting a host from a network.
 docker network disconnect &lt;NETWORK&gt; &lt;CONTAINER&gt;
-</code></pre>
-
-<h3 id="dockerhub">DockerHub</h3>
-
-<pre><code class="language-bash"># Pulling a image
-docker pull &lt;docker-hub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
-
-# Pushing the image to docker hub.
-docker push &lt;docker-hub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
 </code></pre>
 
 <h2 id="the-dockerfile-yaml-file">The Dockerfile.yaml file</h2>
