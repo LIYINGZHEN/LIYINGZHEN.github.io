@@ -59,7 +59,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Organization and Style
 
-- [ ] [Less is exponentially more](https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html)
+- [x] [Less is exponentially more](https://commandcenter.blogspot.com.br/2012/06/less-is-exponentially-more.html)
 - [x] [Go Proverbs](https://go-proverbs.github.io/)
 - [x] [Code Review Comments](https://github.com/golang/go/wiki/CodeReviewComments)
 - [x] [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go)
@@ -86,7 +86,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [x] [Golang HTTP server for pro](https://medium.com/@ScullWM/golang-http-server-for-pro-69034c276355)
 - [x] [Serving Static Sites with Go](https://www.alexedwards.net/blog/serving-static-sites-with-go)
 - [x] [An Intro To Templates in Go](https://www.calhoun.io/an-intro-to-templates-in-go-part-1-of-3/)
-- [ ] [JSON APIs Are Just Web Applications](https://www.calhoun.io/apis-are-just-web-applications/)
+- [x] [JSON APIs Are Just Web Applications](https://www.calhoun.io/apis-are-just-web-applications/)
 - [x] [Writing middleware in #golang and how Go makes it so much fun](https://medium.com/@matryer/writing-middleware-in-golang-and-how-go-makes-it-so-much-fun-4375c1246e81)
 - [x] [Go and JSON](https://eager.io/blog/go-and-json/)
 - [x] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
@@ -95,7 +95,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Concurrency
 
 - [x] [Learning Go's Concurrency Through Illustrations](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)
-- [ ] [Data races in Go(Golang) and how to fix them](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
+- [x] [Data races in Go(Golang) and how to fix them](https://www.sohamkamani.com/blog/2018/02/18/golang-data-race-and-how-to-fix-it/)
 - [ ] [Multithreading in Go - A Tutorial](https://pragmacoders.com/multithreading-go-tutorial/)
 - [ ] [Go’s append is not always thread safe](https://medium.com/@cep21/gos-append-is-not-always-thread-safe-a3034db7975)
 - [ ] [Golang channels tutorial](https://guzalexander.com/2013/12/06/golang-channels-tutorial.html)
