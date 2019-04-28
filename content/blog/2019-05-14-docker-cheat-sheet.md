@@ -17,6 +17,50 @@ docker ps
   -q      # only returns the container IDs
 ```
 
+**Run a shell inside an existing container**
+
+```bash
+docker exec
+  -it         # connect the container to terminal
+  <container>
+  <command>   # bin/sh, bin/bash
+```
+
+**Starting a stopped container**
+
+```bash
+docker start <container>
+```
+
+# Print a container’s logs
+
+```bash
+docker logs
+  -f               # tail
+  -t               # timestamps
+  <container>
+```
+
+**Restarting a stopped container**
+
+```bash
+docker restart <container>
+```
+
+**Getting additional information about a container**
+
+```bash
+docker inspect
+  -f '{{ .NetworkSettings.IPAddress }}'   # selectively query.
+  <container>
+```
+
+**Stop the running Docker container**
+
+```bash
+docker stop <container>
+```
+
 **Remove exited containers**
 
 ```bash
@@ -27,12 +71,6 @@ docker rm -f $(docker container ls -f "status=exited" -q)
 
 ```bash
 docker rm -f $(docker ps -aq)
-```
-
-**Stop the running Docker container**
-
-```bash
-docker stop <CONTAINER>
 ```
 
 **Show the history of an image**
@@ -66,7 +104,7 @@ docker run
   --net=<NETWORK>           # Creating a container inside a Docker network
   --volumes-from            #
   -it                       # connect the container to terminal
-  --name <CONTAINER>        # name the containe
+  --name <name>             # name the containe
   -e NAME=Sam               # environment variable
   -p 5000:80                # expose port 5000 externally and map to port 80
   -d                        # run in the background
@@ -75,7 +113,13 @@ docker run
   <image>:<tag>
 ```
 
-**Listing images**
+**Debug an image**
+
+```bash
+docker run -it <image> /bin/bash
+```
+
+**List images**
 
 ```bash
 docker images ls
@@ -109,32 +153,42 @@ docker push <dockerhub-id>/<image-name>:<version>
 
 **List the networks**
 
-```
+```bash
 docker network ls
 ```
 
 **Creating a Docker network**
 
 ```bash
-docker network create <NETWORK>
+docker network create
+  -d <driver>         #
+  <newwork>
 ```
 
 **Inspect the network**
 
 ```bash
-docker network inspect <NETWORK>
+docker network inspect <newwork>
 ```
 
 **Adding a new container to the network**
 
 ```bash
-docker network connect <NETWORK> <CONTAINER>
+docker network connect <newwork> <container>
 ```
 
 **Disconnecting a host from a network**
 
 ```bash
-docker network disconnect <NETWORK> <CONTAINER>
+docker network disconnect <newwork> <container>
+```
+
+## Volumes
+
+**Remove unused volumes using docker volume prune*
+
+```bash
+docker volume prune
 ```
 
 ## Dockerfile
@@ -142,6 +196,9 @@ docker network disconnect <NETWORK> <CONTAINER>
 ```yaml
 # Sets the Base Image for subsequent instructions.
 FROM
+
+# Apply key/value metadata to your images, containers, or daemons.
+LABEL key="value"
 
 # Sets environment variable.
 ENV KEY VALUE
@@ -161,9 +218,6 @@ ADD
 
 # Creates a mount point for externally mounted volumes or other containers.
 VOLUME ["/opt/project"]
-
-# Apply key/value metadata to your images, containers, or daemons.
-LABEL key="value"
 
 # The ARG instruction defines variables that can be passed at build-time via the docker build command.
 ARG webapp_user=user
