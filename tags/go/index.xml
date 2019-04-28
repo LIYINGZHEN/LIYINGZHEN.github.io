@@ -6,10 +6,21 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go tooling essentials</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-28-go-tooling-essentials/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-28-go-tooling-essentials/</guid>
+      <description>New to the Go tools? Or do you want to expand your knowledge? This article is about the flags for the Go tools everyone should know.
+$ go test -v It provides chatty output for the testing. It prints the test name, its status (failed or passed), how much it took to run the test, any logs from the test case, etc.
+go test without the -v flag is highly quiet, I always use it with -v turned on.</description>
+    </item>
     
     <item>
       <title>Unit Testing HTTP Servers</title>

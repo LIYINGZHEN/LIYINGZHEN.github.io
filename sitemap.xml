@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-04-28-go-tooling-essentials/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-04-27-unit-testing-http-servers/</loc>
     <lastmod>2019-04-27T00:00:00+00:00</lastmod>
   </url>
@@ -73,11 +78,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-14-networking/</loc>
-    <lastmod>2019-03-14T06:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-03-13-nginx/</loc>
     <lastmod>2019-03-13T06:00:00+00:00</lastmod>
   </url>
@@ -108,18 +108,8 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-27-middleware-in-go/</loc>
-    <lastmod>2019-01-27T16:40:32+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</loc>
     <lastmod>2019-01-27T11:03:14+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-27-btyes-in-go/</loc>
-    <lastmod>2019-01-27T10:01:57+01:00</lastmod>
   </url>
   
   <url>
@@ -289,7 +279,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-04-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -337,7 +327,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/go/</loc>
-    <lastmod>2019-04-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -386,12 +376,6 @@
   <url>
     <loc>https://www.maxlivinci.com/tags/mongodb/</loc>
     <lastmod>2019-03-10T16:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/networking/</loc>
-    <lastmod>2019-03-14T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -445,7 +429,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-04-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

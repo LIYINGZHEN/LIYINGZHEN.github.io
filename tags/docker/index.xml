@@ -17,7 +17,7 @@
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove old images. docker rmi -f &#39;docker images -q -f dangling=true&#39; # Deleting all images sudo docker rmi `docker images -a -q` # Stop a container.</description>
+      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container.</description>
     </item>
     
   </channel>

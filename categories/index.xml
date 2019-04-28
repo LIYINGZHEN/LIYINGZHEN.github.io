@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on YING ZHEN LI</title>
+    <title>YING ZHEN LI</title>
     <link>https://www.maxlivinci.com/categories/</link>
-    <description>Recent content in Categories on YING ZHEN LI</description>
+    <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Jan 2019 18:40:48 +0100</lastBuildDate>
@@ -12,30 +12,14 @@
     
     
     <item>
-      <title></title>
-      <link>https://www.maxlivinci.com/categories/</link>
+      <title>OpenAPI Specification</title>
+      <link>https://www.maxlivinci.com/old/2019-01-26-open-api-specification/</link>
       <pubDate>Sat, 26 Jan 2019 18:40:48 +0100</pubDate>
       
-      <guid>https://www.maxlivinci.com/categories/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://www.maxlivinci.com/categories/go/</link>
-      <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Notes</title>
-      <link>https://www.maxlivinci.com/categories/notes/</link>
-      <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/categories/notes/</guid>
-      <description></description>
+      <guid>https://www.maxlivinci.com/old/2019-01-26-open-api-specification/</guid>
+      <description>OpenAPI lets us define RESTful APIs in a standardized manner, and they can be defined without being tied down to any particular programming language or framework being used.
+Let&amp;rsquo;s list the general structure of an OpenAPI specification and use it to redefine the Books API described in Chapter 4, The RESTful Web.
+If we look at the Books API title, we can define the following elements to describe the API:</description>
     </item>
     
   </channel>

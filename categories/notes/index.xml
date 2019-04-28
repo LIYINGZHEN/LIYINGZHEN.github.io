@@ -69,18 +69,6 @@ Elasticsearch is our datastore for our logging data, Kibana is the application w
     </item>
     
     <item>
-      <title>Networking</title>
-      <link>https://www.maxlivinci.com/old/2019-03-14-networking/</link>
-      <pubDate>Thu, 14 Mar 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-14-networking/</guid>
-      <description>Primer on Latency and Bandwidth  Latency - The time from the source sending a packet to the destination receiving it
- Bandwidth - Maximum throughput of a logical or physical communication path
-  Notes
- Network data rates are typically measured in bits per second (bps), whereas data rates for non-network equipment are typically shown in bytes per second (Bps). This is a common source of confusion, pay close attention to the units.</description>
-    </item>
-    
-    <item>
       <title>Nginx</title>
       <link>https://www.maxlivinci.com/old/2019-03-13-nginx/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
@@ -116,7 +104,7 @@ If we have this query, then the manufacturer shoud be the first index.</descript
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove old images. docker rmi -f &#39;docker images -q -f dangling=true&#39; # Deleting all images sudo docker rmi `docker images -a -q` # Stop a container.</description>
+      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container.</description>
     </item>
     
     <item>

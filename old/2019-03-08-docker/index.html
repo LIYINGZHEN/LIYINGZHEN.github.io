@@ -7,7 +7,7 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove old images. docker rmi -f &#39;docker images -q -f dangling=true&#39; # Deleting all images sudo docker rmi `docker images -a -q` # Stop a container." />
+    content="Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/old/2019-03-08-docker/" />
@@ -43,7 +43,7 @@
 
 <meta itemprop="datePublished" content="2019-03-08T13:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-08T13:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="606">
+<meta itemprop="wordCount" content="250">
 
 
 
@@ -143,26 +143,8 @@ docker exec
   &lt;CONTAINER&gt;
   sh | bash
 
-# Remove old images.
-docker rmi -f 'docker images -q -f dangling=true'
-# Deleting all images
-sudo docker rmi `docker images -a -q`
-
-# Stop a container.
-docker stop &lt;CONTAINER&gt;
-# Stop all containers.
-docker stop $(docker ps -a -q)
-
-# Remove a container.
-docker remove &lt;CONTAINER&gt;
-
 # Remove unused data.
 docker system prune -a -f
-
-# Listing running containers.
-docker ps
-  -a      # include stopped
-  -q      # only returns the container IDs
 
 # Starting a stopped container.
 docker start &lt;CONTAINER&gt;
@@ -178,9 +160,6 @@ docker logs
 
 #
 docker commit id
-
-# Stopping the running Docker container.
-docker stop &lt;CONTAINER&gt;
 
 # Tagging an image under an additional tag.
 docker tag &lt;image-name&gt; &lt;docker-hub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
@@ -203,9 +182,6 @@ docker top
 # List port mappings or a specific mapping for the container.
 docker port &lt;CONTAINER&gt;
 
-# Show the history of an image
-docker history
-
 # Display the running processes of a container
 docker top &lt;CONTAINER&gt;
 </code></pre>
@@ -215,64 +191,6 @@ docker top &lt;CONTAINER&gt;
 <pre><code class="language-bash"># Remove unused volumes using docker volume prune.
 docker volume prune
 </code></pre>
-
-<h3 id="network">Network</h3>
-
-<pre><code class="language-bash"># Creating a Docker network.
-docker network create &lt;NETWORK&gt;
-
-# Inspecting network.
-docker network inspect &lt;NETWORK&gt;
-
-# Adding a new container to the network.
-docker network connect &lt;NETWORK&gt; &lt;CONTAINER&gt;
-
-# Disconnecting a host from a network.
-docker network disconnect &lt;NETWORK&gt; &lt;CONTAINER&gt;
-</code></pre>
-
-<h2 id="the-dockerfile-yaml-file">The Dockerfile.yaml file</h2>
-
-<pre><code class="language-yaml"># The base image you’re building on top of.
-FROM
-
-# The ENV instruction is used to set environment variables during the image build process.
-ENV KEY VALUE
-
-RUN
-
-# The WORKDIR instruction provides a way to set the working directory for the container and
-# the ENTRYPOINT and/or CMD to be executed when a container is launched from the image.
-WORKDIR
-
-# Use COPY unless you sure you need ADD
-# The key difference is that the COPY instruction is purely focused on copying local files from the build context and does not have any extraction or decompression capabilities.
-COPY
-
-ADD
-
-#
-VOLUME [&quot;/opt/project&quot;]
-
-#
-LABEL key=&quot;value&quot;
-
-# The ARG instruction defines variables that can be passed at build-time via the docker build command.
-ARG webapp_user=user
-
-EXPOSE 80
-
-# Any arguments we specify on the docker run command line will
-# be passed as arguments to the command specified in the ENTRYPOINT.
-ENTRYPOINT [&quot;/usr/sbin/nginx&quot;]
-# The CMD instruction specifies the command to run when a container is launched.
-# We can override the CMD instruction on the docker run command line.
-CMD [&quot;-h&quot;]
-</code></pre>
-
-<h2 id="docker-volume">Docker Volume</h2>
-
-<p>Writing into a container’s writable layer requires a storage driver to manage the filesystem. The storage driver provides a union filesystem, using the Linux kernel. This extra abstraction reduces performance as compared to using data volumes, which write directly to the host filesystem.</p>
 
 <h1 id="docker-compose">Docker Compose</h1>
 
