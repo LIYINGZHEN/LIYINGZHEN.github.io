@@ -169,7 +169,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 - [x] [Exposing Go on the Internet](https://blog.gopheracademy.com/advent-2016/exposing-go-on-the-internet/)
 - [x] [The complete guide to Go net/http timeouts](https://blog.cloudflare.com/the-complete-guide-to-golang-net-http-timeouts/)
-- [ ] [HTTP(S) Proxy in Golang in less than 100 lines of code](https://medium.com/@mlowicki/http-s-proxy-in-golang-in-less-than-100-lines-of-code-6a51c2f2c38c)
+- [x] [HTTP(S) Proxy in Golang in less than 100 lines of code](https://medium.com/@mlowicki/http-s-proxy-in-golang-in-less-than-100-lines-of-code-6a51c2f2c38c)
 - [x] [Deploying Go apps on Docker scratch images](https://weberc2.bitbucket.io/posts/golang-docker-scratch-app.html)
 - [x] [Write a Kubernetes-ready service from zero step-by-step](https://blog.gopheracademy.com/advent-2017/kubernetes-ready-service/)
 - [x] [How To Write Router Tests in Go](http://eng.tapjoy.com/blog-list/how-to-write-router-tests-in-go)
@@ -193,9 +193,9 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 ### Tools
 
 - [x] [Go tooling essentials](https://rakyll.org/go-tool-flags/)
-- [ ] [Profiling Go Programs](https://blog.golang.org/profiling-go-programs)
-- [ ] [Go Tooling in Action](https://medium.com/google-cloud/go-tooling-in-action-eca6882ff3bc#.d9ob4wyj4)
-- [ ] [Using Go as a scripting language in Linux](https://blog.cloudflare.com/using-go-as-a-scripting-language-in-linux/)
+- [x] [Profiling Go Programs](https://blog.golang.org/profiling-go-programs)
+- [x] [Go Tooling in Action](https://medium.com/google-cloud/go-tooling-in-action-eca6882ff3bc#.d9ob4wyj4)
+- [x] [Using Go as a scripting language in Linux](https://blog.cloudflare.com/using-go-as-a-scripting-language-in-linux/)
 
 ### Trivia
 
@@ -223,11 +223,11 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Miscellaneous
 
-- [ ] [Always Be Closing](https://medium.com/square-corner-blog/always-be-closing-3d5fda0e00da)
+- [x] [Always Be Closing](https://medium.com/square-corner-blog/always-be-closing-3d5fda0e00da)
 - [x] [Don't defer Close() on writable files](https://joeshaw.org/dont-defer-close-on-writable-files/)
-- [ ] [Examples For Using io.Pipe in Go](https://zupzup.org/io-pipe-go/)
+- [x] [Examples For Using io.Pipe in Go](https://zupzup.org/io-pipe-go/)
 - [x] [How to Use go:generate](https://blog.carlmjohnson.net/post/2016-11-27-how-to-use-go-generate/)
-- [ ] [Writing worker queues, in Go](http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html)
+- [x] [Writing worker queues, in Go](http://nesv.github.io/golang/2014/02/25/worker-queues-in-go.html)
 - [x] [Job Queues in Go - OpsDash](https://www.opsdash.com/blog/job-queues-in-go.html)
 - [x] [Reading files in Go](http://kgrz.io/reading-files-in-go-an-overview.html)
 - [x] [Vanity Go Import Paths](https://blog.bramp.net/post/2017/10/02/vanity-go-import-paths/)

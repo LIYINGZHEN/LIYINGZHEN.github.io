@@ -110,6 +110,7 @@ docker run
   -d                        # run in the background
   --rm                      # remove container automatically after it exits
   --restart=always          #
+  --link <container-name>   #
   <image>:<tag>
 ```
 
@@ -183,9 +184,17 @@ docker network connect <newwork> <container>
 docker network disconnect <newwork> <container>
 ```
 
-## Volumes
+## Docker Volume
 
-**Remove unused volumes using docker volume prune*
+```bash
+docker volume ls
+```
+
+```bash
+docker volume inspect <volume>
+```
+
+**Remove unused volumes using docker volume prune**
 
 ```bash
 docker volume prune
