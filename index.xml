@@ -305,17 +305,6 @@ Notes  Use pointers to share data. Values in Go are always pass by value. &amp;l
     </item>
     
     <item>
-      <title>rune in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-20-rune-in-go/</link>
-      <pubDate>Sun, 20 Jan 2019 10:41:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-20-rune-in-go/</guid>
-      <description>A rune is an int32 value, and therefore it is a Go type that is used for representing a Unicode code point. A Unicode code point or code position is a numerical value that is usually used for representing single Unicode characters.
- NOTE: You can consider a string as a collection of runes.
- A rune literal is a character in single quotes. You may also consider a rune literal as a rune constant.</description>
-    </item>
-    
-    <item>
       <title>General Go coding advices</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
