@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Go tooling essentials</title>
+      <title>Go Tooling Essentials</title>
       <link>https://www.maxlivinci.com/blog/2019-04-28-go-tooling-essentials/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
@@ -124,16 +124,6 @@ I have tried several frameworks: Bootstrap, React, and a few more. I admit I enj
     </item>
     
     <item>
-      <title>ELK Stack</title>
-      <link>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</link>
-      <pubDate>Sun, 17 Mar 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</guid>
-      <description>Elasticsearch, Logstash, and Kibana are pretty much the industry standard when it comes to logging verbose data. All of the output which would traditionally be streamed to a log file is stored in a central location which you can query with a graphical interface tool, Kibana.
-Elasticsearch is our datastore for our logging data, Kibana is the application we will use for querying this data, and Logstash is used for reading the data from your application logs and storing it in Elasticsearch.</description>
-    </item>
-    
-    <item>
       <title>Go</title>
       <link>https://www.maxlivinci.com/old/2019-03-16-go/</link>
       <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
@@ -162,17 +152,6 @@ Elasticsearch is our datastore for our logging data, Kibana is the application w
     </item>
     
     <item>
-      <title>Nginx</title>
-      <link>https://www.maxlivinci.com/old/2019-03-13-nginx/</link>
-      <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-13-nginx/</guid>
-      <description> Preserve the default nginx.conf cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original  cp global.conf /etc/nginx/conf.d/
-server { listen 0.0.0.0:80; server_name _; root /var/www/html/website; index index.html index.htm; access_log /var/log/nginx/default_access.log; error_log /var/log/nginx/default_error.log; }  cp nginx.conf /etc/nginx/nginx.conf
-user www-data; worker_processes 4; pid /run/nginx.pid; daemon off; events { } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; gzip on; gzip_disable &amp;quot;msie6&amp;quot;; include /etc/nginx/conf.d/*.conf; }  </description>
-    </item>
-    
-    <item>
       <title>Redis</title>
       <link>https://www.maxlivinci.com/old/2019-03-13-redis/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
@@ -197,7 +176,7 @@ If we have this query, then the manufacturer shoud be the first index.</descript
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container.</description>
+      <description>Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container.</description>
     </item>
     
     <item>
@@ -231,16 +210,6 @@ Commands General Commands # Starting a Minikube virtual machine.</description>
       
       <guid>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</guid>
       <description> ParseFloat strconv.ParseFloat(amount, 64)  ParseInt strconv.ParseInt(result, 10, 64)  FormatInt strconv.FormatInt(amount, 10)  ParseInt s := &amp;quot;1234&amp;quot; if res, err := strconv.ParseInt(s, 10, 64); err != nil { return err }  </description>
-    </item>
-    
-    <item>
-      <title>JSON in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 09:59:40 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</guid>
-      <description> JSONData type JSONData struct { Name string `json:&amp;quot;name&amp;quot;` Age int `json:&amp;quot;age&amp;quot;` }  Marshal if d, err := json.Marshal(t); err != nil { return nil, err } return bytes.NewBuffer(d), nil  Unmarshal res := make(map[string]string) if err := json.Unmarshal([]byte(`{&amp;quot;key&amp;quot;: &amp;quot;value&amp;quot;}`), &amp;amp;res); err != nil { return err }  NewDecoder Working with streams
-res := make(map[string]string) b := bytes.NewReader([]byte(`{&amp;quot;key2&amp;quot;: &amp;quot;value2&amp;quot;}`)) decoder := json.NewDecoder(b) if err := decoder.Decode(&amp;amp;res); err != nil { return err }  </description>
     </item>
     
     <item>
@@ -292,16 +261,6 @@ bin/ Go compiles and builds our projects into executable binaries and places the
       
       <guid>https://www.maxlivinci.com/old/2019-01-26-worker-pools/</guid>
       <description>A worker pool is a set of threads that are about to process jobs assigned to them.  Example package main import ( &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; &amp;quot;strconv&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) type Client struct { id int integer int } type Data struct { job Client square int } var ( size = 10 clients = make(chan Client, size) data = make(chan Data, size) ) func worker(w *sync.WaitGroup) { for c := range clients { square := c.</description>
-    </item>
-    
-    <item>
-      <title>Channels in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</link>
-      <pubDate>Fri, 25 Jan 2019 21:39:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</guid>
-      <description>A channel is a communication mechanism that allows us to pass data between goroutines. It is an in-built data type in Go. Data can be passed using one of the primitive data types or we can create our own complex data type using structs.
-Writing to a channel The code in this subsection will teach you how to write to a channel. Writing the x value to the c channel is as easy as writing c &amp;lt;- x.</description>
     </item>
     
     <item>
@@ -357,17 +316,6 @@ Notes  Use pointers to share data. Values in Go are always pass by value. &amp;l
     </item>
     
     <item>
-      <title>The constant generator iota</title>
-      <link>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</link>
-      <pubDate>Sun, 20 Jan 2019 10:05:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</guid>
-      <description>The constant generator iota is used for declaring a sequence of related values that uses incrementing numbers without the need to type each one of them explicitly.
-const ( Zero Digit = iota One Two Three Four )  Here you see the definition of a constant generator iota based on Digit, which is equivalent to the following declaration of four constants:
-const ( Zero = 0 One = 1 Two = 2 Three = 3 Four = 4 )  </description>
-    </item>
-    
-    <item>
       <title>General Go coding advices</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
@@ -399,15 +347,6 @@ $ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 N
     </item>
     
     <item>
-      <title>Working with command-line arguments</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</link>
-      <pubDate>Sat, 19 Jan 2019 15:39:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</guid>
-      <description>package main import ( &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; &amp;quot;strconv&amp;quot; ) func main() { if len(os.Args) == 1 { fmt.Println(&amp;quot;Please give one or more floats.&amp;quot;) os.Exit(1) } arguments := os.Args min, _ := strconv.ParseFloat(arguments[1], 64) max, _ := strconv.ParseFloat(arguments[1], 64) for i := 2; i &amp;lt; len(arguments); i++ { n, _ := strconv.ParseFloat(arguments[i], 64) if n &amp;lt; min { min = n } if n &amp;gt; max { max = n } } fmt.</description>
-    </item>
-    
-    <item>
       <title>Reading from Standard Input</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</link>
       <pubDate>Sat, 19 Jan 2019 15:33:00 +0100</pubDate>
@@ -415,15 +354,6 @@ $ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 N
       <guid>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</guid>
       <description>package main import ( &amp;quot;bufio&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; ) func main() { var f *os.File f = os.Stdin defer f.Close() scanner := bufio.NewScanner(f) for scanner.Scan() { fmt.Println(&amp;quot;&amp;gt;&amp;quot;, scanner.Text()) } }  The execution of stdIN.go will produce the following type of output:
 $ go run stdIN.go 21 &amp;gt; 21 This is Mihalis! &amp;gt; This is Mihalis!  In Unix, you can tell a program to stop reading data from standard input by pressing Ctrl + D.</description>
-    </item>
-    
-    <item>
-      <title>Working with Cokkies</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</link>
-      <pubDate>Sat, 19 Jan 2019 08:18:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</guid>
-      <description>Code Review Writing Cookies func cookieWriteHandler(formatter *render.Render) http.HandlerFunc { return func(w http.ResponseWriter, req *http.Request) { expiration := time.Now().Add(2 * 24 * time.Hour) cookie := http.Cookie{ Name: &amp;quot;sample&amp;quot;, Value: &amp;quot;this is a cookie&amp;quot;, Expires: expiration, } http.SetCookie(w, &amp;amp;cookie) formatter.JSON(w, http.StatusOK, &amp;quot;cookie set&amp;quot;) } }  Reading Cookies func cookieReadHandler(formatter *render.Render) http.HandlerFunc { return func(w http.ResponseWriter, req *http.Request) { cookie, err := req.Cookie(&amp;quot;sample&amp;quot;) if err == nil { fmt.Fprint(w, cookie.Value) } else { fmt.</description>
     </item>
     
     <item>
@@ -471,24 +401,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
       
       <guid>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</guid>
       <description> Server-side service discovery Client-side discovery </description>
-    </item>
-    
-    <item>
-      <title>Benchmarking and profiling in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</link>
-      <pubDate>Sun, 13 Jan 2019 09:18:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</guid>
-      <description>&amp;ldquo;Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.&amp;rdquo; - Donald Knuth</description>
-    </item>
-    
-    <item>
-      <title>Testing in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</link>
-      <pubDate>Sun, 13 Jan 2019 08:50:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</guid>
-      <description>Source files and associated test files are placed in the same package/folder The name of the test file for any given source file is &amp;lt;source-file-name&amp;gt;_test.go Test functions need to have the &amp;ldquo;Test&amp;rdquo; prefix, and the next character in the function name should be capitalized  func TestSearchHandlerReturnsBadRequestWhenBlankSearchCriteriaIsSent(t *testing.T) { handler := SearchHandler{} data, _ := json.Marshal(searchRequest{}) request := httptest.NewRequest(&amp;quot;POST&amp;quot;, &amp;quot;/search&amp;quot;, bytes.NewReader(data)) response := httptest.NewRecorder() handler.ServeHTTP(response, request) if response.Code != http.</description>
     </item>
     
     <item>

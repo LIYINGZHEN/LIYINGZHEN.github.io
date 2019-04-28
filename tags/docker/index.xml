@@ -17,7 +17,7 @@
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container.</description>
+      <description>Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container.</description>
     </item>
     
   </channel>

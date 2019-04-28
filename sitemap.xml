@@ -58,11 +58,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</loc>
-    <lastmod>2019-03-17T06:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-03-16-go/</loc>
     <lastmod>2019-03-16T19:00:00+00:00</lastmod>
   </url>
@@ -75,11 +70,6 @@
   <url>
     <loc>https://www.maxlivinci.com/old/2019-03-14-linux/</loc>
     <lastmod>2019-03-14T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-13-nginx/</loc>
-    <lastmod>2019-03-13T06:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -113,11 +103,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-27-json-in-go/</loc>
-    <lastmod>2019-01-27T09:59:40+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</loc>
     <lastmod>2019-01-27T09:53:14+01:00</lastmod>
   </url>
@@ -140,11 +125,6 @@
   <url>
     <loc>https://www.maxlivinci.com/old/2019-01-26-worker-pools/</loc>
     <lastmod>2019-01-26T09:52:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-25-channels-in-go/</loc>
-    <lastmod>2019-01-25T21:39:00+01:00</lastmod>
   </url>
   
   <url>
@@ -173,11 +153,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-20-the-constant-generator-iota/</loc>
-    <lastmod>2019-01-20T10:05:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</loc>
     <lastmod>2019-01-19T17:05:00+01:00</lastmod>
   </url>
@@ -193,18 +168,8 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-19-working-with-command-line-arguments/</loc>
-    <lastmod>2019-01-19T15:39:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</loc>
     <lastmod>2019-01-19T15:33:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-19-working-with-cookies/</loc>
-    <lastmod>2019-01-19T08:18:00+01:00</lastmod>
   </url>
   
   <url>
@@ -230,16 +195,6 @@
   <url>
     <loc>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</loc>
     <lastmod>2019-01-13T10:19:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-13-benchmarking-and-profiling-go/</loc>
-    <lastmod>2019-01-13T09:18:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-13-testing-in-go/</loc>
-    <lastmod>2019-01-13T08:50:00+01:00</lastmod>
   </url>
   
   <url>
@@ -314,12 +269,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/tags/elk/</loc>
-    <lastmod>2019-03-17T06:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/tags/fundamental/</loc>
     <lastmod>2019-01-24T18:28:00+01:00</lastmod>
     <priority>0</priority>
@@ -376,12 +325,6 @@
   <url>
     <loc>https://www.maxlivinci.com/tags/mongodb/</loc>
     <lastmod>2019-03-10T16:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/nginx/</loc>
-    <lastmod>2019-03-13T06:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

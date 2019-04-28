@@ -7,7 +7,7 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container." />
+    content="Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/old/2019-03-08-docker/" />
@@ -43,7 +43,7 @@
 
 <meta itemprop="datePublished" content="2019-03-08T13:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-03-08T13:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="250">
+<meta itemprop="wordCount" content="90">
 
 
 
@@ -128,44 +128,14 @@
 
 <h2 id="commands">Commands</h2>
 
-<pre><code class="language-bash"># Checking that the docker binary works.
-docker info
-
-# Getting additional information about a container.
-docker inspect
-  -f '{{ .NetworkSettings.IPAddress }}'   # selectively query.
-  &lt;CONTAINER&gt;
-
-# Running a shell inside an existing container.
-docker exec
-  -i               # Makes sure STDIN is kept open.
-  -t               # Asllocates a pseudo terminal (TTY).
-  &lt;CONTAINER&gt;
-  sh | bash
-
-# Remove unused data.
+<pre><code class="language-bash"># Remove unused data.
 docker system prune -a -f
-
-# Starting a stopped container.
-docker start &lt;CONTAINER&gt;
-
-# Restarting a stopped container.
-docker restart &lt;CONTAINER&gt;
-
-#
-docker logs
-  -f               # tail
-  -t               # timestamps
-  &lt;CONTAINER&gt;
 
 #
 docker commit id
 
 # Tagging an image under an additional tag.
 docker tag &lt;image-name&gt; &lt;docker-hub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
-
-#
-docker-machine ls
 
 # Attach local standard input, output, and error streams to a running container.
 docker attach &lt;CONTAINER&gt;
@@ -184,45 +154,6 @@ docker port &lt;CONTAINER&gt;
 
 # Display the running processes of a container
 docker top &lt;CONTAINER&gt;
-</code></pre>
-
-<h3 id="volumes">Volumes</h3>
-
-<pre><code class="language-bash"># Remove unused volumes using docker volume prune.
-docker volume prune
-</code></pre>
-
-<h1 id="docker-compose">Docker Compose</h1>
-
-<h2 id="the-docker-compose-yml-file">The docker-compose.yml file</h2>
-
-<pre><code class="language-yaml">version: '3'
-  services:
-    web:
-      image: jamtur01/composeapp
-      command: python app.py
-      ports:
-      - &quot;5000:5000&quot;
-      volumes:
-      - .:/composeapp
-    redis:
-      image: redis
-</code></pre>
-
-<h2 id="commands-1">Commands</h2>
-
-<pre><code class="language-bash"># Lists all of the currently running services.
-docker-compose ps
-# Show log events.
-docker-compose logs
-# Stop running services.
-docker-compose stop
-# Force kill the services.
-docker- compose kill
-# Restart services.
-docker-compose start
-# Remove services.
-docker-compose rm
 </code></pre>
 
             </div>

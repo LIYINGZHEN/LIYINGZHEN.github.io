@@ -31,16 +31,6 @@
     </item>
     
     <item>
-      <title>ELK Stack</title>
-      <link>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</link>
-      <pubDate>Sun, 17 Mar 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-17-elk-stack/</guid>
-      <description>Elasticsearch, Logstash, and Kibana are pretty much the industry standard when it comes to logging verbose data. All of the output which would traditionally be streamed to a log file is stored in a central location which you can query with a graphical interface tool, Kibana.
-Elasticsearch is our datastore for our logging data, Kibana is the application we will use for querying this data, and Logstash is used for reading the data from your application logs and storing it in Elasticsearch.</description>
-    </item>
-    
-    <item>
       <title>Go</title>
       <link>https://www.maxlivinci.com/old/2019-03-16-go/</link>
       <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
@@ -69,17 +59,6 @@ Elasticsearch is our datastore for our logging data, Kibana is the application w
     </item>
     
     <item>
-      <title>Nginx</title>
-      <link>https://www.maxlivinci.com/old/2019-03-13-nginx/</link>
-      <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-13-nginx/</guid>
-      <description> Preserve the default nginx.conf cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup-original  cp global.conf /etc/nginx/conf.d/
-server { listen 0.0.0.0:80; server_name _; root /var/www/html/website; index index.html index.htm; access_log /var/log/nginx/default_access.log; error_log /var/log/nginx/default_error.log; }  cp nginx.conf /etc/nginx/nginx.conf
-user www-data; worker_processes 4; pid /run/nginx.pid; daemon off; events { } http { sendfile on; tcp_nopush on; tcp_nodelay on; keepalive_timeout 65; types_hash_max_size 2048; include /etc/nginx/mime.types; default_type application/octet-stream; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; gzip on; gzip_disable &amp;quot;msie6&amp;quot;; include /etc/nginx/conf.d/*.conf; }  </description>
-    </item>
-    
-    <item>
       <title>Redis</title>
       <link>https://www.maxlivinci.com/old/2019-03-13-redis/</link>
       <pubDate>Wed, 13 Mar 2019 06:00:00 +0000</pubDate>
@@ -104,7 +83,7 @@ If we have this query, then the manufacturer shoud be the first index.</descript
       <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Checking that the docker binary works. docker info # Getting additional information about a container. docker inspect -f &#39;{{ .NetworkSettings.IPAddress }}&#39; # selectively query. &amp;lt;CONTAINER&amp;gt; # Running a shell inside an existing container. docker exec -i # Makes sure STDIN is kept open. -t # Asllocates a pseudo terminal (TTY). &amp;lt;CONTAINER&amp;gt; sh | bash # Remove unused data. docker system prune -a -f # Starting a stopped container.</description>
+      <description>Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container.</description>
     </item>
     
     <item>
