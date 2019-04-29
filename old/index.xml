@@ -31,16 +31,6 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://www.maxlivinci.com/old/2019-03-16-go/</link>
-      <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-16-go/</guid>
-      <description>2.3. Zero Value https://play.golang.org/p/yb6qYVZKYKR
-2.6.2. Package Initialization Programs initialize and begin execution from the main package. If the main package imports other packages, they will be imported in the compile time. If one package is imported many times, it will be only compiled once. After importing packages, programs will initialize the constants and variables within the imported packages, then execute the init function if it exists, and so on. After all the other packages are initialized, programs will initialize constants and variables in the main package, then execute the init function inside the package if it exists.</description>
-    </item>
-    
-    <item>
       <title>Drone</title>
       <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
       <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
@@ -99,15 +89,6 @@ Node: Worker nodes that run the actual applications you deploy.
 Pod: Running containers in Kubernetes.
 Service: Enabling clients to discover and talk to pods.
 Commands General Commands # Starting a Minikube virtual machine.</description>
-    </item>
-    
-    <item>
-      <title>Table Driven Tests</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</link>
-      <pubDate>Sun, 27 Jan 2019 16:48:37 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</guid>
-      <description>package main import &amp;quot;testing&amp;quot; func TestCoverage(t *testing.T) { type args struct { condition bool } tests := []struct { name string args args wantErr bool }{ // TODO: Add test cases. } for _, tt := range tests { t.Run(tt.name, func(t *testing.T) { if err := Coverage(tt.args.condition); (err != nil) != tt.wantErr { t.Errorf(&amp;quot;Coverage() error = %v, wantErr %v&amp;quot;, err, tt.wantErr) } }) } }  </description>
     </item>
     
     <item>
@@ -297,17 +278,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
       
       <guid>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</guid>
       <description> Server-side service discovery Client-side discovery </description>
-    </item>
-    
-    <item>
-      <title>URI path design for REST services</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-uri-path-design-for-rest-services/</link>
-      <pubDate>Sat, 12 Jan 2019 19:37:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-uri-path-design-for-rest-services/</guid>
-      <description>Collections A collection is a directory of resources typically broken by parameters to access an individual document. For example:
-GET /cats -&amp;gt; All cats in the collection GET /cats/1 -&amp;gt; Single document for a cat 1  When defining a collection, we should always use a plural noun such as cats or people for the collection name.
-Documents A document is a resource pointing to a single object, similar to a row in a database.</description>
     </item>
     
     <item>

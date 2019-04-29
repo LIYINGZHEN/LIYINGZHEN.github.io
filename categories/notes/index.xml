@@ -31,16 +31,6 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://www.maxlivinci.com/old/2019-03-16-go/</link>
-      <pubDate>Sat, 16 Mar 2019 19:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-16-go/</guid>
-      <description>2.3. Zero Value https://play.golang.org/p/yb6qYVZKYKR
-2.6.2. Package Initialization Programs initialize and begin execution from the main package. If the main package imports other packages, they will be imported in the compile time. If one package is imported many times, it will be only compiled once. After importing packages, programs will initialize the constants and variables within the imported packages, then execute the init function if it exists, and so on. After all the other packages are initialized, programs will initialize constants and variables in the main package, then execute the init function inside the package if it exists.</description>
-    </item>
-    
-    <item>
       <title>Drone</title>
       <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
       <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>

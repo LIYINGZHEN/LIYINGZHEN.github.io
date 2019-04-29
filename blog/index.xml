@@ -98,15 +98,15 @@ func main() {
 
 <p>A choice is sometimes predetermined by usage context. Let’s have a look at the most common use cases.</p>
 
-<h3 id="variable-must-not-be-modified">Variable must not be modified</h3>
+<h4 id="variable-must-not-be-modified">Variable must not be modified</h4>
 
 <p>We do not have other option, but pass variable by value. So that variable cannot be modified downstream. And vice versa, if variable is expected to be modified, it must be passed by pointer.</p>
 
-<h3 id="variable-is-a-large-struct">Variable is a large struct</h3>
+<h4 id="variable-is-a-large-struct">Variable is a large struct</h4>
 
 <p>If variable is a large struct and performance is an issue, it’s preferable to pass variable by pointer. So that to avoid expensive copying of the whole struct in memory.</p>
 
-<h3 id="variable-is-a-map-or-slice">Variable is a map or slice</h3>
+<h4 id="variable-is-a-map-or-slice">Variable is a map or slice</h4>
 
 <p>Maps and slices are reference types in Go and should be passed by values.</p>
 
@@ -183,6 +183,15 @@ ok  	context	2.426s
 <p>The command above will create a coverage profile and open the results page in the browser. The visualized results will look like the page below:</p>
 
 <p><img src="https://user-images.githubusercontent.com/11765228/56710614-52ad8600-6727-11e9-9a55-ef40b16cea26.png" alt="context-coverage" /></p>
+
+<h2 id="go-test-bench-cpuprofile-cpu-prof">go test -bench . -cpuprofile=cpu.prof</h2>
+
+<pre><code class="language-bash">$ go test -bench . -cpuprofile=cpu.prof
+$ go tool pprof cpu.prof
+</code></pre>
+
+<pre><code class="language-bash">$ (pprof) web
+</code></pre>
 ]]></content>
         </item>
         

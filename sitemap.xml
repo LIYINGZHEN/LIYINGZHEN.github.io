@@ -63,11 +63,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-16-go/</loc>
-    <lastmod>2019-03-16T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-03-14-drone/</loc>
     <lastmod>2019-03-14T08:00:00+00:00</lastmod>
   </url>
@@ -95,11 +90,6 @@
   <url>
     <loc>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</loc>
     <lastmod>2019-03-08T12:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-27-table-driven-tests/</loc>
-    <lastmod>2019-01-27T16:48:37+01:00</lastmod>
   </url>
   
   <url>
@@ -198,11 +188,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-01-12-uri-path-design-for-rest-services/</loc>
-    <lastmod>2019-01-12T19:37:17+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</loc>
     <lastmod>2019-01-12T17:15:17+01:00</lastmod>
   </url>
@@ -282,13 +267,13 @@
   
   <url>
     <loc>https://www.maxlivinci.com/categories/go/</loc>
-    <lastmod>2019-01-27T16:48:37+01:00</lastmod>
+    <lastmod>2019-01-27T11:03:14+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.maxlivinci.com/tags/golang/</loc>
-    <lastmod>2019-03-16T19:00:00+00:00</lastmod>
+    <lastmod>2019-01-27T11:03:14+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -361,12 +346,6 @@
   <url>
     <loc>https://www.maxlivinci.com/tags/</loc>
     <lastmod>2019-01-19T07:00:00+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/testing/</loc>
-    <lastmod>2019-01-27T16:48:37+01:00</lastmod>
     <priority>0</priority>
   </url>
   
