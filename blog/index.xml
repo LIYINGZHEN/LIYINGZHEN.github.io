@@ -6,8 +6,119 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Pass by pointer vs pass by value in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-29-pass-by-pointer-vs-pass-by-value-in-go/</link>
+            <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-29-pass-by-pointer-vs-pass-by-value-in-go/</guid>
+            <description>Go allows to pass parameters both by pointers (sometimes it’s called by reference) and by values. In this post we will compare both approaches, paying special attention to different contexts that may affect the choice.
+Pass by pointer vs pass by value Strictly speaking, there is only one way to pass parameters in Go - by value. Every time a variable is passed as parameter, a new copy of the variable is created and passed to called function or method.</description>
+            <content type="html"><![CDATA[
+
+<p>Go allows to pass parameters both by pointers (sometimes it’s called by reference) and by values. In this post we will compare both approaches, paying special attention to different contexts that may affect the choice.</p>
+
+<h2 id="pass-by-pointer-vs-pass-by-value">Pass by pointer vs pass by value</h2>
+
+<p>Strictly speaking, there is only one way to pass parameters in Go - by value. Every time a variable is passed as parameter, a new copy of the variable is created and passed to called function or method. The copy is allocated at a different memory address.</p>
+
+<p>In case a variable is passed by pointer, a new copy of pointer to the same memory address is created. To feel the difference, let’s have a look at how it all works on example.</p>
+
+<h2 id="passing-by-value">Passing by value</h2>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Person struct {
+    firstName string
+    lastName  string
+}
+
+func changeName(p Person) {
+    p.firstName = &quot;Bob&quot;
+}
+
+func main() {
+    person := Person {
+        firstName: &quot;Alice&quot;,
+        lastName: &quot;Dow&quot;,
+    }
+
+    changeName(person)
+
+    fmt.Println(person)
+}
+Running the code will get the following output:
+</code></pre>
+
+<pre><code>{Alice Dow}
+</code></pre>
+
+<p>Note that even though function changeName changes firstName to “Bob”, the change does not affect variable person in function main. This happens because function changeName modifies a copy of variable person, not person itself.</p>
+
+<h2 id="passing-by-pointer">Passing by pointer</h2>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type Person struct {
+    firstName string
+    lastName  string
+}
+
+func changeName(p *Person) {
+    p.firstName = &quot;Bob&quot;
+}
+
+func main() {
+    person := Person {
+        firstName: &quot;Alice&quot;,
+        lastName: &quot;Dow&quot;,
+    }
+
+    changeName(&amp;person)
+
+    fmt.Println(person)
+}
+</code></pre>
+
+<p>Running the code will get the following output:</p>
+
+<pre><code>{Bob Dow}
+</code></pre>
+
+<p>In this case, variable person in function main is modified inside function changeName. This happens because &amp;person and p are two different pointers to the same struct which is stored at the same memory address.</p>
+
+<h2 id="predetermined-choice">Predetermined choice</h2>
+
+<p>A choice is sometimes predetermined by usage context. Let’s have a look at the most common use cases.</p>
+
+<h3 id="variable-must-not-be-modified">Variable must not be modified</h3>
+
+<p>We do not have other option, but pass variable by value. So that variable cannot be modified downstream. And vice versa, if variable is expected to be modified, it must be passed by pointer.</p>
+
+<h3 id="variable-is-a-large-struct">Variable is a large struct</h3>
+
+<p>If variable is a large struct and performance is an issue, it’s preferable to pass variable by pointer. So that to avoid expensive copying of the whole struct in memory.</p>
+
+<h3 id="variable-is-a-map-or-slice">Variable is a map or slice</h3>
+
+<p>Maps and slices are reference types in Go and should be passed by values.</p>
+
+<h2 id="passing-by-value-often-is-cheaper">Passing by value often is cheaper</h2>
+
+<p>Even though Go looks a bit like C, its compiler works differently. And C analogy does not always work with Go. Passing by value in Go may be significantly cheaper than passing by pointer. This happens because Go uses escape analysis to determine if variable can be safely allocated on function’s stack frame, which could be much cheaper then allocating variable on the heap. Passing by value simplifies escape analysis in Go and gives variable a better chance to be allocated on the stack.</p>
+
+<h2 id="bottom-line">Bottom line</h2>
+
+<p>Sometimes the choice of how to pass variable is predetermined by variable type or its usage. Otherwise, it’s highly recommended to pass variables by value. Also it is very important to be consistent with your choice, so that not to confuse yourself and your teammates.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Go Tooling Essentials</title>

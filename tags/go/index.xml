@@ -6,10 +6,20 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pass by pointer vs pass by value in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-29-pass-by-pointer-vs-pass-by-value-in-go/</link>
+      <pubDate>Mon, 29 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-29-pass-by-pointer-vs-pass-by-value-in-go/</guid>
+      <description>Go allows to pass parameters both by pointers (sometimes it’s called by reference) and by values. In this post we will compare both approaches, paying special attention to different contexts that may affect the choice.
+Pass by pointer vs pass by value Strictly speaking, there is only one way to pass parameters in Go - by value. Every time a variable is passed as parameter, a new copy of the variable is created and passed to called function or method.</description>
+    </item>
     
     <item>
       <title>Go Tooling Essentials</title>
