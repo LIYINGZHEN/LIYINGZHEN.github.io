@@ -89,15 +89,15 @@ In this case, variable person in function main is modified inside function chang
 
 A choice is sometimes predetermined by usage context. Let’s have a look at the most common use cases.
 
-### Variable must not be modified
+#### Variable must not be modified
 
 We do not have other option, but pass variable by value. So that variable cannot be modified downstream. And vice versa, if variable is expected to be modified, it must be passed by pointer.
 
-### Variable is a large struct
+#### Variable is a large struct
 
 If variable is a large struct and performance is an issue, it’s preferable to pass variable by pointer. So that to avoid expensive copying of the whole struct in memory.
 
-### Variable is a map or slice
+#### Variable is a map or slice
 
 Maps and slices are reference types in Go and should be passed by values.
 

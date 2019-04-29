@@ -62,3 +62,14 @@ $ go test -coverprofile=c.out && go tool cover -html=c.out
 The command above will create a coverage profile and open the results page in the browser. The visualized results will look like the page below:
 
 ![context-coverage](https://user-images.githubusercontent.com/11765228/56710614-52ad8600-6727-11e9-9a55-ef40b16cea26.png)
+
+## go test -bench . -cpuprofile=cpu.prof
+
+```bash
+$ go test -bench . -cpuprofile=cpu.prof
+$ go tool pprof cpu.prof
+```
+
+```bash
+$ (pprof) web
+```
