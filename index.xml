@@ -6,10 +6,21 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Update map values in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/</link>
+      <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/</guid>
+      <description>We can&amp;rsquo;t change values associated with keys in a map, we can only reassign values.
+So this leaves us 2 possible options:
+ 1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure). 2. Store struct values, but when you modify it, you need to reassign it to the key.  1. Using pointers Storing pointers in the map: dataManaged := map[string]*Data{}</description>
+    </item>
     
     <item>
       <title>Pass by pointer vs pass by value in Go</title>

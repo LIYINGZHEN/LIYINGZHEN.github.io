@@ -6,8 +6,79 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 29 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Update map values in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/</link>
+            <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/</guid>
+            <description>We can&amp;rsquo;t change values associated with keys in a map, we can only reassign values.
+So this leaves us 2 possible options:
+ 1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure). 2. Store struct values, but when you modify it, you need to reassign it to the key.  1. Using pointers Storing pointers in the map: dataManaged := map[string]*Data{}</description>
+            <content type="html"><![CDATA[
+
+<p>We can&rsquo;t change values associated with keys in a map, we can only reassign values.</p>
+
+<p>So this leaves us 2 possible options:</p>
+
+<ul>
+<li>1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure).</li>
+<li>2. Store struct values, but when you modify it, you need to reassign it to the key.</li>
+</ul>
+
+<h2 id="1-using-pointers">1. Using pointers</h2>
+
+<p>Storing pointers in the map: <code>dataManaged := map[string]*Data{}</code></p>
+
+<pre><code class="language-go">type Person struct {
+	Age int
+}
+
+func (p *Person) GrowUp() {
+	p.Age++
+}
+
+func main() {
+	m := map[string]*Person{
+		&quot;zhangsan&quot;: &amp;Person{Age: 20},
+	}
+	m[&quot;zhangsan&quot;].Age = 13
+	m[&quot;zhangsan&quot;].GrowUp()
+
+	fmt.Printf(&quot;%+v \n&quot;, m[&quot;zhangsan&quot;])
+}
+
+</code></pre>
+
+<h2 id="2-reassigning-the-modified-struct">2. Reassigning the modified struct</h2>
+
+<p>Storing struct values in the map: <code>dataManaged := map[string]Data{}</code></p>
+
+<pre><code class="language-go">type Person struct {
+	Age int
+}
+
+func (p *Person) GrowUp() {
+	p.Age++
+}
+
+func main() {
+	m := map[string]Person{
+		&quot;zhangsan&quot;: Person{Age: 20},
+	}
+	p := m[&quot;zhangsan&quot;]
+	p.Age = 23
+	p.GrowUp()
+	m[&quot;zhangsan&quot;] = p
+
+	fmt.Printf(&quot;%+v \n&quot;, m[&quot;zhangsan&quot;])
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Pass by pointer vs pass by value in Go</title>
