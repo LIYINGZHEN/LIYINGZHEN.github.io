@@ -131,42 +131,77 @@ default:
         </item>
         
         <item>
-            <title>Context and Cancellation of goroutines</title>
-            <link>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</link>
+            <title>Go Context</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-01-go-context/</link>
             <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
             
-            <guid>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</guid>
-            <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
-package main import ( &amp;quot;context&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &amp;lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &amp;lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock.</description>
-            <content type="html"><![CDATA[<p>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.</p>
+            <guid>https://www.maxlivinci.com/blog/2019-05-01-go-context/</guid>
+            <description>There are two classical way to control concurrent, one is WaitGroup another way is Context. And today we are going to talk about Context.
+Using Channel package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func monitor(stop chan struct{}) &amp;lt;-chan string { ch := make(chan string) go func() { for { select { case &amp;lt;-stop: close(ch) return case &amp;lt;-time.Tick(1 * time.Second): ch &amp;lt;- &amp;quot;Status OK&amp;quot; } } }() return ch } func main() { stop := make(chan struct{}) go func() { time.</description>
+            <content type="html"><![CDATA[
+
+<p>There are two classical way to control concurrent, one is <code>WaitGroup</code> another way is <code>Context</code>. And today we are going to talk about <code>Context</code>.</p>
+
+<h2 id="using-channel">Using Channel</h2>
 
 <pre><code class="language-go">package main
 
 import (
-	&quot;context&quot;
 	&quot;fmt&quot;
-	&quot;sync&quot;
 	&quot;time&quot;
 )
 
-var (
-	wg sync.WaitGroup
+func monitor(stop chan struct{}) &lt;-chan string {
+	ch := make(chan string)
+	go func() {
+		for {
+			select {
+			case &lt;-stop:
+				close(ch)
+				return
+			case &lt;-time.Tick(1 * time.Second):
+				ch &lt;- &quot;Status OK&quot;
+			}
+		}
+	}()
+	return ch
+}
+
+func main() {
+	stop := make(chan struct{})
+
+	go func() {
+		time.Sleep(6 * time.Second)
+		stop &lt;- struct{}{}
+	}()
+
+	for n := range monitor(stop) {
+		fmt.Println(n)
+	}
+
+	fmt.Println(&quot;Finished. I'm going home&quot;)
+}
+</code></pre>
+
+<h2 id="using-context">Using Context</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
 )
 
-func gen(ctx context.Context) &lt;-chan int {
-	ch := make(chan int)
+func monitor(ctx context.Context) &lt;-chan string {
+	ch := make(chan string)
 	go func() {
-		var n int
 		for {
 			select {
 			case &lt;-ctx.Done():
-				// Remember to close the channel otherwise we will introduce deadlock.
 				close(ch)
-				fmt.Println(&quot;Cancel the context &quot;, n)
 				return
-			case &lt;-time.After(1 * time.Second):
-				ch &lt;- n
-				n++
+			case &lt;-time.Tick(1 * time.Second):
+				ch &lt;- &quot;Status OK&quot;
 			}
 		}
 	}()
@@ -177,9 +212,7 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 6*time.Second)
 	defer cancel()
 
-	fmt.Println(&quot;Hey, I'm going to do some work&quot;)
-
-	for n := range gen(ctx) {
+	for n := range monitor(ctx) {
 		fmt.Println(n)
 	}
 

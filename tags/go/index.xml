@@ -25,13 +25,13 @@ Interface Values An interface value consists of a concrete value and a dynamic t
     </item>
     
     <item>
-      <title>Context and Cancellation of goroutines</title>
-      <link>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</link>
+      <title>Go Context</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-01-go-context/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</guid>
-      <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
-package main import ( &amp;quot;context&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &amp;lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &amp;lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock.</description>
+      <guid>https://www.maxlivinci.com/blog/2019-05-01-go-context/</guid>
+      <description>There are two classical way to control concurrent, one is WaitGroup another way is Context. And today we are going to talk about Context.
+Using Channel package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func monitor(stop chan struct{}) &amp;lt;-chan string { ch := make(chan string) go func() { for { select { case &amp;lt;-stop: close(ch) return case &amp;lt;-time.Tick(1 * time.Second): ch &amp;lt;- &amp;quot;Status OK&amp;quot; } } }() return ch } func main() { stop := make(chan struct{}) go func() { time.</description>
     </item>
     
     <item>
