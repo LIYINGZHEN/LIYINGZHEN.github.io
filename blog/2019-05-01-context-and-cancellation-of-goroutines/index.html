@@ -7,17 +7,16 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="We can&amp;rsquo;t change values associated with keys in a map, we can only reassign values.
-So this leaves us 2 possible options:
- 1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure). 2. Store struct values, but when you modify it, you need to reassign it to the key.  1. Using pointers Storing pointers in the map: dataManaged := map[string]*Data{}" />
+    content="For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+package main import ( &amp;quot;context&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &amp;lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &amp;lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/" />
 
 
 <title>
     
-    Update map values in Go :: YING ZHEN LI 
+    Context and Cancellation of goroutines :: YING ZHEN LI 
     
 </title>
 
@@ -39,15 +38,14 @@ So this leaves us 2 possible options:
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Update map values in Go">
-<meta itemprop="description" content="We can&rsquo;t change values associated with keys in a map, we can only reassign values.
-So this leaves us 2 possible options:
- 1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure). 2. Store struct values, but when you modify it, you need to reassign it to the key.  1. Using pointers Storing pointers in the map: dataManaged := map[string]*Data{}">
+<meta itemprop="name" content="Context and Cancellation of goroutines">
+<meta itemprop="description" content="For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+package main import ( &quot;context&quot; &quot;fmt&quot; &quot;sync&quot; &quot;time&quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock.">
 
 
-<meta itemprop="datePublished" content="2019-04-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-04-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="155">
+<meta itemprop="datePublished" content="2019-05-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="129">
 
 
 
@@ -55,15 +53,14 @@ So this leaves us 2 possible options:
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="Update map values in Go"/>
-<meta name="twitter:description" content="We can&rsquo;t change values associated with keys in a map, we can only reassign values.
-So this leaves us 2 possible options:
- 1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure). 2. Store struct values, but when you modify it, you need to reassign it to the key.  1. Using pointers Storing pointers in the map: dataManaged := map[string]*Data{}"/>
+<meta name="twitter:title" content="Context and Cancellation of goroutines"/>
+<meta name="twitter:description" content="For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+package main import ( &quot;context&quot; &quot;fmt&quot; &quot;sync&quot; &quot;time&quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock."/>
 
 
 
 
-<meta property="article:published_time" content="2019-04-30 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-05-01 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -127,68 +124,57 @@ So this leaves us 2 possible options:
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/">Update map values in Go</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/">Context and Cancellation of goroutines</a></h1>
 
             
 
             <div class="post-content">
-                
+                <p>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.</p>
 
-<p>We can&rsquo;t change values associated with keys in a map, we can only reassign values.</p>
+<pre><code class="language-go">package main
 
-<p>So this leaves us 2 possible options:</p>
+import (
+	&quot;context&quot;
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
 
-<ul>
-<li>1. Store pointers in the map, so you can modify the pointed object (which is not inside the map data structure).</li>
-<li>2. Store struct values, but when you modify it, you need to reassign it to the key.</li>
-</ul>
+var (
+	wg sync.WaitGroup
+)
 
-<h2 id="1-using-pointers">1. Using pointers</h2>
-
-<p>Storing pointers in the map: <code>dataManaged := map[string]*Data{}</code></p>
-
-<pre><code class="language-go">type Person struct {
-	Age int
-}
-
-func (p *Person) GrowUp() {
-	p.Age++
-}
-
-func main() {
-	m := map[string]*Person{
-		&quot;zhangsan&quot;: &amp;Person{Age: 20},
-	}
-	m[&quot;zhangsan&quot;].Age = 13
-	m[&quot;zhangsan&quot;].GrowUp()
-
-	fmt.Printf(&quot;%+v \n&quot;, m[&quot;zhangsan&quot;])
-}
-
-</code></pre>
-
-<h2 id="2-reassigning-the-modified-struct">2. Reassigning the modified struct</h2>
-
-<p>Storing struct values in the map: <code>dataManaged := map[string]Data{}</code></p>
-
-<pre><code class="language-go">type Person struct {
-	Age int
-}
-
-func (p *Person) GrowUp() {
-	p.Age++
+func gen(ctx context.Context) &lt;-chan int {
+	ch := make(chan int)
+	go func() {
+		var n int
+		for {
+			select {
+			case &lt;-ctx.Done():
+				// Remember to close the channel otherwise we will introduce deadlock.
+				close(ch)
+				fmt.Println(&quot;Cancel the context &quot;, n)
+				return
+			case &lt;-time.After(1 * time.Second):
+				ch &lt;- n
+				n++
+			}
+		}
+	}()
+	return ch
 }
 
 func main() {
-	m := map[string]Person{
-		&quot;zhangsan&quot;: Person{Age: 20},
-	}
-	p := m[&quot;zhangsan&quot;]
-	p.Age = 23
-	p.GrowUp()
-	m[&quot;zhangsan&quot;] = p
+	ctx, cancel := context.WithTimeout(context.Background(), 6*time.Second)
+	defer cancel()
 
-	fmt.Printf(&quot;%+v \n&quot;, m[&quot;zhangsan&quot;])
+	fmt.Println(&quot;Hey, I'm going to do some work&quot;)
+
+	for n := range gen(ctx) {
+		fmt.Println(n)
+	}
+
+	fmt.Println(&quot;Finished. I'm going home&quot;)
 }
 </code></pre>
 
@@ -202,9 +188,9 @@ func main() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>155 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>129 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-04-30 02:00 &#43;0200</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-01 02:00 &#43;0200</p>
         </div>
 
         
@@ -217,17 +203,17 @@ func main() {
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">Context and Cancellation of goroutines</span>
+                                <span class="button__text">Interfaces in Go</span>
                             </a>
                         </span>
                     
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-04-29-pass-by-pointer-vs-pass-by-value-in-go/">
-                                <span class="button__text">Pass by pointer vs pass by value in Go</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/">
+                                <span class="button__text">Update map values in Go</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

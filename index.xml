@@ -6,10 +6,33 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Interfaces in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</link>
+      <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</guid>
+      <description>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
+Go&amp;rsquo;s interfaces let you use duck typing.
+Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
+There is no explicit declaration of intent.
+Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]</description>
+    </item>
+    
+    <item>
+      <title>Context and Cancellation of goroutines</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</guid>
+      <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+package main import ( &amp;quot;context&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &amp;lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &amp;lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock.</description>
+    </item>
     
     <item>
       <title>Update map values in Go</title>

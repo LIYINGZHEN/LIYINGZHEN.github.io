@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
+Go&amp;rsquo;s interfaces let you use duck typing.
+Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
+There is no explicit declaration of intent.
+Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/" />
+
+
+<title>
+    
+    Interfaces in Go :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.6a7678f40434c7781747ffdd224a984179b2a3c81c81f19ccf845fdffbe80b7c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Interfaces in Go">
+<meta itemprop="description" content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
+Go&rsquo;s interfaces let you use duck typing.
+Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
+There is no explicit declaration of intent.
+Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]">
+
+
+<meta itemprop="datePublished" content="2019-05-02T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-02T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="440">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Interfaces in Go"/>
+<meta name="twitter:description" content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
+Go&rsquo;s interfaces let you use duck typing.
+Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
+There is no explicit declaration of intent.
+Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]"/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-02 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/">Interfaces in Go</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.</p>
+
+<p>Go&rsquo;s interfaces let you use duck typing.</p>
+
+<h2 id="interfaces-are-satisfied-implicitly">Interfaces are satisfied implicitly</h2>
+
+<p>A type implements an interface by implementing its methods. No explicit declaration is required.</p>
+
+<p><em>There is no explicit declaration of intent.</em></p>
+
+<h2 id="interface-values">Interface Values</h2>
+
+<p>An <strong>interface value</strong> consists of a <strong>concrete value</strong> and a <strong>dynamic type</strong>: [Value, Type]</p>
+
+<p>In a call to fmt.Printf, you can use %v to print the concrete value and %T to print the dynamic type.</p>
+
+<pre><code class="language-go">var x MyStringer
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; &lt;nil&gt;
+
+x = Temp(24)
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // 24 °C main.Temp
+
+x = &amp;Point{1, 2}
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // (1,2) *main.Point
+
+x = (*Point)(nil)
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; *main.Point
+</code></pre>
+
+<p>The <strong>zero value</strong> of an interface type is nil, which is represented as [nil, nil].</p>
+
+<h2 id="equality">Equality</h2>
+
+<p>Two interface values are equal</p>
+
+<ul>
+<li>if they have equal concrete values and identical dynamic types,</li>
+<li>or if both are nil.</li>
+</ul>
+
+<pre><code class="language-go">var x MyStringer
+fmt.Println(x == nil) // true
+
+x = (*Point)(nil)
+fmt.Println(x == nil) // false
+</code></pre>
+
+<p>In the second print statement, the concrete value of x equals <code>nil</code>, but its dynamic type is <code>*Point</code>, which is not <code>nil</code>.</p>
+
+<h2 id="empty-interface">Empty interface</h2>
+
+<p>An empty interface may hold values of any type. (Every type implements at least zero methods.)</p>
+
+<pre><code class="language-go">interface{}
+</code></pre>
+
+<p>Empty interfaces are used by code that handles values of unknown type. For example, <code>fmt.Print</code> takes any number of arguments of type <code>interface{}</code>.</p>
+
+<pre><code class="language-go">func main() {
+	var i interface{}
+	describe(i)
+
+	i = 42
+	describe(i)
+
+	i = &quot;hello&quot;
+	describe(i)
+}
+
+func describe(i interface{}) {
+	fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
+}
+</code></pre>
+
+<h2 id="type-assertion">Type assertion</h2>
+
+<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s concrete value, which is typically what you want.</p>
+
+<p>The type assertion <code>x.(T)</code> asserts that the concrete value stored in x is of type T, and that x is not nil.</p>
+
+<ul>
+<li>If T is not an interface, it asserts that the dynamic type of x is identical to T.</li>
+<li>If T is an interface, it asserts that the dynamic type of x implements T.</li>
+</ul>
+
+<h2 id="type-switches">Type switches</h2>
+
+<p>A type switch performs several type assertions in series and runs the first case with a matching type.</p>
+
+<pre><code class="language-go">var x interface{} = &quot;foo&quot;
+
+switch v := x.(type) {
+case nil:
+    fmt.Println(&quot;x is nil&quot;)            // here v has type interface{}
+case int:
+    fmt.Println(&quot;x is&quot;, v)             // here v has type int
+case bool, string:
+    fmt.Println(&quot;x is bool or string&quot;) // here v has type interface{}
+default:
+    fmt.Println(&quot;type unknown&quot;)        // here v has type interface{}
+}
+</code></pre>
+
+<pre><code>x is bool or string
+</code></pre>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>440 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-02 02:00 &#43;0200</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/">
+                                <span class="button__text">Context and Cancellation of goroutines</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>

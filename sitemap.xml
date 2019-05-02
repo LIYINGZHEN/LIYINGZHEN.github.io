@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</loc>
+    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</loc>
+    <lastmod>2019-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-04-30-update-map-values-in-go/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -224,7 +234,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -266,7 +276,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/go/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -356,7 +366,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

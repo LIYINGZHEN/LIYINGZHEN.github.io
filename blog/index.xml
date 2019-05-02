@@ -6,8 +6,188 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Interfaces in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</link>
+            <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</guid>
+            <description>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
+Go&amp;rsquo;s interfaces let you use duck typing.
+Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
+There is no explicit declaration of intent.
+Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]</description>
+            <content type="html"><![CDATA[
+
+<p>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.</p>
+
+<p>Go&rsquo;s interfaces let you use duck typing.</p>
+
+<h2 id="interfaces-are-satisfied-implicitly">Interfaces are satisfied implicitly</h2>
+
+<p>A type implements an interface by implementing its methods. No explicit declaration is required.</p>
+
+<p><em>There is no explicit declaration of intent.</em></p>
+
+<h2 id="interface-values">Interface Values</h2>
+
+<p>An <strong>interface value</strong> consists of a <strong>concrete value</strong> and a <strong>dynamic type</strong>: [Value, Type]</p>
+
+<p>In a call to fmt.Printf, you can use %v to print the concrete value and %T to print the dynamic type.</p>
+
+<pre><code class="language-go">var x MyStringer
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; &lt;nil&gt;
+
+x = Temp(24)
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // 24 °C main.Temp
+
+x = &amp;Point{1, 2}
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // (1,2) *main.Point
+
+x = (*Point)(nil)
+fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; *main.Point
+</code></pre>
+
+<p>The <strong>zero value</strong> of an interface type is nil, which is represented as [nil, nil].</p>
+
+<h2 id="equality">Equality</h2>
+
+<p>Two interface values are equal</p>
+
+<ul>
+<li>if they have equal concrete values and identical dynamic types,</li>
+<li>or if both are nil.</li>
+</ul>
+
+<pre><code class="language-go">var x MyStringer
+fmt.Println(x == nil) // true
+
+x = (*Point)(nil)
+fmt.Println(x == nil) // false
+</code></pre>
+
+<p>In the second print statement, the concrete value of x equals <code>nil</code>, but its dynamic type is <code>*Point</code>, which is not <code>nil</code>.</p>
+
+<h2 id="empty-interface">Empty interface</h2>
+
+<p>An empty interface may hold values of any type. (Every type implements at least zero methods.)</p>
+
+<pre><code class="language-go">interface{}
+</code></pre>
+
+<p>Empty interfaces are used by code that handles values of unknown type. For example, <code>fmt.Print</code> takes any number of arguments of type <code>interface{}</code>.</p>
+
+<pre><code class="language-go">func main() {
+	var i interface{}
+	describe(i)
+
+	i = 42
+	describe(i)
+
+	i = &quot;hello&quot;
+	describe(i)
+}
+
+func describe(i interface{}) {
+	fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
+}
+</code></pre>
+
+<h2 id="type-assertion">Type assertion</h2>
+
+<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s concrete value, which is typically what you want.</p>
+
+<p>The type assertion <code>x.(T)</code> asserts that the concrete value stored in x is of type T, and that x is not nil.</p>
+
+<ul>
+<li>If T is not an interface, it asserts that the dynamic type of x is identical to T.</li>
+<li>If T is an interface, it asserts that the dynamic type of x implements T.</li>
+</ul>
+
+<h2 id="type-switches">Type switches</h2>
+
+<p>A type switch performs several type assertions in series and runs the first case with a matching type.</p>
+
+<pre><code class="language-go">var x interface{} = &quot;foo&quot;
+
+switch v := x.(type) {
+case nil:
+    fmt.Println(&quot;x is nil&quot;)            // here v has type interface{}
+case int:
+    fmt.Println(&quot;x is&quot;, v)             // here v has type int
+case bool, string:
+    fmt.Println(&quot;x is bool or string&quot;) // here v has type interface{}
+default:
+    fmt.Println(&quot;type unknown&quot;)        // here v has type interface{}
+}
+</code></pre>
+
+<pre><code>x is bool or string
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Context and Cancellation of goroutines</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</link>
+            <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-01-context-and-cancellation-of-goroutines/</guid>
+            <description>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.
+package main import ( &amp;quot;context&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) var ( wg sync.WaitGroup ) func gen(ctx context.Context) &amp;lt;-chan int { ch := make(chan int) go func() { var n int for { select { case &amp;lt;-ctx.Done(): // Remember to close the channel otherwise we will introduce deadlock.</description>
+            <content type="html"><![CDATA[<p>For cancelation of the goroutine we can use the context package. We have to change the function to accept an argument of type context.Context, by convention it’s usuallly the first argument.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;context&quot;
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
+
+var (
+	wg sync.WaitGroup
+)
+
+func gen(ctx context.Context) &lt;-chan int {
+	ch := make(chan int)
+	go func() {
+		var n int
+		for {
+			select {
+			case &lt;-ctx.Done():
+				// Remember to close the channel otherwise we will introduce deadlock.
+				close(ch)
+				fmt.Println(&quot;Cancel the context &quot;, n)
+				return
+			case &lt;-time.After(1 * time.Second):
+				ch &lt;- n
+				n++
+			}
+		}
+	}()
+	return ch
+}
+
+func main() {
+	ctx, cancel := context.WithTimeout(context.Background(), 6*time.Second)
+	defer cancel()
+
+	fmt.Println(&quot;Hey, I'm going to do some work&quot;)
+
+	for n := range gen(ctx) {
+		fmt.Println(n)
+	}
+
+	fmt.Println(&quot;Finished. I'm going home&quot;)
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Update map values in Go</title>
