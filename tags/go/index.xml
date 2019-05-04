@@ -6,10 +6,32 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Command link</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-04-go-command-link/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-04-go-command-link/</guid>
+      <description>The -X Go linker option, which you can set with -ldflags, sets the value of a string variable in the Go program being linked. You use it like this: -X main.version 1.0.0.
+A simple example: let&amp;rsquo;s say you have this source file saved as hello.go.
+package main import &amp;quot;fmt&amp;quot; var who = &amp;quot;World&amp;quot; func main() { fmt.Printf(&amp;quot;Hello, %s.\n&amp;quot;, who) }  Then you can use go run (or other build commands like go build or go install) with the -ldflags option to modify the value of the who variable:</description>
+    </item>
+    
+    <item>
+      <title>The Relationship Between Interfaces and Reflection</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/</guid>
+      <description>Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.
+Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.
+Assigning a Value to an Interface An interface encodes three things: a value, a method set, and the type of the stored value.</description>
+    </item>
     
     <item>
       <title>Interfaces in Go</title>

@@ -6,8 +6,277 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 02 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Go Command link</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-04-go-command-link/</link>
+            <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-04-go-command-link/</guid>
+            <description>The -X Go linker option, which you can set with -ldflags, sets the value of a string variable in the Go program being linked. You use it like this: -X main.version 1.0.0.
+A simple example: let&amp;rsquo;s say you have this source file saved as hello.go.
+package main import &amp;quot;fmt&amp;quot; var who = &amp;quot;World&amp;quot; func main() { fmt.Printf(&amp;quot;Hello, %s.\n&amp;quot;, who) }  Then you can use go run (or other build commands like go build or go install) with the -ldflags option to modify the value of the who variable:</description>
+            <content type="html"><![CDATA[
+
+<p>The <code>-X</code> Go linker option, which you can set with <code>-ldflags</code>, sets the value of a string variable in the Go program being linked. You use it like this: <code>-X main.version 1.0.0</code>.</p>
+
+<p>A simple example: let&rsquo;s say you have this source file saved as hello.go.</p>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+var who = &quot;World&quot;
+
+func main() {
+    fmt.Printf(&quot;Hello, %s.\n&quot;, who)
+}
+</code></pre>
+
+<p>Then you can use <code>go run</code> (or other build commands like <code>go build</code> or <code>go install</code>) with the <code>-ldflags</code> option to modify the value of the who variable:</p>
+
+<pre><code class="language-bash">$ go run hello.go
+Hello, World.
+$ go run -ldflags=&quot;-X main.who CloudFlare&quot; hello.go
+Hello, CloudFlare.
+</code></pre>
+
+<h2 id="do-it-with-docker">Do it with Docker</h2>
+
+<pre><code class="language-dockerfile">FROM golang as builder
+
+WORKDIR /go/src/github.com/LIYINGZHEN/my-app/
+
+COPY app.go	.
+
+RUN GIT_COMMIT=$(git rev-list -1 HEAD) &amp;&amp; \
+  CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo \
+  -ldflags &quot;-X main.GitCommit=$GIT_COMMIT&quot; -o app .
+
+FROM alpine:latest
+
+WORKDIR /root/
+
+COPY --from=builder /go/src/github.com/LIYINGZHEN/my-app/app .
+
+CMD [&quot;./app&quot;]
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>The Relationship Between Interfaces and Reflection</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/</link>
+            <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/</guid>
+            <description>Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.
+Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.
+Assigning a Value to an Interface An interface encodes three things: a value, a method set, and the type of the stored value.</description>
+            <content type="html"><![CDATA[
+
+<p>Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.</p>
+
+<p>Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.</p>
+
+<h2 id="assigning-a-value-to-an-interface">Assigning a Value to an Interface</h2>
+
+<p>An interface encodes three things: a value, a method set, and the type of the stored value.</p>
+
+<p>The structure for an interface looks like the following:</p>
+
+<p><img src="https://blog.gopheracademy.com/postimages/advent-2018/interfaces-and-reflect/interface.svg" alt="interface-diagram" /></p>
+
+<p>We can clearly see the three parts of the interface in that diagram: the <code>_type</code> is type information, <code>*data</code> is a pointer to the actual value, and the <code>itab</code> encodes the method set.</p>
+
+<p>When a function accepts an interface as a parameter, passing a value to that function packs the value, method set, and type into the interface.</p>
+
+<h2 id="reflect-type-examining-types">reflect.Type – Examining Types</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Gift struct {
+	Sender    string
+	Recipient string
+	Number    uint
+	Contents  string
+}
+
+func main() {
+	g := Gift{
+		Sender:    &quot;Hank&quot;,
+		Recipient: &quot;Sue&quot;,
+		Number:    1,
+		Contents:  &quot;Scarf&quot;,
+	}
+
+	t := reflect.TypeOf(g)
+
+	if kind := t.Kind(); kind != reflect.Struct {
+		log.Fatalf(&quot;This program expects to work on a struct; we got a %v instead.&quot;, kind)
+	}
+
+	for i := 0; i &lt; t.NumField(); i++ {
+		f := t.Field(i)
+		log.Printf(&quot;Field %03d: %-10.10s %v&quot;, i, f.Name, f.Type.Kind())
+	}
+}
+</code></pre>
+
+<pre><code>2018/12/16 12:00:00 Field 000: Sender     string
+2018/12/16 12:00:00 Field 001: Recipient  string
+2018/12/16 12:00:00 Field 002: Number     uint
+2018/12/16 12:00:00 Field 003: Contents   string
+</code></pre>
+
+<h2 id="reflect-method-examining-the-itab-method-set">reflect.Method - Examining the itab/Method-Set</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Reindeer string
+
+func (r Reindeer) TakeOff() {
+	log.Printf(&quot;%q lifts off.&quot;, r)
+}
+
+func (r Reindeer) Land() {
+	log.Printf(&quot;%q gently lands.&quot;, r)
+}
+
+func (r Reindeer) ToggleNose() {
+	if r != &quot;rudolph&quot; {
+		panic(&quot;invalid reindeer operation&quot;)
+	}
+	log.Printf(&quot;%q nose changes state.&quot;, r)
+}
+
+func main() {
+	r := Reindeer(&quot;rudolph&quot;)
+
+	t := reflect.TypeOf(r)
+
+	for i := 0; i &lt; t.NumMethod(); i++ {
+		m := t.Method(i)
+		log.Printf(&quot;%s&quot;, m.Name)
+	}
+}
+</code></pre>
+
+<pre><code>2018/12/16 12:00:00 Land
+2018/12/16 12:00:00 TakeOff
+2018/12/16 12:00:00 ToggleNose
+</code></pre>
+
+<h2 id="reflect-value-examining-values">reflect.Value – Examining Values</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Adult struct {
+	Name       string
+	Occupation string
+	Nice       bool
+}
+
+// search a slice of structs for Name field that is &quot;Hank&quot; and set its Nice
+// field to true.
+func nice(i interface{}) {
+	// retrieve the underlying value of i.  we know that i is an
+	// interface.
+	v := reflect.ValueOf(i)
+
+	// we're only interested in slices to let's check what kind of value v is. if
+	// it isn't a slice, return immediately.
+	if v.Kind() != reflect.Slice {
+		return
+	}
+
+	// v is a slice.  now let's ensure that it is a slice of structs.  if not,
+	// return immediately.
+	if e := v.Type().Elem(); e.Kind() != reflect.Struct {
+		return
+	}
+
+	// determine if our struct has a Name field of type string and a Nice field
+	// of type bool
+	st := v.Type().Elem()
+
+	if nameField, found := st.FieldByName(&quot;Name&quot;); found == false || nameField.Type.Kind() != reflect.String {
+		return
+	}
+
+	if niceField, found := st.FieldByName(&quot;Nice&quot;); found == false || niceField.Type.Kind() != reflect.Bool {
+		return
+	}
+
+	// Set any Nice fields to true where the Name is &quot;Hank&quot;
+	for i := 0; i &lt; v.Len(); i++ {
+		e := v.Index(i)
+		name := e.FieldByName(&quot;Name&quot;)
+		nice := e.FieldByName(&quot;Nice&quot;)
+
+		if name.String() == &quot;Hank&quot; {
+			nice.SetBool(true)
+		}
+	}
+}
+
+func main() {
+	adults := []Adult{
+		{Name: &quot;Bob&quot;, Occupation: &quot;Carpenter&quot;, Nice: true},
+		{Name: &quot;Steve&quot;, Occupation: &quot;Clerk&quot;, Nice: true},
+		{Name: &quot;Nikki&quot;, Occupation: &quot;Rad Tech&quot;, Nice: false},
+		{Name: &quot;Hank&quot;, Occupation: &quot;Go Programmer&quot;, Nice: false},
+	}
+
+	log.Printf(&quot;adults before nice: %v&quot;, adults)
+	nice(adults)
+	log.Printf(&quot;adults after nice: %v&quot;, adults)
+}
+</code></pre>
+
+<pre><code>2019/04/26 06:57:34 adults before nice: [{Bob Carpenter true} {Steve Clerk true} {Nikki Rad Tech false} {Hank Go Programmer false}]
+2019/04/26 06:57:34 adults after nice: [{Bob Carpenter true} {Steve Clerk true} {Nikki Rad Tech false} {Hank Go Programmer true}]
+</code></pre>
+
+<h2 id="tool-boxs">Tool Boxs</h2>
+
+<h3 id="show-all-the-methods">Show all the methods</h3>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+func main() {
+	t := reflect.TypeOf(reflect.Value{})
+
+	for i := 0; i &lt; t.NumMethod(); i++ {
+		m := t.Method(i)
+		log.Printf(&quot;%s&quot;, m.Name)
+	}
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Interfaces in Go</title>

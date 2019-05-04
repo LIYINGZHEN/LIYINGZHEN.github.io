@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.
+Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.
+Assigning a Value to an Interface An interface encodes three things: a value, a method set, and the type of the stored value." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/" />
+
+
+<title>
+    
+    The Relationship Between Interfaces and Reflection :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.6a7678f40434c7781747ffdd224a984179b2a3c81c81f19ccf845fdffbe80b7c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="The Relationship Between Interfaces and Reflection">
+<meta itemprop="description" content="Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.
+Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.
+Assigning a Value to an Interface An interface encodes three things: a value, a method set, and the type of the stored value.">
+
+
+<meta itemprop="datePublished" content="2019-05-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="679">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="The Relationship Between Interfaces and Reflection"/>
+<meta name="twitter:description" content="Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.
+Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.
+Assigning a Value to an Interface An interface encodes three things: a value, a method set, and the type of the stored value."/>
+
+
+
+
+<meta property="article:published_time" content="2019-05-03 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/">The Relationship Between Interfaces and Reflection</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p>Interfaces are one of the fundamental tools for abstraction in Go. Interfaces store type information when assigned a value. Reflection is a method of examining type and value information at runtime.</p>
+
+<p>Go implements reflection with the reflect package which provides types and methods for inspecting portions of the interface structure and even modifying values at runtime.</p>
+
+<h2 id="assigning-a-value-to-an-interface">Assigning a Value to an Interface</h2>
+
+<p>An interface encodes three things: a value, a method set, and the type of the stored value.</p>
+
+<p>The structure for an interface looks like the following:</p>
+
+<p><img src="https://blog.gopheracademy.com/postimages/advent-2018/interfaces-and-reflect/interface.svg" alt="interface-diagram" /></p>
+
+<p>We can clearly see the three parts of the interface in that diagram: the <code>_type</code> is type information, <code>*data</code> is a pointer to the actual value, and the <code>itab</code> encodes the method set.</p>
+
+<p>When a function accepts an interface as a parameter, passing a value to that function packs the value, method set, and type into the interface.</p>
+
+<h2 id="reflect-type-examining-types">reflect.Type – Examining Types</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Gift struct {
+	Sender    string
+	Recipient string
+	Number    uint
+	Contents  string
+}
+
+func main() {
+	g := Gift{
+		Sender:    &quot;Hank&quot;,
+		Recipient: &quot;Sue&quot;,
+		Number:    1,
+		Contents:  &quot;Scarf&quot;,
+	}
+
+	t := reflect.TypeOf(g)
+
+	if kind := t.Kind(); kind != reflect.Struct {
+		log.Fatalf(&quot;This program expects to work on a struct; we got a %v instead.&quot;, kind)
+	}
+
+	for i := 0; i &lt; t.NumField(); i++ {
+		f := t.Field(i)
+		log.Printf(&quot;Field %03d: %-10.10s %v&quot;, i, f.Name, f.Type.Kind())
+	}
+}
+</code></pre>
+
+<pre><code>2018/12/16 12:00:00 Field 000: Sender     string
+2018/12/16 12:00:00 Field 001: Recipient  string
+2018/12/16 12:00:00 Field 002: Number     uint
+2018/12/16 12:00:00 Field 003: Contents   string
+</code></pre>
+
+<h2 id="reflect-method-examining-the-itab-method-set">reflect.Method - Examining the itab/Method-Set</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Reindeer string
+
+func (r Reindeer) TakeOff() {
+	log.Printf(&quot;%q lifts off.&quot;, r)
+}
+
+func (r Reindeer) Land() {
+	log.Printf(&quot;%q gently lands.&quot;, r)
+}
+
+func (r Reindeer) ToggleNose() {
+	if r != &quot;rudolph&quot; {
+		panic(&quot;invalid reindeer operation&quot;)
+	}
+	log.Printf(&quot;%q nose changes state.&quot;, r)
+}
+
+func main() {
+	r := Reindeer(&quot;rudolph&quot;)
+
+	t := reflect.TypeOf(r)
+
+	for i := 0; i &lt; t.NumMethod(); i++ {
+		m := t.Method(i)
+		log.Printf(&quot;%s&quot;, m.Name)
+	}
+}
+</code></pre>
+
+<pre><code>2018/12/16 12:00:00 Land
+2018/12/16 12:00:00 TakeOff
+2018/12/16 12:00:00 ToggleNose
+</code></pre>
+
+<h2 id="reflect-value-examining-values">reflect.Value – Examining Values</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+type Adult struct {
+	Name       string
+	Occupation string
+	Nice       bool
+}
+
+// search a slice of structs for Name field that is &quot;Hank&quot; and set its Nice
+// field to true.
+func nice(i interface{}) {
+	// retrieve the underlying value of i.  we know that i is an
+	// interface.
+	v := reflect.ValueOf(i)
+
+	// we're only interested in slices to let's check what kind of value v is. if
+	// it isn't a slice, return immediately.
+	if v.Kind() != reflect.Slice {
+		return
+	}
+
+	// v is a slice.  now let's ensure that it is a slice of structs.  if not,
+	// return immediately.
+	if e := v.Type().Elem(); e.Kind() != reflect.Struct {
+		return
+	}
+
+	// determine if our struct has a Name field of type string and a Nice field
+	// of type bool
+	st := v.Type().Elem()
+
+	if nameField, found := st.FieldByName(&quot;Name&quot;); found == false || nameField.Type.Kind() != reflect.String {
+		return
+	}
+
+	if niceField, found := st.FieldByName(&quot;Nice&quot;); found == false || niceField.Type.Kind() != reflect.Bool {
+		return
+	}
+
+	// Set any Nice fields to true where the Name is &quot;Hank&quot;
+	for i := 0; i &lt; v.Len(); i++ {
+		e := v.Index(i)
+		name := e.FieldByName(&quot;Name&quot;)
+		nice := e.FieldByName(&quot;Nice&quot;)
+
+		if name.String() == &quot;Hank&quot; {
+			nice.SetBool(true)
+		}
+	}
+}
+
+func main() {
+	adults := []Adult{
+		{Name: &quot;Bob&quot;, Occupation: &quot;Carpenter&quot;, Nice: true},
+		{Name: &quot;Steve&quot;, Occupation: &quot;Clerk&quot;, Nice: true},
+		{Name: &quot;Nikki&quot;, Occupation: &quot;Rad Tech&quot;, Nice: false},
+		{Name: &quot;Hank&quot;, Occupation: &quot;Go Programmer&quot;, Nice: false},
+	}
+
+	log.Printf(&quot;adults before nice: %v&quot;, adults)
+	nice(adults)
+	log.Printf(&quot;adults after nice: %v&quot;, adults)
+}
+</code></pre>
+
+<pre><code>2019/04/26 06:57:34 adults before nice: [{Bob Carpenter true} {Steve Clerk true} {Nikki Rad Tech false} {Hank Go Programmer false}]
+2019/04/26 06:57:34 adults after nice: [{Bob Carpenter true} {Steve Clerk true} {Nikki Rad Tech false} {Hank Go Programmer true}]
+</code></pre>
+
+<h2 id="tool-boxs">Tool Boxs</h2>
+
+<h3 id="show-all-the-methods">Show all the methods</h3>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;reflect&quot;
+)
+
+func main() {
+	t := reflect.TypeOf(reflect.Value{})
+
+	for i := 0; i &lt; t.NumMethod(); i++ {
+		m := t.Method(i)
+		log.Printf(&quot;%s&quot;, m.Name)
+	}
+}
+</code></pre>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>679 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-03 02:00 &#43;0200</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-04-go-command-link/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Go Command link</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/">
+                                <span class="button__text">Interfaces in Go</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>
