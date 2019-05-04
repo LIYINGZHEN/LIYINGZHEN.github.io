@@ -186,9 +186,19 @@ docker network disconnect <newwork> <container>
 
 ## Docker Volume
 
+**List volumes**
+
 ```bash
 docker volume ls
 ```
+
+**Remove volume**
+
+```
+docker volume rm <volume>
+```
+
+**Volumes Detail**
 
 ```bash
 docker volume inspect <volume>
