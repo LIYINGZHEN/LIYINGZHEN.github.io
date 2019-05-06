@@ -6,8 +6,109 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Go Memory Layout</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/</link>
+            <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/</guid>
+            <description>How memory works internally When you have a struct like this one:
+type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
+But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 + 8 + 4 = 13 bytes.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="how-memory-works-internally">How memory works internally</h2>
+
+<p>When you have a struct like this one:</p>
+
+<pre><code class="language-go">type myStruct struct {
+ 	myInt   bool    // 1 byte
+	myFloat float64 // 8 bytes
+	myBool  int32   // 4 bytes
+}
+</code></pre>
+
+<p>As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.</p>
+
+<p>But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 + 8 + 4 = 13 bytes. This struct will takes : 24 bytes</p>
+
+<pre><code class="language-go">a := myStruct{}
+fmt.Println(unsafe.Sizeof(a)) // 24 bytes
+</code></pre>
+
+<p>How to optimize :
+It’s possible to optimize, ordering the struct by bytes taken:</p>
+
+<pre><code class="language-go">type myStructOptimized struct {
+ 	myFloat float64 // 8 bytes
+	myInt   int32   // 4 bytes
+	myBool  bool    // 1 byte
+}
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*Zd0nkKfQcIzg6XUPDUBsEg.png" alt="" /></p>
+
+<p>This new struct ordered will take now:</p>
+
+<pre><code class="language-go">b := myStructOptimized{}
+fmt.Println(unsafe.Sizeof(b)) // ordered 16 bytes
+</code></pre>
+
+<p>16 bytes, because in memory it will be allocated like that (<a href="https://play.golang.org/p/gmkrt6X7aM">https://play.golang.org/p/gmkrt6X7aM</a>) :</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*wQvQILr8fAJqnWZ07kpmlA.png" alt="" /></p>
+
+<p>8 + 8 = 16 bytes</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Go Escape Analysis</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/</link>
+            <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/</guid>
+            <description>Garbage collection is a convenient feature of Go - automatic memory management makes code cleaner and memory leaks less likely. However, GC also adds overhead as the program periodically needs to stop and collect unused objects. The Go compiler is smart enough to automatically decide whether a variable should be allocated on the heap, where it will later need to be garbage collected, or whether it can be allocated as part of the stack frame of the function which declared it.</description>
+            <content type="html"><![CDATA[
+
+<p>Garbage collection is a convenient feature of Go - automatic memory management makes code cleaner and memory leaks less likely. However, GC also adds overhead as the program periodically needs to stop and collect unused objects. The Go compiler is smart enough to automatically decide whether a variable should be allocated on the heap, where it will later need to be garbage collected, or whether it can be allocated as part of the stack frame of the function which declared it. <strong>Stack-allocated variables, unlike heap-allocated variables, don’t incur any GC overhead because they’re destroyed when the rest of the stack frame is destroyed - when the function returns.</strong></p>
+
+<p>Go’s escape analysis is more basic than the HotSpot JVM, for example. <strong>The basic rule is that if a reference to a variable is returned from the function where it is declared, it “escapes”</strong> - it can be referenced after the function returns, so it must be heap-allocated. This is complicated by:</p>
+
+<ul>
+<li>functions calling other functions</li>
+<li>references being assigned to struct members</li>
+<li>slices and maps</li>
+<li>cgo taking pointers to variables</li>
+</ul>
+
+<h2 id="command">Command</h2>
+
+<pre><code class="language-bash">go run -gcflags '-m -l'
+</code></pre>
+
+<p>To perform escape analysis, Go builds a graph of function calls at compile time, and traces the flow of input arguments and return values. A function may take a reference to one of it’s arguments, but if that reference is not returned, the variable does not escape. A function may also return a reference, but that reference may be dereferenced or not returned by another function in the stack before the function which declared the variable returns. To illustrate a few simple cases, we can run the compiler with <code>-gcflags '-m'</code>, which will print verbose escape analysis information:</p>
+
+<pre><code class="language-go">package main
+
+type S struct {}
+
+func main() {
+  var x S
+  _ = identity(x)
+}
+
+func identity(x S) S {
+  return x
+}
+</code></pre>
+
+<p>You’ll have to build this with <code>go run -gcflags '-m -l'</code> - the <code>-l</code> flag prevents the function <code>identity</code> from being inlined (that’s a topic for another time). The output is: nothing! Go uses pass-by-value semantics, so the <code>x</code> variable from <code>main</code> will always be copied into the stack of <code>identity</code>. In general code without references always uses stack allocation, trivially. There’s no escape analysis to do.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Go Command link</title>
@@ -286,94 +387,79 @@ func main() {
             <guid>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</guid>
             <description>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 Go&amp;rsquo;s interfaces let you use duck typing.
-Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
-There is no explicit declaration of intent.
-Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]</description>
+Static Type V.S. Dynamic Type V.S. Dynamic Value  Static Type: A static type of interface is interface itself. Dynamic Type: The type of the value which the interface type holds. Dynamic Value: The value of the value which the interface type holds.</description>
             <content type="html"><![CDATA[
 
 <p>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.</p>
 
 <p>Go&rsquo;s interfaces let you use duck typing.</p>
 
-<h2 id="interfaces-are-satisfied-implicitly">Interfaces are satisfied implicitly</h2>
+<h2 id="static-type-v-s-dynamic-type-v-s-dynamic-value">Static Type V.S. Dynamic Type V.S. Dynamic Value</h2>
 
-<p>A type implements an interface by implementing its methods. No explicit declaration is required.</p>
+<ol>
+<li>Static Type: A static type of interface is interface itself.</li>
+<li>Dynamic Type: The type of the value which the interface type holds.</li>
+<li>Dynamic Value: The value of the value which the interface type holds.</li>
+</ol>
 
-<p><em>There is no explicit declaration of intent.</em></p>
+<pre><code class="language-go"> package main
 
-<h2 id="interface-values">Interface Values</h2>
+import &quot;fmt&quot;
 
-<p>An <strong>interface value</strong> consists of a <strong>concrete value</strong> and a <strong>dynamic type</strong>: [Value, Type]</p>
+type MyInterface interface{}
 
-<p>In a call to fmt.Printf, you can use %v to print the concrete value and %T to print the dynamic type.</p>
+func main() {
+	var i MyInterface
 
-<pre><code class="language-go">var x MyStringer
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; &lt;nil&gt;
+	// Print the dynamic value and the dynamic type of the i
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // nil, nil
 
-x = Temp(24)
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // 24 °C main.Temp
+	i = string(&quot;Hi&quot;)
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // Hi, string
 
-x = &amp;Point{1, 2}
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // (1,2) *main.Point
-
-x = (*Point)(nil)
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; *main.Point
-</code></pre>
-
-<p>The <strong>zero value</strong> of an interface type is nil, which is represented as [nil, nil].</p>
-
-<h2 id="equality">Equality</h2>
-
-<p>Two interface values are equal</p>
-
-<ul>
-<li>if they have equal concrete values and identical dynamic types,</li>
-<li>or if both are nil.</li>
-</ul>
-
-<pre><code class="language-go">var x MyStringer
-fmt.Println(x == nil) // true
-
-x = (*Point)(nil)
-fmt.Println(x == nil) // false
-</code></pre>
-
-<p>In the second print statement, the concrete value of x equals <code>nil</code>, but its dynamic type is <code>*Point</code>, which is not <code>nil</code>.</p>
-
-<h2 id="empty-interface">Empty interface</h2>
-
-<p>An empty interface may hold values of any type. (Every type implements at least zero methods.)</p>
-
-<pre><code class="language-go">interface{}
-</code></pre>
-
-<p>Empty interfaces are used by code that handles values of unknown type. For example, <code>fmt.Print</code> takes any number of arguments of type <code>interface{}</code>.</p>
-
-<pre><code class="language-go">func main() {
-	var i interface{}
-	describe(i)
-
-	i = 42
-	describe(i)
-
-	i = &quot;hello&quot;
-	describe(i)
+	i = (*MyInterface)(nil)
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // &lt;nil&gt; *main.MyInterface
 }
+</code></pre>
 
-func describe(i interface{}) {
-	fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
+<p>## Nil Interface</p>
+
+<p>Interface type value is <code>nil</code> if both <code>dynamic value</code> and <code>dynamic type</code> are <code>nil</code>.</p>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type MyInterface interface{}
+
+func main() {
+	var i MyInterface
+
+	if i == nil {
+		fmt.Println(&quot;1&quot;) // 1
+	}
+
+	i = string(&quot;Hi&quot;)
+	if i == nil {
+		fmt.Println(&quot;2&quot;) // won't print
+	}
+
+	i = (*MyInterface)(nil)
+	if i == nil {
+		fmt.Println(&quot;3&quot;) // won't print
+	}
 }
 </code></pre>
 
 <h2 id="type-assertion">Type assertion</h2>
 
-<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s concrete value, which is typically what you want.</p>
+<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s <code>dynamic value</code>, which is typically what you want.</p>
 
-<p>The type assertion <code>x.(T)</code> asserts that the concrete value stored in x is of type T, and that x is not nil.</p>
+<p>The type assertion <code>x.(T)</code> asserts that the <code>dynamic value</code> stored in x is of type T, and that x is not <code>nil</code>.</p>
 
 <ul>
-<li>If T is not an interface, it asserts that the dynamic type of x is identical to T.</li>
-<li>If T is an interface, it asserts that the dynamic type of x implements T.</li>
+<li>If <code>T</code> is not an interface, it asserts that the <code>dynamic type</code> of x is identical to T.</li>
+<li>If <code>T</code> is an interface, it asserts that the <code>dynamic type</code> of x implements T.</li>
 </ul>
 
 <h2 id="type-switches">Type switches</h2>

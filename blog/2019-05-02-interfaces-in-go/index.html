@@ -9,9 +9,7 @@
 <meta name="description"
     content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 Go&amp;rsquo;s interfaces let you use duck typing.
-Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
-There is no explicit declaration of intent.
-Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]" />
+Static Type V.S. Dynamic Type V.S. Dynamic Value  Static Type: A static type of interface is interface itself. Dynamic Type: The type of the value which the interface type holds. Dynamic Value: The value of the value which the interface type holds." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/" />
@@ -44,14 +42,12 @@ Interface Values An interface value consists of a concrete value and a dynamic t
 <meta itemprop="name" content="Interfaces in Go">
 <meta itemprop="description" content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 Go&rsquo;s interfaces let you use duck typing.
-Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
-There is no explicit declaration of intent.
-Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]">
+Static Type V.S. Dynamic Type V.S. Dynamic Value  Static Type: A static type of interface is interface itself. Dynamic Type: The type of the value which the interface type holds. Dynamic Value: The value of the value which the interface type holds.">
 
 
 <meta itemprop="datePublished" content="2019-05-02T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="440">
+<meta itemprop="wordCount" content="356">
 
 
 
@@ -62,9 +58,7 @@ Interface Values An interface value consists of a concrete value and a dynamic t
 <meta name="twitter:title" content="Interfaces in Go"/>
 <meta name="twitter:description" content="An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 Go&rsquo;s interfaces let you use duck typing.
-Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
-There is no explicit declaration of intent.
-Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]"/>
+Static Type V.S. Dynamic Type V.S. Dynamic Value  Static Type: A static type of interface is interface itself. Dynamic Type: The type of the value which the interface type holds. Dynamic Value: The value of the value which the interface type holds."/>
 
 
 
@@ -125,7 +119,7 @@ Interface Values An interface value consists of a concrete value and a dynamic t
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
 
             
 
@@ -144,85 +138,72 @@ Interface Values An interface value consists of a concrete value and a dynamic t
 
 <p>Go&rsquo;s interfaces let you use duck typing.</p>
 
-<h2 id="interfaces-are-satisfied-implicitly">Interfaces are satisfied implicitly</h2>
+<h2 id="static-type-v-s-dynamic-type-v-s-dynamic-value">Static Type V.S. Dynamic Type V.S. Dynamic Value</h2>
 
-<p>A type implements an interface by implementing its methods. No explicit declaration is required.</p>
+<ol>
+<li>Static Type: A static type of interface is interface itself.</li>
+<li>Dynamic Type: The type of the value which the interface type holds.</li>
+<li>Dynamic Value: The value of the value which the interface type holds.</li>
+</ol>
 
-<p><em>There is no explicit declaration of intent.</em></p>
+<pre><code class="language-go"> package main
 
-<h2 id="interface-values">Interface Values</h2>
+import &quot;fmt&quot;
 
-<p>An <strong>interface value</strong> consists of a <strong>concrete value</strong> and a <strong>dynamic type</strong>: [Value, Type]</p>
+type MyInterface interface{}
 
-<p>In a call to fmt.Printf, you can use %v to print the concrete value and %T to print the dynamic type.</p>
+func main() {
+	var i MyInterface
 
-<pre><code class="language-go">var x MyStringer
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; &lt;nil&gt;
+	// Print the dynamic value and the dynamic type of the i
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // nil, nil
 
-x = Temp(24)
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // 24 °C main.Temp
+	i = string(&quot;Hi&quot;)
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // Hi, string
 
-x = &amp;Point{1, 2}
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // (1,2) *main.Point
-
-x = (*Point)(nil)
-fmt.Printf(&quot;%v %T\n&quot;, x, x) // &lt;nil&gt; *main.Point
-</code></pre>
-
-<p>The <strong>zero value</strong> of an interface type is nil, which is represented as [nil, nil].</p>
-
-<h2 id="equality">Equality</h2>
-
-<p>Two interface values are equal</p>
-
-<ul>
-<li>if they have equal concrete values and identical dynamic types,</li>
-<li>or if both are nil.</li>
-</ul>
-
-<pre><code class="language-go">var x MyStringer
-fmt.Println(x == nil) // true
-
-x = (*Point)(nil)
-fmt.Println(x == nil) // false
-</code></pre>
-
-<p>In the second print statement, the concrete value of x equals <code>nil</code>, but its dynamic type is <code>*Point</code>, which is not <code>nil</code>.</p>
-
-<h2 id="empty-interface">Empty interface</h2>
-
-<p>An empty interface may hold values of any type. (Every type implements at least zero methods.)</p>
-
-<pre><code class="language-go">interface{}
-</code></pre>
-
-<p>Empty interfaces are used by code that handles values of unknown type. For example, <code>fmt.Print</code> takes any number of arguments of type <code>interface{}</code>.</p>
-
-<pre><code class="language-go">func main() {
-	var i interface{}
-	describe(i)
-
-	i = 42
-	describe(i)
-
-	i = &quot;hello&quot;
-	describe(i)
+	i = (*MyInterface)(nil)
+	fmt.Printf(&quot;%v %T\n&quot;, i, i) // &lt;nil&gt; *main.MyInterface
 }
+</code></pre>
 
-func describe(i interface{}) {
-	fmt.Printf(&quot;(%v, %T)\n&quot;, i, i)
+<p>## Nil Interface</p>
+
+<p>Interface type value is <code>nil</code> if both <code>dynamic value</code> and <code>dynamic type</code> are <code>nil</code>.</p>
+
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+type MyInterface interface{}
+
+func main() {
+	var i MyInterface
+
+	if i == nil {
+		fmt.Println(&quot;1&quot;) // 1
+	}
+
+	i = string(&quot;Hi&quot;)
+	if i == nil {
+		fmt.Println(&quot;2&quot;) // won't print
+	}
+
+	i = (*MyInterface)(nil)
+	if i == nil {
+		fmt.Println(&quot;3&quot;) // won't print
+	}
 }
 </code></pre>
 
 <h2 id="type-assertion">Type assertion</h2>
 
-<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s concrete value, which is typically what you want.</p>
+<p>A type assertion doesn’t really convert an interface to another data type, but it provides access to an interface’s <code>dynamic value</code>, which is typically what you want.</p>
 
-<p>The type assertion <code>x.(T)</code> asserts that the concrete value stored in x is of type T, and that x is not nil.</p>
+<p>The type assertion <code>x.(T)</code> asserts that the <code>dynamic value</code> stored in x is of type T, and that x is not <code>nil</code>.</p>
 
 <ul>
-<li>If T is not an interface, it asserts that the dynamic type of x is identical to T.</li>
-<li>If T is an interface, it asserts that the dynamic type of x implements T.</li>
+<li>If <code>T</code> is not an interface, it asserts that the <code>dynamic type</code> of x is identical to T.</li>
+<li>If <code>T</code> is an interface, it asserts that the <code>dynamic type</code> of x implements T.</li>
 </ul>
 
 <h2 id="type-switches">Type switches</h2>
@@ -256,7 +237,7 @@ default:
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>440 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>356 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-02 02:00 &#43;0200</p>
         </div>

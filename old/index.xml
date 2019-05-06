@@ -6,19 +6,10 @@
     <description>Recent content in Olds on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Mar 2019 18:02:49 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 07:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/old/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://www.maxlivinci.com/old/2019-03-25-postgres/</link>
-      <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-25-postgres/</guid>
-      <description>Setting up a password for the postgres role By default, local connections to PostgreSQL use the peer authentication sys- tem. That means that instead of asking for a password, they check to see if we are currently logged into a user (a linux user) that matches a user name in Postgres. We are going to change the way we do authentication and instead tell Postgres to use an encrypted password, but first we need to actually set a password for the postgres user.</description>
-    </item>
     
     <item>
       <title>HTTP Response codes</title>
@@ -287,15 +278,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
       
       <guid>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</guid>
       <description>func main() { port := 8080 cathandler := http.FileServer(http.Dir(&amp;quot;./images&amp;quot;)) // images/... http.Handle(&amp;quot;/cat/&amp;quot;, http.StripPrefix(&amp;quot;/cat/&amp;quot;, cathandler)) // images/cat/... http.Handle(&amp;quot;/cat/&amp;quot;, cathandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) }  </description>
-    </item>
-    
-    <item>
-      <title>Reading and writing JSON</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</link>
-      <pubDate>Sat, 12 Jan 2019 15:43:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</guid>
-      <description>Writing JSON func main() { port := 8080 http.HandleFunc(&amp;quot;/&amp;quot;, helloWorldHandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) } type HelloWorldResponse struct { // change the output field to be &amp;quot;message&amp;quot; Message string `json:&amp;quot;message&amp;quot;` // do not output this field Author string `json:&amp;quot;-&amp;quot;` // do not output the field if the value is empty Date string `json:&amp;quot;,omitempty&amp;quot;` // convert output to a string and rename &amp;quot;id&amp;quot; Id int `json:&amp;quot;id, string&amp;quot;` } func helloWorldHandler(w http.</description>
     </item>
     
     <item>

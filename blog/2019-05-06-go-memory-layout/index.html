@@ -7,17 +7,17 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="The -X Go linker option, which you can set with -ldflags, sets the value of a string variable in the Go program being linked. You use it like this: -X main.version 1.0.0.
-A simple example: let&amp;rsquo;s say you have this source file saved as hello.go.
-package main import &amp;quot;fmt&amp;quot; var who = &amp;quot;World&amp;quot; func main() { fmt.Printf(&amp;quot;Hello, %s.\n&amp;quot;, who) }  Then you can use go run (or other build commands like go build or go install) with the -ldflags option to modify the value of the who variable:" />
+    content="How memory works internally When you have a struct like this one:
+type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
+But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-04-go-command-link/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/" />
 
 
 <title>
     
-    Go Command link :: YING ZHEN LI 
+    Go Memory Layout :: YING ZHEN LI 
     
 </title>
 
@@ -39,15 +39,15 @@ package main import &amp;quot;fmt&amp;quot; var who = &amp;quot;World&amp;quot; 
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Go Command link">
-<meta itemprop="description" content="The -X Go linker option, which you can set with -ldflags, sets the value of a string variable in the Go program being linked. You use it like this: -X main.version 1.0.0.
-A simple example: let&rsquo;s say you have this source file saved as hello.go.
-package main import &quot;fmt&quot; var who = &quot;World&quot; func main() { fmt.Printf(&quot;Hello, %s.\n&quot;, who) }  Then you can use go run (or other build commands like go build or go install) with the -ldflags option to modify the value of the who variable:">
+<meta itemprop="name" content="Go Memory Layout">
+<meta itemprop="description" content="How memory works internally When you have a struct like this one:
+type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
+But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes.">
 
 
-<meta itemprop="datePublished" content="2019-05-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-05-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="147">
+<meta itemprop="datePublished" content="2019-05-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="152">
 
 
 
@@ -55,15 +55,15 @@ package main import &quot;fmt&quot; var who = &quot;World&quot; func main() { fm
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="Go Command link"/>
-<meta name="twitter:description" content="The -X Go linker option, which you can set with -ldflags, sets the value of a string variable in the Go program being linked. You use it like this: -X main.version 1.0.0.
-A simple example: let&rsquo;s say you have this source file saved as hello.go.
-package main import &quot;fmt&quot; var who = &quot;World&quot; func main() { fmt.Printf(&quot;Hello, %s.\n&quot;, who) }  Then you can use go run (or other build commands like go build or go install) with the -ldflags option to modify the value of the who variable:"/>
+<meta name="twitter:title" content="Go Memory Layout"/>
+<meta name="twitter:description" content="How memory works internally When you have a struct like this one:
+type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
+But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes."/>
 
 
 
 
-<meta property="article:published_time" content="2019-05-04 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-05-06 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -127,56 +127,55 @@ package main import &quot;fmt&quot; var who = &quot;World&quot; func main() { fm
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-04-go-command-link/">Go Command link</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/">Go Memory Layout</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p>The <code>-X</code> Go linker option, which you can set with <code>-ldflags</code>, sets the value of a string variable in the Go program being linked. You use it like this: <code>-X main.version 1.0.0</code>.</p>
+<h2 id="how-memory-works-internally">How memory works internally</h2>
 
-<p>A simple example: let&rsquo;s say you have this source file saved as hello.go.</p>
+<p>When you have a struct like this one:</p>
 
-<pre><code class="language-go">package main
-
-import &quot;fmt&quot;
-
-var who = &quot;World&quot;
-
-func main() {
-    fmt.Printf(&quot;Hello, %s.\n&quot;, who)
+<pre><code class="language-go">type myStruct struct {
+ 	myInt   bool    // 1 byte
+	myFloat float64 // 8 bytes
+	myBool  int32   // 4 bytes
 }
 </code></pre>
 
-<p>Then you can use <code>go run</code> (or other build commands like <code>go build</code> or <code>go install</code>) with the <code>-ldflags</code> option to modify the value of the who variable:</p>
+<p>As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.</p>
 
-<pre><code class="language-bash">$ go run hello.go
-Hello, World.
-$ go run -ldflags=&quot;-X main.who CloudFlare&quot; hello.go
-Hello, CloudFlare.
+<p>But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 + 8 + 4 = 13 bytes. This struct will takes : 24 bytes</p>
+
+<pre><code class="language-go">a := myStruct{}
+fmt.Println(unsafe.Sizeof(a)) // 24 bytes
 </code></pre>
 
-<h2 id="do-it-with-docker">Do it with Docker</h2>
+<p>How to optimize :
+It’s possible to optimize, ordering the struct by bytes taken:</p>
 
-<pre><code class="language-dockerfile">FROM golang as builder
-
-WORKDIR /go/src/github.com/LIYINGZHEN/my-app/
-
-COPY app.go	.
-
-RUN GIT_COMMIT=$(git rev-list -1 HEAD) &amp;&amp; \
-  CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo \
-  -ldflags &quot;-X main.GitCommit=$GIT_COMMIT&quot; -o app .
-
-FROM alpine:latest
-
-WORKDIR /root/
-
-COPY --from=builder /go/src/github.com/LIYINGZHEN/my-app/app .
-
-CMD [&quot;./app&quot;]
+<pre><code class="language-go">type myStructOptimized struct {
+ 	myFloat float64 // 8 bytes
+	myInt   int32   // 4 bytes
+	myBool  bool    // 1 byte
+}
 </code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*Zd0nkKfQcIzg6XUPDUBsEg.png" alt="" /></p>
+
+<p>This new struct ordered will take now:</p>
+
+<pre><code class="language-go">b := myStructOptimized{}
+fmt.Println(unsafe.Sizeof(b)) // ordered 16 bytes
+</code></pre>
+
+<p>16 bytes, because in memory it will be allocated like that (<a href="https://play.golang.org/p/gmkrt6X7aM">https://play.golang.org/p/gmkrt6X7aM</a>) :</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/800/1*wQvQILr8fAJqnWZ07kpmlA.png" alt="" /></p>
+
+<p>8 + 8 = 16 bytes</p>
 
             </div>
         </article>
@@ -188,9 +187,9 @@ CMD [&quot;./app&quot;]
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>147 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>152 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-04 02:00 &#43;0200</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-06 02:00 &#43;0200</p>
         </div>
 
         
@@ -202,18 +201,11 @@ CMD [&quot;./app&quot;]
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">Go Escape Analysis</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-05-03-the-relationship-between-interfaces-and-reflection/">
-                                <span class="button__text">The Relationship Between Interfaces and Reflection</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/">
+                                <span class="button__text">Go Escape Analysis</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

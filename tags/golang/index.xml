@@ -141,15 +141,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
     </item>
     
     <item>
-      <title>Reading and writing JSON</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</link>
-      <pubDate>Sat, 12 Jan 2019 15:43:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</guid>
-      <description>Writing JSON func main() { port := 8080 http.HandleFunc(&amp;quot;/&amp;quot;, helloWorldHandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) } type HelloWorldResponse struct { // change the output field to be &amp;quot;message&amp;quot; Message string `json:&amp;quot;message&amp;quot;` // do not output this field Author string `json:&amp;quot;-&amp;quot;` // do not output the field if the value is empty Date string `json:&amp;quot;,omitempty&amp;quot;` // convert output to a string and rename &amp;quot;id&amp;quot; Id int `json:&amp;quot;id, string&amp;quot;` } func helloWorldHandler(w http.</description>
-    </item>
-    
-    <item>
       <title>Panic and Recover in Go</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</link>
       <pubDate>Sat, 12 Jan 2019 14:16:34 +0100</pubDate>

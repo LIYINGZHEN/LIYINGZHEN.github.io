@@ -6,19 +6,10 @@
     <description>Recent content in Notes on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Mar 2019 18:02:49 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 07:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://www.maxlivinci.com/old/2019-03-25-postgres/</link>
-      <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-25-postgres/</guid>
-      <description>Setting up a password for the postgres role By default, local connections to PostgreSQL use the peer authentication sys- tem. That means that instead of asking for a password, they check to see if we are currently logged into a user (a linux user) that matches a user name in Postgres. We are going to change the way we do authentication and instead tell Postgres to use an encrypted password, but first we need to actually set a password for the postgres user.</description>
-    </item>
     
     <item>
       <title>HTTP Response codes</title>

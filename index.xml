@@ -6,10 +6,30 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Memory Layout</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/</link>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/</guid>
+      <description>How memory works internally When you have a struct like this one:
+type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
+But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 + 8 + 4 = 13 bytes.</description>
+    </item>
+    
+    <item>
+      <title>Go Escape Analysis</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/</guid>
+      <description>Garbage collection is a convenient feature of Go - automatic memory management makes code cleaner and memory leaks less likely. However, GC also adds overhead as the program periodically needs to stop and collect unused objects. The Go compiler is smart enough to automatically decide whether a variable should be allocated on the heap, where it will later need to be garbage collected, or whether it can be allocated as part of the stack frame of the function which declared it.</description>
+    </item>
     
     <item>
       <title>Go Command link</title>
@@ -41,9 +61,7 @@ Assigning a Value to an Interface An interface encodes three things: a value, a 
       <guid>https://www.maxlivinci.com/blog/2019-05-02-interfaces-in-go/</guid>
       <description>An interface type is defined by a set of methods. A value of interface type can hold any value that implements those methods.
 Go&amp;rsquo;s interfaces let you use duck typing.
-Interfaces are satisfied implicitly A type implements an interface by implementing its methods. No explicit declaration is required.
-There is no explicit declaration of intent.
-Interface Values An interface value consists of a concrete value and a dynamic type: [Value, Type]</description>
+Static Type V.S. Dynamic Type V.S. Dynamic Value  Static Type: A static type of interface is interface itself. Dynamic Type: The type of the value which the interface type holds. Dynamic Value: The value of the value which the interface type holds.</description>
     </item>
     
     <item>
@@ -168,15 +186,6 @@ Go is growing fast and so are the number of blog posts about it. If an intereste
       <guid>https://www.maxlivinci.com/blog/2019-04-20-building-a-website/</guid>
       <description>Since I started programming, I’ve found myself interested in many subjects and technologies. However, despite a few efforts, I never managed to get interested in front-end development.
 I have tried several frameworks: Bootstrap, React, and a few more. I admit I enjoy way more developing something with React than doing plain HTML/CSS/JS, but let’s face it, it’s just not my cup of tea. Sometimes I have to work on front-end projects, but whenever I can avoid it, I do it.</description>
-    </item>
-    
-    <item>
-      <title>PostgreSQL</title>
-      <link>https://www.maxlivinci.com/old/2019-03-25-postgres/</link>
-      <pubDate>Mon, 25 Mar 2019 18:02:49 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-25-postgres/</guid>
-      <description>Setting up a password for the postgres role By default, local connections to PostgreSQL use the peer authentication sys- tem. That means that instead of asking for a password, they check to see if we are currently logged into a user (a linux user) that matches a user name in Postgres. We are going to change the way we do authentication and instead tell Postgres to use an encrypted password, but first we need to actually set a password for the postgres user.</description>
     </item>
     
     <item>
@@ -446,15 +455,6 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
       
       <guid>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</guid>
       <description>func main() { port := 8080 cathandler := http.FileServer(http.Dir(&amp;quot;./images&amp;quot;)) // images/... http.Handle(&amp;quot;/cat/&amp;quot;, http.StripPrefix(&amp;quot;/cat/&amp;quot;, cathandler)) // images/cat/... http.Handle(&amp;quot;/cat/&amp;quot;, cathandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) }  </description>
-    </item>
-    
-    <item>
-      <title>Reading and writing JSON</title>
-      <link>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</link>
-      <pubDate>Sat, 12 Jan 2019 15:43:17 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-12-reading-and-writing-json/</guid>
-      <description>Writing JSON func main() { port := 8080 http.HandleFunc(&amp;quot;/&amp;quot;, helloWorldHandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) } type HelloWorldResponse struct { // change the output field to be &amp;quot;message&amp;quot; Message string `json:&amp;quot;message&amp;quot;` // do not output this field Author string `json:&amp;quot;-&amp;quot;` // do not output the field if the value is empty Date string `json:&amp;quot;,omitempty&amp;quot;` // convert output to a string and rename &amp;quot;id&amp;quot; Id int `json:&amp;quot;id, string&amp;quot;` } func helloWorldHandler(w http.</description>
     </item>
     
     <item>
