@@ -6,8 +6,118 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Standard Package Layout</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-08-standard-package-layout/</link>
+            <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-08-standard-package-layout/</guid>
+            <description>myapp/ cmd/ server/ main.go /internal http/ middleware.go middleware_test.go route.go server.go userhandler.go psql/ psql.go userrepository.go service/ userservice/ userservice.go userservice_test.go # Domain types models.go  Domain types Your application has a logical, high-level language that describes how data and processes interact. This is your domain. If you have an e-commerce application your domain involves things like customers, accounts, charging credit cards, and handling inventory. If you’re Facebook then your domain is users, likes, &amp;amp; relationships.</description>
+            <content type="html"><![CDATA[
+
+<pre><code>myapp/
+	cmd/
+		server/
+      main.go
+  /internal
+    http/
+      middleware.go
+      middleware_test.go
+      route.go
+      server.go
+      userhandler.go
+    psql/
+      psql.go
+      userrepository.go
+    service/
+      userservice/
+        userservice.go
+        userservice_test.go
+  # Domain types
+	models.go
+</code></pre>
+
+<h2 id="domain-types">Domain types</h2>
+
+<p>Your application has a logical, high-level language that describes how data and processes interact. This is your domain. If you have an e-commerce application your domain involves things like customers, accounts, charging credit cards, and handling inventory. If you’re Facebook then your domain is users, likes, &amp; relationships. It’s the stuff that doesn’t depend on your underlying technology.</p>
+
+<h2 id="cmd">/cmd</h2>
+
+<p>Main applications for this project.</p>
+
+<p>The directory name for each application should match the name of the executable you want to have (e.g., <code>/cmd/myapp</code>).</p>
+
+<p>Don&rsquo;t put a lot of code in the application directory. If you think the code can be imported and used in other projects, then it should live in the /pkg directory. If the code is not reusable or if you don&rsquo;t want others to reuse it, put that code in the <code>/internal</code> directory. You&rsquo;ll be surprised what others will do, so be explicit about your intentions!</p>
+
+<p>It&rsquo;s common to have a small <code>main</code> function that imports and invokes the code from the <code>/internal</code> and <code>/pkg</code> directories and nothing else.</p>
+
+<p>See the <code>/cmd</code> directory for examples.</p>
+
+<h2 id="internal">/internal</h2>
+
+<p>Private application and library code. This is the code you don&rsquo;t want others importing in their applications or libraries.</p>
+
+<p>You can optionally add a bit of extra structure to your internal packages to separate your shared and non-shared internal code. It&rsquo;s not required, but it&rsquo;s nice to have visual clues showing the intended package use. Your actual application code can go in the <code>/internal/app</code> directory (e.g., <code>/internal/app/myapp</code>) and the code shared by those apps in the <code>/internal/pkg</code> directory (e.g., <code>/internal/pkg/myprivlib</code>).</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Password Hashing</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-07-password-hashing/</link>
+            <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-07-password-hashing/</guid>
+            <description>This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:
+$ go get golang.org/x/crypto/bcrypt  From now on, every application we write will be able to make use of this library.
+// passwords.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;golang.org/x/crypto/bcrypt&amp;quot; ) func HashPassword(password string) (string, error) { bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14) return string(bytes), err } func CheckPasswordHash(password, hash string) bool { err := bcrypt.</description>
+            <content type="html"><![CDATA[<p>This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:</p>
+
+<pre><code>$ go get golang.org/x/crypto/bcrypt
+</code></pre>
+
+<p>From now on, every application we write will be able to make use of this library.</p>
+
+<pre><code class="language-go">// passwords.go
+package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;golang.org/x/crypto/bcrypt&quot;
+)
+
+func HashPassword(password string) (string, error) {
+	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
+	return string(bytes), err
+}
+
+func CheckPasswordHash(password, hash string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err == nil
+}
+
+func main() {
+	password := &quot;secret&quot;
+	hash, _ := HashPassword(password) // ignore error for the sake of simplicity
+
+	fmt.Println(&quot;Password:&quot;, password)
+	fmt.Println(&quot;Hash:    &quot;, hash)
+
+	match := CheckPasswordHash(password, hash)
+	fmt.Println(&quot;Match:   &quot;, match)
+}
+</code></pre>
+
+<pre><code class="language-bash">$ go run passwords.go
+Password: secret
+Hash:     $2a$14$ajq8Q7fbtFRQvXpdCq7Jcuy.Rx1h/L4J60Otx.gyNLbAYctGMJ9tK
+Match:    true
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Go Memory Layout</title>

@@ -7,17 +7,17 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="How memory works internally When you have a struct like this one:
-type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
-But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes." />
+    content="This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:
+$ go get golang.org/x/crypto/bcrypt  From now on, every application we write will be able to make use of this library.
+// passwords.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;golang.org/x/crypto/bcrypt&amp;quot; ) func HashPassword(password string) (string, error) { bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14) return string(bytes), err } func CheckPasswordHash(password, hash string) bool { err := bcrypt." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-07-password-hashing/" />
 
 
 <title>
     
-    Go Memory Layout :: YING ZHEN LI 
+    Password Hashing :: YING ZHEN LI 
     
 </title>
 
@@ -39,15 +39,15 @@ But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="Go Memory Layout">
-<meta itemprop="description" content="How memory works internally When you have a struct like this one:
-type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
-But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes.">
+<meta itemprop="name" content="Password Hashing">
+<meta itemprop="description" content="This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:
+$ go get golang.org/x/crypto/bcrypt  From now on, every application we write will be able to make use of this library.
+// passwords.go package main import ( &quot;fmt&quot; &quot;golang.org/x/crypto/bcrypt&quot; ) func HashPassword(password string) (string, error) { bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14) return string(bytes), err } func CheckPasswordHash(password, hash string) bool { err := bcrypt.">
 
 
-<meta itemprop="datePublished" content="2019-05-06T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-05-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="152">
+<meta itemprop="datePublished" content="2019-05-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-05-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="123">
 
 
 
@@ -55,15 +55,15 @@ But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="Go Memory Layout"/>
-<meta name="twitter:description" content="How memory works internally When you have a struct like this one:
-type myStruct struct { myInt bool // 1 byte myFloat float64 // 8 bytes myBool int32 // 4 bytes }  As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.
-But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &#43; 8 &#43; 4 = 13 bytes."/>
+<meta name="twitter:title" content="Password Hashing"/>
+<meta name="twitter:description" content="This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:
+$ go get golang.org/x/crypto/bcrypt  From now on, every application we write will be able to make use of this library.
+// passwords.go package main import ( &quot;fmt&quot; &quot;golang.org/x/crypto/bcrypt&quot; ) func HashPassword(password string) (string, error) { bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14) return string(bytes), err } func CheckPasswordHash(password, hash string) bool { err := bcrypt."/>
 
 
 
 
-<meta property="article:published_time" content="2019-05-06 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-05-07 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -127,55 +127,54 @@ But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 &
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/">Go Memory Layout</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-05-07-password-hashing/">Password Hashing</a></h1>
 
             
 
             <div class="post-content">
-                
+                <p>This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:</p>
 
-<h2 id="how-memory-works-internally">How memory works internally</h2>
+<pre><code>$ go get golang.org/x/crypto/bcrypt
+</code></pre>
 
-<p>When you have a struct like this one:</p>
+<p>From now on, every application we write will be able to make use of this library.</p>
 
-<pre><code class="language-go">type myStruct struct {
- 	myInt   bool    // 1 byte
-	myFloat float64 // 8 bytes
-	myBool  int32   // 4 bytes
+<pre><code class="language-go">// passwords.go
+package main
+
+import (
+	&quot;fmt&quot;
+
+	&quot;golang.org/x/crypto/bcrypt&quot;
+)
+
+func HashPassword(password string) (string, error) {
+	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
+	return string(bytes), err
+}
+
+func CheckPasswordHash(password, hash string) bool {
+	err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+	return err == nil
+}
+
+func main() {
+	password := &quot;secret&quot;
+	hash, _ := HashPassword(password) // ignore error for the sake of simplicity
+
+	fmt.Println(&quot;Password:&quot;, password)
+	fmt.Println(&quot;Hash:    &quot;, hash)
+
+	match := CheckPasswordHash(password, hash)
+	fmt.Println(&quot;Match:   &quot;, match)
 }
 </code></pre>
 
-<p>As you see a boolean takes 1 byte, a float64 8 bytes, and an int32 4 bytes.</p>
-
-<p>But the memory allocates consecutive packet of 8 bytes. So instead of taking 1 + 8 + 4 = 13 bytes. This struct will takes : 24 bytes</p>
-
-<pre><code class="language-go">a := myStruct{}
-fmt.Println(unsafe.Sizeof(a)) // 24 bytes
+<pre><code class="language-bash">$ go run passwords.go
+Password: secret
+Hash:     $2a$14$ajq8Q7fbtFRQvXpdCq7Jcuy.Rx1h/L4J60Otx.gyNLbAYctGMJ9tK
+Match:    true
 </code></pre>
-
-<p>How to optimize :
-It’s possible to optimize, ordering the struct by bytes taken:</p>
-
-<pre><code class="language-go">type myStructOptimized struct {
- 	myFloat float64 // 8 bytes
-	myInt   int32   // 4 bytes
-	myBool  bool    // 1 byte
-}
-</code></pre>
-
-<p><img src="https://cdn-images-1.medium.com/max/800/1*Zd0nkKfQcIzg6XUPDUBsEg.png" alt="" /></p>
-
-<p>This new struct ordered will take now:</p>
-
-<pre><code class="language-go">b := myStructOptimized{}
-fmt.Println(unsafe.Sizeof(b)) // ordered 16 bytes
-</code></pre>
-
-<p>16 bytes, because in memory it will be allocated like that (<a href="https://play.golang.org/p/gmkrt6X7aM">https://play.golang.org/p/gmkrt6X7aM</a>) :</p>
-
-<p><img src="https://cdn-images-1.medium.com/max/800/1*wQvQILr8fAJqnWZ07kpmlA.png" alt="" /></p>
-
-<p>8 + 8 = 16 bytes</p>
 
             </div>
         </article>
@@ -187,9 +186,9 @@ fmt.Println(unsafe.Sizeof(b)) // ordered 16 bytes
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>152 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>123 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-06 02:00 &#43;0200</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-05-07 02:00 &#43;0200</p>
         </div>
 
         
@@ -202,17 +201,17 @@ fmt.Println(unsafe.Sizeof(b)) // ordered 16 bytes
                 <div class="pagination__buttons">
                     
                         <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-05-07-password-hashing/">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-08-standard-package-layout/">
                                 <span class="button__icon">←</span>
-                                <span class="button__text">Password Hashing</span>
+                                <span class="button__text">Standard Package Layout</span>
                             </a>
                         </span>
                     
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-05-05-go-escape-analysis/">
-                                <span class="button__text">Go Escape Analysis</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-05-06-go-memory-layout/">
+                                <span class="button__text">Go Memory Layout</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

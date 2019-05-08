@@ -6,10 +6,30 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Standard Package Layout</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-08-standard-package-layout/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-08-standard-package-layout/</guid>
+      <description>myapp/ cmd/ server/ main.go /internal http/ middleware.go middleware_test.go route.go server.go userhandler.go psql/ psql.go userrepository.go service/ userservice/ userservice.go userservice_test.go # Domain types models.go  Domain types Your application has a logical, high-level language that describes how data and processes interact. This is your domain. If you have an e-commerce application your domain involves things like customers, accounts, charging credit cards, and handling inventory. If you’re Facebook then your domain is users, likes, &amp;amp; relationships.</description>
+    </item>
+    
+    <item>
+      <title>Password Hashing</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-07-password-hashing/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-07-password-hashing/</guid>
+      <description>This example will show how to hash passwords using bcrypt. For this we have to go get the golang bcrypt library like so:
+$ go get golang.org/x/crypto/bcrypt  From now on, every application we write will be able to make use of this library.
+// passwords.go package main import ( &amp;quot;fmt&amp;quot; &amp;quot;golang.org/x/crypto/bcrypt&amp;quot; ) func HashPassword(password string) (string, error) { bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14) return string(bytes), err } func CheckPasswordHash(password, hash string) bool { err := bcrypt.</description>
+    </item>
     
     <item>
       <title>Go Memory Layout</title>
