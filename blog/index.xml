@@ -6,8 +6,356 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Build a Web Crawler in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-11-build-a-web-crawler-in-go/</link>
+            <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-11-build-a-web-crawler-in-go/</guid>
+            <description>package main import ( &amp;quot;crypto/tls&amp;quot; &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;net/url&amp;quot; &amp;quot;os&amp;quot; &amp;quot;github.com/jackdanger/collectlinks&amp;quot; ) var visited = make(map[string]bool) func main() { // Parses the command-line flags. flag.Parse() args := flag.Args() fmt.Println(args) if len(args) &amp;lt; 1 { fmt.Println(&amp;quot;Please specify start page&amp;quot;) os.Exit(1) } queue := make(chan string) go func() { queue &amp;lt;- args[0] }() for uri := range queue { enqueue(uri, queue) } } func enqueue(uri string, queue chan string) { fmt.Println(&amp;quot;fetching&amp;quot;, uri) visited[uri] = true transport := &amp;amp;http.</description>
+            <content type="html"><![CDATA[<pre><code class="language-go">package main
+
+import (
+	&quot;crypto/tls&quot;
+	&quot;flag&quot;
+	&quot;fmt&quot;
+	&quot;net/http&quot;
+	&quot;net/url&quot;
+	&quot;os&quot;
+
+	&quot;github.com/jackdanger/collectlinks&quot;
+)
+
+var visited = make(map[string]bool)
+
+func main() {
+	// Parses the command-line flags.
+	flag.Parse()
+
+	args := flag.Args()
+	fmt.Println(args)
+	if len(args) &lt; 1 {
+		fmt.Println(&quot;Please specify start page&quot;)
+		os.Exit(1)
+	}
+
+	queue := make(chan string)
+
+	go func() { queue &lt;- args[0] }()
+
+	for uri := range queue {
+		enqueue(uri, queue)
+	}
+}
+
+func enqueue(uri string, queue chan string) {
+	fmt.Println(&quot;fetching&quot;, uri)
+	visited[uri] = true
+	transport := &amp;http.Transport{
+		TLSClientConfig: &amp;tls.Config{
+			InsecureSkipVerify: true,
+		},
+	}
+	client := http.Client{Transport: transport}
+	resp, err := client.Get(uri)
+	if err != nil {
+		return
+	}
+	defer resp.Body.Close()
+
+	links := collectlinks.All(resp.Body)
+
+	for _, link := range links {
+		absolute := fixUrl(link, uri)
+		if uri != &quot;&quot; {
+			if !visited[absolute] {
+				go func() { queue &lt;- absolute }()
+			}
+		}
+	}
+}
+
+func fixUrl(href, base string) string {
+	uri, err := url.Parse(href)
+	if err != nil {
+		return &quot;&quot;
+	}
+	baseUrl, err := url.Parse(base)
+	if err != nil {
+		return &quot;&quot;
+	}
+	uri = baseUrl.ResolveReference(uri)
+	return uri.String()
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Functional options</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-10-functional-options/</link>
+            <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-10-functional-options/</guid>
+            <description>Here&amp;rsquo;s the simplest example showing how to do functional options in Golang.
+They&amp;rsquo;re a great way to enable users to set options and ease adding new options later.
+package main import ( &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; ) // This is your function used by users to set options. func Host(host string) func(*Server) { return func(s *Server) { s.Host = host } } // This is another function used by users to set options.</description>
+            <content type="html"><![CDATA[<p>Here&rsquo;s the simplest example showing how to do functional options in Golang.</p>
+
+<p>They&rsquo;re a great way to enable users to set options and ease adding new options later.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;flag&quot;
+	&quot;fmt&quot;
+)
+
+// This is your function used by users to set options.
+func Host(host string) func(*Server) {
+	return func(s *Server) {
+		s.Host = host
+	}
+}
+
+// This is another function used by users to set options.
+func Port(port int) func(*Server) {
+	return func(s *Server) {
+		s.Port = port
+	}
+}
+
+// This is the type whose options you're enabling users to set.
+type Server struct {
+	Host string
+	Port int
+}
+
+// This is your creator function that accepts a list of option functions.
+func NewServer(opts ...func(*Server)) *Server {
+	s := &amp;Server{}
+
+	// call option functions on instance to set options on it
+	for _, opt := range opts {
+		opt(s)
+	}
+
+	return s
+}
+
+func main() {
+	var host = flag.String(&quot;host&quot;, &quot;127.0.0.1&quot;, &quot;host&quot;)
+	var port = flag.Int(&quot;port&quot;, 8000, &quot;port&quot;)
+	flag.Parse()
+
+	// This is how your user sets the options.
+	s := NewServer(
+		Host(*host),
+		Port(*port),
+	)
+
+	fmt.Printf(&quot;server host: %s, port: %d&quot;, s.Host, s.Port)
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Data races in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-09-data-races-in-go/</link>
+            <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-09-data-races-in-go/</guid>
+            <description>Go is known for how easy it is to build concurrent programs in it. But, with all this concurrency, comes the possibility of the dreaded data race — one of the hardest bugs to debug if you’re ever unfortunate enough to encounter it in your code.
+In this post, we will go through a sample program that causes a data race, and detect the race condition with the race detector tool.</description>
+            <content type="html"><![CDATA[
+
+<p>Go is known for how easy it is to build concurrent programs in it. But, with all this concurrency, comes the possibility of the dreaded data race — one of the hardest bugs to debug if you’re ever unfortunate enough to encounter it in your code.</p>
+
+<p>In this post, we will go through a sample program that causes a data race, and detect the race condition with the <a href="https://golang.org/doc/articles/race_detector.html">race detector</a> tool. We will then look at some of the methods to get around and solve the race condition, while still keeping the core logic of our code intact.</p>
+
+<h2 id="the-data-race">The data race</h2>
+
+<p>Rather than explaining what a data race is, let’s look at a sample piece of code:</p>
+
+<pre><code class="language-go">func main() {
+	fmt.Println(getNumber())
+}
+
+func getNumber() int {
+	var i int
+	go func() {
+		i = 5
+	}()
+
+	return i
+}
+</code></pre>
+
+<p><a href="https://play.golang.org/p/TvaREY1QDFx">Try it here</a></p>
+
+<p>Here, we can see that the <code>getNumber</code> function is setting the value of <code>i</code> in a separate goroutine. We are also returning i from the function without any knowledge of whether our goroutine has completed or not. So now, there are two operations that are taking place:</p>
+
+<p>The value of <code>i</code> is being set to <code>5</code>
+The value of <code>i</code> is being returned from the function
+Now depending on which of these two operations completes first, our value printed will be either <code>0</code> (the default integer value) or <code>5</code>.</p>
+
+<p>This is why it’s called a data race : the value returned from <code>getNumber</code> changes depending on which of the operations <code>1</code> or <code>2</code> finish first.</p>
+
+<p><img src="https://www.sohamkamani.com/datarace1-f381f099898b2cd7389019a427e53da8.svg" alt="" /></p>
+
+<p>👆 Data race with read finishing first</p>
+
+<p><img src="https://www.sohamkamani.com/datarace2-19c7b8cc43a260dd7f476365d276455d.svg" alt="" /></p>
+
+<p>👆 Data race with write finishing first</p>
+
+<p>As you can imagine, its horrible having to test and use code which acts differently every single time you call it, and this is why data races pose such a huge problem.</p>
+
+<h2 id="detecting-a-data-race">Detecting a data race</h2>
+
+<p>The code we went through is a highly simplified example of a data race in action. In larger applications, a data race is much harder to detect on your own. Fortunately for us, Go (as of v1.1) has an inbuilt data race detector that we can use to pin point potential data race conditions.</p>
+
+<p>Using it is as simple as adding a <code>-race</code> flag to your normal Go command line tools.</p>
+
+<p>For example, let’s try to run the program we just wrote by using the <code>-race</code> flag:</p>
+
+<pre><code>go run -race main.go
+</code></pre>
+
+<p>This is what I got as the output:</p>
+
+<pre><code>0
+==================
+WARNING: DATA RACE
+Write at 0x00c420086008 by goroutine 6:
+  main.getNumber.func1()
+      /Users/soham/go/src/tmp/main.go:15 +0x3b
+
+Previous read at 0x00c420086008 by main goroutine:
+  main.getNumber()
+      /Users/soham/go/src/tmp/main.go:17 +0x8e
+  main.main()
+      /Users/soham/go/src/tmp/main.go:9 +0x33
+
+Goroutine 6 (running) created at:
+  main.getNumber()
+      /Users/soham/go/src/tmp/main.go:14 +0x7d
+  main.main()
+      /Users/soham/go/src/tmp/main.go:9 +0x33
+==================
+Found 1 data race(s)
+exit status 66
+</code></pre>
+
+<p>The first <code>0</code> is the printed result (so we now know that operation 2 finished first). The next few lines give us information about the data race that was detected in out code. (The line numbers may not correspond to the sample code above since the actual code will have imports and package declarations)</p>
+
+<p>We can see that the information about our data race is divided into three sections:</p>
+
+<ol>
+<li>The first section tells us that there was an attempted write inside a goroutine that we created (which is where we assign the value <code>5</code> to <code>i</code>)</li>
+<li>The next section tells us that was a simultaneous read by the main goroutine, which in our code, traces through the return statement and the print statement.</li>
+<li>The third section describes where the goroutine that caused (1) was created.
+So, just by adding a <code>-race</code> flag, the <code>go run</code> command has explained exactly what I explained in the previous section about the data race.</li>
+</ol>
+
+<p>The <code>-race</code> flag can also be added to the <code>go build</code> and <code>go test</code> commands.</p>
+
+<p>It’s so easy to detect a potential race condition in Go, that I can’t think of any reason not to include the <code>-race</code> flag when building your Go application. The benefits far outweigh the costs(if there even are any) and can contribute to a much more robust application.</p>
+
+<h2 id="fixing-data-races">Fixing data races</h2>
+
+<p>Once you finally find that annoying data race, you’ll be glad to know that Go offers many options to fix it. All of these solutions help to ensure that access to the variable in question is blocked if we are writing to it.</p>
+
+<h3 id="blocking-with-waitgroups">Blocking with waitgroups</h3>
+
+<p>The most straightforward way of solving a data race, is to block read access until the write operation has been completed:</p>
+
+<pre><code class="language-go">func getNumber() int {
+	var i int
+	// Initialize a waitgroup variable
+	var wg sync.WaitGroup
+	// `Add(1) signifies that there is 1 task that we need to wait for
+	wg.Add(1)
+	go func() {
+		i = 5
+		// Calling `wg.Done` indicates that we are done with the task we are waiting fo
+		wg.Done()
+	}()
+	// `wg.Wait` blocks until `wg.Done` is called the same number of times
+	// as the amount of tasks we have (in this case, 1 time)
+	wg.Wait()
+	return i
+}
+</code></pre>
+
+<p><a href="https://play.golang.org/p/RHbGQOI3cUv">Try it here</a></p>
+
+<p><img src="https://www.sohamkamani.com/wg-8a9641c4bfb1f4c169ea91891b4d0e27.svg" alt="" /></p>
+
+<h3 id="blocking-with-channels">Blocking with channels</h3>
+
+<p>This method is similar in principle to the last one, except we use channels instead of waitgroups:</p>
+
+<pre><code class="language-go">func getNumber() int {
+	var i int
+	// Create a channel to push an empty struct to once we're done
+	done := make(chan struct{})
+	go func() {
+		i = 5
+		// Push an empty struct once we're done
+		done &lt;- struct{}{}
+	}()
+	// This statement blocks until something gets pushed into the `done` channel
+	&lt;-done
+	return i
+}
+</code></pre>
+
+<p><a href="https://play.golang.org/p/oSnM7_7gI3X">Try it here</a></p>
+
+<p><img src="https://www.sohamkamani.com/blockchannel-80dcff0c671bc778b54340aceefae777.svg" alt="" /></p>
+
+<p>Blocking inside the <code>getNumber</code> function, although simple, would get troublesome if we want to call the function repeatedly. The next method follows a more flexible approach towards blocking.</p>
+
+<h3 id="returning-a-channel">Returning a channel</h3>
+
+<p>Instead of using channels to block the function, we could return a channel through which we push our result, once we have it. Unlike the previous two methods, this method does not do any blocking on its own. Instead it leaves the decision of blocking up to the calling code.</p>
+
+<pre><code class="language-go">// return an integer channel instead of an integer
+func getNumberChan() &lt;-chan int {
+	// create the channel
+	c := make(chan int)
+	go func() {
+		// push the result into the channel
+		c &lt;- 5
+	}()
+	// immediately return the channel
+	return c
+}
+</code></pre>
+
+<p>Then, you can get the result from the channel in the calling code:</p>
+
+<pre><code class="language-go">func main() {
+	// The code is blocked until something gets pushed into the returned channel
+	// As opposed to the previous method, we block in the main function, instead
+	// of the function itself
+	i := &lt;-getNumberChan()
+	fmt.Println(i)
+}
+</code></pre>
+
+<p><a href="https://play.golang.org/p/POYn3UalH3e">Try it here</a></p>
+
+<p><img src="https://www.sohamkamani.com/returnchannel-3b129c89d38b8c17bdbd2b2939b20b19.svg" alt="" /></p>
+
+<p>This approach is more flexible because it allows higher level functions to decide their own blocking and concurrency mechanisms, instead of treating the getNumber function as synchronous.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Standard Package Layout</title>

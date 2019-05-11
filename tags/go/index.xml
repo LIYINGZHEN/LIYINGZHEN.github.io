@@ -6,10 +6,40 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Build a Web Crawler in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-11-build-a-web-crawler-in-go/</link>
+      <pubDate>Sat, 11 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-11-build-a-web-crawler-in-go/</guid>
+      <description>package main import ( &amp;quot;crypto/tls&amp;quot; &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;net/url&amp;quot; &amp;quot;os&amp;quot; &amp;quot;github.com/jackdanger/collectlinks&amp;quot; ) var visited = make(map[string]bool) func main() { // Parses the command-line flags. flag.Parse() args := flag.Args() fmt.Println(args) if len(args) &amp;lt; 1 { fmt.Println(&amp;quot;Please specify start page&amp;quot;) os.Exit(1) } queue := make(chan string) go func() { queue &amp;lt;- args[0] }() for uri := range queue { enqueue(uri, queue) } } func enqueue(uri string, queue chan string) { fmt.Println(&amp;quot;fetching&amp;quot;, uri) visited[uri] = true transport := &amp;amp;http.</description>
+    </item>
+    
+    <item>
+      <title>Functional options</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-10-functional-options/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-10-functional-options/</guid>
+      <description>Here&amp;rsquo;s the simplest example showing how to do functional options in Golang.
+They&amp;rsquo;re a great way to enable users to set options and ease adding new options later.
+package main import ( &amp;quot;flag&amp;quot; &amp;quot;fmt&amp;quot; ) // This is your function used by users to set options. func Host(host string) func(*Server) { return func(s *Server) { s.Host = host } } // This is another function used by users to set options.</description>
+    </item>
+    
+    <item>
+      <title>Data races in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-09-data-races-in-go/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-09-data-races-in-go/</guid>
+      <description>Go is known for how easy it is to build concurrent programs in it. But, with all this concurrency, comes the possibility of the dreaded data race — one of the hardest bugs to debug if you’re ever unfortunate enough to encounter it in your code.
+In this post, we will go through a sample program that causes a data race, and detect the race condition with the race detector tool.</description>
+    </item>
     
     <item>
       <title>Standard Package Layout</title>
