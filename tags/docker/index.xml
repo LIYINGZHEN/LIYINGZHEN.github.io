@@ -6,10 +6,32 @@
     <description>Recent content in Docker on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2019 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Cheat Sheet</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</guid>
+      <description>Docker Container List all containers
+docker ps -a # include stopped -q # only returns the container IDs  Run a shell inside an existing container
+docker exec -it # connect the container to terminal &amp;lt;container&amp;gt; &amp;lt;command&amp;gt; # bin/sh, bin/bash  Starting a stopped container
+docker start &amp;lt;container&amp;gt;  Print a container’s logs docker logs -f # tail -t # timestamps &amp;lt;container&amp;gt;  Restarting a stopped container
+docker restart &amp;lt;container&amp;gt;  Getting additional information about a container</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose Cheat Sheet</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</guid>
+      <description>docker-compose.yml version: &amp;quot;3&amp;quot; services: voting-app: build: ./voting-app/. # bind mount volumes: - ./voting-app:/app ports: - &amp;quot;5000:80&amp;quot; links: - redis networks: - front-tier - back-tier result-app: build: ./result-app/. # bind mount volumes: - ./result-app:/app ports: - &amp;quot;5001:80&amp;quot; links: - db networks: - front-tier - back-tier worker: build: ./worker links: - db - redis networks: - back-tier redis: image: redis ports: [&amp;quot;6379&amp;quot;] networks: - back-tier db: image: postgres:9.4 # docker volume volumes: - &amp;quot;db-data:/var/lib/postgresql/data&amp;quot; networks: - back-tier volumes: db-data: networks: front-tier: driver: bridge back-tier: driver: bridge  Commands docker-compose -f &amp;lt;docker-compose.</description>
+    </item>
     
     <item>
       <title>Docker</title>

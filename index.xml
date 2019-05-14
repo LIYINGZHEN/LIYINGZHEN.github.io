@@ -6,10 +6,51 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker Cheat Sheet</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</guid>
+      <description>Docker Container List all containers
+docker ps -a # include stopped -q # only returns the container IDs  Run a shell inside an existing container
+docker exec -it # connect the container to terminal &amp;lt;container&amp;gt; &amp;lt;command&amp;gt; # bin/sh, bin/bash  Starting a stopped container
+docker start &amp;lt;container&amp;gt;  Print a container’s logs docker logs -f # tail -t # timestamps &amp;lt;container&amp;gt;  Restarting a stopped container
+docker restart &amp;lt;container&amp;gt;  Getting additional information about a container</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose Cheat Sheet</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</guid>
+      <description>docker-compose.yml version: &amp;quot;3&amp;quot; services: voting-app: build: ./voting-app/. # bind mount volumes: - ./voting-app:/app ports: - &amp;quot;5000:80&amp;quot; links: - redis networks: - front-tier - back-tier result-app: build: ./result-app/. # bind mount volumes: - ./result-app:/app ports: - &amp;quot;5001:80&amp;quot; links: - db networks: - front-tier - back-tier worker: build: ./worker links: - db - redis networks: - back-tier redis: image: redis ports: [&amp;quot;6379&amp;quot;] networks: - back-tier db: image: postgres:9.4 # docker volume volumes: - &amp;quot;db-data:/var/lib/postgresql/data&amp;quot; networks: - back-tier volumes: db-data: networks: front-tier: driver: bridge back-tier: driver: bridge  Commands docker-compose -f &amp;lt;docker-compose.</description>
+    </item>
+    
+    <item>
+      <title>Vagrant in Action</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</guid>
+      <description> Vagrant is a tool for building and managing virtual machine environments in a single workflow.
+Boxes Vagrant.configure(&amp;quot;2&amp;quot;) do |config| config.vm.box = &amp;quot;centos/7&amp;quot; end # automatically install software config.vm.provision &amp;quot;shell&amp;quot;, privileged: true, path: &amp;quot;./setup.sh&amp;quot;  Up And SSH vagrant up vagrant ssh  </description>
+    </item>
+    
+    <item>
+      <title>Atomic Counters</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</guid>
+      <description>Program with the the race condition package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 for i := 0; i &amp;lt; 10000; i++ { go func() { ops = ops + 1 }() } time.Sleep(time.Second) fmt.Println(&amp;quot;ops:&amp;quot;, ops) }  ops: 9742  Solving the race condition using Mutex package main import ( &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 var m sync.Mutex for i := 0; i &amp;lt; 10000; i++ { go func() { m.</description>
+    </item>
     
     <item>
       <title>Build a Web Crawler in Go</title>

@@ -6,8 +6,498 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Docker Cheat Sheet</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</link>
+            <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-cheat-sheet/</guid>
+            <description>Docker Container List all containers
+docker ps -a # include stopped -q # only returns the container IDs  Run a shell inside an existing container
+docker exec -it # connect the container to terminal &amp;lt;container&amp;gt; &amp;lt;command&amp;gt; # bin/sh, bin/bash  Starting a stopped container
+docker start &amp;lt;container&amp;gt;  Print a container’s logs docker logs -f # tail -t # timestamps &amp;lt;container&amp;gt;  Restarting a stopped container
+docker restart &amp;lt;container&amp;gt;  Getting additional information about a container</description>
+            <content type="html"><![CDATA[
+
+<h2 id="docker-container">Docker Container</h2>
+
+<p><strong>List all containers</strong></p>
+
+<pre><code class="language-bash">docker ps
+  -a      # include stopped
+  -q      # only returns the container IDs
+</code></pre>
+
+<p><strong>Run a shell inside an existing container</strong></p>
+
+<pre><code class="language-bash">docker exec
+  -it         # connect the container to terminal
+  &lt;container&gt;
+  &lt;command&gt;   # bin/sh, bin/bash
+</code></pre>
+
+<p><strong>Starting a stopped container</strong></p>
+
+<pre><code class="language-bash">docker start &lt;container&gt;
+</code></pre>
+
+<h1 id="print-a-container-s-logs">Print a container’s logs</h1>
+
+<pre><code class="language-bash">docker logs
+  -f               # tail
+  -t               # timestamps
+  &lt;container&gt;
+</code></pre>
+
+<p><strong>Restarting a stopped container</strong></p>
+
+<pre><code class="language-bash">docker restart &lt;container&gt;
+</code></pre>
+
+<p><strong>Getting additional information about a container</strong></p>
+
+<pre><code class="language-bash">docker inspect
+  -f '{{ .NetworkSettings.IPAddress }}'   # selectively query.
+  &lt;container&gt;
+</code></pre>
+
+<p><strong>Stop the running Docker container</strong></p>
+
+<pre><code class="language-bash">docker stop &lt;container&gt;
+</code></pre>
+
+<p><strong>Remove exited containers</strong></p>
+
+<pre><code class="language-bash">docker rm -f $(docker container ls -f &quot;status=exited&quot; -q)
+</code></pre>
+
+<p><strong>Remove all containers</strong></p>
+
+<pre><code class="language-bash">docker rm -f $(docker ps -aq)
+</code></pre>
+
+<p><strong>Show the history of an image</strong></p>
+
+<pre><code class="language-bash">docker history &lt;container-id&gt;
+</code></pre>
+
+<p><strong>Stop a running container through SIGKILL</strong></p>
+
+<pre><code class="language-bash">docker kill web
+</code></pre>
+
+<h2 id="docker-image">Docker Image</h2>
+
+<p><strong>Build a image</strong></p>
+
+<pre><code class="language-bash">docker build
+  -t &lt;image-name&gt;:&lt;tag&gt; # name docker image
+  --no-cache            # do not use cache
+  .
+</code></pre>
+
+<p><strong>Run an image</strong></p>
+
+<pre><code class="language-bash">docker run
+  -v &lt;source&gt;:&lt;destination&gt; # create a volume in our container from a directory on the host
+  --net=&lt;NETWORK&gt;           # Creating a container inside a Docker network
+  --volumes-from            #
+  -it                       # connect the container to terminal
+  --name &lt;name&gt;             # name the containe
+  -e NAME=Sam               # environment variable
+  -p 5000:80                # expose port 5000 externally and map to port 80
+  -d                        # run in the background
+  --rm                      # remove container automatically after it exits
+  --restart=always          #
+  --link &lt;container-name&gt;   #
+  &lt;image&gt;:&lt;tag&gt;
+</code></pre>
+
+<p><strong>Debug an image</strong></p>
+
+<pre><code class="language-bash">docker run -it &lt;image&gt; /bin/bash
+</code></pre>
+
+<p><strong>List images</strong></p>
+
+<pre><code class="language-bash">docker images ls
+</code></pre>
+
+<p><strong>Remove an image</strong></p>
+
+<pre><code class="language-bash">docker rmi &lt;image-name&gt;
+</code></pre>
+
+<p><strong>Remove all images</strong></p>
+
+<pre><code class="language-bash">sudo docker rmi `docker images -a -q`
+</code></pre>
+
+<p><strong>Pulling a image</strong></p>
+
+<pre><code class="language-bash">docker pull &lt;dockerhub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
+</code></pre>
+
+<p><strong>Pushing a image to DockerHub</strong></p>
+
+<pre><code class="language-bash">docker push &lt;dockerhub-id&gt;/&lt;image-name&gt;:&lt;version&gt;
+</code></pre>
+
+<h2 id="docker-network">Docker Network</h2>
+
+<p><strong>List the networks</strong></p>
+
+<pre><code class="language-bash">docker network ls
+</code></pre>
+
+<p><strong>Creating a Docker network</strong></p>
+
+<pre><code class="language-bash">docker network create
+  -d &lt;driver&gt;         #
+  &lt;newwork&gt;
+</code></pre>
+
+<p><strong>Inspect the network</strong></p>
+
+<pre><code class="language-bash">docker network inspect &lt;newwork&gt;
+</code></pre>
+
+<p><strong>Adding a new container to the network</strong></p>
+
+<pre><code class="language-bash">docker network connect &lt;newwork&gt; &lt;container&gt;
+</code></pre>
+
+<p><strong>Disconnecting a host from a network</strong></p>
+
+<pre><code class="language-bash">docker network disconnect &lt;newwork&gt; &lt;container&gt;
+</code></pre>
+
+<h2 id="docker-volume">Docker Volume</h2>
+
+<p><strong>List volumes</strong></p>
+
+<pre><code class="language-bash">docker volume ls
+</code></pre>
+
+<p><strong>Remove volume</strong></p>
+
+<pre><code>docker volume rm &lt;volume&gt;
+</code></pre>
+
+<p><strong>Volumes Detail</strong></p>
+
+<pre><code class="language-bash">docker volume inspect &lt;volume&gt;
+</code></pre>
+
+<p><strong>Remove unused volumes using docker volume prune</strong></p>
+
+<pre><code class="language-bash">docker volume prune
+</code></pre>
+
+<h2 id="dockerfile">Dockerfile</h2>
+
+<pre><code class="language-yaml"># Sets the Base Image for subsequent instructions.
+FROM
+
+# Apply key/value metadata to your images, containers, or daemons.
+LABEL key=&quot;value&quot;
+
+# Sets environment variable.
+ENV KEY VALUE
+
+# Cxecute any commands in a new layer on top of the current image and commit the results.
+RUN
+
+# The WORKDIR instruction provides a way to set the working directory for the container and
+# the ENTRYPOINT and/or CMD to be executed when a container is launched from the image.
+WORKDIR
+
+# Use COPY unless you sure you need ADD
+# The key difference is that the COPY instruction is purely focused on copying local files from the build context and does not have any extraction or decompression capabilities.
+COPY
+
+ADD
+
+# Creates a mount point for externally mounted volumes or other containers.
+VOLUME [&quot;/opt/project&quot;]
+
+# The ARG instruction defines variables that can be passed at build-time via the docker build command.
+ARG webapp_user=user
+
+# Configures a container that will run as an executable.
+EXPOSE 80
+
+# Any arguments we specify on the docker run command line will
+# be passed as arguments to the command specified in the ENTRYPOINT.
+ENTRYPOINT [&quot;/usr/sbin/nginx&quot;]
+
+# The CMD instruction specifies the command to run when a container is launched.
+# We can override the CMD instruction on the docker run command line.
+CMD [&quot;-h&quot;]
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Docker Compose Cheat Sheet</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</link>
+            <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-14-docker-compose-cheat-sheet/</guid>
+            <description>docker-compose.yml version: &amp;quot;3&amp;quot; services: voting-app: build: ./voting-app/. # bind mount volumes: - ./voting-app:/app ports: - &amp;quot;5000:80&amp;quot; links: - redis networks: - front-tier - back-tier result-app: build: ./result-app/. # bind mount volumes: - ./result-app:/app ports: - &amp;quot;5001:80&amp;quot; links: - db networks: - front-tier - back-tier worker: build: ./worker links: - db - redis networks: - back-tier redis: image: redis ports: [&amp;quot;6379&amp;quot;] networks: - back-tier db: image: postgres:9.4 # docker volume volumes: - &amp;quot;db-data:/var/lib/postgresql/data&amp;quot; networks: - back-tier volumes: db-data: networks: front-tier: driver: bridge back-tier: driver: bridge  Commands docker-compose -f &amp;lt;docker-compose.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="docker-compose-yml">docker-compose.yml</h2>
+
+<pre><code class="language-yaml">version: &quot;3&quot;
+
+services:
+  voting-app:
+    build: ./voting-app/.
+    # bind mount
+    volumes:
+     - ./voting-app:/app
+    ports:
+      - &quot;5000:80&quot;
+    links:
+      - redis
+    networks:
+      - front-tier
+      - back-tier
+
+  result-app:
+    build: ./result-app/.
+    # bind mount
+    volumes:
+      - ./result-app:/app
+    ports:
+      - &quot;5001:80&quot;
+    links:
+      - db
+    networks:
+      - front-tier
+      - back-tier
+
+  worker:
+    build: ./worker
+    links:
+      - db
+      - redis
+    networks:
+      - back-tier
+
+  redis:
+    image: redis
+    ports: [&quot;6379&quot;]
+    networks:
+      - back-tier
+
+  db:
+    image: postgres:9.4
+    # docker volume
+    volumes:
+      - &quot;db-data:/var/lib/postgresql/data&quot;
+    networks:
+      - back-tier
+
+volumes:
+  db-data:
+
+networks:
+  front-tier:
+    driver: bridge
+  back-tier:
+    driver: bridge
+</code></pre>
+
+<p><img src="https://user-images.githubusercontent.com/11765228/57179986-12b37500-6e84-11e9-834b-6aa59a6664e5.png" alt="Screen Shot 2019-05-04 at 15 48 19" /></p>
+
+<h2 id="commands">Commands</h2>
+
+<pre><code class="language-bash">docker-compose
+  -f &lt;docker-compose.yaml&gt;  # apply docker-compose file
+  up
+  -d                        # run in the background
+# Build images.
+docker-compose build
+# Lists all of the currently running services.
+docker-compose ps
+# Show log events.
+docker-compose logs
+# Stop running services.
+docker-compose stop
+# Stops containers and removes containers, networks, volumes, and images created by up.
+docker-compose down
+# List images used by the created containers.
+docker-compose images
+# Run arbitrary commands in your services.
+docker-compose exec &lt;service&gt; bash
+# Force kill the services.
+docker- compose kill
+# Restart services.
+docker-compose start
+# Remove services.
+docker-compose rm
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Vagrant in Action</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</link>
+            <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</guid>
+            <description> Vagrant is a tool for building and managing virtual machine environments in a single workflow.
+Boxes Vagrant.configure(&amp;quot;2&amp;quot;) do |config| config.vm.box = &amp;quot;centos/7&amp;quot; end # automatically install software config.vm.provision &amp;quot;shell&amp;quot;, privileged: true, path: &amp;quot;./setup.sh&amp;quot;  Up And SSH vagrant up vagrant ssh  </description>
+            <content type="html"><![CDATA[
+
+<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow.</p>
+
+<h2 id="boxes">Boxes</h2>
+
+<pre><code class="language-ruby">Vagrant.configure(&quot;2&quot;) do |config|
+  config.vm.box = &quot;centos/7&quot;
+end
+
+# automatically install software
+config.vm.provision &quot;shell&quot;, privileged: true, path: &quot;./setup.sh&quot;
+</code></pre>
+
+<h2 id="up-and-ssh">Up And SSH</h2>
+
+<pre><code>vagrant up
+vagrant ssh
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Atomic Counters</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</link>
+            <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</guid>
+            <description>Program with the the race condition package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 for i := 0; i &amp;lt; 10000; i++ { go func() { ops = ops + 1 }() } time.Sleep(time.Second) fmt.Println(&amp;quot;ops:&amp;quot;, ops) }  ops: 9742  Solving the race condition using Mutex package main import ( &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 var m sync.Mutex for i := 0; i &amp;lt; 10000; i++ { go func() { m.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="program-with-the-the-race-condition">Program with the the race condition</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	var ops uint64
+
+	for i := 0; i &lt; 10000; i++ {
+		go func() {
+			ops = ops + 1
+		}()
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println(&quot;ops:&quot;, ops)
+}
+</code></pre>
+
+<pre><code>ops: 9742
+</code></pre>
+
+<h2 id="solving-the-race-condition-using-mutex">Solving the race condition using Mutex</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	var ops uint64
+	var m sync.Mutex
+
+	for i := 0; i &lt; 10000; i++ {
+		go func() {
+			m.Lock()
+			defer m.Unlock()
+			ops = ops + 10
+		}()
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println(&quot;ops:&quot;, ops)
+}
+</code></pre>
+
+<pre><code>ops: 10000
+</code></pre>
+
+<h2 id="solving-the-race-condition-using-a-buffered-channel">Solving the race condition using a buffered channel</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	var ops uint64
+	ch := make(chan bool, 1)
+
+	for i := 0; i &lt; 10000; i++ {
+		go func() {
+			ch &lt;- true
+			ops = ops + 1
+			&lt;-ch
+		}()
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println(&quot;ops:&quot;, ops)
+}
+</code></pre>
+
+<pre><code>ops: 10000
+</code></pre>
+
+<h2 id="solving-the-race-condition-using-atomic">Solving the race condition using Atomic</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync/atomic&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	var ops uint64
+
+	for i := 0; i &lt; 10000; i++ {
+		go func() {
+			atomic.AddUint64(&amp;ops, 1)
+		}()
+	}
+
+	time.Sleep(time.Second)
+	opsFinal := atomic.LoadUint64(&amp;ops)
+	fmt.Println(&quot;ops:&quot;, opsFinal)
+}
+</code></pre>
+
+<pre><code>ops: 10000
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Build a Web Crawler in Go</title>
@@ -2078,12 +2568,12 @@ with a link to the post.</p>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@matryer/5-simple-tips-and-tricks-for-writing-unit-tests-in-golang-619653f90742">5 simple tips and tricks for writing unit tests in #golang</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://segment.com/blog/5-advanced-testing-techniques-in-go/">5 Advanced Testing Techniques in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://danmux.com/posts/the_cult_of_go_test/">The Cult of Go Test</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/">Interfaces and Composition for Effective Unit Testing in Golang</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://nathanleclaire.com/blog/2015/10/10/interfaces-and-composition-for-effective-unit-testing-in-golang/">Interfaces and Composition for Effective Unit Testing in Golang</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@xoen/go-testing-technique-testing-json-http-requests-76d9ce0e11f#.95p1r8n16">Go Testing Technique: Testing JSON HTTP Requests</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://www.meetspaceapp.com/2016/05/16/acceptance-testing-go-webapps-with-cookies.html">Acceptance Testing Go Web Applications with Cookies</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://blog.questionable.services/article/testing-http-handlers-go/">Testing Your (HTTP) Handlers in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://deadbeef.me/2018/05/go-test">Go test your tests in Go with go test</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://github.com/quii/learn-go-with-tests">Learn Go with tests</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://github.com/quii/learn-go-with-tests">Learn Go with tests</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://medium.com/@PurdonKyle/unit-testing-golang-http-middleware-c7727ca896ea">Unit Testing Golang HTTP Middleware</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://splice.com/blog/lesser-known-features-go-test/">Lesser-Known Features of Go Test</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://sendgrid.com/blog/when-writing-unit-tests-dont-use-mocks/">When Writing Unit Tests, Don’t Use Mocks</a></label></li>

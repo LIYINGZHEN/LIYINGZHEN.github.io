@@ -6,10 +6,19 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atomic Counters</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</link>
+      <pubDate>Sun, 12 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-12-atomic-counters/</guid>
+      <description>Program with the the race condition package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 for i := 0; i &amp;lt; 10000; i++ { go func() { ops = ops + 1 }() } time.Sleep(time.Second) fmt.Println(&amp;quot;ops:&amp;quot;, ops) }  ops: 9742  Solving the race condition using Mutex package main import ( &amp;quot;fmt&amp;quot; &amp;quot;sync&amp;quot; &amp;quot;time&amp;quot; ) func main() { var ops uint64 var m sync.Mutex for i := 0; i &amp;lt; 10000; i++ { go func() { m.</description>
+    </item>
     
     <item>
       <title>Build a Web Crawler in Go</title>
