@@ -6,8 +6,110 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Factory patterns in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-17-factory-patterns-in-go/</link>
+            <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-17-factory-patterns-in-go/</guid>
+            <description>The factory pattern is a commonly used pattern in object oriented programming. In Go, there are many different ways in which you can use the factory pattern to make your code cleaner and more concise.
+Go’s answer to classes, are structs. For example, the struct for a “Person”, along with a “Greet” method would look like this:
+type Greeter interface { Greet() } type Person struct { Name string Age int } func (p Person) Greet() { fmt.</description>
+            <content type="html"><![CDATA[
+
+<p>The factory pattern is a commonly used pattern in object oriented programming. In Go, there are many different ways in which you can use the factory pattern to make your code cleaner and more concise.</p>
+
+<p>Go’s answer to classes, are structs. For example, the struct for a “Person”, along with a “Greet” method would look like this:</p>
+
+<pre><code class="language-go">type Greeter interface {
+  Greet()
+}
+
+type Person struct {
+  Name string
+  Age int
+}
+
+func (p Person) Greet() {
+  fmt.Printf(&quot;Hi! My name is %s&quot;, p.Name)
+}
+</code></pre>
+
+<p>We can now make use of factory functions to create new instances of Person</p>
+
+<h2 id="simple-factory">Simple factory</h2>
+
+<p>The simplest, and most commonly used factory is a function that takes in some arguments, and returns an instance of <code>Person</code>:</p>
+
+<pre><code class="language-go">func NewPerson(name string, age int) Person {
+  return Person{
+    Name: name,
+    Age: age
+  }
+}
+</code></pre>
+
+<p>We can also return pointers to the <code>Person</code> instance instead:</p>
+
+<pre><code class="language-go">func NewPerson(name string, age int) *Person {
+  return &amp;Person{
+    Name: name,
+    Age: age
+  }
+}
+</code></pre>
+
+<p>Factory functions are a better alternative to initializing instances using something like <code>p := &amp;Person{}</code> because, the function signature ensures that everyone will supply the required attributes. For example, one can easily forget to initialize the <code>Age</code> attribute when using struct initialization. The function signature of <code>NewPerson(name string, age int)</code> ensures that both the name and age are supplied in order to construct a new instance of <code>Person</code></p>
+
+<blockquote>
+<p>👉 Use factory functions to ensure that new instances structs are constructed with the required arguments</p>
+</blockquote>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Go Rune</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-16-go-rune/</link>
+            <pubDate>Thu, 16 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-16-go-rune/</guid>
+            <description>package main import &amp;quot;fmt&amp;quot; func main() { var chinese = &amp;quot;人工智能&amp;quot; fmt.Println(&amp;quot;chinese length&amp;quot;, len(chinese)) fmt.Println(&amp;quot;chinese word length&amp;quot;, len([]rune(chinese))) fmt.Println(&amp;quot;chinese word length&amp;quot;, utf8.RuneCountInString(chinese)) for i, ch := range chinese { fmt.Printf(&amp;quot;(%d, %c)&amp;quot;, i, ch) // (0, 人)(3, 工)(6, 智)(9, 能) } fmt.Println() for i, ch := range []rune(chinese) { fmt.Printf(&amp;quot;(%d, %c)&amp;quot;, i, ch) // (0, 人)(1, 工)(2, 智)(3, 能) } fmt.Println() }  # chinses is 3 bytes chinese length 12 chinese word length 4 chinese word length 4 (0, 人)(3, 工)(6, 智)(9, 能) (0, 人)(1, 工)(2, 智)(3, 能)  </description>
+            <content type="html"><![CDATA[<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+	var chinese = &quot;人工智能&quot;
+	fmt.Println(&quot;chinese length&quot;, len(chinese))
+	fmt.Println(&quot;chinese word length&quot;, len([]rune(chinese)))
+	fmt.Println(&quot;chinese word length&quot;, utf8.RuneCountInString(chinese))
+
+	for i, ch := range chinese {
+		fmt.Printf(&quot;(%d, %c)&quot;, i, ch) // (0, 人)(3, 工)(6, 智)(9, 能)
+	}
+
+	fmt.Println()
+
+	for i, ch := range []rune(chinese) {
+		fmt.Printf(&quot;(%d, %c)&quot;, i, ch) // (0, 人)(1, 工)(2, 智)(3, 能)
+	}
+
+	fmt.Println()
+}
+</code></pre>
+
+<pre><code class="language-bash"># chinses is 3 bytes
+chinese length 12
+chinese word length 4
+chinese word length 4
+(0, 人)(3, 工)(6, 智)(9, 能)
+(0, 人)(1, 工)(2, 智)(3, 能)
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Docker Cheat Sheet</title>
@@ -341,36 +443,6 @@ docker- compose kill
 docker-compose start
 # Remove services.
 docker-compose rm
-</code></pre>
-]]></content>
-        </item>
-        
-        <item>
-            <title>Vagrant in Action</title>
-            <link>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</link>
-            <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
-            
-            <guid>https://www.maxlivinci.com/blog/2019-05-13-vagrant-in-action/</guid>
-            <description> Vagrant is a tool for building and managing virtual machine environments in a single workflow.
-Boxes Vagrant.configure(&amp;quot;2&amp;quot;) do |config| config.vm.box = &amp;quot;centos/7&amp;quot; end # automatically install software config.vm.provision &amp;quot;shell&amp;quot;, privileged: true, path: &amp;quot;./setup.sh&amp;quot;  Up And SSH vagrant up vagrant ssh  </description>
-            <content type="html"><![CDATA[
-
-<p>Vagrant is a tool for building and managing virtual machine environments in a single workflow.</p>
-
-<h2 id="boxes">Boxes</h2>
-
-<pre><code class="language-ruby">Vagrant.configure(&quot;2&quot;) do |config|
-  config.vm.box = &quot;centos/7&quot;
-end
-
-# automatically install software
-config.vm.provision &quot;shell&quot;, privileged: true, path: &quot;./setup.sh&quot;
-</code></pre>
-
-<h2 id="up-and-ssh">Up And SSH</h2>
-
-<pre><code>vagrant up
-vagrant ssh
 </code></pre>
 ]]></content>
         </item>
@@ -2673,10 +2745,10 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://syslog.ravelin.com/anatomy-of-a-function-call-in-go-f6fc81b80ecc">Anatomy of a function call in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://www.ardanlabs.com/blog/2015/02/scheduler-tracing-in-go.html">Scheduler Tracing in Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.gopheracademy.com/advent-2017/unsafe-pointer-and-system-calls/">unsafe.Pointer and system calls</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://go101.org/article/unsafe.html">Type-Unsafe Pointers</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html">Looking at your program’s structure in Go 1.7</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://go101.org/article/unsafe.html">Type-Unsafe Pointers</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html">Looking at your program’s structure in Go 1.7</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://blog.sgmansfield.com/2016/06/managing-syscall-overhead-with-crypto-rand/">Managing Syscall Overhead with crypto/rand</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://cavaliercoder.com/blog/optimized-abs-for-int64-in-go.html">Optimized abs() for int64 in Go</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://cavaliercoder.com/blog/optimized-abs-for-int64-in-go.html">Optimized abs() for int64 in Go</a></label></li>
 <li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="http://www.agardner.me/golang/garbage/collection/gc/escape/analysis/2015/10/18/go-escape-analysis.html">Golang escape analysis</a></label></li>
 </ul>
 
@@ -2687,7 +2759,7 @@ with a link to the post.</p>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/">Handling 1 Million Requests per Minute with Go</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.com/@val_deleplace/go-code-refactoring-the-23x-performance-hunt-156746b522f7">Go code refactoring : the 23x performance hunt</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://medium.freecodecamp.org/million-websockets-and-go-cc58418460bb">A Million WebSockets and Go</a></label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://github.com/dgryski/go-perfbook">go-perfbook</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://github.com/dgryski/go-perfbook">go-perfbook</a></label></li>
 </ul>
 
 <h3 id="garbage-collection">Garbage Collection</h3>
@@ -2702,7 +2774,7 @@ with a link to the post.</p>
 <h3 id="concurrency-2">Concurrency</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/advanced-go-concurrency-patterns">Advanced Go Concurrency Patterns</a></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <a href="https://blog.golang.org/advanced-go-concurrency-patterns">Advanced Go Concurrency Patterns</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://rodaine.com/2018/08/x-files-sync-golang/">The X-Files: Avoiding Concurrency Boilerplate with golang.org/x/sync</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://texlution.com/post/golang-lock-free-values-with-atomic-value/">Golang lock-free values with atomic.Value</a></label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <a href="https://blog.golang.org/share-memory-by-communicating">Share Memory by Communicating</a></label></li>

@@ -6,10 +6,30 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Factory patterns in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-17-factory-patterns-in-go/</link>
+      <pubDate>Fri, 17 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-17-factory-patterns-in-go/</guid>
+      <description>The factory pattern is a commonly used pattern in object oriented programming. In Go, there are many different ways in which you can use the factory pattern to make your code cleaner and more concise.
+Go’s answer to classes, are structs. For example, the struct for a “Person”, along with a “Greet” method would look like this:
+type Greeter interface { Greet() } type Person struct { Name string Age int } func (p Person) Greet() { fmt.</description>
+    </item>
+    
+    <item>
+      <title>Go Rune</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-16-go-rune/</link>
+      <pubDate>Thu, 16 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-16-go-rune/</guid>
+      <description>package main import &amp;quot;fmt&amp;quot; func main() { var chinese = &amp;quot;人工智能&amp;quot; fmt.Println(&amp;quot;chinese length&amp;quot;, len(chinese)) fmt.Println(&amp;quot;chinese word length&amp;quot;, len([]rune(chinese))) fmt.Println(&amp;quot;chinese word length&amp;quot;, utf8.RuneCountInString(chinese)) for i, ch := range chinese { fmt.Printf(&amp;quot;(%d, %c)&amp;quot;, i, ch) // (0, 人)(3, 工)(6, 智)(9, 能) } fmt.Println() for i, ch := range []rune(chinese) { fmt.Printf(&amp;quot;(%d, %c)&amp;quot;, i, ch) // (0, 人)(1, 工)(2, 智)(3, 能) } fmt.Println() }  # chinses is 3 bytes chinese length 12 chinese word length 4 chinese word length 4 (0, 人)(3, 工)(6, 智)(9, 能) (0, 人)(1, 工)(2, 智)(3, 能)  </description>
+    </item>
     
     <item>
       <title>Atomic Counters</title>
