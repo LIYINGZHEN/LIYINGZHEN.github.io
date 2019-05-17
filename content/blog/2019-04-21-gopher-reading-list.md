@@ -246,10 +246,10 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Anatomy of a function call in Go](https://syslog.ravelin.com/anatomy-of-a-function-call-in-go-f6fc81b80ecc)
 - [ ] [Scheduler Tracing in Go](https://www.ardanlabs.com/blog/2015/02/scheduler-tracing-in-go.html)
 - [ ] [unsafe.Pointer and system calls](https://blog.gopheracademy.com/advent-2017/unsafe-pointer-and-system-calls/)
-- [ ] [Type-Unsafe Pointers](https://go101.org/article/unsafe.html)
-- [ ] [Looking at your program’s structure in Go 1.7](https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html)
+- [x] [Type-Unsafe Pointers](https://go101.org/article/unsafe.html)
+- [x] [Looking at your program’s structure in Go 1.7](https://pauladamsmith.com/blog/2016/08/go-1.7-ssa.html)
 - [ ] [Managing Syscall Overhead with crypto/rand](http://blog.sgmansfield.com/2016/06/managing-syscall-overhead-with-crypto-rand/)
-- [ ] [Optimized abs() for int64 in Go](http://cavaliercoder.com/blog/optimized-abs-for-int64-in-go.html)
+- [x] [Optimized abs() for int64 in Go](http://cavaliercoder.com/blog/optimized-abs-for-int64-in-go.html)
 - [x] [Golang escape analysis](http://www.agardner.me/golang/garbage/collection/gc/escape/analysis/2015/10/18/go-escape-analysis.html)
 
 ### Performance
@@ -258,7 +258,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 - [ ] [Handling 1 Million Requests per Minute with Go](http://marcio.io/2015/07/handling-1-million-requests-per-minute-with-golang/)
 - [ ] [Go code refactoring : the 23x performance hunt](https://medium.com/@val_deleplace/go-code-refactoring-the-23x-performance-hunt-156746b522f7)
 - [ ] [A Million WebSockets and Go](https://medium.freecodecamp.org/million-websockets-and-go-cc58418460bb)
-- [ ] [go-perfbook](https://github.com/dgryski/go-perfbook)
+- [x] [go-perfbook](https://github.com/dgryski/go-perfbook)
 
 ### Garbage Collection
 
@@ -269,7 +269,7 @@ See [Go Books](https://github.com/dariubs/GoBooks) for a longer list of books, b
 
 ### Concurrency
 
-- [ ] [Advanced Go Concurrency Patterns](https://blog.golang.org/advanced-go-concurrency-patterns)
+- [x] [Advanced Go Concurrency Patterns](https://blog.golang.org/advanced-go-concurrency-patterns)
 - [ ] [The X-Files: Avoiding Concurrency Boilerplate with golang.org/x/sync](https://rodaine.com/2018/08/x-files-sync-golang/)
 - [ ] [Golang lock-free values with atomic.Value](https://texlution.com/post/golang-lock-free-values-with-atomic-value/)
 - [ ] [Share Memory by Communicating](https://blog.golang.org/share-memory-by-communicating)
