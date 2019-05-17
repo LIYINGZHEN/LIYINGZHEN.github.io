@@ -2,7 +2,7 @@
 title:       "Table driven tests in Go"
 date:        2019-05-20T00:00:00+00:00
 author:      "Max"
-published:   true
+published:   false
 tags:        ["go"]
 ---
 

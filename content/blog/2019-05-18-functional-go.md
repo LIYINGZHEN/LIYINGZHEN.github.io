@@ -2,7 +2,7 @@
 title:       "Functional Go"
 date:        2019-05-18T00:00:00+00:00
 author:      "Max"
-published:   true
+published:   false
 tags:        ["go"]
 ---
 

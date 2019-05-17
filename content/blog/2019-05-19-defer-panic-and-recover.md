@@ -2,7 +2,7 @@
 title:       "Defer, Panic, and Recover"
 date:        2019-05-19T00:00:00+00:00
 author:      "Max"
-published:   true
+published:   false
 tags:        ["go"]
 ---
 
