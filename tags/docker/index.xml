@@ -33,14 +33,5 @@ docker restart &amp;lt;container&amp;gt;  Getting additional information about a
       <description>docker-compose.yml version: &amp;quot;3&amp;quot; services: voting-app: build: ./voting-app/. # bind mount volumes: - ./voting-app:/app ports: - &amp;quot;5000:80&amp;quot; links: - redis networks: - front-tier - back-tier result-app: build: ./result-app/. # bind mount volumes: - ./result-app:/app ports: - &amp;quot;5001:80&amp;quot; links: - db networks: - front-tier - back-tier worker: build: ./worker links: - db - redis networks: - back-tier redis: image: redis ports: [&amp;quot;6379&amp;quot;] networks: - back-tier db: image: postgres:9.4 # docker volume volumes: - &amp;quot;db-data:/var/lib/postgresql/data&amp;quot; networks: - back-tier volumes: db-data: networks: front-tier: driver: bridge back-tier: driver: bridge  Commands docker-compose -f &amp;lt;docker-compose.</description>
     </item>
     
-    <item>
-      <title>Docker</title>
-      <link>https://www.maxlivinci.com/old/2019-03-08-docker/</link>
-      <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container.</description>
-    </item>
-    
   </channel>
 </rss>

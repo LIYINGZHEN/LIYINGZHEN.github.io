@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Goroutine on YING ZHEN LI</title>
+    <link>https://www.maxlivinci.com/tags/goroutine/</link>
+    <description>Recent content in Goroutine on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/goroutine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to end a goroutine</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</guid>
+      <description>1. Stop Channel package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { ch := make(chan int) done := make(chan struct{}) go func() { i := 0 for { select { case ch &amp;lt;- i: i++ case &amp;lt;-done: close(ch) return } time.Sleep(100 * time.Millisecond) } }() go func() { time.Sleep(3 * time.Second) done &amp;lt;- struct{}{} }() for i := range ch { fmt.Println(&amp;quot;receive value: &amp;quot;, i) } fmt.Println(&amp;quot;finish&amp;quot;) }  2.</description>
+    </item>
+    
+  </channel>
+</rss>

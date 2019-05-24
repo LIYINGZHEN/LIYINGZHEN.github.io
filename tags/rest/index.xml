@@ -6,20 +6,10 @@
     <description>Recent content in Rest on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Mar 2019 07:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Jan 2019 18:40:48 +0100</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>HTTP Response codes</title>
-      <link>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</link>
-      <pubDate>Sun, 17 Mar 2019 07:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</guid>
-      <description>400 Bad Request This response indicates that the request could not be understood by the client due to a malformed request or due to a failure of domain validation (missing data, or an operation that would cause invalid state).
-401 Unauthorized This indicates that the request requires user authentication and will include a WWWAuthenticate header containing a challenge applicable to the requested resource. If the user has included the required credentials in the WWW-Authenticate header, then the response should include an error object that may contain relevant diagnostic information.</description>
-    </item>
     
     <item>
       <title>OpenAPI Specification</title>

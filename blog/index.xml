@@ -6,8 +6,363 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to end a goroutine</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</link>
+            <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</guid>
+            <description>1. Stop Channel package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { ch := make(chan int) done := make(chan struct{}) go func() { i := 0 for { select { case ch &amp;lt;- i: i++ case &amp;lt;-done: close(ch) return } time.Sleep(100 * time.Millisecond) } }() go func() { time.Sleep(3 * time.Second) done &amp;lt;- struct{}{} }() for i := range ch { fmt.Println(&amp;quot;receive value: &amp;quot;, i) } fmt.Println(&amp;quot;finish&amp;quot;) }  2.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="1-stop-channel">1. Stop Channel</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+	done := make(chan struct{})
+
+	go func() {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				i++
+			case &lt;-done:
+				close(ch)
+				return
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}()
+
+	go func() {
+		time.Sleep(3 * time.Second)
+		done &lt;- struct{}{}
+	}()
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+
+<h2 id="2-signal-channel">2. Signal Channel</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;os&quot;
+	&quot;os/signal&quot;
+	&quot;syscall&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+	done := make(chan os.Signal, 2)
+	signal.Notify(done, os.Interrupt, syscall.SIGTERM)
+
+	go func() {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				i++
+			case &lt;-done:
+				close(ch)
+				return
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}()
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+
+<h2 id="3-close-the-channel">3. Close the channel</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+
+	go func() {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				i++
+			case &lt;-ch:
+				return
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}()
+
+	go func() {
+		time.Sleep(3 * time.Second)
+		close(ch)
+	}()
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+
+<h2 id="4-context">4. Context</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;context&quot;
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+	ctx, cancel := context.WithCancel(context.Background())
+
+	go func(ctx context.Context) {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				i++
+			case &lt;-ctx.Done():
+				close(ch)
+				return
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}(ctx)
+
+	go func() {
+		time.Sleep(3 * time.Second)
+		cancel()
+	}()
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+
+<h2 id="5-time-after">5. Time.After</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+	timeout := time.After(3 * time.Second)
+
+	go func(t &lt;-chan time.Time) {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				i++
+			case &lt;-t:
+				close(ch)
+				return
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}(timeout)
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+
+<h2 id="6-atmoic">6. Atmoic</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;sync/atomic&quot;
+	&quot;time&quot;
+)
+
+func main() {
+	ch := make(chan int)
+	var v atomic.Value
+
+	go func() {
+		i := 0
+		for {
+			select {
+			case ch &lt;- i:
+				if v.Load().(bool) {
+					close(ch)
+				} else {
+					i++
+				}
+			}
+			time.Sleep(100 * time.Millisecond)
+		}
+	}()
+
+	go func() {
+		v.Store(false)
+		time.Sleep(3 * time.Second)
+		v.Store(true)
+	}()
+
+	for i := range ch {
+		fmt.Println(&quot;receive value: &quot;, i)
+	}
+
+	fmt.Println(&quot;finish&quot;)
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Types in Go</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</link>
+            <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</guid>
+            <description>Terminology  Pre-Declared Type Composite Type (Type Literal) Named Type Unnamed Types Underlying Type Assignability Type Conversions Untyped constants Default Type  Pre-Declared Type Part of Named Type.
+String Integer Boolean  Composite Type (Type Literal) Part of Unnamed Types.
+Array Slice Map Struct  Named Type Named types can have their own method sets.
+  Unnamed Types  Underlying Type Every type do have an underlying type. Pre-declared types and Composite Type refers to itself as the underlying type.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="terminology">Terminology</h2>
+
+<ol>
+<li>Pre-Declared Type</li>
+<li>Composite Type (Type Literal)</li>
+<li>Named Type</li>
+<li>Unnamed Types</li>
+<li>Underlying Type</li>
+<li>Assignability</li>
+<li>Type Conversions</li>
+<li>Untyped constants</li>
+<li>Default Type</li>
+</ol>
+
+<h2 id="pre-declared-type">Pre-Declared Type</h2>
+
+<p>Part of <code>Named Type</code>.</p>
+
+<pre><code>String
+Integer
+Boolean
+</code></pre>
+
+<h2 id="composite-type-type-literal">Composite Type (Type Literal)</h2>
+
+<p>Part of <code>Unnamed Types</code>.</p>
+
+<pre><code>Array
+Slice
+Map
+Struct
+</code></pre>
+
+<h2 id="named-type">Named Type</h2>
+
+<p><code>Named types</code> can have their own method sets.</p>
+
+<pre><code>
+</code></pre>
+
+<h2 id="unnamed-types">Unnamed Types</h2>
+
+<pre><code></code></pre>
+
+<h2 id="underlying-type">Underlying Type</h2>
+
+<p>Every type do have an underlying type. <code>Pre-declared types</code> and <code>Composite Type</code> refers to itself as the underlying type.</p>
+
+<pre><code></code></pre>
+
+<h2 id="assignability">Assignability</h2>
+
+<p>It is also possible to assign a value to a variable if their <code>underlying types</code> are identical and one of them is an <code>unnamed type</code>.</p>
+
+<pre><code class="language-go">func main() {
+	type S []int
+	type S2 []int
+
+	var a S = []int{1}
+	// var b S2 = a &lt;------- error
+	var b S2 = S2(a)
+
+	fmt.Printf(&quot;%v&quot;, a, b)
+
+	// a        -&gt;   name type, type     S, underlying type: []int
+    // b        -&gt;   name type, type    S2, underlying type: []int
+    // []int{1} -&gt; unname type, type []int, underlying type: []int
+}
+</code></pre>
+
+<h2 id="type-conversions">Type Conversions</h2>
+
+<pre><code></code></pre>
+
+<h2 id="untyped-constants">Untyped constants</h2>
+
+<p>For <code>Numbers</code> -&gt; Untyped constants they can be assigned to a variable of any integer type.</p>
+
+<pre><code class="language-go">func main() {
+	const a = 2 // Untyped constants
+
+    var b float32 = a
+	var c complex64 = a
+	var d uintptr = a
+	var e byte = a
+
+	fmt.Println(b, c, d, e)
+}
+</code></pre>
+
+<h2 id="default-type">Default Type</h2>
+
+<pre><code class="language-go"></code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>Factory patterns in Go</title>

@@ -6,10 +6,31 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to end a goroutine</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</link>
+      <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</guid>
+      <description>1. Stop Channel package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { ch := make(chan int) done := make(chan struct{}) go func() { i := 0 for { select { case ch &amp;lt;- i: i++ case &amp;lt;-done: close(ch) return } time.Sleep(100 * time.Millisecond) } }() go func() { time.Sleep(3 * time.Second) done &amp;lt;- struct{}{} }() for i := range ch { fmt.Println(&amp;quot;receive value: &amp;quot;, i) } fmt.Println(&amp;quot;finish&amp;quot;) }  2.</description>
+    </item>
+    
+    <item>
+      <title>Types in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</link>
+      <pubDate>Wed, 22 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</guid>
+      <description>Terminology  Pre-Declared Type Composite Type (Type Literal) Named Type Unnamed Types Underlying Type Assignability Type Conversions Untyped constants Default Type  Pre-Declared Type Part of Named Type.
+String Integer Boolean  Composite Type (Type Literal) Part of Unnamed Types.
+Array Slice Map Struct  Named Type Named types can have their own method sets.
+  Unnamed Types  Underlying Type Every type do have an underlying type. Pre-declared types and Composite Type refers to itself as the underlying type.</description>
+    </item>
     
     <item>
       <title>Factory patterns in Go</title>
@@ -290,16 +311,6 @@ I have tried several frameworks: Bootstrap, React, and a few more. I admit I enj
     </item>
     
     <item>
-      <title>HTTP Response codes</title>
-      <link>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</link>
-      <pubDate>Sun, 17 Mar 2019 07:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</guid>
-      <description>400 Bad Request This response indicates that the request could not be understood by the client due to a malformed request or due to a failure of domain validation (missing data, or an operation that would cause invalid state).
-401 Unauthorized This indicates that the request requires user authentication and will include a WWWAuthenticate header containing a challenge applicable to the requested resource. If the user has included the required credentials in the WWW-Authenticate header, then the response should include an error object that may contain relevant diagnostic information.</description>
-    </item>
-    
-    <item>
       <title>Drone</title>
       <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
       <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
@@ -334,15 +345,6 @@ I have tried several frameworks: Bootstrap, React, and a few more. I admit I enj
       <guid>https://www.maxlivinci.com/old/2019-03-09-mongodb/</guid>
       <description>Indexing and query optimization  Indexes in MongoDB are very important. Indexes that use more than one key like this are called compound indexes. The order of keys in a compound index matters. Aa query where one term demands an exact match and another specifies a range requires a compound index where the range key comes second.  For example:
 If we have this query, then the manufacturer shoud be the first index.</description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://www.maxlivinci.com/old/2019-03-08-docker/</link>
-      <pubDate>Fri, 08 Mar 2019 13:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-08-docker/</guid>
-      <description>Commands # Remove unused data. docker system prune -a -f # docker commit id # Tagging an image under an additional tag. docker tag &amp;lt;image-name&amp;gt; &amp;lt;docker-hub-id&amp;gt;/&amp;lt;image-name&amp;gt;:&amp;lt;version&amp;gt; # Attach local standard input, output, and error streams to a running container. docker attach &amp;lt;CONTAINER&amp;gt; # Shows statistics for a container docker stats &amp;lt;CONTAINER&amp;gt; # Searching for images docker search puppet # Inspecting the container’s processes docker top # List port mappings or a specific mapping for the container.</description>
     </item>
     
     <item>

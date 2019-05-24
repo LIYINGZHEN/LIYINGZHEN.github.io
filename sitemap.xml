@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</loc>
+    <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-05-17-factory-patterns-in-go/</loc>
     <lastmod>2019-05-17T00:00:00+00:00</lastmod>
   </url>
@@ -138,11 +148,6 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-17-http-response-codes/</loc>
-    <lastmod>2019-03-17T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/old/2019-03-14-drone/</loc>
     <lastmod>2019-03-14T08:00:00+00:00</lastmod>
   </url>
@@ -160,11 +165,6 @@
   <url>
     <loc>https://www.maxlivinci.com/old/2019-03-09-mongodb/</loc>
     <lastmod>2019-03-10T16:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/old/2019-03-08-docker/</loc>
-    <lastmod>2019-03-08T13:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -294,7 +294,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -336,7 +336,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/go/</loc>
-    <lastmod>2019-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -349,6 +349,12 @@
   <url>
     <loc>https://www.maxlivinci.com/tags/golang/</loc>
     <lastmod>2019-01-27T11:03:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/tags/goroutine/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -390,13 +396,13 @@
   
   <url>
     <loc>https://www.maxlivinci.com/categories/notes/</loc>
-    <lastmod>2019-03-17T07:00:00+00:00</lastmod>
+    <lastmod>2019-03-14T08:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.maxlivinci.com/old/</loc>
-    <lastmod>2019-03-17T07:00:00+00:00</lastmod>
+    <lastmod>2019-03-14T08:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -408,7 +414,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/rest/</loc>
-    <lastmod>2019-03-17T07:00:00+00:00</lastmod>
+    <lastmod>2019-01-26T18:40:48+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -420,7 +426,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
