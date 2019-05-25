@@ -1,44 +1,28 @@
 ---
-title:       "Kubernetes"
-description: " "
-date:        2019-03-08T12:00:00+00:00
+title:       "Kubernetes Cheat Sheet"
+date:        2019-05-27T00:00:00+00:00
 author:      "Max"
-published:   true
-tags:        ["kubernetes"]
-categories:  ["notes"]
+published:   false
+tags:        ["k8s"]
 ---
 
-# Terminology
+# Command
 
-**Minikube**: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
+## Minikube
 
-**Kubelet**:
+```bash
+minikube start
 
-**Master Node**: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.
+minikube status
 
-**Node**: Worker nodes that run the actual applications you deploy.
+minikube ip
 
-**Pod**: Running containers in Kubernetes.
-
-**Service**: Enabling clients to discover and talk to pods.
-
-
-
-
-
-
-
-
-
-
-# Commands
+minikube dashboard
+```
 
 ## General Commands
 
 ```bash
-# Starting a Minikube virtual machine.
-minikube start
-
 # Displaying cluster information.
 kubectl cluster-info
 
@@ -53,6 +37,9 @@ kubectl proxy
 
 # Forwarding a local network port to a port in the pod.
 kubectl port-forward <pod-name> 8888:8080
+
+#
+kubectl get all
 ```
 
 ## Deployment Commands
@@ -139,7 +126,7 @@ kubectl delete svc <service-name>
 kubectl get nodes -o jsonpath='{.items[*].status. ➥ addresses[?(@.type=="ExternalIP")].address}'
 
 # Listing cluster nodes.
-kubectl get nodes
+kubectl get nodes -o wide
 
 #
 kubectl describe node
@@ -155,15 +142,6 @@ kubectl get ns
 # Deleting pods by deleting the whole namespace.
 kubectl delete ns custom-namespace
 ```
-
-
-
-
-
-
-
-
-
 
 # YAML
 
@@ -243,7 +221,6 @@ spec:
           serviceName: max-backend
           servicePort: 3030
 ```
-
 
 ## Service
 
