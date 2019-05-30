@@ -6,28 +6,35 @@ published:   false
 tags:        ["algorithms"]
 ---
 
-Data Structures:
+## Data Structures:
 
-1. 数组
-2. 链表
-3. 栈
-4. 队列
-5. 散列表
-6. 二叉树
-7. 堆
-8. 跳表
-9. 图
-10. Trie树
+1. Array
+2. Stack / Queue
+3. PriorityQueue
+4. Linked List
+5. Skip list
+6. Tree / Binary Search Tree
+7. HashTable
+8. Trie
 
-Algorithms:
+## Algorithms:
 
-1. 递归
-2. 排序
-3. 二分查找
-4. 搜索
-5. 哈希算法
-6. 贪心算法
-7. 分治算法
-8. 回溯算法
-9. 动态规划
-10. 字符串匹配算法
+1. Greedy
+2. Recursion
+3. Traversal
+4. Divide and Conquer
+5. Dynamic Programming
+6. Graph
+7. Binary Search
+8. Backtracking
+
+## Sorting Algorithms
+
+1. Bubble Sort
+2. Insertion Sort
+3. Selection Sort
+4. Quick Sort
+5. Merge Sort
+6. Counting Sort
+7. Bucket Sort
+8. Radix Sort
