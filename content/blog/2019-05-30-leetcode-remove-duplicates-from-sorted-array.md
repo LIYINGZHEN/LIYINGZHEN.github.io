@@ -1,7 +1,7 @@
 ---
-title: "Remove Duplicates from Sorted Array"
+title: "LeetCode - Remove Duplicates from Sorted Array"
 date: 2019-05-30T00:00:00+00:00
-author:      "Max"
+author: "Max"
 published: true
 tags: ["leetcode"]
 ---
