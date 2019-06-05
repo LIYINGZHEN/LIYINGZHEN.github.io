@@ -158,7 +158,11 @@ func reverse(nums []int, i int, j int) {
             <description>LeetCode
 Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
 Example 1
-&amp;gt; Given nums = [1,1,2], &amp;gt; &amp;gt; Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. &amp;gt; &amp;gt; It doesn’t matter what you leave beyond the returned length. *Example 2* &amp;gt; Given nums = [0,0,1,1,1,2,2,3,3,4], &amp;gt; &amp;gt; Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</description>
+ Given nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+It doesn’t matter what you leave beyond the returned length.
+ Example 2
+ Given nums = [0,0,1,1,1,2,2,3,3,4],</description>
             <content type="html"><![CDATA[
 
 <p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">LeetCode</a></p>
@@ -169,24 +173,27 @@ Example 1
 
 <p><em>Example 1</em></p>
 
-<pre><code>&gt; Given nums = [1,1,2],
-&gt;
-&gt; Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
-&gt;
-&gt; It doesn’t matter what you leave beyond the returned length.
+<blockquote>
+<p>Given nums = [1,1,2],</p>
 
-*Example 2*
+<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.</p>
 
-&gt;  Given nums = [0,0,1,1,1,2,2,3,3,4],
-&gt;
-&gt; Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
-&gt;
-&gt; It doesn’t matter what values are set beyond the returned length.
+<p>It doesn’t matter what you leave beyond the returned length.</p>
+</blockquote>
 
-## Solution
+<p><em>Example 2</em></p>
 
-```go
-package main
+<blockquote>
+<p>Given nums = [0,0,1,1,1,2,2,3,3,4],</p>
+
+<p>Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</p>
+
+<p>It doesn’t matter what values are set beyond the returned length.</p>
+</blockquote>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">package main
 
 import (
 	&quot;fmt&quot;

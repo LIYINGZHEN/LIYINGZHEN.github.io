@@ -48,7 +48,11 @@ Example 1
       <description>LeetCode
 Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
 Example 1
-&amp;gt; Given nums = [1,1,2], &amp;gt; &amp;gt; Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively. &amp;gt; &amp;gt; It doesn’t matter what you leave beyond the returned length. *Example 2* &amp;gt; Given nums = [0,0,1,1,1,2,2,3,3,4], &amp;gt; &amp;gt; Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</description>
+ Given nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+It doesn’t matter what you leave beyond the returned length.
+ Example 2
+ Given nums = [0,0,1,1,1,2,2,3,3,4],</description>
     </item>
     
     <item>
