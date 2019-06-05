@@ -31,28 +31,16 @@ Given a sorted array of numbers, remove the duplicates in-place such that each e
 ## Solution
 
 ```go
-package main
-
-import (
-	"fmt"
-)
-
 func removeDuplicates(nums []int) int {
-	replaceIndex := 1
+  replaceIndex := 1
 
-	for curr := 1; curr < len(nums); curr++ {
-		if nums[curr] != nums[curr-1] {
-			nums[replaceIndex] = nums[curr]
-			replaceIndex++
-		}
-	}
+  for curr := 1; curr < len(nums); curr++ {
+    if nums[curr] != nums[curr - 1] {
+      nums[replaceIndex] = nums[curr]
+      replaceIndex++
+    }
+  }
 
-	fmt.Printf("%v", nums)
-
-	return replaceIndex
-}
-
-func main() {
-	removeDuplicates([]int{1, 2, 3, 3, 3, 3, 3, 4})
+  return replaceIndex
 }
 ```
