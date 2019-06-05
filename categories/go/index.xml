@@ -6,37 +6,10 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Jan 2019 11:03:14 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 21:08:00 +0100</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Strconv in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 11:03:14 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</guid>
-      <description> ParseFloat strconv.ParseFloat(amount, 64)  ParseInt strconv.ParseInt(result, 10, 64)  FormatInt strconv.FormatInt(amount, 10)  ParseInt s := &amp;quot;1234&amp;quot; if res, err := strconv.ParseInt(s, 10, 64); err != nil { return err }  </description>
-    </item>
-    
-    <item>
-      <title>Ioutil in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 09:53:14 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</guid>
-      <description> ReadAll payload, err := ioutil.ReadAll(recorder.Body); err != nil { t.Errorf(&amp;quot;Error parsing response body: %v&amp;quot;, err) }  </description>
-    </item>
-    
-    <item>
-      <title>Bufio in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 09:33:26 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</guid>
-      <description> NewScanner scanner := bufio.NewScanner(r) // r io.Reader scanner.Split(bufio.ScanWords) for scanner.Scan() { result[scanner.Text()]++ }  NewReader r := bufio.NewReader(f) line, err := r.ReadString(&#39;\n&#39;)  </description>
-    </item>
     
     <item>
       <title>Concurrency and parallelism</title>

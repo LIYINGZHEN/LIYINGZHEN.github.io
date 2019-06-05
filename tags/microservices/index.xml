@@ -20,14 +20,5 @@
       <description>Asynchronous processing With asynchronous processing, all the communication to the downstream application happens out of process leveraging a queue or a message broker as an intermediary.</description>
     </item>
     
-    <item>
-      <title>Service discovery</title>
-      <link>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</link>
-      <pubDate>Sun, 13 Jan 2019 10:19:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</guid>
-      <description> Server-side service discovery Client-side discovery </description>
-    </item>
-    
   </channel>
 </rss>

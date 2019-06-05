@@ -6,8 +6,78 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 30 May 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Remove Duplicates from Sorted Array</title>
+            <link>https://www.maxlivinci.com/blog/2019-05-30-remove-duplicates-from-sorted-array/</link>
+            <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-05-30-remove-duplicates-from-sorted-array/</guid>
+            <description>Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
+Example 1
+ Given nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+It doesn’t matter what you leave beyond the returned length.
+ Example 2
+ Given nums = [0,0,1,1,1,2,2,3,3,4],
+Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</description>
+            <content type="html"><![CDATA[
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.</p>
+
+<p><em>Example 1</em></p>
+
+<blockquote>
+<p>Given nums = [1,1,2],</p>
+
+<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.</p>
+
+<p>It doesn’t matter what you leave beyond the returned length.</p>
+</blockquote>
+
+<p><em>Example 2</em></p>
+
+<blockquote>
+<p>Given nums = [0,0,1,1,1,2,2,3,3,4],</p>
+
+<p>Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</p>
+
+<p>It doesn’t matter what values are set beyond the returned length.</p>
+</blockquote>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+)
+
+func removeDuplicates(nums []int) int {
+	replaceIndex := 1
+
+	for curr := 1; curr &lt; len(nums); curr++ {
+		if nums[curr] != nums[curr-1] {
+			nums[replaceIndex] = nums[curr]
+			replaceIndex++
+		}
+	}
+
+	fmt.Printf(&quot;%v&quot;, nums)
+
+	return replaceIndex
+}
+
+func main() {
+	removeDuplicates([]int{1, 2, 3, 3, 3, 3, 3, 4})
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>How to end a goroutine</title>

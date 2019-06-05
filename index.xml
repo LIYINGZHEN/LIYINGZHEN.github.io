@@ -6,10 +6,26 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Duplicates from Sorted Array</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-30-remove-duplicates-from-sorted-array/</link>
+      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-05-30-remove-duplicates-from-sorted-array/</guid>
+      <description>Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
+Example 1
+ Given nums = [1,1,2],
+Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+It doesn’t matter what you leave beyond the returned length.
+ Example 2
+ Given nums = [0,0,1,1,1,2,2,3,3,4],
+Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.</description>
+    </item>
     
     <item>
       <title>How to end a goroutine</title>
@@ -311,15 +327,6 @@ I have tried several frameworks: Bootstrap, React, and a few more. I admit I enj
     </item>
     
     <item>
-      <title>Drone</title>
-      <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
-      <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-14-drone/</guid>
-      <description> The .drone.yml file  </description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://www.maxlivinci.com/old/2019-03-14-linux/</link>
       <pubDate>Thu, 14 Mar 2019 07:00:00 +0000</pubDate>
@@ -345,48 +352,6 @@ I have tried several frameworks: Bootstrap, React, and a few more. I admit I enj
       <guid>https://www.maxlivinci.com/old/2019-03-09-mongodb/</guid>
       <description>Indexing and query optimization  Indexes in MongoDB are very important. Indexes that use more than one key like this are called compound indexes. The order of keys in a compound index matters. Aa query where one term demands an exact match and another specifies a range requires a compound index where the range key comes second.  For example:
 If we have this query, then the manufacturer shoud be the first index.</description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</link>
-      <pubDate>Fri, 08 Mar 2019 12:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</guid>
-      <description>Terminology Minikube: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
-Kubelet:
-Master Node: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.
-Node: Worker nodes that run the actual applications you deploy.
-Pod: Running containers in Kubernetes.
-Service: Enabling clients to discover and talk to pods.
-Commands General Commands # Starting a Minikube virtual machine.</description>
-    </item>
-    
-    <item>
-      <title>Strconv in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 11:03:14 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-strconv-in-go/</guid>
-      <description> ParseFloat strconv.ParseFloat(amount, 64)  ParseInt strconv.ParseInt(result, 10, 64)  FormatInt strconv.FormatInt(amount, 10)  ParseInt s := &amp;quot;1234&amp;quot; if res, err := strconv.ParseInt(s, 10, 64); err != nil { return err }  </description>
-    </item>
-    
-    <item>
-      <title>Ioutil in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 09:53:14 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-ioutil-in-go/</guid>
-      <description> ReadAll payload, err := ioutil.ReadAll(recorder.Body); err != nil { t.Errorf(&amp;quot;Error parsing response body: %v&amp;quot;, err) }  </description>
-    </item>
-    
-    <item>
-      <title>Bufio in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</link>
-      <pubDate>Sun, 27 Jan 2019 09:33:26 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-27-bufio-in-go/</guid>
-      <description> NewScanner scanner := bufio.NewScanner(r) // r io.Reader scanner.Split(bufio.ScanWords) for scanner.Scan() { result[scanner.Text()]++ }  NewReader r := bufio.NewReader(f) line, err := r.ReadString(&#39;\n&#39;)  </description>
     </item>
     
     <item>
@@ -433,37 +398,6 @@ Concurrency and parallelism are two terms that we are bound to come across often
     </item>
     
     <item>
-      <title>Unix Signals</title>
-      <link>https://www.maxlivinci.com/old/2019-01-25-unix-signals/</link>
-      <pubDate>Fri, 25 Jan 2019 20:34:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-25-unix-signals/</guid>
-      <description>Ctrl + C sends the SIGINT signal
- number 1 SIGTERM
- number 9 SIGKILL
-  package main import ( &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; &amp;quot;os/signal&amp;quot; &amp;quot;syscall&amp;quot; &amp;quot;time&amp;quot; ) func handle(signal os.Signal) { fmt.Println(&amp;quot;Received:&amp;quot;, signal) } func main() { sigs := make(chan os.Signal, 1) signal.Notify(sigs) go func() { for { sig := &amp;lt;-sigs switch sig { case os.Interrupt: handle(sig) case syscall.SIGTERM: handle(sig) os.Exit(0) case syscall.SIGUSR2: fmt.Println(&amp;quot;Handling syscall.SIGUSR2!&amp;quot;) default: fmt.Println(&amp;quot;Ignoring:&amp;quot;, sig) } } }() for { fmt.</description>
-    </item>
-    
-    <item>
-      <title>Interfaces in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-24-interface-in-go/</link>
-      <pubDate>Thu, 24 Jan 2019 18:28:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-24-interface-in-go/</guid>
-      <description>Interfaces provide a way to declare types that define only behavior. This behavior can be implemented by concrete types, such as struct or named types, via methods. When a concrete type implements the set of methods for an interface, values of the concrete type can be assigned to variables of the interface type. Then method calls against the interface value actually call into the equivalent method of the concrete value.</description>
-    </item>
-    
-    <item>
-      <title>Struct in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-22-pointers-in-go/</link>
-      <pubDate>Tue, 22 Jan 2019 09:34:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-22-pointers-in-go/</guid>
-      <description>Pointers provide a way to share data across function boundaries. Having the ability to share and reference data with a pointer provides flexbility. It also helps our programs minimize the amount of memory they need and can add some extra performance.
-Notes  Use pointers to share data. Values in Go are always pass by value. &amp;ldquo;Value of&amp;rdquo;, what&amp;rsquo;s in the box. &amp;ldquo;Address of&amp;rdquo; ( &amp;amp; ), where is the box.</description>
-    </item>
-    
-    <item>
       <title>General Go coding advices</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
       <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
@@ -495,16 +429,6 @@ $ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 N
     </item>
     
     <item>
-      <title>Reading from Standard Input</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</link>
-      <pubDate>Sat, 19 Jan 2019 15:33:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-reading-from-standard-input/</guid>
-      <description>package main import ( &amp;quot;bufio&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;os&amp;quot; ) func main() { var f *os.File f = os.Stdin defer f.Close() scanner := bufio.NewScanner(f) for scanner.Scan() { fmt.Println(&amp;quot;&amp;gt;&amp;quot;, scanner.Text()) } }  The execution of stdIN.go will produce the following type of output:
-$ go run stdIN.go 21 &amp;gt; 21 This is Mihalis! &amp;gt; This is Mihalis!  In Unix, you can tell a program to stop reading data from standard input by pressing Ctrl + D.</description>
-    </item>
-    
-    <item>
       <title>An Example of Using RabbitMQ From Go</title>
       <link>https://www.maxlivinci.com/old/2019-01-19-an-example-of-using-rabbitmq-from-go/</link>
       <pubDate>Sat, 19 Jan 2019 07:42:05 +0100</pubDate>
@@ -524,16 +448,6 @@ package main import ( &amp;quot;log&amp;quot; &amp;quot;github.com/streadway/amq
     </item>
     
     <item>
-      <title>Building an API server with Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-15-building-an-api-server-with-go/</link>
-      <pubDate>Tue, 15 Jan 2019 19:41:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-15-building-an-api-server-with-go/</guid>
-      <description>File Structures main.go service/ handlers_test.go handlers.go server.go middleware.go types.go  Libraries introduction  gorilla/mux -&amp;gt; A powerful URL router and dispatcher for golang unrolled/render -&amp;gt; Go package for easily rendering JSON responses. codegangsta/negroni -&amp;gt; Idiomatic HTTP Middleware for Golang  Install Dependencies go get github.com/urfave/negroni go get github.com/gorilla/mux go get github.com/unrolled/render  Create our types In service folder create types.go
-package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&amp;quot;` ShipsWithin int `json:&amp;quot;ships_within&amp;quot;` QuantityInStock int `json:&amp;quot;qty_in_stock&amp;quot;` }  TDD In service folder create handlers_test.</description>
-    </item>
-    
-    <item>
       <title>Event-Driven Architecture</title>
       <link>https://www.maxlivinci.com/old/2019-01-13-event-driven-architecture/</link>
       <pubDate>Sun, 13 Jan 2019 13:44:00 +0100</pubDate>
@@ -543,32 +457,12 @@ package service type fulfillmentStatus struct { SKU string `json:&amp;quot;sku&a
     </item>
     
     <item>
-      <title>Service discovery</title>
-      <link>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</link>
-      <pubDate>Sun, 13 Jan 2019 10:19:00 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-13-service-discovery/</guid>
-      <description> Server-side service discovery Client-side discovery </description>
-    </item>
-    
-    <item>
       <title>Serving Static Files In Go</title>
       <link>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</link>
       <pubDate>Sat, 12 Jan 2019 17:15:17 +0100</pubDate>
       
       <guid>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</guid>
       <description>func main() { port := 8080 cathandler := http.FileServer(http.Dir(&amp;quot;./images&amp;quot;)) // images/... http.Handle(&amp;quot;/cat/&amp;quot;, http.StripPrefix(&amp;quot;/cat/&amp;quot;, cathandler)) // images/cat/... http.Handle(&amp;quot;/cat/&amp;quot;, cathandler) log.Printf(&amp;quot;Server starting on port %v\n&amp;quot;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;quot;:%v&amp;quot;, port), nil)) }  </description>
-    </item>
-    
-    <item>
-      <title>Panic and Recover in Go</title>
-      <link>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</link>
-      <pubDate>Sat, 12 Jan 2019 14:16:34 +0100</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-01-19-panic-and-recover-in-go/</guid>
-      <description>Strictly speaking, panic() is a built-in Go function that terminates the current flow of a Go program and starts panicking!
-On the other hand, the recover() function, which is also a built-in Go function, allows you to take back the control of a goroutine that just panicked using panic().
-package main import ( &amp;quot;fmt&amp;quot; ) func a() { fmt.Println(&amp;quot;Inside a()&amp;quot;) defer func() { if c := recover(); c != nil { fmt.</description>
     </item>
     
     <item>

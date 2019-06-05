@@ -6,19 +6,10 @@
     <description>Recent content in Notes on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Mar 2019 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 07:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Drone</title>
-      <link>https://www.maxlivinci.com/old/2019-03-14-drone/</link>
-      <pubDate>Thu, 14 Mar 2019 08:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-14-drone/</guid>
-      <description> The .drone.yml file  </description>
-    </item>
     
     <item>
       <title>Linux</title>
@@ -46,21 +37,6 @@
       <guid>https://www.maxlivinci.com/old/2019-03-09-mongodb/</guid>
       <description>Indexing and query optimization  Indexes in MongoDB are very important. Indexes that use more than one key like this are called compound indexes. The order of keys in a compound index matters. Aa query where one term demands an exact match and another specifies a range requires a compound index where the range key comes second.  For example:
 If we have this query, then the manufacturer shoud be the first index.</description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</link>
-      <pubDate>Fri, 08 Mar 2019 12:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/old/2019-03-08-kubernetes/</guid>
-      <description>Terminology Minikube: Minikube is a tool that sets up a single-node cluster that’s great for both testing Kubernetes and developing apps locally.
-Kubelet:
-Master Node: The master node, which hosts the Kubernetes Control Plane that controls and manages the whole Kubernetes system.
-Node: Worker nodes that run the actual applications you deploy.
-Pod: Running containers in Kubernetes.
-Service: Enabling clients to discover and talk to pods.
-Commands General Commands # Starting a Minikube virtual machine.</description>
     </item>
     
   </channel>
