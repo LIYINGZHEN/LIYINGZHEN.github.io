@@ -7,11 +7,12 @@
 <meta name="author"
     content="Max">
 <meta name="description"
-    content=" LeetCode
+    content="LeetCode
 Problem Statement Given an array, rotate the array to the right by k steps, where k is non-negative.
 Example 1
-Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]  Example 2
-Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]  Solution func rotate(nums []int, k int) { n := len(nums) k = k % n reverse(nums, 0, n-1) reverse(nums, 0, k-1) reverse(nums, k, n-1) } func reverse(nums []int, i int, j int) { for i &amp;lt; j { nums[i], nums[j] = nums[j], nums[i] i&#43;&#43; j-- } }  " />
+ Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]
+ Example 2
+ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/blog/2019-05-31-leetcode-rotate-array/" />
@@ -42,11 +43,12 @@ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 ste
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="LeetCode - Rotate Array">
-<meta itemprop="description" content=" LeetCode
+<meta itemprop="description" content="LeetCode
 Problem Statement Given an array, rotate the array to the right by k steps, where k is non-negative.
 Example 1
-Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]  Example 2
-Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]  Solution func rotate(nums []int, k int) { n := len(nums) k = k % n reverse(nums, 0, n-1) reverse(nums, 0, k-1) reverse(nums, k, n-1) } func reverse(nums []int, i int, j int) { for i &lt; j { nums[i], nums[j] = nums[j], nums[i] i&#43;&#43; j-- } }  ">
+ Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]
+ Example 2
+ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]">
 
 
 <meta itemprop="datePublished" content="2019-05-31T00:00:00&#43;00:00" />
@@ -60,11 +62,12 @@ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 ste
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="LeetCode - Rotate Array"/>
-<meta name="twitter:description" content=" LeetCode
+<meta name="twitter:description" content="LeetCode
 Problem Statement Given an array, rotate the array to the right by k steps, where k is non-negative.
 Example 1
-Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]  Example 2
-Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]  Solution func rotate(nums []int, k int) { n := len(nums) k = k % n reverse(nums, 0, n-1) reverse(nums, 0, k-1) reverse(nums, k, n-1) } func reverse(nums []int, i int, j int) { for i &lt; j { nums[i], nums[j] = nums[j], nums[i] i&#43;&#43; j-- } }  "/>
+ Input: [1,2,3,4,5,6,7] and k = 3 Output: [5,6,7,1,2,3,4] Explanation: rotate 1 steps to the right: [7,1,2,3,4,5,6] rotate 2 steps to the right: [6,7,1,2,3,4,5] rotate 3 steps to the right: [5,6,7,1,2,3,4]
+ Example 2
+ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 steps to the right: [99,-1,-100,3] rotate 2 steps to the right: [3,99,-1,-100]"/>
 
 
 
@@ -148,22 +151,24 @@ Input: [-1,-100,3,99] and k = 2 Output: [3,99,-1,-100] Explanation: rotate 1 ste
 
 <p><em>Example 1</em></p>
 
-<pre><code>Input: [1,2,3,4,5,6,7] and k = 3
+<blockquote>
+<p>Input: [1,2,3,4,5,6,7] and k = 3
 Output: [5,6,7,1,2,3,4]
 Explanation:
 rotate 1 steps to the right: [7,1,2,3,4,5,6]
 rotate 2 steps to the right: [6,7,1,2,3,4,5]
-rotate 3 steps to the right: [5,6,7,1,2,3,4]
-</code></pre>
+rotate 3 steps to the right: [5,6,7,1,2,3,4]</p>
+</blockquote>
 
 <p><em>Example 2</em></p>
 
-<pre><code>Input: [-1,-100,3,99] and k = 2
+<blockquote>
+<p>Input: [-1,-100,3,99] and k = 2
 Output: [3,99,-1,-100]
 Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
-rotate 2 steps to the right: [3,99,-1,-100]
-</code></pre>
+rotate 2 steps to the right: [3,99,-1,-100]</p>
+</blockquote>
 
 <h2 id="solution">Solution</h2>
 
