@@ -6,10 +6,24 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 88. Merge Sorted Array</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/</link>
+      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/</guid>
+      <description>LeetCode
+Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Note:
+ The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.  Example
+ Input:
+nums1 = [1,2,3,0,0,0], m = 3</description>
+    </item>
     
     <item>
       <title>LeetCode - Merge Two Sorted Lists</title>
