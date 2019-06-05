@@ -6,6 +6,8 @@ published: true
 tags: ["leetcode"]
 ---
 
+[LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
 ## Problem Statement
 
 Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
@@ -20,7 +22,7 @@ Given a sorted array of numbers, remove the duplicates in-place such that each e
 
 *Example 2*
 
-> Given nums = [0,0,1,1,1,2,2,3,3,4],
+>  Given nums = [0,0,1,1,1,2,2,3,3,4],
 >
 > Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively.
 >
