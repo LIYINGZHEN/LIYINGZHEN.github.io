@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 26. Remove Duplicates from Sorted Array"
+title: "LeetCode - 026. Remove Duplicates from Sorted Array"
 date: 2019-05-30T00:00:00+00:00
 author: "Max"
 published: true

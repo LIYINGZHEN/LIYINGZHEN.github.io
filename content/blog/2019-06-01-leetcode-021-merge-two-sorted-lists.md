@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 21. Merge Two Sorted Lists"
+title: "LeetCode - 021. Merge Two Sorted Lists"
 date: 2019-06-01T00:00:00+00:00
 author: "Max"
 published: true

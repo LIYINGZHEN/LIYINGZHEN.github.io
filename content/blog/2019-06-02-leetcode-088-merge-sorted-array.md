@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 88. Merge Sorted Array"
+title: "LeetCode - 088. Merge Sorted Array"
 date: 2019-06-02T00:00:00+00:00
 author: "Max"
 published: true

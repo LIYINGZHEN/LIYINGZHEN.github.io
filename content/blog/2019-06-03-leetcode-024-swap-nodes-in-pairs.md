@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 24. Swap Nodes in Pairs"
+title: "LeetCode - 024. Swap Nodes in Pairs"
 date: 2019-06-03T00:00:00+00:00
 author: "Max"
 published: true
