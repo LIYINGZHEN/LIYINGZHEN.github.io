@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - Rotate Array"
+title: "LeetCode - 189. Rotate Array"
 date: 2019-05-31T00:00:00+00:00
 author: "Max"
 published: true

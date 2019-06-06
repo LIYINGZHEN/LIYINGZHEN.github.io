@@ -31,20 +31,19 @@ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one s
 
 ```go
 func merge(nums1 []int, m int, nums2 []int, n int)  {
-  // k is the index which we will replace the value
-  k := m + n - 1
-  i := m - 1
-  j := n - 1
+  replaceIndex := m + n - 1
+  array1Target := m - 1
+  array2Target := n - 1
 
-  for j >= 0 {
-    if (i >= 0 && nums1[i] > nums2[j]) {
-      nums1[k] = nums1[i];
-      i--;
+  for array2Target >= 0 {
+    if (array1Target >= 0 && nums2[array2Target] < nums1[array1Target]) {
+      nums1[replaceIndex] = nums1[array1Target]
+      array1Target--
     } else {
-      nums1[k] = nums2[j];
-      j--;
+      nums1[replaceIndex] = nums2[array2Target]
+      array2Target--
     }
-    k--
+    replaceIndex--
   }
 }
 ```
