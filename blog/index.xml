@@ -89,7 +89,7 @@ func buildCharMap(s string) map[rune]int {
         </item>
         
         <item>
-            <title>LeetCode - 24. Swap Nodes in Pairs</title>
+            <title>LeetCode - 024. Swap Nodes in Pairs</title>
             <link>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</link>
             <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
             
@@ -156,7 +156,7 @@ func swapPairs(head *ListNode) *ListNode {
         </item>
         
         <item>
-            <title>LeetCode - 88. Merge Sorted Array</title>
+            <title>LeetCode - 088. Merge Sorted Array</title>
             <link>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</link>
             <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
             
@@ -217,7 +217,7 @@ nums1 = [1,2,3,0,0,0], m = 3</description>
         </item>
         
         <item>
-            <title>LeetCode - 21. Merge Two Sorted Lists</title>
+            <title>LeetCode - 021. Merge Two Sorted Lists</title>
             <link>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</link>
             <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
             
@@ -374,7 +374,7 @@ func reverse(nums []int, i int, j int) {
         </item>
         
         <item>
-            <title>LeetCode - 26. Remove Duplicates from Sorted Array</title>
+            <title>LeetCode - 026. Remove Duplicates from Sorted Array</title>
             <link>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</link>
             <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
             
