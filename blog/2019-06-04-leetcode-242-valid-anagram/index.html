@@ -8,19 +8,22 @@
     content="Max">
 <meta name="description"
     content="LeetCode
-Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:
- The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2.  Example
- Input:
-nums1 = [1,2,3,0,0,0], m = 3" />
+Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+ Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo;
+Output: true
+ Example 2:
+ Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo;
+Output: false
+ Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/" />
 
 
 <title>
     
-    LeetCode - 88. Merge Sorted Array :: YING ZHEN LI 
+    LeetCode - 242. Valid Anagram :: YING ZHEN LI 
     
 </title>
 
@@ -42,18 +45,21 @@ nums1 = [1,2,3,0,0,0], m = 3" />
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 88. Merge Sorted Array">
+<meta itemprop="name" content="LeetCode - 242. Valid Anagram">
 <meta itemprop="description" content="LeetCode
-Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:
- The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2.  Example
- Input:
-nums1 = [1,2,3,0,0,0], m = 3">
+Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+ Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;
+Output: true
+ Example 2:
+ Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;
+Output: false
+ Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !">
 
 
-<meta itemprop="datePublished" content="2019-06-02T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-02T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="142">
+<meta itemprop="datePublished" content="2019-06-04T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-04T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="129">
 
 
 
@@ -61,18 +67,21 @@ nums1 = [1,2,3,0,0,0], m = 3">
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 88. Merge Sorted Array"/>
+<meta name="twitter:title" content="LeetCode - 242. Valid Anagram"/>
 <meta name="twitter:description" content="LeetCode
-Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:
- The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m &#43; n) to hold additional elements from nums2.  Example
- Input:
-nums1 = [1,2,3,0,0,0], m = 3"/>
+Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+ Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;
+Output: true
+ Example 2:
+ Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;
+Output: false
+ Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !"/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-02 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-04 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -136,56 +145,70 @@ nums1 = [1,2,3,0,0,0], m = 3"/>
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/">LeetCode - 88. Merge Sorted Array</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/">LeetCode - 242. Valid Anagram</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/merge-sorted-array/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/valid-anagram/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
+<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
 
-<p><strong>Note:</strong></p>
-
-<ul>
-<li>The number of elements initialized in nums1 and nums2 are m and n respectively.</li>
-<li>You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.</li>
-</ul>
-
-<p><em>Example</em></p>
+<p><em>Example 1:</em></p>
 
 <blockquote>
-<p>Input:</p>
+<p>Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;</p>
 
-<p>nums1 = [1,2,3,0,0,0], m = 3</p>
+<p>Output: true</p>
+</blockquote>
 
-<p>nums2 = [2,5,6],       n = 3</p>
+<p><em>Example 2:</em></p>
 
-<p>Output: [1,2,2,3,5,6]</p>
+<blockquote>
+<p>Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;</p>
+
+<p>Output: false</p>
 </blockquote>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func merge(nums1 []int, m int, nums2 []int, n int)  {
-  // k is the index which we will replace the value
-  k := m + n - 1
-  i := m - 1
-  j := n - 1
+<pre><code class="language-go">func isAnagram(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
 
-  for j &gt;= 0 {
-    if (i &gt;= 0 &amp;&amp; nums1[i] &gt; nums2[j]) {
-      nums1[k] = nums1[i];
-      i--;
-    } else {
-      nums1[k] = nums2[j];
-      j--;
-    }
-    k--
-  }
+	mapA := buildCharMap(s)
+	mapB := buildCharMap(t)
+
+	for key, Acount := range mapA {
+		Bcount, ok := mapB[key]
+		if !ok {
+			return false
+		}
+		if Acount != Bcount {
+			return false
+		}
+	}
+
+	return true
+}
+
+func buildCharMap(s string) map[rune]int {
+	m := make(map[rune]int)
+
+	for _, char := range s {
+		if _, ok := m[char]; ok {
+			m[char]++
+		} else {
+			m[char] = 1
+		}
+	}
+
+	return m
 }
 </code></pre>
 
@@ -199,9 +222,9 @@ nums1 = [1,2,3,0,0,0], m = 3"/>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>142 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>129 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-02 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-04 08:00 &#43;0800</p>
         </div>
 
         
@@ -216,8 +239,8 @@ nums1 = [1,2,3,0,0,0], m = 3"/>
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-01-leetcode-merge-two-sorted-lists/">
-                                <span class="button__text">LeetCode - Merge Two Sorted Lists</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/">
+                                <span class="button__text">LeetCode - 24. Swap Nodes in Pairs</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

@@ -6,17 +6,48 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>LeetCode - 242. Valid Anagram</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/</guid>
+      <description>LeetCode
+Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
+Example 1:
+ Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo;
+Output: true
+ Example 2:
+ Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo;
+Output: false
+ Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 24. Swap Nodes in Pairs</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</guid>
+      <description>LeetCode
+Problem Statement Given a linked list, swap every two adjacent nodes and return its head.
+You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
+Example
+ Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you should return the list as 2-&amp;gt;1-&amp;gt;4-&amp;gt;3.
+ Solution /** * Definition for singly-linked list. * type ListNode struct { * Val int * Next *ListNode * } */ func swapPairs(head *ListNode) *ListNode { dummy := ListNode{} dummy.</description>
+    </item>
+    
+    <item>
       <title>LeetCode - 88. Merge Sorted Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/</link>
+      <link>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</link>
       <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/</guid>
+      <guid>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</guid>
       <description>LeetCode
 Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 Note:
@@ -26,11 +57,11 @@ nums1 = [1,2,3,0,0,0], m = 3</description>
     </item>
     
     <item>
-      <title>LeetCode - Merge Two Sorted Lists</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-01-leetcode-merge-two-sorted-lists/</link>
+      <title>LeetCode - 21. Merge Two Sorted Lists</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</link>
       <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-01-leetcode-merge-two-sorted-lists/</guid>
+      <guid>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</guid>
       <description>LeetCode
 Problem Statement Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 Example
@@ -40,11 +71,11 @@ Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
     </item>
     
     <item>
-      <title>LeetCode - Rotate Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-05-31-leetcode-rotate-array/</link>
+      <title>LeetCode - 189. Rotate Array</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-31-leetcode-189-rotate-array/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-05-31-leetcode-rotate-array/</guid>
+      <guid>https://www.maxlivinci.com/blog/2019-05-31-leetcode-189-rotate-array/</guid>
       <description>LeetCode
 Problem Statement Given an array, rotate the array to the right by k steps, where k is non-negative.
 Example 1
@@ -62,11 +93,11 @@ rotate 1 steps to the right: [99,-1,-100,3]</description>
     </item>
     
     <item>
-      <title>LeetCode - Remove Duplicates from Sorted Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-05-30-leetcode-remove-duplicates-from-sorted-array/</link>
+      <title>LeetCode - 26. Remove Duplicates from Sorted Array</title>
+      <link>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-05-30-leetcode-remove-duplicates-from-sorted-array/</guid>
+      <guid>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</guid>
       <description>LeetCode
 Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
 Example 1

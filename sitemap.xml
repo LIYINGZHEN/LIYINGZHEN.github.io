@@ -3,22 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.maxlivinci.com/blog/2019-06-02-leetcode-merge-sorted-array/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/</loc>
+    <lastmod>2019-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</loc>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</loc>
     <lastmod>2019-06-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/blog/2019-06-01-leetcode-merge-two-sorted-lists/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</loc>
     <lastmod>2019-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/blog/2019-05-31-leetcode-rotate-array/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-05-31-leetcode-189-rotate-array/</loc>
     <lastmod>2019-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/blog/2019-05-30-leetcode-remove-duplicates-from-sorted-array/</loc>
+    <loc>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</loc>
     <lastmod>2019-05-30T00:00:00+00:00</lastmod>
   </url>
   
@@ -254,7 +264,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -314,7 +324,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/leetcode/</loc>
-    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -374,7 +384,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-06-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
