@@ -8,22 +8,21 @@
     content="Max">
 <meta name="description"
     content="LeetCode
-Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
-Example 1:
- Input: s = &amp;ldquo;anagram&amp;rdquo;, t = &amp;ldquo;nagaram&amp;rdquo;
-Output: true
- Example 2:
- Input: s = &amp;ldquo;rat&amp;rdquo;, t = &amp;ldquo;car&amp;rdquo;
-Output: false
- Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !" />
+Problem Statement Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Note: A leaf is a node with no children.
+Example:
+Given binary tree [3,9,20,null,null,15,7],
+3 / \ 9 20 / \ 15 7  return its depth = 3.
+Solution /** * Definition for a binary tree node." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/" />
 
 
 <title>
     
-    LeetCode - 242. Valid Anagram :: YING ZHEN LI 
+    LeetCode - 104. Maximum Depth of Binary Tree :: YING ZHEN LI 
     
 </title>
 
@@ -45,21 +44,20 @@ Output: false
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 242. Valid Anagram">
+<meta itemprop="name" content="LeetCode - 104. Maximum Depth of Binary Tree">
 <meta itemprop="description" content="LeetCode
-Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
-Example 1:
- Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;
-Output: true
- Example 2:
- Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;
-Output: false
- Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !">
+Problem Statement Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Note: A leaf is a node with no children.
+Example:
+Given binary tree [3,9,20,null,null,15,7],
+3 / \ 9 20 / \ 15 7  return its depth = 3.
+Solution /** * Definition for a binary tree node.">
 
 
-<meta itemprop="datePublished" content="2019-06-04T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-04T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="129">
+<meta itemprop="datePublished" content="2019-06-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="108">
 
 
 
@@ -67,21 +65,20 @@ Output: false
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 242. Valid Anagram"/>
+<meta name="twitter:title" content="LeetCode - 104. Maximum Depth of Binary Tree"/>
 <meta name="twitter:description" content="LeetCode
-Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
-Example 1:
- Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;
-Output: true
- Example 2:
- Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;
-Output: false
- Solution func isAnagram(s string, t string) bool { if len(s) != len(t) { return false } mapA := buildCharMap(s) mapB := buildCharMap(t) for key, Acount := range mapA { Bcount, ok := mapB[key] if !"/>
+Problem Statement Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Note: A leaf is a node with no children.
+Example:
+Given binary tree [3,9,20,null,null,15,7],
+3 / \ 9 20 / \ 15 7  return its depth = 3.
+Solution /** * Definition for a binary tree node."/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-04 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-06 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -145,70 +142,54 @@ Output: false
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/">LeetCode - 242. Valid Anagram</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/">LeetCode - 104. Maximum Depth of Binary Tree</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/valid-anagram/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given two strings s and t , write a function to determine if t is an anagram of s.</p>
+<p>Given a binary tree, find its maximum depth.</p>
 
-<p><em>Example 1:</em></p>
+<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>
 
-<blockquote>
-<p>Input: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo;</p>
+<p>Note: A leaf is a node with no children.</p>
 
-<p>Output: true</p>
-</blockquote>
+<p><em>Example:</em></p>
 
-<p><em>Example 2:</em></p>
+<p>Given binary tree <code>[3,9,20,null,null,15,7]</code>,</p>
 
-<blockquote>
-<p>Input: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo;</p>
+<pre><code class="language-js">    3
+   / \
+  9  20
+    /  \
+   15   7
+</code></pre>
 
-<p>Output: false</p>
-</blockquote>
+<p>return its depth = 3.</p>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func isAnagram(s string, t string) bool {
-	if len(s) != len(t) {
-		return false
+<pre><code class="language-go">/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+import &quot;math&quot;
+
+func maxDepth(root *TreeNode) int {
+	if root == nil {
+		return 0
 	}
 
-	mapA := buildCharMap(s)
-	mapB := buildCharMap(t)
-
-	for key, Acount := range mapA {
-		Bcount, ok := mapB[key]
-		if !ok {
-			return false
-		}
-		if Acount != Bcount {
-			return false
-		}
-	}
-
-	return true
-}
-
-func buildCharMap(s string) map[rune]int {
-	m := make(map[rune]int)
-
-	for _, char := range s {
-		if _, ok := m[char]; ok {
-			m[char]++
-		} else {
-			m[char] = 1
-		}
-	}
-
-	return m
+	return int(math.Max(float64(maxDepth(root.Left)), float64(maxDepth(root.Right))) + 1)
 }
 </code></pre>
 
@@ -222,9 +203,9 @@ func buildCharMap(s string) map[rune]int {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>129 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>108 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-04 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-06 08:00 &#43;0800</p>
         </div>
 
         
@@ -236,18 +217,11 @@ func buildCharMap(s string) map[rune]int {
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 49. Group Anagrams</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/">
-                                <span class="button__text">LeetCode - 024. Swap Nodes in Pairs</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-06-leetcode-050-pow/">
+                                <span class="button__text">LeetCode - 50. Pow(x, n)</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

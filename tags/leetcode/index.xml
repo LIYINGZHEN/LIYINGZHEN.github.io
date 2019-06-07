@@ -6,10 +6,52 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 104. Maximum Depth of Binary Tree</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</guid>
+      <description>LeetCode
+Problem Statement Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Note: A leaf is a node with no children.
+Example:
+Given binary tree [3,9,20,null,null,15,7],
+3 / \ 9 20 / \ 15 7  return its depth = 3.
+Solution /** * Definition for a binary tree node.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 50. Pow(x, n)</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-06-leetcode-050-pow/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-06-leetcode-050-pow/</guid>
+      <description> LeetCode
+Problem Statement Implement pow(x, n), which calculates x raised to the power n (xn).
+Example 1:
+Input: 2.00000, 10 Output: 1024.00000  Example 2:
+Input: 2.10000, 3 Output: 9.26100  Example 3:
+Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25  Solution func myPow(x float64, n int) float64 { if n == 0 { return 1 } if n == 1 { return x } if n &amp;lt; 0 { return 1 / myPow(x, -n) } if n%2 == 0 { return myPow(x*x, n/2) } else { return x * myPow(x*x, n/2) } }  </description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 49. Group Anagrams</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/</guid>
+      <description> LeetCode
+Problem Statement Given an array of strings, group anagrams together.
+Example:
+Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot;, &amp;quot;ate&amp;quot;, &amp;quot;nat&amp;quot;, &amp;quot;bat&amp;quot;], Output: [ [&amp;quot;ate&amp;quot;,&amp;quot;eat&amp;quot;,&amp;quot;tea&amp;quot;], [&amp;quot;nat&amp;quot;,&amp;quot;tan&amp;quot;], [&amp;quot;bat&amp;quot;] ]  Solution import ( &amp;quot;sort&amp;quot; &amp;quot;strings&amp;quot; ) func SortString(w string) string { s := strings.Split(w, &amp;quot;&amp;quot;) sort.Strings(s) return strings.Join(s, &amp;quot;&amp;quot;) } func groupAnagrams(strs []string) [][]string { m := make(map[string][]string) for _, w := range strs { word := SortString(w) m[word] = append(m[word], w) } var ss [][]string for e := range m { ss = append(ss, m[e]) } return ss }  </description>
+    </item>
     
     <item>
       <title>LeetCode - 242. Valid Anagram</title>
