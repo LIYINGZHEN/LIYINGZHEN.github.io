@@ -1,9 +1,9 @@
 ---
 title: "TCP/IP"
-date: 2019-06-03T00:00:00+00:00
+date: 2019-01-01T00:00:00+00:00
 author: "Max"
 published: false
-tags: ["tcp/ip"]
+tags: []
 ---
 
 应用层
@@ -21,3 +21,13 @@ Mac層
     - ARP
 
 物理層
+
+## 查看IP地址
+
+```
+ifconfig
+```
+
+```
+ip addr
+```

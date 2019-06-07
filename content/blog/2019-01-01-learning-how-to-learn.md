@@ -1,9 +1,9 @@
 ---
 title:       "Learning How to Learn"
-date:        2019-05-29T00:00:00+00:00
+date:        2019-01-01T00:00:00+00:00
 author:      "Max"
 published:   false
-tags:        ["thought"]
+tags:        []
 ---
 
 ## 開發經歷
