@@ -6,15 +6,28 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>LeetCode - 257. Binary Tree Paths</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/</guid>
+      <description>LeetCode
+Problem Statement Given a binary tree, return all root-to-leaf paths.
+Note: A leaf is a node with no children.
+Example:
+Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;quot;1-&amp;gt;3&amp;quot;] Explanation: All root-to-leaf paths are: 1-&amp;gt;2-&amp;gt;5, 1-&amp;gt;3  Solution /** * Definition for a binary tree node. * type TreeNode struct { * Val int * Left *TreeNode * Right *TreeNode * } */ import &amp;quot;strconv&amp;quot; func binaryTreePaths(root *TreeNode) []string { if root == nil { return nil } res := make([]string, 0, 16) dfs(&amp;quot;&amp;quot;, root, &amp;amp;res) return res } func dfs(path string, root *TreeNode, res *[]string) { if path == &amp;quot;&amp;quot; { path += strconv.</description>
+    </item>
+    
+    <item>
       <title>LeetCode - 104. Maximum Depth of Binary Tree</title>
       <link>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</guid>
       <description>LeetCode
