@@ -1,6 +1,6 @@
 ---
 title: "LeetCode - 104. Maximum Depth of Binary Tree"
-date: 2019-06-06T00:00:00+00:00
+date: 2019-06-07T00:00:00+00:00
 author: "Max"
 published: true
 tags: ["leetcode"]

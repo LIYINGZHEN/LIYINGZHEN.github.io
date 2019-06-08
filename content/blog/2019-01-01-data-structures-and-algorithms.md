@@ -1,6 +1,6 @@
 ---
 title:       "Data Structures and Algorithms"
-date:        2019-05-28T00:00:00+00:00
+date:        2019-01-01T00:00:00+00:00
 author:      "Max"
 published:   false
 tags:        ["algorithms"]
@@ -38,3 +38,10 @@ tags:        ["algorithms"]
 6. Counting Sort
 7. Bucket Sort
 8. Radix Sort
+
+## Linked List
+
+
+## Hash Table
+
+1. 散列函数生成的值要尽可能随机并且均匀分布

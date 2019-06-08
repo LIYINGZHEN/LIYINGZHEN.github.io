@@ -1,5 +1,5 @@
 ---
-title:       "Slices from the ground up"
+title:       "Slices in Go"
 date:        2019-04-22T00:00:00+00:00
 author:      "Max"
 published:   true
@@ -62,5 +62,37 @@ func main() {
   s := []int{1, 2, 3}
   double(s)
   fmt.Println(s, len(s)) // prints [1 2 3] 3
+}
+```
+
+## Trick
+
+```go
+package main
+
+import (
+	"fmt"
+	"reflect"
+	"unsafe"
+)
+
+func binaryTreePaths() {
+	res := make([]string, 0, 16)
+	fmt.Printf("before %+v \n", res)
+	dfs(res)
+	fmt.Printf("after %+v \n", res)
+
+	header := (*reflect.SliceHeader)(unsafe.Pointer(&res))
+	header.Len = 1
+	fmt.Printf("after trick %+v \n", res)
+}
+
+func dfs(res []string) {
+	res = append(res, "10")
+	fmt.Printf("res in dfs %+v \n", res)
+}
+
+func main() {
+	binaryTreePaths()
 }
 ```
