@@ -6,8 +6,71 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 08 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 938. Range Sum of BST</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</link>
+            <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</guid>
+            <description>LeetCode
+Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
+The binary search tree is guaranteed to have unique values.
+Example 1:
+Input: root = [10,5,15,3,7,null,18], L = 7, R = 15 Output: 32  Example 2:
+Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /** * Definition for a binary tree node.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/range-sum-of-bst/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given the <strong>root</strong> node of a binary search tree, return the sum of values of all nodes with value between <strong>L</strong> and <strong>R</strong> (inclusive).</p>
+
+<p>The binary search tree is guaranteed to have unique values.</p>
+
+<p><em>Example 1:</em></p>
+
+<pre><code class="language-js">Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
+Output: 32
+</code></pre>
+
+<p><em>Example 2:</em></p>
+
+<pre><code class="language-js">Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
+Output: 23
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+func rangeSumBST(root *TreeNode, L int, R int) int {
+	return dfs(root, L, R)
+}
+
+func dfs(root *TreeNode, L int, R int) int {
+	if root == nil {
+		return 0
+	}
+
+	if root.Val &gt;= L &amp;&amp; root.Val &lt;= R {
+		return root.Val + dfs(root.Left, L, R) + dfs(root.Right, L, R)
+	}
+
+	return dfs(root.Left, L, R) + dfs(root.Right, L, R)
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 257. Binary Tree Paths</title>

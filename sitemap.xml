@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</loc>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/</loc>
     <lastmod>2019-06-08T00:00:00+00:00</lastmod>
   </url>
@@ -284,7 +289,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -313,14 +318,14 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/tags/go/</loc>
-    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
+    <loc>https://www.maxlivinci.com/categories/go/</loc>
+    <lastmod>2019-01-25T21:08:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/categories/go/</loc>
-    <lastmod>2019-01-25T21:08:00+01:00</lastmod>
+    <loc>https://www.maxlivinci.com/tags/go/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -344,7 +349,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/leetcode/</loc>
-    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -404,7 +409,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

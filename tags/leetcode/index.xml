@@ -6,10 +6,24 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 938. Range Sum of BST</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</guid>
+      <description>LeetCode
+Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
+The binary search tree is guaranteed to have unique values.
+Example 1:
+Input: root = [10,5,15,3,7,null,18], L = 7, R = 15 Output: 32  Example 2:
+Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /** * Definition for a binary tree node.</description>
+    </item>
     
     <item>
       <title>LeetCode - 257. Binary Tree Paths</title>
