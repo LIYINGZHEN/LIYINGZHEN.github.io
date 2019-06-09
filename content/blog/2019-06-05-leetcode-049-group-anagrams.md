@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 49. Group Anagrams"
+title: "LeetCode - 049. Group Anagrams"
 date: 2019-06-05T00:00:00+00:00
 author: "Max"
 published: true

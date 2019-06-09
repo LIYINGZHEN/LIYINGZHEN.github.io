@@ -32,15 +32,16 @@ Given a sorted array of numbers, remove the duplicates in-place such that each e
 
 ```go
 func removeDuplicates(nums []int) int {
-  replaceIndex := 1
+	currentIndex, replaceIndex := 1, 1
 
-  for curr := 1; curr < len(nums); curr++ {
-    if nums[curr] != nums[curr - 1] {
-      nums[replaceIndex] = nums[curr]
-      replaceIndex++
-    }
-  }
+	for currentIndex < len(nums) {
+		if nums[currentIndex] != nums[currentIndex-1] {
+			nums[replaceIndex] = nums[currentIndex]
+			replaceIndex++
+		}
+		currentIndex++
+	}
 
-  return replaceIndex
+	return replaceIndex
 }
 ```
