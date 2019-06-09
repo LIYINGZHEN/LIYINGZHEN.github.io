@@ -69,7 +69,7 @@ Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25  Solutio
     </item>
     
     <item>
-      <title>LeetCode - 49. Group Anagrams</title>
+      <title>LeetCode - 049. Group Anagrams</title>
       <link>https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
