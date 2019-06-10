@@ -6,8 +6,59 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 09 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 10 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 001. Two Sum</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/</link>
+            <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/</guid>
+            <description> LeetCode
+Problem Statement Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution func twoSum(nums []int, target int) []int { // visited store value and index visited := make(map[int]int) for currentIndex, v := range nums { counterPart := target - v counterPartIndex, ok := visited[counterPart] if ok { return []int{counterPartIndex, currentIndex} } visited[v] = currentIndex } return []int{-1, -1} }  </description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/two-sum/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+
+<p><em>Example:</em></p>
+
+<pre><code class="language-js">Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">func twoSum(nums []int, target int) []int {
+	// visited store value and index
+	visited := make(map[int]int)
+
+	for currentIndex, v := range nums {
+		counterPart := target - v
+
+		counterPartIndex, ok := visited[counterPart]
+		if ok {
+			return []int{counterPartIndex, currentIndex}
+		}
+		visited[v] = currentIndex
+	}
+
+	return []int{-1, -1}
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 938. Range Sum of BST</title>

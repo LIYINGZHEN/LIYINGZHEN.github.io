@@ -7,20 +7,19 @@
 <meta name="author"
     content="Max">
 <meta name="description"
-    content="LeetCode
-Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
-The binary search tree is guaranteed to have unique values.
-Example 1:
-Input: root = [10,5,15,3,7,null,18], L = 7, R = 15 Output: 32  Example 2:
-Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /** * Definition for a binary tree node." />
+    content=" LeetCode
+Problem Statement Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution func twoSum(nums []int, target int) []int { // visited store value and index visited := make(map[int]int) for currentIndex, v := range nums { counterPart := target - v counterPartIndex, ok := visited[counterPart] if ok { return []int{counterPartIndex, currentIndex} } visited[v] = currentIndex } return []int{-1, -1} }  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/" />
 
 
 <title>
     
-    LeetCode - 938. Range Sum of BST :: YING ZHEN LI 
+    LeetCode - 001. Two Sum :: YING ZHEN LI 
     
 </title>
 
@@ -42,18 +41,17 @@ Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 938. Range Sum of BST">
-<meta itemprop="description" content="LeetCode
-Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
-The binary search tree is guaranteed to have unique values.
-Example 1:
-Input: root = [10,5,15,3,7,null,18], L = 7, R = 15 Output: 32  Example 2:
-Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /** * Definition for a binary tree node.">
+<meta itemprop="name" content="LeetCode - 001. Two Sum">
+<meta itemprop="description" content=" LeetCode
+Problem Statement Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution func twoSum(nums []int, target int) []int { // visited store value and index visited := make(map[int]int) for currentIndex, v := range nums { counterPart := target - v counterPartIndex, ok := visited[counterPart] if ok { return []int{counterPartIndex, currentIndex} } visited[v] = currentIndex } return []int{-1, -1} }  ">
 
 
-<meta itemprop="datePublished" content="2019-06-09T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-09T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="151">
+<meta itemprop="datePublished" content="2019-06-10T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-10T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="115">
 
 
 
@@ -61,18 +59,17 @@ Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 938. Range Sum of BST"/>
-<meta name="twitter:description" content="LeetCode
-Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
-The binary search tree is guaranteed to have unique values.
-Example 1:
-Input: root = [10,5,15,3,7,null,18], L = 7, R = 15 Output: 32  Example 2:
-Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /** * Definition for a binary tree node."/>
+<meta name="twitter:title" content="LeetCode - 001. Two Sum"/>
+<meta name="twitter:description" content=" LeetCode
+Problem Statement Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+Given nums = [2, 7, 11, 15], target = 9, Because nums[0] &#43; nums[1] = 2 &#43; 7 = 9, return [0, 1].  Solution func twoSum(nums []int, target int) []int { // visited store value and index visited := make(map[int]int) for currentIndex, v := range nums { counterPart := target - v counterPartIndex, ok := visited[counterPart] if ok { return []int{counterPartIndex, currentIndex} } visited[v] = currentIndex } return []int{-1, -1} }  "/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-09 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-10 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -136,57 +133,46 @@ Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/">LeetCode - 938. Range Sum of BST</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/">LeetCode - 001. Two Sum</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/range-sum-of-bst/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/two-sum/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given the <strong>root</strong> node of a binary search tree, return the sum of values of all nodes with value between <strong>L</strong> and <strong>R</strong> (inclusive).</p>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
 
-<p>The binary search tree is guaranteed to have unique values.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
 
-<p><em>Example 1:</em></p>
+<p><em>Example:</em></p>
 
-<pre><code class="language-js">Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
-Output: 32
-</code></pre>
+<pre><code class="language-js">Given nums = [2, 7, 11, 15], target = 9,
 
-<p><em>Example 2:</em></p>
-
-<pre><code class="language-js">Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
-Output: 23
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">/**
- * Definition for a binary tree node.
- * type TreeNode struct {
- *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
- * }
- */
-func rangeSumBST(root *TreeNode, L int, R int) int {
-	return dfs(root, L, R)
-}
+<pre><code class="language-go">func twoSum(nums []int, target int) []int {
+	// visited store value and index
+	visited := make(map[int]int)
 
-func dfs(root *TreeNode, L int, R int) int {
-	if root == nil {
-		return 0
+	for currentIndex, v := range nums {
+		counterPart := target - v
+
+		counterPartIndex, ok := visited[counterPart]
+		if ok {
+			return []int{counterPartIndex, currentIndex}
+		}
+		visited[v] = currentIndex
 	}
 
-	if root.Val &gt;= L &amp;&amp; root.Val &lt;= R {
-		return root.Val + dfs(root.Left, L, R) + dfs(root.Right, L, R)
-	}
-
-	return dfs(root.Left, L, R) + dfs(root.Right, L, R)
+	return []int{-1, -1}
 }
 </code></pre>
 
@@ -200,9 +186,9 @@ func dfs(root *TreeNode, L int, R int) int {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>151 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>115 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-09 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-10 08:00 &#43;0800</p>
         </div>
 
         
@@ -214,18 +200,11 @@ func dfs(root *TreeNode, L int, R int) int {
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 001. Two Sum</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/">
-                                <span class="button__text">LeetCode - 257. Binary Tree Paths</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/">
+                                <span class="button__text">LeetCode - 938. Range Sum of BST</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
