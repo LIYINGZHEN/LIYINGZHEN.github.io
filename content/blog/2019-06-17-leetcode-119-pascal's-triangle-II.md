@@ -1,6 +1,6 @@
 ---
 title: "LeetCode - 118. Pascal's Triangle"
-date: 2019-06-16T00:00:00+00:00
+date: 2019-06-17T00:00:00+00:00
 author: "Max"
 published: true
 tags: ["leetcode"]
