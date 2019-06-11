@@ -6,8 +6,75 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 10 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 002. Add Two Numbers</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/</link>
+            <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/</guid>
+            <description>LeetCode
+Problem Statement You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+Example:
+Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/add-two-numbers/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+
+<p><em>Example:</em></p>
+
+<pre><code class="language-js">Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+Output: 7 -&gt; 0 -&gt; 8
+Explanation: 342 + 465 = 807.
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+	dummy := ListNode{}
+	head := &amp;dummy
+	carry := 0
+
+	for l1 != nil || l2 != nil || carry != 0 {
+		sum := 0
+
+		if l1 != nil {
+			sum += l1.Val
+			l1 = l1.Next
+		}
+		if l2 != nil {
+			sum += l2.Val
+			l2 = l2.Next
+		}
+
+		sum += carry
+		carry = sum / 10
+
+		head.Next = &amp;ListNode{Val: sum % 10}
+		head = head.Next
+	}
+
+	return dummy.Next
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 001. Two Sum</title>
