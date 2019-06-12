@@ -7,19 +7,18 @@
 <meta name="author"
     content="Max">
 <meta name="description"
-    content="LeetCode
-Problem Statement You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+    content=" LeetCode
+Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 &#43; 465 = 807." />
+Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &amp;lt; 0 { cur = v } else { cur &#43;= v } if cur &amp;gt; max { max = cur } } return max }  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/" />
 
 
 <title>
     
-    LeetCode - 002. Add Two Numbers :: YING ZHEN LI 
+    LeetCode - 053. Maximum Subarray :: YING ZHEN LI 
     
 </title>
 
@@ -41,17 +40,16 @@ Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 002. Add Two Numbers">
-<meta itemprop="description" content="LeetCode
-Problem Statement You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+<meta itemprop="name" content="LeetCode - 053. Maximum Subarray">
+<meta itemprop="description" content=" LeetCode
+Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example:
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.">
+Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &lt; 0 { cur = v } else { cur &#43;= v } if cur &gt; max { max = cur } } return max }  ">
 
 
-<meta itemprop="datePublished" content="2019-06-11T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-11T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="181">
+<meta itemprop="datePublished" content="2019-06-12T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-12T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="96">
 
 
 
@@ -59,17 +57,16 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 002. Add Two Numbers"/>
-<meta name="twitter:description" content="LeetCode
-Problem Statement You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+<meta name="twitter:title" content="LeetCode - 053. Maximum Subarray"/>
+<meta name="twitter:description" content=" LeetCode
+Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 Example:
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807."/>
+Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &lt; 0 { cur = v } else { cur &#43;= v } if cur &gt; max { max = cur } } return max }  "/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-11 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-12 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -133,20 +130,18 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/">LeetCode - 002. Add Two Numbers</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/">LeetCode - 053. Maximum Subarray</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/add-two-numbers/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/maximum-subarray/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>Given an integer array <strong>nums</strong>, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.</p>
 
 <p><em>Example:</em></p>
 
@@ -157,38 +152,19 @@ Explanation: 342 + 465 = 807.
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-	dummy := ListNode{}
-	head := &amp;dummy
-	carry := 0
-
-	for l1 != nil || l2 != nil || carry != 0 {
-		sum := 0
-
-		if l1 != nil {
-			sum += l1.Val
-			l1 = l1.Next
-		}
-		if l2 != nil {
-			sum += l2.Val
-			l2 = l2.Next
-		}
-
-		sum += carry
-		carry = sum / 10
-
-		head.Next = &amp;ListNode{Val: sum % 10}
-		head = head.Next
-	}
-
-	return dummy.Next
+<pre><code class="language-go">func maxSubArray(nums []int) int {
+	cur, max := nums[0], nums[0]
+	for _, v := range(nums[1:]) {
+        if cur &lt; 0 {
+            cur = v
+        } else {
+            cur += v
+        }
+        if cur &gt; max {
+            max = cur
+        }
+    }
+    return max
 }
 </code></pre>
 
@@ -202,9 +178,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>181 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>96 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-11 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-12 08:00 &#43;0800</p>
         </div>
 
         
@@ -216,18 +192,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 053. Maximum Subarray</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/">
-                                <span class="button__text">LeetCode - 001. Two Sum</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/">
+                                <span class="button__text">LeetCode - 002. Add Two Numbers</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
