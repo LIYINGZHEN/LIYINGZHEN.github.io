@@ -7,18 +7,20 @@
 <meta name="author"
     content="Max">
 <meta name="description"
-    content=" LeetCode
-Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &amp;lt; 0 { cur = v } else { cur &#43;= v } if cur &amp;gt; max { max = cur } } return max }  " />
+    content="LeetCode
+Problem Statement Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn&amp;rsquo;t matter what you leave beyond the new length.
+Example 1:
+Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/" />
 
 
 <title>
     
-    LeetCode - 053. Maximum Subarray :: YING ZHEN LI 
+    LeetCode - 027. Remove Element :: YING ZHEN LI 
     
 </title>
 
@@ -40,16 +42,18 @@ Input: (2 -&amp;gt; 4 -&amp;gt; 3) &#43; (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 053. Maximum Subarray">
-<meta itemprop="description" content=" LeetCode
-Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-Example:
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &lt; 0 { cur = v } else { cur &#43;= v } if cur &gt; max { max = cur } } return max }  ">
+<meta itemprop="name" content="LeetCode - 027. Remove Element">
+<meta itemprop="description" content="LeetCode
+Problem Statement Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn&rsquo;t matter what you leave beyond the new length.
+Example 1:
+Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2.">
 
 
-<meta itemprop="datePublished" content="2019-06-12T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-12T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="96">
+<meta itemprop="datePublished" content="2019-06-13T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-13T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="181">
 
 
 
@@ -57,16 +61,18 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 053. Maximum Subarray"/>
-<meta name="twitter:description" content=" LeetCode
-Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-Example:
-Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 Explanation: 342 &#43; 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &lt; 0 { cur = v } else { cur &#43;= v } if cur &gt; max { max = cur } } return max }  "/>
+<meta name="twitter:title" content="LeetCode - 027. Remove Element"/>
+<meta name="twitter:description" content="LeetCode
+Problem Statement Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn&rsquo;t matter what you leave beyond the new length.
+Example 1:
+Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with the first two elements of nums being 2."/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-12 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-13 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -130,41 +136,56 @@ Input: (2 -&gt; 4 -&gt; 3) &#43; (5 -&gt; 6 -&gt; 4) Output: 7 -&gt; 0 -&gt; 8 E
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/">LeetCode - 053. Maximum Subarray</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/">LeetCode - 027. Remove Element</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/maximum-subarray/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/remove-element/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given an integer array <strong>nums</strong>, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.</p>
+<p>Given an array nums and a value val, remove all instances of that value in-place and return the new length.</p>
 
-<p><em>Example:</em></p>
+<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
 
-<pre><code class="language-js">Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 0 -&gt; 8
-Explanation: 342 + 465 = 807.
+<p>The order of elements can be changed. It doesn&rsquo;t matter what you leave beyond the new length.</p>
+
+<p><em>Example 1:</em></p>
+
+<pre><code class="language-js">Given nums = [3,2,2,3], val = 3,
+
+Your function should return length = 2, with the first two elements of nums being 2.
+
+It doesn't matter what you leave beyond the returned length.
+</code></pre>
+
+<p><em>Example 2:</em></p>
+
+<pre><code class="language-js">Given nums = [0,1,2,2,3,0,4,2], val = 2,
+
+Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
+
+Note that the order of those five elements can be arbitrary.
+
+It doesn't matter what values are set beyond the returned length.
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func maxSubArray(nums []int) int {
-	cur, max := nums[0], nums[0]
-	for _, v := range(nums[1:]) {
-        if cur &lt; 0 {
-            cur = v
-        } else {
-            cur += v
-        }
-        if cur &gt; max {
-            max = cur
-        }
-    }
-    return max
+<pre><code class="language-go">func removeElement(nums []int, val int) int {
+	replaceIndex := 0
+
+	for i, v := range nums {
+		if v != val {
+			nums[replaceIndex] = nums[i]
+			replaceIndex++
+		}
+	}
+
+	return replaceIndex
 }
 </code></pre>
 
@@ -178,9 +199,9 @@ Explanation: 342 + 465 = 807.
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>96 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>181 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-12 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-13 08:00 &#43;0800</p>
         </div>
 
         
@@ -192,18 +213,11 @@ Explanation: 342 + 465 = 807.
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 027. Remove Element</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/">
-                                <span class="button__text">LeetCode - 002. Add Two Numbers</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/">
+                                <span class="button__text">LeetCode - 053. Maximum Subarray</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
