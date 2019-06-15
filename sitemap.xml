@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/</loc>
+    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -309,7 +319,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -338,14 +348,14 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/tags/go/</loc>
-    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
+    <loc>https://www.maxlivinci.com/categories/go/</loc>
+    <lastmod>2019-01-25T21:08:00+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/categories/go/</loc>
-    <lastmod>2019-01-25T21:08:00+01:00</lastmod>
+    <loc>https://www.maxlivinci.com/tags/go/</loc>
+    <lastmod>2019-05-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -369,7 +379,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/leetcode/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -429,7 +439,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

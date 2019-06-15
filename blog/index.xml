@@ -6,8 +6,142 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 066. Plus One</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/</link>
+            <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/</guid>
+            <description>Plus One
+Problem Statement Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+Example 1:
+Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/plus-one/">Plus One</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.</p>
+
+<p>The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.</p>
+
+<p>You may assume the integer does not contain any leading zero, except the number 0 itself.</p>
+
+<p><em>Example 1:</em></p>
+
+<pre><code class="language-js">Input: [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+</code></pre>
+
+<p><em>Example 2:</em></p>
+
+<pre><code class="language-js">Input: [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">func plusOne(digits []int) []int {
+    length := len(digits) - 1
+    right := length
+    carry := 0
+
+    for right &gt;= 0 || carry != 0 {
+        sum := 0
+
+        if (right &lt; 0 &amp;&amp; carry != 0) {
+            return append([]int{1}, digits...)
+        }
+
+        if (right == length) {
+            sum = digits[right] + 1
+        } else {
+            sum = digits[right] + carry
+        }
+
+        digits[right] = sum % 10
+        carry = sum / 10
+        right--
+    }
+
+    return digits
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>LeetCode - 035. Search Insert Position</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/</link>
+            <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/</guid>
+            <description> LeetCode
+Problem Statement Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+You may assume no duplicates in the array.
+Example 1:
+Input: [1,3,5,6], 5 Output: 2  Example 2:
+Input: [1,3,5,6], 2 Output: 1  Example 3:
+Input: [1,3,5,6], 7 Output: 4  Example 4:
+Input: [1,3,5,6], 0 Output: 0  Solution func searchInsert(nums []int, target int) int { for i, v := range nums { if (v == target) { return i } if (target &amp;lt; v) { return i } } return len(nums) }  </description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/search-insert-position/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
+
+<p>You may assume no duplicates in the array.</p>
+
+<p><em>Example 1:</em></p>
+
+<pre><code class="language-js">Input: [1,3,5,6], 5
+Output: 2
+</code></pre>
+
+<p><em>Example 2:</em></p>
+
+<pre><code class="language-js">Input: [1,3,5,6], 2
+Output: 1
+</code></pre>
+
+<p><em>Example 3:</em></p>
+
+<pre><code class="language-js">Input: [1,3,5,6], 7
+Output: 4
+</code></pre>
+
+<p><em>Example 4:</em></p>
+
+<pre><code class="language-js">Input: [1,3,5,6], 0
+Output: 0
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">func searchInsert(nums []int, target int) int {
+    for i, v := range nums {
+        if (v == target) {
+            return i
+        }
+        if (target &lt; v) {
+            return i
+        }
+    }
+    return len(nums)
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 027. Remove Element</title>
