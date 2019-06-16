@@ -7,20 +7,18 @@
 <meta name="author"
     content="Max">
 <meta name="description"
-    content="Plus One
-Problem Statement Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
-You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123." />
+    content=" LeetCode
+Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&amp;rsquo;s triangle.
+Example:
+Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &amp;lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &amp;lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &amp;lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/" />
 
 
 <title>
     
-    LeetCode - 066. Plus One :: YING ZHEN LI 
+    LeetCode - 118. Pascal&#39;s Triangle :: YING ZHEN LI 
     
 </title>
 
@@ -42,18 +40,16 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 066. Plus One">
-<meta itemprop="description" content="Plus One
-Problem Statement Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
-You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123.">
+<meta itemprop="name" content="LeetCode - 118. Pascal&#39;s Triangle">
+<meta itemprop="description" content=" LeetCode
+Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.
+Example:
+Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  ">
 
 
-<meta itemprop="datePublished" content="2019-06-15T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="164">
+<meta itemprop="datePublished" content="2019-06-16T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-16T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="95">
 
 
 
@@ -61,18 +57,16 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 066. Plus One"/>
-<meta name="twitter:description" content="Plus One
-Problem Statement Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
-The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
-You may assume the integer does not contain any leading zero, except the number 0 itself.
-Example 1:
-Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123."/>
+<meta name="twitter:title" content="LeetCode - 118. Pascal&#39;s Triangle"/>
+<meta name="twitter:description" content=" LeetCode
+Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.
+Example:
+Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  "/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-15 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-16 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -136,63 +130,57 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/">LeetCode - 066. Plus One</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/">LeetCode - 118. Pascal&rsquo;s Triangle</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/plus-one/">Plus One</a></p>
+<p><a href="https://leetcode.com/problems/pascals-triangle/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.</p>
+<p>Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.</p>
 
-<p>The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" alt="" /></p>
 
-<p>You may assume the integer does not contain any leading zero, except the number 0 itself.</p>
+<p><em>Example:</em></p>
 
-<p><em>Example 1:</em></p>
-
-<pre><code class="language-js">Input: [1,2,3]
-Output: [1,2,4]
-Explanation: The array represents the integer 123.
-</code></pre>
-
-<p><em>Example 2:</em></p>
-
-<pre><code class="language-js">Input: [4,3,2,1]
-Output: [4,3,2,2]
-Explanation: The array represents the integer 4321.
+<pre><code class="language-js">Input: 5
+Output:
+[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func plusOne(digits []int) []int {
-    length := len(digits) - 1
-    right := length
-    carry := 0
+<pre><code class="language-go">func generate(numRows int) [][]int {
+	if numRows &lt; 1 {
+		return [][]int{}
+	}
 
-    for right &gt;= 0 || carry != 0 {
-        sum := 0
+	result := make([][]int, numRows)
+	result[0] = []int{1}
 
-        if (right &lt; 0 &amp;&amp; carry != 0) {
-            return append([]int{1}, digits...)
-        }
+	for row := 1; row &lt; numRows; row++ {
+		result[row] = make([]int, row+1)
 
-        if (right == length) {
-            sum = digits[right] + 1
-        } else {
-            sum = digits[right] + carry
-        }
+		for column := 0; column &lt;= row; column++ {
+			if column == 0 || column == row {
+				result[row][column] = 1
+			} else {
+				result[row][column] = result[row-1][column-1] + result[row-1][column]
+			}
+		}
+	}
 
-        digits[right] = sum % 10
-        carry = sum / 10
-        right--
-    }
-
-    return digits
+	return result
 }
 </code></pre>
 
@@ -206,9 +194,9 @@ Explanation: The array represents the integer 4321.
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>164 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>95 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-15 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-16 08:00 &#43;0800</p>
         </div>
 
         
@@ -220,18 +208,11 @@ Explanation: The array represents the integer 4321.
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 118. Pascal&#39;s Triangle</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/">
-                                <span class="button__text">LeetCode - 035. Search Insert Position</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/">
+                                <span class="button__text">LeetCode - 066. Plus One</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>
