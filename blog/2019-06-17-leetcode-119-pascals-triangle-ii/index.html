@@ -8,12 +8,13 @@
     content="Max">
 <meta name="description"
     content=" LeetCode
-Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&amp;rsquo;s triangle.
+Problem Statement Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&amp;rsquo;s triangle.
+Note that the row index starts from 0.
 Example:
-Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &amp;lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &amp;lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &amp;lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  " />
+Input: 3 Output: [1,3,3,1]  Solution func getRow(rowIndex int) []int { result := make([][]int, rowIndex&#43;1) result[0] = []int{1} for row := 1; row &amp;lt;= rowIndex; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &amp;lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result[rowIndex] }  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/" />
 
 
 <title>
@@ -42,13 +43,14 @@ Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func 
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="LeetCode - 118. Pascal&#39;s Triangle">
 <meta itemprop="description" content=" LeetCode
-Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.
+Problem Statement Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&rsquo;s triangle.
+Note that the row index starts from 0.
 Example:
-Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  ">
+Input: 3 Output: [1,3,3,1]  Solution func getRow(rowIndex int) []int { result := make([][]int, rowIndex&#43;1) result[0] = []int{1} for row := 1; row &lt;= rowIndex; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result[rowIndex] }  ">
 
 
-<meta itemprop="datePublished" content="2019-06-16T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-16T00:00:00&#43;00:00" />
+<meta itemprop="datePublished" content="2019-06-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-17T00:00:00&#43;00:00" />
 <meta itemprop="wordCount" content="95">
 
 
@@ -59,14 +61,15 @@ Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func 
 
 <meta name="twitter:title" content="LeetCode - 118. Pascal&#39;s Triangle"/>
 <meta name="twitter:description" content=" LeetCode
-Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.
+Problem Statement Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&rsquo;s triangle.
+Note that the row index starts from 0.
 Example:
-Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &lt; numRows; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result }  "/>
+Input: 3 Output: [1,3,3,1]  Solution func getRow(rowIndex int) []int { result := make([][]int, rowIndex&#43;1) result[0] = []int{1} for row := 1; row &lt;= rowIndex; row&#43;&#43; { result[row] = make([]int, row&#43;1) for column := 0; column &lt;= row; column&#43;&#43; { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] &#43; result[row-1][column] } } } return result[rowIndex] }  "/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-16 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-17 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -130,47 +133,37 @@ Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func 
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/">LeetCode - 118. Pascal&rsquo;s Triangle</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/">LeetCode - 118. Pascal&rsquo;s Triangle</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/pascals-triangle/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/pascals-triangle-ii/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given a non-negative integer numRows, generate the first numRows of Pascal&rsquo;s triangle.</p>
+<p>Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&rsquo;s triangle.</p>
+
+<p>Note that the row index starts from 0.</p>
 
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" alt="" /></p>
 
 <p><em>Example:</em></p>
 
-<pre><code class="language-js">Input: 5
-Output:
-[
-     [1],
-    [1,1],
-   [1,2,1],
-  [1,3,3,1],
- [1,4,6,4,1]
-]
+<pre><code class="language-js">Input: 3
+Output: [1,3,3,1]
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func generate(numRows int) [][]int {
-	if numRows &lt; 1 {
-		return [][]int{}
-	}
-
-	result := make([][]int, numRows)
+<pre><code class="language-go">func getRow(rowIndex int) []int {
+	result := make([][]int, rowIndex+1)
 	result[0] = []int{1}
 
-	for row := 1; row &lt; numRows; row++ {
+	for row := 1; row &lt;= rowIndex; row++ {
 		result[row] = make([]int, row+1)
-
 		for column := 0; column &lt;= row; column++ {
 			if column == 0 || column == row {
 				result[row][column] = 1
@@ -180,7 +173,7 @@ Output:
 		}
 	}
 
-	return result
+	return result[rowIndex]
 }
 </code></pre>
 
@@ -196,7 +189,7 @@ Output:
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>95 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-16 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-17 08:00 &#43;0800</p>
         </div>
 
         
@@ -208,18 +201,11 @@ Output:
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 118. Pascal&#39;s Triangle</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/">
-                                <span class="button__text">LeetCode - 066. Plus One</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/">
+                                <span class="button__text">LeetCode - 118. Pascal&#39;s Triangle</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

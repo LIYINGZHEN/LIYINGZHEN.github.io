@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/</loc>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/</loc>
     <lastmod>2019-06-16T00:00:00+00:00</lastmod>
   </url>
@@ -324,7 +329,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-06-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -383,8 +388,12 @@
   </url>
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-31-leetcode-448-find-all-numbers-disappeared-in-an-array/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/tags/leetcode/</loc>
-    <lastmod>2019-06-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -444,7 +453,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-06-16T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,23 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 118. Pascal&#39;s Triangle</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/</guid>
+      <description> LeetCode
+Problem Statement Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&amp;rsquo;s triangle.
+Note that the row index starts from 0.
+Example:
+Input: 3 Output: [1,3,3,1]  Solution func getRow(rowIndex int) []int { result := make([][]int, rowIndex+1) result[0] = []int{1} for row := 1; row &amp;lt;= rowIndex; row++ { result[row] = make([]int, row+1) for column := 0; column &amp;lt;= row; column++ { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] + result[row-1][column] } } } return result[rowIndex] }  </description>
+    </item>
     
     <item>
       <title>LeetCode - 118. Pascal&#39;s Triangle</title>
@@ -269,6 +282,20 @@ Your function should return length = 2, with the first two elements of nums bein
 It doesn’t matter what you leave beyond the returned length.
  Example 2
  Given nums = [0,0,1,1,1,2,2,3,3,4],</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 448. Find All Numbers Disappeared in an Array</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-31-leetcode-448-find-all-numbers-disappeared-in-an-array/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-31-leetcode-448-find-all-numbers-disappeared-in-an-array/</guid>
+      <description> LeetCode
+Problem Statement Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example:
+Input: [4,3,2,7,8,2,3,1] Output: [5,6]  Solution func findDisappearedNumbers(nums []int) []int { for _, v := range nums { index := int(abs(v) - 1) if nums[index] &amp;gt; 0 { nums[index] = -nums[index] } } res := make([]int, 0, len(nums)) for i := 0; i &amp;lt; len(nums); i++ { if nums[i] &amp;gt; 0 { res = append(res, i+1) } } return res } func abs(x int) int { if x &amp;lt; 0 { return -x } return x }  </description>
     </item>
     
   </channel>
