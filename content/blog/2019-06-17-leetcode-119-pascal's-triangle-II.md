@@ -1,5 +1,5 @@
 ---
-title: "LeetCode - 118. Pascal's Triangle"
+title: "LeetCode - 119. Pascal's Triangle - II"
 date: 2019-06-17T00:00:00+00:00
 author: "Max"
 published: true
