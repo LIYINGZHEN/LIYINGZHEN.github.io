@@ -6,10 +6,24 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 003. Longest Substring Without Repeating Characters</title>
+      <link>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</guid>
+      <description>LeetCode
+Problem Statement Given a string, find the length of the longest substring without repeating characters.
+Example: 1
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  Example: 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  Example: 3
+Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
+    </item>
     
     <item>
       <title>LeetCode - 119. Pascal&#39;s Triangle - II</title>

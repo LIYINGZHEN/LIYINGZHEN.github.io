@@ -6,8 +6,76 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 17 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 003. Longest Substring Without Repeating Characters</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</link>
+            <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</guid>
+            <description>LeetCode
+Problem Statement Given a string, find the length of the longest substring without repeating characters.
+Example: 1
+Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  Example: 2
+Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  Example: 3
+Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given a string, find the length of the longest substring without repeating characters.</p>
+
+<p><em>Example: 1</em></p>
+
+<pre><code class="language-js">Input: &quot;abcabcbb&quot;
+Output: 3
+Explanation: The answer is &quot;abc&quot;, with the length of 3.
+</code></pre>
+
+<p><em>Example: 2</em></p>
+
+<pre><code class="language-js">Input: &quot;bbbbb&quot;
+Output: 1
+Explanation: The answer is &quot;b&quot;, with the length of 1.
+</code></pre>
+
+<p><em>Example: 3</em></p>
+
+<pre><code class="language-js">Input: &quot;pwwkew&quot;
+Output: 3
+Explanation: The answer is &quot;wke&quot;, with the length of 3.
+             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">func lengthOfLongestSubstring(s string) int {
+	maxLength := 0
+	right := 0
+	curr := &quot;&quot;
+
+	for right &lt; len(s) {
+		char := string(s[right])
+		if !strings.Contains(curr, char) {
+			curr += char
+			if len(curr) &gt; maxLength {
+				maxLength = len(curr)
+			}
+			right++
+		} else {
+			curr = curr[1:]
+		}
+	}
+
+	return maxLength
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 119. Pascal&#39;s Triangle - II</title>
