@@ -8,19 +8,19 @@
     content="Max">
 <meta name="description"
     content="LeetCode
-Problem Statement Given a string, find the length of the longest substring without repeating characters.
+Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
 Example: 1
-Input: &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3.  Example: 2
-Input: &amp;quot;bbbbb&amp;quot; Output: 1 Explanation: The answer is &amp;quot;b&amp;quot;, with the length of 1.  Example: 3
-Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot;wke&amp;quot;, with the length of 3. Note that the answer must be a substring, &amp;quot;pwke&amp;quot; is a subsequence and not a substring." />
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/" />
 
 
 <title>
     
-    LeetCode - 003. Longest Substring Without Repeating Characters :: YING ZHEN LI 
+    LeetCode - 121. Best Time to Buy and Sell Stock :: YING ZHEN LI 
     
 </title>
 
@@ -42,18 +42,18 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 003. Longest Substring Without Repeating Characters">
+<meta itemprop="name" content="LeetCode - 121. Best Time to Buy and Sell Stock">
 <meta itemprop="description" content="LeetCode
-Problem Statement Given a string, find the length of the longest substring without repeating characters.
+Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
 Example: 1
-Input: &quot;abcabcbb&quot; Output: 3 Explanation: The answer is &quot;abc&quot;, with the length of 3.  Example: 2
-Input: &quot;bbbbb&quot; Output: 1 Explanation: The answer is &quot;b&quot;, with the length of 1.  Example: 3
-Input: &quot;pwwkew&quot; Output: 3 Explanation: The answer is &quot;wke&quot;, with the length of 3. Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.">
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.">
 
 
-<meta itemprop="datePublished" content="2019-06-18T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="131">
+<meta itemprop="datePublished" content="2019-06-20T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-20T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="180">
 
 
 
@@ -61,18 +61,18 @@ Input: &quot;pwwkew&quot; Output: 3 Explanation: The answer is &quot;wke&quot;, 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 003. Longest Substring Without Repeating Characters"/>
+<meta name="twitter:title" content="LeetCode - 121. Best Time to Buy and Sell Stock"/>
 <meta name="twitter:description" content="LeetCode
-Problem Statement Given a string, find the length of the longest substring without repeating characters.
+Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
 Example: 1
-Input: &quot;abcabcbb&quot; Output: 3 Explanation: The answer is &quot;abc&quot;, with the length of 3.  Example: 2
-Input: &quot;bbbbb&quot; Output: 1 Explanation: The answer is &quot;b&quot;, with the length of 1.  Example: 3
-Input: &quot;pwwkew&quot; Output: 3 Explanation: The answer is &quot;wke&quot;, with the length of 3. Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring."/>
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5."/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-18 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-20 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -136,62 +136,60 @@ Input: &quot;pwwkew&quot; Output: 3 Explanation: The answer is &quot;wke&quot;, 
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/">LeetCode - 003. Longest Substring Without Repeating Characters</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/">LeetCode - 121. Best Time to Buy and Sell Stock</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Given a string, find the length of the longest substring without repeating characters.</p>
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+
+<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+
+<p>Note that you cannot sell a stock before you buy one.</p>
 
 <p><em>Example: 1</em></p>
 
-<pre><code class="language-js">Input: &quot;abcabcbb&quot;
-Output: 3
-Explanation: The answer is &quot;abc&quot;, with the length of 3.
+<pre><code class="language-js">Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+             Not 7-1 = 6, as selling price needs to be larger than buying price.
 </code></pre>
 
 <p><em>Example: 2</em></p>
 
-<pre><code class="language-js">Input: &quot;bbbbb&quot;
-Output: 1
-Explanation: The answer is &quot;b&quot;, with the length of 1.
-</code></pre>
-
-<p><em>Example: 3</em></p>
-
-<pre><code class="language-js">Input: &quot;pwwkew&quot;
-Output: 3
-Explanation: The answer is &quot;wke&quot;, with the length of 3.
-             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
+<pre><code class="language-js">Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func lengthOfLongestSubstring(s string) int {
-	maxLength := 0
-	right := 0
-	curr := &quot;&quot;
+<pre><code class="language-go">func maxProfit(prices []int) int {
+	if (len(prices) == 0) {
+		return 0
+	}
 
-	for right &lt; len(s) {
-		char := string(s[right])
-		if !strings.Contains(curr, char) {
-			curr += char
-			if len(curr) &gt; maxLength {
-				maxLength = len(curr)
-			}
-			right++
+	max := 0
+	buyPrice := prices[0]
+
+	for _, price := range prices[1:] {
+		if price &lt; buyPrice {
+			buyPrice = price
 		} else {
-			curr = curr[1:]
+			earn := price - buyPrice
+			if earn &gt; max {
+				max = earn
+			}
 		}
 	}
 
-	return maxLength
+	return max
 }
 </code></pre>
 
@@ -205,9 +203,9 @@ Explanation: The answer is &quot;wke&quot;, with the length of 3.
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>131 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>180 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-18 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-20 08:00 &#43;0800</p>
         </div>
 
         
@@ -219,18 +217,11 @@ Explanation: The answer is &quot;wke&quot;, with the length of 3.
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 692. Top K Frequent Words</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/">
-                                <span class="button__text">LeetCode - 119. Pascal&#39;s Triangle - II</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/">
+                                <span class="button__text">LeetCode - 692. Top K Frequent Words</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

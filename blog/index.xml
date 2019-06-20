@@ -6,8 +6,155 @@
         <description>Recent content in Blogs on YING ZHEN LI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Thu, 20 Jun 2019 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://www.maxlivinci.com/blog/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>LeetCode - 121. Best Time to Buy and Sell Stock</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/</link>
+            <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/</guid>
+            <description>LeetCode
+Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
+Example: 1
+Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+
+<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+
+<p>Note that you cannot sell a stock before you buy one.</p>
+
+<p><em>Example: 1</em></p>
+
+<pre><code class="language-js">Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+             Not 7-1 = 6, as selling price needs to be larger than buying price.
+</code></pre>
+
+<p><em>Example: 2</em></p>
+
+<pre><code class="language-js">Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">func maxProfit(prices []int) int {
+	if (len(prices) == 0) {
+		return 0
+	}
+
+	max := 0
+	buyPrice := prices[0]
+
+	for _, price := range prices[1:] {
+		if price &lt; buyPrice {
+			buyPrice = price
+		} else {
+			earn := price - buyPrice
+			if earn &gt; max {
+				max = earn
+			}
+		}
+	}
+
+	return max
+}
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>LeetCode - 692. Top K Frequent Words</title>
+            <link>https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/</link>
+            <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
+            
+            <guid>https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/</guid>
+            <description>LeetCode
+Problem Statement Given a non-empty list of words, return the k most frequent elements.
+Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
+Example: 1
+Input: [&amp;quot;i&amp;quot;, &amp;quot;love&amp;quot;, &amp;quot;leetcode&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;love&amp;quot;, &amp;quot;coding&amp;quot;], k = 2 Output: [&amp;quot;i&amp;quot;, &amp;quot;love&amp;quot;] Explanation: &amp;quot;i&amp;quot; and &amp;quot;love&amp;quot; are the two most frequent words. Note that &amp;quot;i&amp;quot; comes before &amp;quot;love&amp;quot; due to a lower alphabetical order.</description>
+            <content type="html"><![CDATA[
+
+<p><a href="https://leetcode.com/problems/top-k-frequent-words/">LeetCode</a></p>
+
+<h2 id="problem-statement">Problem Statement</h2>
+
+<p>Given a non-empty list of words, return the k most frequent elements.</p>
+
+<p>Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.</p>
+
+<p><em>Example: 1</em></p>
+
+<pre><code class="language-js">Input: [&quot;i&quot;, &quot;love&quot;, &quot;leetcode&quot;, &quot;i&quot;, &quot;love&quot;, &quot;coding&quot;], k = 2
+Output: [&quot;i&quot;, &quot;love&quot;]
+Explanation: &quot;i&quot; and &quot;love&quot; are the two most frequent words.
+    Note that &quot;i&quot; comes before &quot;love&quot; due to a lower alphabetical order.
+
+</code></pre>
+
+<p><em>Example: 2</em></p>
+
+<pre><code class="language-js">Input: [&quot;the&quot;, &quot;day&quot;, &quot;is&quot;, &quot;sunny&quot;, &quot;the&quot;, &quot;the&quot;, &quot;the&quot;, &quot;sunny&quot;, &quot;is&quot;, &quot;is&quot;], k = 4
+Output: [&quot;the&quot;, &quot;is&quot;, &quot;sunny&quot;, &quot;day&quot;]
+Explanation: &quot;the&quot;, &quot;is&quot;, &quot;sunny&quot; and &quot;day&quot; are the four most frequent words,
+    with the number of occurrence being 4, 3, 2 and 1 respectively.
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+
+<pre><code class="language-go">import &quot;sort&quot;
+
+type entry struct {
+	word      string
+	frequence int
+}
+
+type freWords []*entry
+
+func topKFrequent(words []string, k int) []string {
+	count := make(map[string]int, len(words))
+	for _, w := range words {
+		count[w]++
+	}
+
+	fw := make(freWords, 0, len(count))
+	for w, c := range count {
+		fw = append(fw, &amp;entry{
+			word:      w,
+			frequence: c,
+		})
+	}
+
+	sort.Slice(fw, func(i, j int) bool {
+		if fw[i].frequence == fw[j].frequence {
+			return fw[i].word &lt; fw[j].word
+		}
+		return fw[i].frequence &gt; fw[j].frequence
+	})
+
+	res := make([]string, k)
+	for i := 0; i &lt; k; i++ {
+		res[i] = fw[i].word
+	}
+
+	return res
+}
+</code></pre>
+]]></content>
+        </item>
         
         <item>
             <title>LeetCode - 003. Longest Substring Without Repeating Characters</title>
