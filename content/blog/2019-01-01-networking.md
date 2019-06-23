@@ -6,28 +6,38 @@ published: false
 tags: []
 ---
 
-应用层
-    - DNS
-    - HTTP/HTTPS
+## Protocol
 
-传输层
-    - UDP
-    - TCP
+A defined "set of standards" that "computers must follow" in order to communicate properly.
 
-网络层
-    - IP协议
+## Physical Layer
 
-Mac層
-    - ARP
+Represents the physical devices that interconnect computers.
 
-物理層
+## Data Link Layer
 
-## 查看IP地址
+Responsible for defining a common way of interpreting these signals so network devices can communicate.
 
-```
-ifconfig
-```
+## Network Layer
 
-```
-ip addr
-```
+Allows different networks to communicate with each other through devices known as routers.
+
+IP
+
+### Router
+
+A device that knows how to forward data between independent networks.
+
+## Transport Layer
+
+Sorts out which client and server programs are supposed to get that data.
+
+TCP/UDP
+
+## Application Layer
+
+## MAC Address
+
+A globally unique identifier attached to an individual network interface.
+
+## 7-Layer OSI Model
