@@ -8,19 +8,17 @@
     content="Max">
 <meta name="description"
     content="LeetCode
-Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example: 1
-Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5." />
+Problem Statement Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/" />
 
 
 <title>
     
-    LeetCode - 121. Best Time to Buy and Sell Stock :: YING ZHEN LI 
+    LeetCode - 236. Lowest Common Ancestor of a Binary Tree :: YING ZHEN LI 
     
 </title>
 
@@ -42,18 +40,16 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
-<meta itemprop="name" content="LeetCode - 121. Best Time to Buy and Sell Stock">
+<meta itemprop="name" content="LeetCode - 236. Lowest Common Ancestor of a Binary Tree">
 <meta itemprop="description" content="LeetCode
-Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example: 1
-Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.">
+Problem Statement Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]">
 
 
-<meta itemprop="datePublished" content="2019-06-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-06-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="180">
+<meta itemprop="datePublished" content="2019-06-23T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-06-23T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="204">
 
 
 
@@ -61,18 +57,16 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="LeetCode - 121. Best Time to Buy and Sell Stock"/>
+<meta name="twitter:title" content="LeetCode - 236. Lowest Common Ancestor of a Binary Tree"/>
 <meta name="twitter:description" content="LeetCode
-Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example: 1
-Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5."/>
+Problem Statement Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]"/>
 
 
 
 
-<meta property="article:published_time" content="2019-06-20 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2019-06-23 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -136,60 +130,66 @@ Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/">LeetCode - 121. Best Time to Buy and Sell Stock</a></h1>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/">LeetCode - 236. Lowest Common Ancestor of a Binary Tree</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/">LeetCode</a></p>
+<p><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/">LeetCode</a></p>
 
 <h2 id="problem-statement">Problem Statement</h2>
 
-<p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</p>
 
-<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p>According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (<strong>where we allow a node to be a descendant of itself</strong>).”</p>
 
-<p>Note that you cannot sell a stock before you buy one.</p>
+<p>Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+
+<p><img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="" /></p>
 
 <p><em>Example: 1</em></p>
 
-<pre><code class="language-js">Input: [7,1,5,3,6,4]
-Output: 5
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-             Not 7-1 = 6, as selling price needs to be larger than buying price.
+<pre><code class="language-js">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+Output: 3
+Explanation: The LCA of nodes 5 and 1 is 3.
 </code></pre>
 
-<p><em>Example: 2</em></p>
+<p><em>Example 2:</em></p>
 
-<pre><code class="language-js">Input: [7,6,4,3,1]
-Output: 0
-Explanation: In this case, no transaction is done, i.e. max profit = 0.
+<pre><code class="language-js">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+Output: 5
+Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
 </code></pre>
 
 <h2 id="solution">Solution</h2>
 
-<pre><code class="language-go">func maxProfit(prices []int) int {
-	if (len(prices) == 0) {
-		return 0
+<pre><code class="language-go">func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
 	}
 
-	max := 0
-	buyPrice := prices[0]
-
-	for _, price := range prices[1:] {
-		if price &lt; buyPrice {
-			buyPrice = price
-		} else {
-			earn := price - buyPrice
-			if earn &gt; max {
-				max = earn
-			}
-		}
+	if root == p || root == q {
+		return root
 	}
 
-	return max
+	left := lowestCommonAncestor(root.Left, p, q)
+	right := lowestCommonAncestor(root.Right, p, q)
+
+	if left != nil &amp;&amp; right != nil {
+		return root
+	}
+
+	if left == nil {
+		return right
+	}
+
+	if right == nil {
+		return left
+	}
+
+	return nil
 }
 </code></pre>
 
@@ -203,9 +203,9 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/leetcode">leetcode</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>180 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>204 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-20 08:00 &#43;0800</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-23 08:00 &#43;0800</p>
         </div>
 
         
@@ -217,18 +217,11 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-21-leetcode-122-best-time-to-buy-and-sell-stock-ii/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">LeetCode - 122. Best Time to Buy and Sell Stock II</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/">
-                                <span class="button__text">LeetCode - 692. Top K Frequent Words</span>
+                            <a href="https://www.maxlivinci.com/blog/2019-06-22-leetcode-111-minimum-depth-of-binary-tree/">
+                                <span class="button__text">LeetCode - 111. Minimum Depth of Binary Tree</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

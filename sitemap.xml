@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/</loc>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-22-leetcode-111-minimum-depth-of-binary-tree/</loc>
+    <lastmod>2019-06-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-06-21-leetcode-122-best-time-to-buy-and-sell-stock-ii/</loc>
+    <lastmod>2019-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/</loc>
     <lastmod>2019-06-20T00:00:00+00:00</lastmod>
   </url>
@@ -120,6 +135,11 @@
   <url>
     <loc>https://www.maxlivinci.com/blog/2019-05-22-types-in-go/</loc>
     <lastmod>2019-05-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/blog/2019-05-19-defer-function/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -344,7 +364,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/blog/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -404,7 +424,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/leetcode/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -464,7 +484,7 @@
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2019-06-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
