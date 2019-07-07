@@ -6,17 +6,134 @@
     <description>Recent content on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>LeetCode - 581. Shortest Unsorted Continuous Subarray</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-06-leetcode-581-shortest-unsorted-continuous-subarray/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-06-leetcode-581-shortest-unsorted-continuous-subarray/</guid>
+      <description>LeetCode
+Problem Statement Given an integer array, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order, too.
+You need to find the shortest such subarray and output its length.
+Example:
+Input: [2, 6, 4, 8, 10, 9, 15] Output: 5 Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 566. Reshape the Matrix</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-05-leetcode-566-reshape-the-matrix/</link>
+      <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-05-leetcode-566-reshape-the-matrix/</guid>
+      <description>LeetCode
+Problem Statement In MATLAB, there is a very useful function called &amp;lsquo;reshape&amp;rsquo;, which can reshape a matrix into a new one with different size but keep its original data.
+You&amp;rsquo;re given a matrix represented by a two-dimensional array, and two positive integers r and c representing the row number and column number of the wanted reshaped matrix, respectively.
+The reshaped matrix need to be filled with all the elements of the original matrix in the same row-traversing order as they were.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 561. Array Partition I</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-04-leetcode-561-array-partition-i/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-04-leetcode-561-array-partition-i/</guid>
+      <description>LeetCode
+Problem Statement Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), &amp;hellip;, (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
+Example:
+Input: [1,4,3,2] Output: 4 Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).  Solution func arrayPairSum(nums []int) int { sort.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 532. K-diff Pairs in an Array</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-03-leetcode-532-k-diff-pairs-in-an-array/</link>
+      <pubDate>Wed, 03 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-03-leetcode-532-k-diff-pairs-in-an-array/</guid>
+      <description>LeetCode
+Problem Statement Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
+Example 1:
+Input: [3, 1, 4, 1, 5], k = 2 Output: 2 Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 485. Max Consecutive Ones</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-02-leetcode-485-max-consecutive-ones/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-02-leetcode-485-max-consecutive-ones/</guid>
+      <description> LeetCode
+Problem Statement Given a binary array, find the maximum number of consecutive 1s in this array.
+Example:
+Given a binary array, find the maximum number of consecutive 1s in this array.  Solution func findMaxConsecutiveOnes(nums []int) int { max, counter := 0, 0 for _, v := range nums { if v == 1 { counter++ continue } if counter &amp;gt; max { max = counter } counter = 0 } if counter &amp;gt; max { max = counter } return max }  </description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 448. Find All Numbers Disappeared in an Array</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-01-leetcode-448-find-all-numbers-disappeared-in-an-array/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-01-leetcode-448-find-all-numbers-disappeared-in-an-array/</guid>
+      <description> LeetCode
+Problem Statement Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+Find all the elements of [1, n] inclusive that do not appear in this array.
+Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+Example:
+Input: [4,3,2,7,8,2,3,1] Output: [5,6]  Solution func findDisappearedNumbers(nums []int) []int { for _, v := range nums { index := int(abs(v) - 1) if nums[index] &amp;gt; 0 { nums[index] = -nums[index] } } res := make([]int, 0, len(nums)) for i := 0; i &amp;lt; len(nums); i++ { if nums[i] &amp;gt; 0 { res = append(res, i+1) } } return res } func abs(x int) int { if x &amp;lt; 0 { return -x } return x }  </description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 414. Third Maximum Number</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-30-leetcode-414-third-maximum-number/</link>
+      <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-30-leetcode-414-third-maximum-number/</guid>
+      <description>LeetCode
+Problem Statement Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
+Example: 1
+Input: [3, 2, 1] Output: 1  Example: 2
+Input: [3, 2, 1] Output: 1  Example: 2
+Input: [2, 2, 3, 1] Output: 1  Solution func thirdMax(nums []int) int { const INT_MAX = int(^uint(0) &amp;gt;&amp;gt; 1) const INT_MIN = ^INT_MAX s1, s2, s3 := INT_MIN, INT_MIN, INT_MIN for _, num := range nums { if num &amp;gt; s1 { s1, s2, s3 = num, s1, s2 } else if num &amp;lt; s1 &amp;amp;&amp;amp; num &amp;gt; s2 { s2, s3 = num, s2 } else if num &amp;lt; s2 &amp;amp;&amp;amp; num &amp;gt; s3 { s3 = num } } if s3 !</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 219. Contains Duplicate II</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-27-leetcode-219-contains-duplicate-ii/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-27-leetcode-219-contains-duplicate-ii/</guid>
+      <description>LeetCode
+Problem Statement Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+Example: 1
+Input: nums = [1,2,3,1], k = 3 Output: true  Example: 2
+Input: nums = [1,0,1,1], k = 1 Output: true  Example: 3</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 217. Contains Duplicate</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-26-leetcode-217-contains-duplicate/</link>
+      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-26-leetcode-217-contains-duplicate/</guid>
+      <description> LeetCode
+Problem Statement Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Example: 1
+Input: [1,2,3,1] Output: true  Example: 2
+Input: [1,2,3,4] Output: false  Example: 3
+Input: [1,1,1,3,3,4,3,2,4,2] Output: true  Solution func containsDuplicate(nums []int) bool { hashMap := make(map[int]int) for _, v := range nums { _, ok := hashMap[v] if ok { return true } hashMap[v] = v } return false }  </description>
+    </item>
+    
+    <item>
       <title>LeetCode - 236. Lowest Common Ancestor of a Binary Tree</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/</link>
       <pubDate>Sun, 23 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-23-leetcode-236-lowest-common-ancestor-of-a-binary-tree/</guid>
       <description>LeetCode
 Problem Statement Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
@@ -24,53 +141,11 @@ Given the following binary tree: root = [3,5,1,6,2,0,8,null,null,7,4]</descripti
     </item>
     
     <item>
-      <title>LeetCode - 111. Minimum Depth of Binary Tree</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-22-leetcode-111-minimum-depth-of-binary-tree/</link>
-      <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-22-leetcode-111-minimum-depth-of-binary-tree/</guid>
-      <description>LeetCode
-Problem Statement Given a binary tree, find its minimum depth.
-The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
-Note: A leaf is a node with no children.
-Example:
-Given binary tree [3,9,20,null,null,15,7],
- 3 / \ 9 20 / \ 15 7  return its minimum depth = 2.
-Solution func minDepth(root *TreeNode) int { if root == nil { return 0 } if root.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode - 122. Best Time to Buy and Sell Stock II</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-21-leetcode-122-best-time-to-buy-and-sell-stock-ii/</link>
-      <pubDate>Fri, 21 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-21-leetcode-122-best-time-to-buy-and-sell-stock-ii/</guid>
-      <description>LeetCode
-Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).</description>
-    </item>
-    
-    <item>
-      <title>LeetCode - 121. Best Time to Buy and Sell Stock</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/</link>
-      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-20-leetcode-121-best-time-to-buy-and-sell-stock/</guid>
-      <description>LeetCode
-Problem Statement Say you have an array for which the ith element is the price of a given stock on day i.
-If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
-Note that you cannot sell a stock before you buy one.
-Example: 1
-Input: [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.</description>
-    </item>
-    
-    <item>
       <title>LeetCode - 692. Top K Frequent Words</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-19-leetcode-692-top-k-frequent-words/</link>
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-19-leetcode-692-top-k-frequent-words/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-19-leetcode-692-top-k-frequent-words/</guid>
       <description>LeetCode
 Problem Statement Given a non-empty list of words, return the k most frequent elements.
 Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
@@ -80,10 +155,10 @@ Input: [&amp;quot;i&amp;quot;, &amp;quot;love&amp;quot;, &amp;quot;leetcode&amp;
     
     <item>
       <title>LeetCode - 003. Longest Substring Without Repeating Characters</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</link>
       <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-18-leetcode-003-longest-substring-without-repeating-characters/</guid>
       <description>LeetCode
 Problem Statement Given a string, find the length of the longest substring without repeating characters.
 Example: 1
@@ -94,10 +169,10 @@ Input: &amp;quot;pwwkew&amp;quot; Output: 3 Explanation: The answer is &amp;quot
     
     <item>
       <title>LeetCode - 119. Pascal&#39;s Triangle - II</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-17-leetcode-119-pascals-triangle-ii/</link>
       <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-17-leetcode-119-pascals-triangle-ii/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-17-leetcode-119-pascals-triangle-ii/</guid>
       <description> LeetCode
 Problem Statement Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal&amp;rsquo;s triangle.
 Note that the row index starts from 0.
@@ -106,23 +181,11 @@ Input: 3 Output: [1,3,3,1]  Solution func getRow(rowIndex int) []int { result :=
     </item>
     
     <item>
-      <title>LeetCode - 118. Pascal&#39;s Triangle</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/</link>
-      <pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-16-leetcode-118-pascals-triangle/</guid>
-      <description> LeetCode
-Problem Statement Given a non-negative integer numRows, generate the first numRows of Pascal&amp;rsquo;s triangle.
-Example:
-Input: 5 Output: [ [1], [1,1], [1,2,1], [1,3,3,1], [1,4,6,4,1] ]  Solution func generate(numRows int) [][]int { if numRows &amp;lt; 1 { return [][]int{} } result := make([][]int, numRows) result[0] = []int{1} for row := 1; row &amp;lt; numRows; row++ { result[row] = make([]int, row+1) for column := 0; column &amp;lt;= row; column++ { if column == 0 || column == row { result[row][column] = 1 } else { result[row][column] = result[row-1][column-1] + result[row-1][column] } } } return result }  </description>
-    </item>
-    
-    <item>
       <title>LeetCode - 066. Plus One</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-15-leetcode-066-plus-one/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-15-leetcode-066-plus-one/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-15-leetcode-066-plus-one/</guid>
       <description>Plus One
 Problem Statement Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
@@ -132,27 +195,11 @@ Input: [1,2,3] Output: [1,2,4] Explanation: The array represents the integer 123
     </item>
     
     <item>
-      <title>LeetCode - 035. Search Insert Position</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/</link>
-      <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-14-leetcode-035-search-insert-position/</guid>
-      <description> LeetCode
-Problem Statement Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
-You may assume no duplicates in the array.
-Example 1:
-Input: [1,3,5,6], 5 Output: 2  Example 2:
-Input: [1,3,5,6], 2 Output: 1  Example 3:
-Input: [1,3,5,6], 7 Output: 4  Example 4:
-Input: [1,3,5,6], 0 Output: 0  Solution func searchInsert(nums []int, target int) int { for i, v := range nums { if (v == target) { return i } if (target &amp;lt; v) { return i } } return len(nums) }  </description>
-    </item>
-    
-    <item>
       <title>LeetCode - 027. Remove Element</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-13-leetcode-027-remove-element/</link>
       <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-13-leetcode-027-remove-element/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-13-leetcode-027-remove-element/</guid>
       <description>LeetCode
 Problem Statement Given an array nums and a value val, remove all instances of that value in-place and return the new length.
 Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
@@ -162,49 +209,11 @@ Given nums = [3,2,2,3], val = 3, Your function should return length = 2, with th
     </item>
     
     <item>
-      <title>LeetCode - 053. Maximum Subarray</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/</link>
-      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-12-leetcode-053-maximum-subarray/</guid>
-      <description> LeetCode
-Problem Statement Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.  Solution func maxSubArray(nums []int) int { cur, max := nums[0], nums[0] for _, v := range(nums[1:]) { if cur &amp;lt; 0 { cur = v } else { cur += v } if cur &amp;gt; max { max = cur } } return max }  </description>
-    </item>
-    
-    <item>
-      <title>LeetCode - 002. Add Two Numbers</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-11-leetcode-002-add-two-numbers/</guid>
-      <description>LeetCode
-Problem Statement You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-Example:
-Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4) Output: 7 -&amp;gt; 0 -&amp;gt; 8 Explanation: 342 + 465 = 807.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode - 001. Two Sum</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-10-leetcode-001-two-sum/</guid>
-      <description> LeetCode
-Problem Statement Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
-Example:
-Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1].  Solution func twoSum(nums []int, target int) []int { // visited store value and index visited := make(map[int]int) for currentIndex, v := range nums { counterPart := target - v counterPartIndex, ok := visited[counterPart] if ok { return []int{counterPartIndex, currentIndex} } visited[v] = currentIndex } return []int{-1, -1} }  </description>
-    </item>
-    
-    <item>
       <title>LeetCode - 938. Range Sum of BST</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-09-leetcode-938-range-sum-of-bst/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-09-leetcode-938-range-sum-of-bst/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-09-leetcode-938-range-sum-of-bst/</guid>
       <description>LeetCode
 Problem Statement Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
 The binary search tree is guaranteed to have unique values.
@@ -215,10 +224,10 @@ Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10 Output: 23  Solution /
     
     <item>
       <title>LeetCode - 257. Binary Tree Paths</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-08-leetcode-257-binary-tree-paths/</link>
       <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-08-leetcode-257-binary-tree-paths/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-08-leetcode-257-binary-tree-paths/</guid>
       <description>LeetCode
 Problem Statement Given a binary tree, return all root-to-leaf paths.
 Note: A leaf is a node with no children.
@@ -228,10 +237,10 @@ Input: 1 / \ 2 3 \ 5 Output: [&amp;quot;1-&amp;gt;2-&amp;gt;5&amp;quot;, &amp;qu
     
     <item>
       <title>LeetCode - 104. Maximum Depth of Binary Tree</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</link>
       <pubDate>Fri, 07 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-07-leetcode-104-maximum-depth-of-binary-tree/</guid>
       <description>LeetCode
 Problem Statement Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
@@ -243,25 +252,11 @@ Solution /** * Definition for a binary tree node.</description>
     </item>
     
     <item>
-      <title>LeetCode - 50. Pow(x, n)</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-06-leetcode-050-pow/</link>
-      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-06-leetcode-050-pow/</guid>
-      <description> LeetCode
-Problem Statement Implement pow(x, n), which calculates x raised to the power n (xn).
-Example 1:
-Input: 2.00000, 10 Output: 1024.00000  Example 2:
-Input: 2.10000, 3 Output: 9.26100  Example 3:
-Input: 2.00000, -2 Output: 0.25000 Explanation: 2-2 = 1/22 = 1/4 = 0.25  Solution func myPow(x float64, n int) float64 { if n == 0 { return 1 } if n == 1 { return x } if n &amp;lt; 0 { return 1 / myPow(x, -n) } if n%2 == 0 { return myPow(x*x, n/2) } else { return x * myPow(x*x, n/2) } }  </description>
-    </item>
-    
-    <item>
       <title>LeetCode - 049. Group Anagrams</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-05-leetcode-049-group-anagrams/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-05-leetcode-049-group-anagrams/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-05-leetcode-049-group-anagrams/</guid>
       <description> LeetCode
 Problem Statement Given an array of strings, group anagrams together.
 Example:
@@ -270,10 +265,10 @@ Input: [&amp;quot;eat&amp;quot;, &amp;quot;tea&amp;quot;, &amp;quot;tan&amp;quot
     
     <item>
       <title>LeetCode - 242. Valid Anagram</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-04-leetcode-242-valid-anagram/</link>
       <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-04-leetcode-242-valid-anagram/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-04-leetcode-242-valid-anagram/</guid>
       <description>LeetCode
 Problem Statement Given two strings s and t , write a function to determine if t is an anagram of s.
 Example 1:
@@ -287,10 +282,10 @@ Output: false
     
     <item>
       <title>LeetCode - 024. Swap Nodes in Pairs</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-06-03-leetcode-024-swap-nodes-in-pairs/</link>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-06-03-leetcode-024-swap-nodes-in-pairs/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-06-03-leetcode-024-swap-nodes-in-pairs/</guid>
       <description>LeetCode
 Problem Statement Given a linked list, swap every two adjacent nodes and return its head.
 You may not modify the values in the list&amp;rsquo;s nodes, only nodes itself may be changed.
@@ -300,39 +295,11 @@ Example
     </item>
     
     <item>
-      <title>LeetCode - 088. Merge Sorted Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</link>
-      <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-02-leetcode-088-merge-sorted-array/</guid>
-      <description>LeetCode
-Problem Statement Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
-Note:
- The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.  Example
- Input:
-nums1 = [1,2,3,0,0,0], m = 3</description>
-    </item>
-    
-    <item>
-      <title>LeetCode - 021. Merge Two Sorted Lists</title>
-      <link>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</link>
-      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/blog/2019-06-01-leetcode-021-merge-two-sorted-lists/</guid>
-      <description>LeetCode
-Problem Statement Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example
- Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4
-Output: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;4
- Solution /** * Definition for singly-linked list. * type ListNode struct { * Val int * Next *ListNode * } */ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode { // Check boundary condition if l1 == nil { return l2 } if l2 == nil { return l1 } // Create dummy node dummy := ListNode{} head := &amp;amp;dummy // Connect l1 and l2 for l1 !</description>
-    </item>
-    
-    <item>
       <title>LeetCode - 189. Rotate Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-05-31-leetcode-189-rotate-array/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-05-31-leetcode-189-rotate-array/</link>
       <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-05-31-leetcode-189-rotate-array/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-05-31-leetcode-189-rotate-array/</guid>
       <description>LeetCode
 Problem Statement Given an array, rotate the array to the right by k steps, where k is non-negative.
 Example 1
@@ -351,10 +318,10 @@ rotate 1 steps to the right: [99,-1,-100,3]</description>
     
     <item>
       <title>LeetCode - 026. Remove Duplicates from Sorted Array</title>
-      <link>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</link>
+      <link>https://www.maxlivinci.com/leetcode/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</link>
       <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/blog/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</guid>
+      <guid>https://www.maxlivinci.com/leetcode/2019-05-30-leetcode-026-remove-duplicates-from-sorted-array/</guid>
       <description>LeetCode
 Problem Statement Given a sorted array of numbers, remove the duplicates in-place such that each element appear only once and return the new length.
 Example 1
