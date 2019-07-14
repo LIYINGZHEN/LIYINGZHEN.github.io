@@ -28,10 +28,6 @@ theme = "hello-friend-ng"
 
   # Social icons
   [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/maxlivinci"
-
-  [[params.social]]
     name = "email"
     url  = "mailto:maxlivinci@gamil.com"
 
