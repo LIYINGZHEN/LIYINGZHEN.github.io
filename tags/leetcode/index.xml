@@ -6,10 +6,48 @@
     <description>Recent content in Leetcode on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode - 674. Longest Continuous Increasing Subsequence</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-10-leetcode-674-longest-continuous-increasing-subsequence/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-10-leetcode-674-longest-continuous-increasing-subsequence/</guid>
+      <description>LeetCode
+Problem Statement Given an unsorted array of integers, find the length of longest continuous increasing subsequence (subarray).
+Example 1:
+Input: [1,3,5,4,7] Output: 3 Explanation: The longest continuous increasing subsequence is [1,3,5], its length is 3. Even though [1,3,5,7] is also an increasing subsequence, it&#39;s not a continuous one where 5 and 7 are separated by 4.  Example 2:
+Input: [2,2,2,2,2] Output: 1 Explanation: The longest continuous increasing subsequence is [2], its length is 1.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 643. Maximum Average Subarray I</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-09-leetcode-643-maximum-average-subarray-i/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-09-leetcode-643-maximum-average-subarray-i/</guid>
+      <description> LeetCode
+Problem Statement Given an array consisting of n integers, find the contiguous subarray of given length k that has the maximum average value. And you need to output the maximum average value.
+Example 1:
+Input: [1,12,-5,-6,50,3], k = 4 Output: 12.75 Explanation: Maximum average is (12-5-6+50)/4 = 51/4 = 12.75  Solution func findMaxAverage(nums []int, k int) float64 { sum := 0 for _, v := range nums[:k] { sum += v } maxSum, windowSum := sum, sum for i := 0; i &amp;lt; len(nums)-k; i++ { windowSum += nums[k+i] - nums[i] if windowSum &amp;gt; maxSum { maxSum = windowSum } } return float64(maxSum) / float64(k) }  </description>
+    </item>
+    
+    <item>
+      <title>LeetCode - 628. Maximum Product of Three Numbers</title>
+      <link>https://www.maxlivinci.com/leetcode/2019-07-08-leetcode-628-maximum-product-of-three-numbers/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/leetcode/2019-07-08-leetcode-628-maximum-product-of-three-numbers/</guid>
+      <description> LeetCode
+Problem Statement Given an integer array, find three numbers whose product is maximum and output the maximum product.
+Example 1:
+Input: [1,2,3] Output: 6  Example 2:
+Input: [1,2,3,4] Output: 24  Solution import &amp;quot;math&amp;quot; func maximumProduct(nums []int) int { min1, min2 := math.MaxInt32, math.MaxInt32 max1, max2, max3 := -math.MaxInt32, -math.MaxInt32, -math.MaxInt32 for _, v := range nums { if v &amp;gt; max1 { max3 = max2 max2 = max1 max1 = v } else if v &amp;gt; max2 { max3 = max2 max2 = v } else if v &amp;gt; max3 { max3 = v } if v &amp;lt; min1 { min2 = min1 min1 = v } else if v &amp;lt; min2 { min2 = v } } if max1*max2*max3 &amp;gt; max1*min1*min2 { return max1 * max2 * max3 } return max1 * min1 * min2 }  </description>
+    </item>
     
     <item>
       <title>LeetCode - 581. Shortest Unsorted Continuous Subarray</title>
