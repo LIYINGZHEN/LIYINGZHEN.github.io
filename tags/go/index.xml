@@ -6,10 +6,19 @@
     <description>Recent content in Go on YING ZHEN LI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Concurrency Patterns in Go</title>
+      <link>https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/</link>
+      <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/</guid>
+      <description>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i++ { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt.</description>
+    </item>
     
     <item>
       <title>How to end a goroutine</title>

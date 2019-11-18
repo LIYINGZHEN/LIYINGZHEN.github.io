@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i&#43;&#43; { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/" />
+
+
+<title>
+    
+    Concurrency Patterns in Go :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.6a7678f40434c7781747ffdd224a984179b2a3c81c81f19ccf845fdffbe80b7c.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="Concurrency Patterns in Go">
+<meta itemprop="description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt.">
+
+
+<meta itemprop="datePublished" content="2019-11-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-11-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="557">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Concurrency Patterns in Go"/>
+<meta name="twitter:description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt."/>
+
+
+
+
+<meta property="article:published_time" content="2019-11-18 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/">Concurrency Patterns in Go</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<ul>
+<li>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.</li>
+</ul>
+
+<h3 id="lexical-confinement">Lexical confinement</h3>
+
+<pre><code class="language-go">func main() {
+	chanOwner := func() &lt;-chan int { // 1
+		results := make(chan int, 5) 
+		go func() {
+			defer close(results)
+			for i := 0; i &lt;= 5; i++ {
+				results &lt;- i
+			}
+		}()
+		return results
+	}
+
+	consumer := func(results &lt;-chan int) {
+		for result := range results {
+			fmt.Printf(&quot;Received: %d\n&quot;, result)
+		}
+		fmt.Println(&quot;Done receiving!&quot;)
+	}
+
+	results := chanOwner()
+	consumer(results)
+}
+</code></pre>
+
+<ol>
+<li>Here we instantiate the channel within the lexical scope of the <code>chanOwner</code> function. This limits the scope of the write aspect of the results channel to the closure defined below it. In other words, it confines the write aspect of this channel to prevent other goroutines from writing to it.</li>
+</ol>
+
+<h3 id="preventing-goroutine-leaks">Preventing Goroutine Leaks</h3>
+
+<p>If a goroutine is responsible for creating a goroutine, it is also responsible for ensuring it can stop the goroutine.</p>
+
+<pre><code class="language-go">func main() {
+	chanOwner := func(done &lt;-chan struct{}) chan&lt;- int { // 1
+		inputs := make(chan int, 5)
+		go func() {
+			defer close(inputs)
+			for {
+				select {
+				case input := &lt;-inputs:
+					fmt.Printf(&quot;Received: %d\n&quot;, input)
+				case &lt;-done:
+					return
+				}
+			}
+		}()
+		return inputs
+	}
+
+	producer := func(inputs chan&lt;- int) {
+		for i := 0; i &lt; 11; i++ {
+			inputs &lt;- i
+		}
+	}
+
+	done := make(chan struct{})
+	inputs := chanOwner(done)
+	producer(inputs)
+	time.Sleep(1 * time.Second)
+	close(done)
+}
+</code></pre>
+
+<h3 id="error-handling">Error Handling</h3>
+
+<p>Errors should be considered first-class citizens when constructing values to return from goroutines.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;net/http&quot;
+)
+
+func main() {
+	type Result struct {
+		Error    error
+		Response *http.Response
+	}
+
+	checkStatus := func(done &lt;-chan interface{}, urls ...string) &lt;-chan Result {
+		results := make(chan Result)
+		go func() {
+			defer close(results)
+			for _, url := range urls {
+				var result Result
+				resp, err := http.Get(url)
+				result = Result{Error: err, Response: resp}
+				select {
+				case &lt;-done:
+					return
+				case results &lt;- result:
+				}
+			}
+		}()
+		return results
+	}
+
+	done := make(chan interface{})
+	defer close(done)
+
+	urls := []string{&quot;https://www.google.com&quot;, &quot;https://badhost&quot;}
+	for result := range checkStatus(done, urls...) {
+		if result.Error != nil {
+			fmt.Printf(&quot;error: %v&quot;, result.Error)
+			continue
+		}
+		fmt.Printf(&quot;Response: %v\n&quot;, result.Response.Status)
+	}
+}
+</code></pre>
+
+<h3 id="some-handy-generators">Some Handy Generators</h3>
+
+<pre><code class="language-go">	take := func(
+		done &lt;-chan interface{},
+		valueStream &lt;-chan interface{},
+		num int,
+	) &lt;-chan interface{} {
+		takeStream := make(chan interface{})
+		go func() {
+			defer close(takeStream)
+			for i := 0; i &lt; num; i++ {
+				select {
+				case &lt;-done:
+					return
+				case takeStream &lt;- &lt;-valueStream:
+				}
+			}
+		}()
+		return takeStream
+	}
+
+	repeatFn := func(
+		done &lt;-chan struct{},
+		fn func() interface{},
+	) &lt;-chan interface{} {
+		valueStream := make(chan interface{})
+		go func() {
+			defer close(valueStream)
+			for {
+				select {
+				case &lt;-done:
+					return
+				case valueStream &lt;- fn():
+				}
+			}
+		}()
+		return valueStream
+	}
+</code></pre>
+
+<h3 id="fan-out-fan-in">Fan-Out, Fan-In</h3>
+
+<p><code>Fan-out</code> is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and <code>fan-in</code> is a term to describe the process of combining multiple results into one channel.</p>
+
+<pre><code class="language-go">	fanIn := func(
+		done &lt;-chan interface{},
+		channels ...&lt;-chan interface{},
+	) &lt;-chan interface{} {
+		var wg sync.WaitGroup
+		multiplexedStream := make(chan interface{})
+
+		multiplex := func(c &lt;-chan interface{}) {
+			defer wg.Done()
+			for i := range c {
+				select {
+				case &lt;-done:
+					return
+				case multiplexedStream &lt;- i:
+				}
+			}
+		}
+
+		// Select from all the channels
+		wg.Add(len(channels))
+		for _, c := range channels {
+			go multiplex(c)
+		}
+
+		// Wait for all the reads to complete
+		go func() {
+			wg.Wait()
+			close(multiplexedStream)
+		}()
+
+		return multiplexedStream
+	}
+</code></pre>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>557 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-11-18 08:00 &#43;0800</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://www.maxlivinci.com/blog/2019-05-24-how-to-end-a-goroutine/">
+                                <span class="button__text">How to end a goroutine</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>
