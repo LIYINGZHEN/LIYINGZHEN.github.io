@@ -7,7 +7,8 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i&#43;&#43; { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt." />
+    content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
+Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i&#43;&#43; { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/" />
@@ -38,12 +39,13 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="Concurrency Patterns in Go">
-<meta itemprop="description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt.">
+<meta itemprop="description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
+Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt.">
 
 
 <meta itemprop="datePublished" content="2019-11-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="557">
+<meta itemprop="wordCount" content="559">
 
 
 
@@ -52,7 +54,8 @@
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Concurrency Patterns in Go"/>
-<meta name="twitter:description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt."/>
+<meta name="twitter:description" content="Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
+Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &lt;= 5; i&#43;&#43; { results &lt;- i } }() return results } consumer := func(results &lt;-chan int) { for result := range results { fmt."/>
 
 
 
@@ -128,11 +131,9 @@
             <div class="post-content">
                 
 
-<ul>
-<li>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.</li>
-</ul>
+<p>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.</p>
 
-<h3 id="lexical-confinement">Lexical confinement</h3>
+<h2 id="lexical-confinement">Lexical confinement</h2>
 
 <pre><code class="language-go">func main() {
 	chanOwner := func() &lt;-chan int { // 1
@@ -158,11 +159,9 @@
 }
 </code></pre>
 
-<ol>
-<li>Here we instantiate the channel within the lexical scope of the <code>chanOwner</code> function. This limits the scope of the write aspect of the results channel to the closure defined below it. In other words, it confines the write aspect of this channel to prevent other goroutines from writing to it.</li>
-</ol>
+<p>Here we instantiate the channel within the lexical scope of the <code>chanOwner</code> function. This limits the scope of the write aspect of the results channel to the closure defined below it. In other words, it confines the write aspect of this channel to prevent other goroutines from writing to it.</p>
 
-<h3 id="preventing-goroutine-leaks">Preventing Goroutine Leaks</h3>
+<h2 id="preventing-goroutine-leaks">Preventing Goroutine Leaks</h2>
 
 <p>If a goroutine is responsible for creating a goroutine, it is also responsible for ensuring it can stop the goroutine.</p>
 
@@ -197,7 +196,7 @@
 }
 </code></pre>
 
-<h3 id="error-handling">Error Handling</h3>
+<h2 id="error-handling">Error Handling</h2>
 
 <p>Errors should be considered first-class citizens when constructing values to return from goroutines.</p>
 
@@ -214,7 +213,10 @@ func main() {
 		Response *http.Response
 	}
 
-	checkStatus := func(done &lt;-chan interface{}, urls ...string) &lt;-chan Result {
+	checkStatus := func(
+        done &lt;-chan interface{},
+        urls ...string,
+    ) &lt;-chan Result {
 		results := make(chan Result)
 		go func() {
 			defer close(results)
@@ -246,7 +248,7 @@ func main() {
 }
 </code></pre>
 
-<h3 id="some-handy-generators">Some Handy Generators</h3>
+<h2 id="some-handy-generators">Some Handy Generators</h2>
 
 <pre><code class="language-go">	take := func(
 		done &lt;-chan interface{},
@@ -286,7 +288,7 @@ func main() {
 	}
 </code></pre>
 
-<h3 id="fan-out-fan-in">Fan-Out, Fan-In</h3>
+<h2 id="fan-out-fan-in">Fan-Out, Fan-In</h2>
 
 <p><code>Fan-out</code> is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and <code>fan-in</code> is a term to describe the process of combining multiple results into one channel.</p>
 
@@ -334,7 +336,7 @@ func main() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>557 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>559 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-11-18 08:00 &#43;0800</p>
         </div>

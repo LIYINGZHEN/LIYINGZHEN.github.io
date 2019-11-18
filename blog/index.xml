@@ -15,14 +15,13 @@
             <pubDate>Mon, 18 Nov 2019 00:00:00 +0000</pubDate>
             
             <guid>https://www.maxlivinci.com/blog/2019-11-18-concurrency-patterns-in-go/</guid>
-            <description>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.  Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i++ { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt.</description>
+            <description>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
+Lexical confinement func main() { chanOwner := func() &amp;lt;-chan int { // 1 results := make(chan int, 5) go func() { defer close(results) for i := 0; i &amp;lt;= 5; i++ { results &amp;lt;- i } }() return results } consumer := func(results &amp;lt;-chan int) { for result := range results { fmt.</description>
             <content type="html"><![CDATA[
 
-<ul>
-<li>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.</li>
-</ul>
+<p>Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.</p>
 
-<h3 id="lexical-confinement">Lexical confinement</h3>
+<h2 id="lexical-confinement">Lexical confinement</h2>
 
 <pre><code class="language-go">func main() {
 	chanOwner := func() &lt;-chan int { // 1
@@ -48,11 +47,9 @@
 }
 </code></pre>
 
-<ol>
-<li>Here we instantiate the channel within the lexical scope of the <code>chanOwner</code> function. This limits the scope of the write aspect of the results channel to the closure defined below it. In other words, it confines the write aspect of this channel to prevent other goroutines from writing to it.</li>
-</ol>
+<p>Here we instantiate the channel within the lexical scope of the <code>chanOwner</code> function. This limits the scope of the write aspect of the results channel to the closure defined below it. In other words, it confines the write aspect of this channel to prevent other goroutines from writing to it.</p>
 
-<h3 id="preventing-goroutine-leaks">Preventing Goroutine Leaks</h3>
+<h2 id="preventing-goroutine-leaks">Preventing Goroutine Leaks</h2>
 
 <p>If a goroutine is responsible for creating a goroutine, it is also responsible for ensuring it can stop the goroutine.</p>
 
@@ -87,7 +84,7 @@
 }
 </code></pre>
 
-<h3 id="error-handling">Error Handling</h3>
+<h2 id="error-handling">Error Handling</h2>
 
 <p>Errors should be considered first-class citizens when constructing values to return from goroutines.</p>
 
@@ -104,7 +101,10 @@ func main() {
 		Response *http.Response
 	}
 
-	checkStatus := func(done &lt;-chan interface{}, urls ...string) &lt;-chan Result {
+	checkStatus := func(
+        done &lt;-chan interface{},
+        urls ...string,
+    ) &lt;-chan Result {
 		results := make(chan Result)
 		go func() {
 			defer close(results)
@@ -136,7 +136,7 @@ func main() {
 }
 </code></pre>
 
-<h3 id="some-handy-generators">Some Handy Generators</h3>
+<h2 id="some-handy-generators">Some Handy Generators</h2>
 
 <pre><code class="language-go">	take := func(
 		done &lt;-chan interface{},
@@ -176,7 +176,7 @@ func main() {
 	}
 </code></pre>
 
-<h3 id="fan-out-fan-in">Fan-Out, Fan-In</h3>
+<h2 id="fan-out-fan-in">Fan-Out, Fan-In</h2>
 
 <p><code>Fan-out</code> is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and <code>fan-in</code> is a term to describe the process of combining multiple results into one channel.</p>
 
