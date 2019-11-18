@@ -138,49 +138,52 @@ func main() {
 
 <h2 id="some-handy-generators">Some Handy Generators</h2>
 
-<pre><code class="language-go">	take := func(
-		done &lt;-chan interface{},
-		valueStream &lt;-chan interface{},
-		num int,
-	) &lt;-chan interface{} {
-		takeStream := make(chan interface{})
-		go func() {
-			defer close(takeStream)
-			for i := 0; i &lt; num; i++ {
-				select {
-				case &lt;-done:
-					return
-				case takeStream &lt;- &lt;-valueStream:
-				}
-			}
-		}()
-		return takeStream
-	}
+<pre><code class="language-go">func main() {
+    take := func(
+        done &lt;-chan interface{},
+        valueStream &lt;-chan interface{},
+        num int,
+    ) &lt;-chan interface{} {
+        takeStream := make(chan interface{})
+        go func() {
+            defer close(takeStream)
+            for i := 0; i &lt; num; i++ {
+                select {
+                case &lt;-done:
+                    return
+                case takeStream &lt;- &lt;-valueStream:
+                }
+            }
+        }()
+        return takeStream
+    }
 
-	repeatFn := func(
-		done &lt;-chan struct{},
-		fn func() interface{},
-	) &lt;-chan interface{} {
-		valueStream := make(chan interface{})
-		go func() {
-			defer close(valueStream)
-			for {
-				select {
-				case &lt;-done:
-					return
-				case valueStream &lt;- fn():
-				}
-			}
-		}()
-		return valueStream
-	}
+    repeatFn := func(
+        done &lt;-chan struct{},
+        fn func() interface{},
+    ) &lt;-chan interface{} {
+        valueStream := make(chan interface{})
+        go func() {
+            defer close(valueStream)
+            for {
+                select {
+                case &lt;-done:
+                    return
+                case valueStream &lt;- fn():
+                }
+            }
+        }()
+        return valueStream
+    }
+}
 </code></pre>
 
 <h2 id="fan-out-fan-in">Fan-Out, Fan-In</h2>
 
 <p><code>Fan-out</code> is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and <code>fan-in</code> is a term to describe the process of combining multiple results into one channel.</p>
 
-<pre><code class="language-go">	fanIn := func(
+<pre><code class="language-go">func main() {
+	fanIn := func(
 		done &lt;-chan interface{},
 		channels ...&lt;-chan interface{},
 	) &lt;-chan interface{} {
@@ -211,7 +214,8 @@ func main() {
 		}()
 
 		return multiplexedStream
-	}
+    }
+}
 </code></pre>
 ]]></content>
         </item>

@@ -45,7 +45,7 @@ Lexical confinement func main() { chanOwner := func() &lt;-chan int { // 1 resul
 
 <meta itemprop="datePublished" content="2019-11-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="559">
+<meta itemprop="wordCount" content="567">
 
 
 
@@ -250,49 +250,52 @@ func main() {
 
 <h2 id="some-handy-generators">Some Handy Generators</h2>
 
-<pre><code class="language-go">	take := func(
-		done &lt;-chan interface{},
-		valueStream &lt;-chan interface{},
-		num int,
-	) &lt;-chan interface{} {
-		takeStream := make(chan interface{})
-		go func() {
-			defer close(takeStream)
-			for i := 0; i &lt; num; i++ {
-				select {
-				case &lt;-done:
-					return
-				case takeStream &lt;- &lt;-valueStream:
-				}
-			}
-		}()
-		return takeStream
-	}
+<pre><code class="language-go">func main() {
+    take := func(
+        done &lt;-chan interface{},
+        valueStream &lt;-chan interface{},
+        num int,
+    ) &lt;-chan interface{} {
+        takeStream := make(chan interface{})
+        go func() {
+            defer close(takeStream)
+            for i := 0; i &lt; num; i++ {
+                select {
+                case &lt;-done:
+                    return
+                case takeStream &lt;- &lt;-valueStream:
+                }
+            }
+        }()
+        return takeStream
+    }
 
-	repeatFn := func(
-		done &lt;-chan struct{},
-		fn func() interface{},
-	) &lt;-chan interface{} {
-		valueStream := make(chan interface{})
-		go func() {
-			defer close(valueStream)
-			for {
-				select {
-				case &lt;-done:
-					return
-				case valueStream &lt;- fn():
-				}
-			}
-		}()
-		return valueStream
-	}
+    repeatFn := func(
+        done &lt;-chan struct{},
+        fn func() interface{},
+    ) &lt;-chan interface{} {
+        valueStream := make(chan interface{})
+        go func() {
+            defer close(valueStream)
+            for {
+                select {
+                case &lt;-done:
+                    return
+                case valueStream &lt;- fn():
+                }
+            }
+        }()
+        return valueStream
+    }
+}
 </code></pre>
 
 <h2 id="fan-out-fan-in">Fan-Out, Fan-In</h2>
 
 <p><code>Fan-out</code> is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and <code>fan-in</code> is a term to describe the process of combining multiple results into one channel.</p>
 
-<pre><code class="language-go">	fanIn := func(
+<pre><code class="language-go">func main() {
+	fanIn := func(
 		done &lt;-chan interface{},
 		channels ...&lt;-chan interface{},
 	) &lt;-chan interface{} {
@@ -323,7 +326,8 @@ func main() {
 		}()
 
 		return multiplexedStream
-	}
+    }
+}
 </code></pre>
 
             </div>
@@ -336,7 +340,7 @@ func main() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/go">go</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>559 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>567 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-11-18 08:00 &#43;0800</p>
         </div>
