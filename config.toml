@@ -41,7 +41,7 @@ theme = "hello-friend-ng"
 
   [[params.social]]
     name = "youtube"
-    url  = "https://www.youtube.com/channel/UCAQZMBsP6jslq1-n_EwNLFQ/videos"
+    url  = "https://www.youtube.com/channel/UCAQZMBsP6jslq1-n_EwNLFQ"
 
 [languages]
   [languages.en]
