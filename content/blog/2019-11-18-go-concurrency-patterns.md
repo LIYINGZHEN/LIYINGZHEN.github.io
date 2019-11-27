@@ -1,19 +1,32 @@
 ---
-title:       "Concurrency Patterns in Go"
+title:       "Go Concurrency Patterns"
 date:        2019-11-18T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["go"]
 ---
 
-Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
+## Introduction
 
-## Lexical confinement
+Go's concurrency primitives make it easy to construct streaming data pipelines that make efficient use of I/O and multiple CPUs.
+
+## Table of Contents
+
+- [Lexical confinement](#lexical-confinement)
+- [Preventing Goroutine Leaks](#preventing-goroutine-leaks)
+- [Error Handling](#error-handling)
+- [Generator](#generator)
+	- [Some Handy Generators](#some-handy-generators)
+- [Fan-Out, Fan-In](#fan-out-fan-in)
+
+## Lexical Confinement
+
+Confinement is a simple yet powerful idea of ensuring information is only ever available from one concurrent process.
 
 ```go
 func main() {
-	chanOwner := func() <-chan int { // 1
-		results := make(chan int, 5) 
+	chanOwner := func() <-chan int {
+		results := make(chan int, 5)
 		go func() {
 			defer close(results)
 			for i := 0; i <= 5; i++ {
@@ -43,7 +56,7 @@ If a goroutine is responsible for creating a goroutine, it is also responsible f
 
 ```go
 func main() {
-	chanOwner := func(done <-chan struct{}) chan<- int { // 1
+	chanOwner := func(done <-chan struct{}) chan<- int {
 		inputs := make(chan int, 5)
 		go func() {
 			defer close(inputs)
@@ -126,7 +139,40 @@ func main() {
 }
 ```
 
-## Some Handy Generators
+## Generator
+
+Generator Pattern is used to generate a sequence of values which is used to produce some output. This pattern is widely used to introduce parallelism into loops. This allows the consumer of the data produced by the generator to run in parallel when the generator function is busy computing the next value.
+
+```go
+package main
+
+import "fmt"
+
+// Generator func which produces data which might be computationally expensive.
+func fib(n int) chan int {
+    c := make(chan int)
+    go func() {
+	for i, j:= 0, 1; i < n ; i, j = i+j,i {
+		c <- i
+	 }
+        close(c)
+    }()
+    return c
+}
+
+func main() {
+    // fib returns the fibonacci numbers lesser than 1000
+    for i := range fib(1000) {
+    // Consumer which consumes the data produced by the generator, which further does some extra computations
+		v := i*i
+        fmt.Println(v)
+    }
+}
+```
+
+Generators in Go are implemented with goroutines. The fib function passes the Fibonacci number with the help of channels, which is then consumed in the loop to generate output. The generator and the consumer can work concurrently (maybe in parallel) as the logic involved in both are different.
+
+### Some Handy Generators
 
 ```go
 func main() {
@@ -171,7 +217,9 @@ func main() {
 
 ## Fan-Out, Fan-In
 
-`Fan-out` is a term to describe the process of starting multiple goroutines to handle input from the pipeline, and `fan-in` is a term to describe the process of combining multiple results into one channel.
+`Fan-out`: Multiple functions can read from the same channel until that channel is closed; this is called fan-out.
+
+`Fan-in`: A function can read from multiple inputs and proceed until all are closed by multiplexing the input channels onto a single channel that's closed when all the inputs are closed.
 
 ```go
 func main() {

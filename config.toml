@@ -39,10 +39,14 @@ theme = "hello-friend-ng"
     name = "linkedin"
     url  = "https://www.linkedin.com/in/maxlivinci"
 
+  [[params.social]]
+    name = "youtube"
+    url  = "https://www.youtube.com/channel/UCAQZMBsP6jslq1-n_EwNLFQ/videos"
+
 [languages]
   [languages.en]
     title = "YING ZHEN LI"
-    homeSubtitle = "Backend Developer & Golang Enthusiast"
+    homeSubtitle = "Backend Golang Engineer"
     keywords = ""
     copyright = ""
     readOtherPosts = "Read other posts"
