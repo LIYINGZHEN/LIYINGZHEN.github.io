@@ -14,7 +14,7 @@ theme = "hello-friend-ng"
 
   # Metadata mostly used in document's head
   description = "Homepage and blog by Max Li"
-  keywords = "homepage, blog, informatics, development, programming, golang"
+  keywords = "blog, informatics, algorithm, programming"
   images = [""]
 
   # Directory name of your blog content (default is `content/posts`)
@@ -45,8 +45,8 @@ theme = "hello-friend-ng"
 
 [languages]
   [languages.en]
-    title = "YING ZHEN LI"
-    homeSubtitle = "Software Engineer"
+    title = "Max Li"
+    homeSubtitle = "Senior Software Engineer"
     keywords = ""
     copyright = ""
     readOtherPosts = "Read other posts"
