@@ -2,8 +2,7 @@
     <main aria-role="main">
         <div>
             <h1>{{ .Site.Title }}</h1>
-
-            <p>Backend Golang Engineer</p>
+            <p>{{ .Site.HomeSubtitle }}</p>
 
             {{- with .Site.Params.social }}
                 <div>
