@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_add-two-numbers/</loc>
+    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/tags/algorithm/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
@@ -23,23 +28,23 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-every-alternate-k-nodes/</loc>
-    <lastmod>2020-04-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.maxlivinci.com/tags/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-a-linked-list/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-every-alternate-k-nodes/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_merge-sort/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-a-linked-list/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_merge-sort/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
