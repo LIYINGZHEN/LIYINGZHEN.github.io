@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>array on Max Li</title>
+    <link>https://www.maxlivinci.com/tags/array/</link>
+    <description>Recent content in array on Max Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Count Inversions In an Array</title>
+      <link>https://www.maxlivinci.com/algorithm/array_count_inversions_in_an_array/</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/array_count_inversions_in_an_array/</guid>
+      <description>public class CountInversions { static int merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return 0; } int m = l + (h - l) / 2; int[] left = new int[m - l + 1]; int[] right = new int[h - m]; for (int i = 0; i &amp;lt; left.length; i++) { left[i] = arr[l + i]; } for (int i = 0; i &amp;lt; right.</description>
+    </item>
+    
+    <item>
+      <title>Find Pair In a Sorted Rotated Array</title>
+      <link>https://www.maxlivinci.com/algorithm/array_find_pair_in_a_sorted_rotated_array/</link>
+      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/array_find_pair_in_a_sorted_rotated_array/</guid>
+      <description>public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &amp;lt; n - 1; i++) { if (arr[i] &amp;gt; arr[i + 1]) { pivot = i; break; } } int l = (pivot + 1) % n; int h = pivot; while (l !</description>
+    </item>
+    
+  </channel>
+</rss>

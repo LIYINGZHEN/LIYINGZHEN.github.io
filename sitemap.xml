@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_add-two-numbers/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</loc>
     <lastmod>2020-04-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -33,18 +33,33 @@
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-every-alternate-k-nodes/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse-a-linked-list/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</loc>
     <lastmod>2020-04-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.maxlivinci.com/algorithm/linked_list_merge-sort/</loc>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</loc>
     <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/tags/array/</loc>
+    <lastmod>2020-04-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/algorithm/array_count_inversions_in_an_array/</loc>
+    <lastmod>2020-04-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/algorithm/array_find_pair_in_a_sorted_rotated_array/</loc>
+    <lastmod>2020-04-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
