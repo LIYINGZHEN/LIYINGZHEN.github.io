@@ -1,9 +1,11 @@
 {{ define "main" }}
     <main aria-role="main">
         <div>
-            <h1>{{ .Site.Title }}</h1>
+            <div style="display: flex;flex-direction: column;justify-content: center;text-align: center;">
+                <h1>{{ .Site.Title }}</h1>
+            </div>
 
-            <p>Software Engineer</p>
+            <p>Senior Software Engineer</p>
 
             {{- with .Site.Params.social }}
                 <div>
