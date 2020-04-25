@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on YING ZHEN LI</title>
+    <link>https://www.maxlivinci.com/tags/golang/</link>
+    <description>Recent content in golang on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Jan 2019 11:20:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Environment</title>
+      <link>https://www.maxlivinci.com/old/2019-01-26-go-environment/</link>
+      <pubDate>Sat, 26 Jan 2019 11:20:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-26-go-environment/</guid>
+      <description>GOROOT To access to the Go binary and its libraries
+GOPATH To tell the Go compiler where to find the source code for the project and its dependencies.
+src/ Contain the source code of our projects and their dependencies.
+pkg/ To store reusable machine code that can be readily included in our Go binary.
+bin/ Go compiles and builds our projects into executable binaries and places them in this directory.</description>
+    </item>
+    
+    <item>
+      <title>Concurrency and parallelism</title>
+      <link>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</link>
+      <pubDate>Fri, 25 Jan 2019 21:08:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</guid>
+      <description>Computer and software programs are useful because they do a lot of laborious work very fast and can also do multiple things at once. We want our programs to be able to do multiple things simultaneously, that is, multitask, and the success of a programming language can depend on how easy it is to write and understand multitasking programs.
+Concurrency and parallelism are two terms that we are bound to come across often when looking into multitasking and they are often used interchangeably.</description>
+    </item>
+    
+    <item>
+      <title>General Go coding advices</title>
+      <link>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</link>
+      <pubDate>Sat, 19 Jan 2019 17:05:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-19-general-go-coding-advices/</guid>
+      <description>The following list offers practical advices that will help you write better Go code:
+ If you have an error in a Go function, either log it or return it, do not do both unless you have a really good reason for doing so! Go interfaces define behaviors, not data and data structures. Use the io.Reader and io.Writer interfaces because they make your code more extensible. Make sure that you pass a pointer to a variable of a function only when needed.</description>
+    </item>
+    
+    <item>
+      <title>Find out Go Environment</title>
+      <link>https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/</link>
+      <pubDate>Sat, 19 Jan 2019 17:02:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/</guid>
+      <description>package main import ( &amp;#34;fmt&amp;#34; &amp;#34;runtime&amp;#34; ) func main() { fmt.Print(&amp;#34;You are using &amp;#34;, runtime.Compiler, &amp;#34; &amp;#34;) fmt.Println(&amp;#34;on a&amp;#34;, runtime.GOARCH, &amp;#34;machine&amp;#34;) fmt.Println(&amp;#34;Using Go version&amp;#34;, runtime.Version()) fmt.Println(&amp;#34;Number of CPUs:&amp;#34;, runtime.NumCPU()) fmt.Println(&amp;#34;Number of Goroutines:&amp;#34;, runtime.NumGoroutine()) } xecuting goEnv.go on a macOS High Sierra machine with Go version 1.9.2 will create the following output:
+$ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 Number of CPUs: 8 Number of Goroutines: 1 </description>
+    </item>
+    
+    <item>
+      <title>Writing to log files</title>
+      <link>https://www.maxlivinci.com/old/2019-01-19-writing-to-log-files/</link>
+      <pubDate>Sat, 19 Jan 2019 15:44:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-19-writing-to-log-files/</guid>
+      <description>Generally speaking, using a log file to write some information is considered a better practice than writing the same output on the screen for two reasons:
+  The output does not get lost as it is stored in a file
+  You can search and process log files using Unix tools such as grep(1), awk(1), and sed(1), which cannot be done when messages are printed on a Terminal window</description>
+    </item>
+    
+    <item>
+      <title>Serving Static Files In Go</title>
+      <link>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</link>
+      <pubDate>Sat, 12 Jan 2019 17:15:17 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-12-servering-static-files/</guid>
+      <description>func main() { port := 8080 cathandler := http.FileServer(http.Dir(&amp;#34;./images&amp;#34;)) // images/...  http.Handle(&amp;#34;/cat/&amp;#34;, http.StripPrefix(&amp;#34;/cat/&amp;#34;, cathandler)) // images/cat/...  http.Handle(&amp;#34;/cat/&amp;#34;, cathandler) log.Printf(&amp;#34;Server starting on port %v\n&amp;#34;, 8080) log.Fatal(http.ListenAndServe(fmt.Sprintf(&amp;#34;:%v&amp;#34;, port), nil)) } </description>
+    </item>
+    
+  </channel>
+</rss>

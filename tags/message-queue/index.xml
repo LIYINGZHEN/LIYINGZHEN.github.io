@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>message-queue on YING ZHEN LI</title>
+    <link>https://www.maxlivinci.com/tags/message-queue/</link>
+    <description>Recent content in message-queue on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jan 2019 07:42:05 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/message-queue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An Example of Using RabbitMQ From Go</title>
+      <link>https://www.maxlivinci.com/old/2019-01-19-an-example-of-using-rabbitmq-from-go/</link>
+      <pubDate>Sat, 19 Jan 2019 07:42:05 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-19-an-example-of-using-rabbitmq-from-go/</guid>
+      <description>Sending We&amp;rsquo;ll call our message publisher (sender) send.go and our message consumer (receiver) receive.go. The publisher will connect to RabbitMQ, send a single message, then exit.
+package main import ( &amp;#34;log&amp;#34; &amp;#34;github.com/streadway/amqp&amp;#34; ) func failOnError(err error, msg string) { if err != nil { log.Fatalf(&amp;#34;%s: %s&amp;#34;, msg, err) } } func main() { conn, err := amqp.Dial(&amp;#34;amqp://guest:guest@localhost:5672/&amp;#34;) failOnError(err, &amp;#34;Failed to connect to RabbitMQ&amp;#34;) defer conn.Close() ch, err := conn.Channel() failOnError(err, &amp;#34;Failed to open a channel&amp;#34;) defer ch.</description>
+    </item>
+    
+    <item>
+      <title>An Example of Using Nsq From Go</title>
+      <link>https://www.maxlivinci.com/old/2019-01-11-an-example-of-using-nsq-from-go/</link>
+      <pubDate>Fri, 11 Jan 2019 10:27:05 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-11-an-example-of-using-nsq-from-go/</guid>
+      <description>NSQ is a message queue, similar to RabbitMQ. I decided I’d give it a whirl.
+ Install Nsq brew install nsq Launch Nsq nsqlookupd &amp;amp; nsqd --lookupd-tcp-address=127.0.0.1:4160 &amp;amp; nsqadmin --lookupd-http-address=127.0.0.1:4161 &amp;amp; Get Go client library go get github.com/nsqio/go-nsq Create a producer package main import ( &amp;#34;log&amp;#34; &amp;#34;github.com/bitly/go-nsq&amp;#34; ) func main() { config := nsq.NewConfig() w, _ := nsq.NewProducer(&amp;#34;127.0.0.1:4150&amp;#34;, config) err := w.Publish(&amp;#34;write_test&amp;#34;, []byte(&amp;#34;test&amp;#34;)) if err != nil { log.Panic(&amp;#34;Could not connect&amp;#34;) } w.</description>
+    </item>
+    
+  </channel>
+</rss>

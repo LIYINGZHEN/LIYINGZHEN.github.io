@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on YING ZHEN LI</title>
+    <link>https://www.maxlivinci.com/categories/go/</link>
+    <description>Recent content in Go on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jan 2019 21:08:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Concurrency and parallelism</title>
+      <link>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</link>
+      <pubDate>Fri, 25 Jan 2019 21:08:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-25-concurrency-and-parallelism/</guid>
+      <description>Computer and software programs are useful because they do a lot of laborious work very fast and can also do multiple things at once. We want our programs to be able to do multiple things simultaneously, that is, multitask, and the success of a programming language can depend on how easy it is to write and understand multitasking programs.
+Concurrency and parallelism are two terms that we are bound to come across often when looking into multitasking and they are often used interchangeably.</description>
+    </item>
+    
+  </channel>
+</rss>

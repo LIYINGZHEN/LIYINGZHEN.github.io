@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Commands redis-cli # Local redis-cli -h host -p port -a password # Run Commands on the Remote Server redis-cli INFO memory Data Types  Strings Lists Hashes Sets Sorted Sets  Strings # SET first &amp;#34;First Key value&amp;#34; GET first # EXPIRE command adds an expiration time (in seconds) to a given key. EXPIRE first 10 # TTL (Time To Live) command returns the amount of seconds a given key has left to live." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/old/2019-03-13-redis/" />
+
+
+<title>
+    
+    Redis :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.94c394bd7d70b51441c665cf02c970563b921861bd1cd9cab4e40f1edb0defdc.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Redis">
+<meta itemprop="description" content=" ">
+<meta itemprop="datePublished" content="2019-03-13T06:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-13T06:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="604">
+<meta itemprop="image" content="https://www.maxlivinci.com"/>
+
+
+
+<meta itemprop="keywords" content="redis," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Redis"/>
+<meta name="twitter:description" content=" "/>
+
+
+
+<meta property="article:section" content="notes" />
+
+<meta property="article:published_time" content="2019-03-13 06:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/old/2019-03-13-redis/">Redis</a></h2>
+
+            
+
+            <div class="post-content">
+                <h1 id="commands">Commands</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">redis-cli                             <span style="color:#75715e"># Local</span>
+redis-cli -h host -p port -a password <span style="color:#75715e"># Run Commands on the Remote Server</span>
+
+redis-cli INFO memory
+</code></pre></div><h1 id="data-types">Data Types</h1>
+<ul>
+<li>Strings</li>
+<li>Lists</li>
+<li>Hashes</li>
+<li>Sets</li>
+<li>Sorted Sets</li>
+</ul>
+<h2 id="strings">Strings</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">#
+SET first <span style="color:#e6db74">&#34;First Key value&#34;</span>
+GET first
+<span style="color:#75715e"># EXPIRE command adds an expiration time (in seconds) to a given key.</span>
+EXPIRE first <span style="color:#ae81ff">10</span>
+<span style="color:#75715e"># TTL (Time To Live) command returns the amount of seconds a given key has left to live.</span>
+TTL first
+<span style="color:#75715e"># MSET command sets the values of multiple keys at once.</span>
+MSET first <span style="color:#e6db74">&#34;First Key value&#34;</span> second <span style="color:#e6db74">&#34;Second Key value&#34;</span>
+<span style="color:#75715e"># MGET command retrieves the values of multiple key names at once</span>
+MGET first second
+<span style="color:#75715e"># INCR increments a key by 1 and returns the incremented value</span>
+INCR counter
+<span style="color:#75715e"># INCRBY increments a key by the given integer and returns the incremented value</span>
+INCRBY counter <span style="color:#ae81ff">5</span>
+DECR counter
+DECRBY counter <span style="color:#ae81ff">100</span>
+</code></pre></div><h2 id="lists">Lists</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># LPUSH inserts data at the beginning of a List (left push).</span>
+LPUSH books <span style="color:#e6db74">&#34;Clean Code&#34;</span>
+<span style="color:#75715e"># RPUSH inserts data at the end of a List (right push).</span>
+RPUSH books <span style="color:#e6db74">&#34;Code Complete&#34;</span>
+<span style="color:#75715e"># LLEN returns the length of a List.</span>
+LLEN books
+<span style="color:#75715e"># LINDEX returns the element in a given index (indices are zero-based).</span>
+LINDEX books <span style="color:#ae81ff">1</span>
+<span style="color:#75715e"># LRANGE returns an array with all elements from a given index range.</span>
+LRANGE books <span style="color:#ae81ff">0</span> -1
+<span style="color:#75715e"># LPOP removes and returns the first element of a List.</span>
+LPOP books
+<span style="color:#75715e"># RPOP removes and returns the last element of a List.</span>
+RPOP books
+</code></pre></div><h2 id="hashes">Hashes</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">HSET movie <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#e6db74">&#34;The Godfather&#34;</span>
+HMSET movie <span style="color:#e6db74">&#34;year&#34;</span> <span style="color:#ae81ff">1972</span> <span style="color:#e6db74">&#34;rating&#34;</span> 9.2 <span style="color:#e6db74">&#34;watchers&#34;</span> <span style="color:#ae81ff">10000000</span>
+HINCRBY movie <span style="color:#e6db74">&#34;watchers&#34;</span> <span style="color:#ae81ff">3</span>
+HGET movie <span style="color:#e6db74">&#34;title&#34;</span>
+HMGET movie <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#e6db74">&#34;watchers&#34;</span>
+HDEL movie <span style="color:#e6db74">&#34;watchers&#34;</span>
+HGETALL movie
+HSCAN movie <span style="color:#ae81ff">0</span>
+</code></pre></div><h2 id="sets">Sets</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SADD user:max:favorite_artists <span style="color:#e6db74">&#34;Arcade Fire&#34;</span> <span style="color:#e6db74">&#34;Arctic Monkeys&#34;</span> <span style="color:#e6db74">&#34;Belle &amp; Sebastian&#34;</span> <span style="color:#e6db74">&#34;Lenine&#34;</span>
+SADD user:hugo:favorite_artists <span style="color:#e6db74">&#34;Daft Punk&#34;</span> <span style="color:#e6db74">&#34;The Kooks&#34;</span> <span style="color:#e6db74">&#34;Arctic Monkeys&#34;</span>
+<span style="color:#75715e"># SINTER returns only the favorite artists that both Max and Hugo have on their lists.</span>
+SINTER user:max:favorite_artists user:hugo:favorite_artists
+<span style="color:#75715e"># SDIFF returns an array with all members of the first Set that do not exist in the Sets that follow it.</span>
+SDIFF user:max:favorite_artists user:hugo:favorite_artists
+<span style="color:#75715e"># SUNION returns the names of all artists in both users&#39; Sets of favorite artists.</span>
+SUNION user:max:favorite_artists user:hugo:favorite_artists
+<span style="color:#75715e"># SRANDMEMBER returns random members from a Set.</span>
+SRANDMEMBER user:max:favorite_artists
+<span style="color:#75715e"># SISMEMBER checks whether a member exists in a Set.</span>
+SISMEMBER user:max:favorite_artists <span style="color:#e6db74">&#34;Arctic Monkeys&#34;</span>
+<span style="color:#75715e"># SREM removes and returns members from a Set.</span>
+SREM user:max:favorite_artists <span style="color:#e6db74">&#34;Arctic Monkeys&#34;</span>
+<span style="color:#75715e"># SCARD returns the number of members in a Set.</span>
+SCARD user:max:favorite_artists
+<span style="color:#75715e"># SMEMBERS returns an array with all members of a Set.</span>
+SMEMBERS user:max:favorite_artists
+</code></pre></div><h2 id="sorted-sets">Sorted Sets</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># ZADD command adds one or many members to a Sorted Set.</span>
+ZADD leaders <span style="color:#ae81ff">100</span> <span style="color:#e6db74">&#34;Alice&#34;</span>
+<span style="color:#75715e"># ZRANGE returns elements from the lowest to the highest score.</span>
+<span style="color:#75715e"># ZREVRANGE returns elements from the highest to the lowest score.</span>
+ZREVRANGE leaders <span style="color:#ae81ff">0</span> -1 WITHSCORES
+<span style="color:#75715e"># ZREM command removes a member from a Sorted Set:</span>
+ZREM leaders <span style="color:#e6db74">&#34;Hugo&#34;</span>
+<span style="color:#75715e"># ZSCORE: This returns the score of a member.</span>
+ZSCORE leaders <span style="color:#e6db74">&#34;Max&#34;</span>
+<span style="color:#75715e"># ZRANK: This returns the member rank (or index) ordered from low to high.</span>
+ZRANK leaders <span style="color:#e6db74">&#34;Max&#34;</span>
+<span style="color:#75715e"># ZREVRANK: This returns the member rank (or index) ordered from high to low.</span>
+ZREVRANK leaders <span style="color:#e6db74">&#34;Max&#34;</span>
+</code></pre></div><h2 id="keys">Keys</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">TYPE KEY_NAME
+KEYS pattern <span style="color:#75715e"># KEYS * is dangerous!</span>
+</code></pre></div><h1 id="sentinel-vs-cluster">Sentinel vs. Cluster</h1>
+<ul>
+<li>Sentinel&rsquo;s goal is to provide reliable automatic failover in a master/slave topology without sharding data.</li>
+<li>Cluster&rsquo;s goal is to distribute data across different Redis instances and perform automatic failover if any problem happens to any master instance.</li>
+</ul>
+<h2 id="sentinel-configuration">Sentinel configuration</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sentinel monitor mymaster 127.0.0.1 <span style="color:#ae81ff">6379</span> <span style="color:#ae81ff">2</span>
+sentinel down-after-milliseconds mymaster <span style="color:#ae81ff">30000</span>
+sentinel failover-timeout mymaster <span style="color:#ae81ff">180000</span>
+sentinel parallel-syncs mymaster <span style="color:#ae81ff">1</span>
+</code></pre></div><h1 id="notes">Notes</h1>
+<ol>
+<li>Use benchmarks before committing to a solution.</li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/redis">redis</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.c3134e4a0a3d5ff628f7e932e4d6846626cad5e9457046b58e07c6036133ea0d788e9d330d51e709b43a7a8a22e1a4cf28aff9dbf27756a6a12b9c135260726a.js" integrity="sha512-wxNOSgo9X/Yo9&#43;ky5NaEZibK1elFcEa1jgfGA2Ez6g14jp0zDVHnCbQ6eooi4aTPKK/52/J3VqahK5wTUmByag=="></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="package main import ( &amp;#34;fmt&amp;#34; &amp;#34;runtime&amp;#34; ) func main() { fmt.Print(&amp;#34;You are using &amp;#34;, runtime.Compiler, &amp;#34; &amp;#34;) fmt.Println(&amp;#34;on a&amp;#34;, runtime.GOARCH, &amp;#34;machine&amp;#34;) fmt.Println(&amp;#34;Using Go version&amp;#34;, runtime.Version()) fmt.Println(&amp;#34;Number of CPUs:&amp;#34;, runtime.NumCPU()) fmt.Println(&amp;#34;Number of Goroutines:&amp;#34;, runtime.NumGoroutine()) } xecuting goEnv.go on a macOS High Sierra machine with Go version 1.9.2 will create the following output:
+$ go run goEnv.go You are using gc on a amd64 machine Using Go version go1.9.2 Number of CPUs: 8 Number of Goroutines: 1 " />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/" />
+
+
+<title>
+    
+    Find out Go Environment :: YING ZHEN LI 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.94c394bd7d70b51441c665cf02c970563b921861bd1cd9cab4e40f1edb0defdc.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Find out Go Environment">
+<meta itemprop="description" content=" ">
+<meta itemprop="datePublished" content="2019-01-19T17:02:00&#43;01:00" />
+<meta itemprop="dateModified" content="2019-01-19T17:02:00&#43;01:00" />
+<meta itemprop="wordCount" content="75">
+<meta itemprop="image" content="https://www.maxlivinci.com"/>
+
+
+
+<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Find out Go Environment"/>
+<meta name="twitter:description" content=" "/>
+
+
+
+
+<meta property="article:published_time" content="2019-01-19 17:02:00 &#43;0100 &#43;0100" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/blog">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/old/2019-01-19-find-out-go-environment/">Find out Go Environment</a></h2>
+
+            
+
+            <div class="post-content">
+                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+   <span style="color:#e6db74">&#34;fmt&#34;</span>
+   <span style="color:#e6db74">&#34;runtime&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Print</span>(<span style="color:#e6db74">&#34;You are using &#34;</span>, <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">Compiler</span>, <span style="color:#e6db74">&#34; &#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;on a&#34;</span>, <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">GOARCH</span>, <span style="color:#e6db74">&#34;machine&#34;</span>)
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Using Go version&#34;</span>, <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">Version</span>())
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Number of CPUs:&#34;</span>, <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">NumCPU</span>())
+   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Number of Goroutines:&#34;</span>, <span style="color:#a6e22e">runtime</span>.<span style="color:#a6e22e">NumGoroutine</span>())
+}
+</code></pre></div><p>xecuting goEnv.go on a macOS High Sierra machine with Go version 1.9.2 will create the following output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#960050;background-color:#1e0010">$</span> <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">goEnv</span>.<span style="color:#66d9ef">go</span>
+<span style="color:#a6e22e">You</span> <span style="color:#a6e22e">are</span> <span style="color:#a6e22e">using</span> <span style="color:#a6e22e">gc</span> <span style="color:#a6e22e">on</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">amd64</span> <span style="color:#a6e22e">machine</span>
+<span style="color:#a6e22e">Using</span> <span style="color:#a6e22e">Go</span> <span style="color:#a6e22e">version</span> <span style="color:#a6e22e">go1</span><span style="color:#ae81ff">.9.2</span>
+<span style="color:#a6e22e">Number</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">CPUs</span>: <span style="color:#ae81ff">8</span>
+<span style="color:#a6e22e">Number</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">Goroutines</span>: <span style="color:#ae81ff">1</span>
+</code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/golang">golang</a></span>
+  				</p>
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2018 - 2019</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.c3134e4a0a3d5ff628f7e932e4d6846626cad5e9457046b58e07c6036133ea0d788e9d330d51e709b43a7a8a22e1a4cf28aff9dbf27756a6a12b9c135260726a.js" integrity="sha512-wxNOSgo9X/Yo9&#43;ky5NaEZibK1elFcEa1jgfGA2Ez6g14jp0zDVHnCbQ6eooi4aTPKK/52/J3VqahK5wTUmByag=="></script>
+
+
+
+    </body>
+</html>

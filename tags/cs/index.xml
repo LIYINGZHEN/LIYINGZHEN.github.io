@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs on YING ZHEN LI</title>
+    <link>https://www.maxlivinci.com/tags/cs/</link>
+    <description>Recent content in cs on YING ZHEN LI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Jan 2019 09:52:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Worker pools</title>
+      <link>https://www.maxlivinci.com/old/2019-01-26-worker-pools/</link>
+      <pubDate>Sat, 26 Jan 2019 09:52:00 +0100</pubDate>
+      
+      <guid>https://www.maxlivinci.com/old/2019-01-26-worker-pools/</guid>
+      <description>A worker pool is a set of threads that are about to process jobs assigned to them.  Example package main import ( &amp;#34;fmt&amp;#34; &amp;#34;os&amp;#34; &amp;#34;strconv&amp;#34; &amp;#34;sync&amp;#34; &amp;#34;time&amp;#34; ) type Client struct { id int integer int } type Data struct { job Client square int } var ( size = 10 clients = make(chan Client, size) data = make(chan Data, size) ) func worker(w *sync.WaitGroup) { for c := range clients { square := c.</description>
+    </item>
+    
+  </channel>
+</rss>
