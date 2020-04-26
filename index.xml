@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Rotate An Array</title>
+      <link>https://www.maxlivinci.com/algorithm/array_rotate_an_array/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/array_rotate_an_array/</guid>
+      <description>public class ArrayRotation { // Time: O(n), Space: O(1)  static void rotate(final int[] arr, final int d) { int n = arr.length; int rotation = d % n; if (rotation == 0) { return; } int count = 0; for (int start = 0; count &amp;lt; arr.length; start++) { int currIdx = start; int prev = arr[currIdx]; do { int nextIdx = (currIdx - rotation + n) % n; int temp = arr[nextIdx]; arr[nextIdx] = prev; prev = temp; count++; currIdx = nextIdx; } while (currIdx !</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://www.maxlivinci.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
