@@ -1,5 +1,5 @@
 ---
-title:       "Reverse Every Alternate k Nodes In a Linked List"
+title:       "[Linked List] Reverse Every Alternate k Nodes"
 date:        2020-04-24T00:00:00+00:00
 author:      "Max"
 published:   true

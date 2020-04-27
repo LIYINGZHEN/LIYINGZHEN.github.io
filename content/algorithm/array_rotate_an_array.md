@@ -1,5 +1,5 @@
 ---
-title:       "Rotate An Array"
+title:       "[Array] Rotate An Array"
 date:        2020-04-19T00:00:00+00:00
 author:      "Max"
 published:   true

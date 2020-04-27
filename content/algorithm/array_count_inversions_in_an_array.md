@@ -1,5 +1,5 @@
 ---
-title:       "Count Inversions In an Array"
+title:       "[Array] Count Inversions"
 date:        2020-04-21T00:00:00+00:00
 author:      "Max"
 published:   true
