@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sorting on Max Li</title>
+    <link>https://www.maxlivinci.com/tags/sorting/</link>
+    <description>Recent content in sorting on Max Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sorting - Merge Sort</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
+      <description>import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
+    </item>
+    
+  </channel>
+</rss>

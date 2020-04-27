@@ -83,5 +83,14 @@
       <description>public class ArrayRotation { // Time: O(n), Space: O(1)  static void rotate(final int[] arr, final int d) { int n = arr.length; int rotation = d % n; if (rotation == 0) { return; } int count = 0; for (int start = 0; count &amp;lt; arr.length; start++) { int currIdx = start; int prev = arr[currIdx]; do { int nextIdx = (currIdx - rotation + n) % n; int temp = arr[nextIdx]; arr[nextIdx] = prev; prev = temp; count++; currIdx = nextIdx; } while (currIdx !</description>
     </item>
     
+    <item>
+      <title>Sorting - Merge Sort</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
+      <description>import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
+    </item>
+    
   </channel>
 </rss>
