@@ -1,5 +1,5 @@
 ---
-title:       "[Linked List] Find Start of The Loop"
+title:       "Linked List - Find Start of The Loop"
 date:        2020-04-26T00:00:00+00:00
 author:      "Max"
 published:   true
