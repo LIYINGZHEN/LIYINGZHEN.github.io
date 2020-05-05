@@ -7,34 +7,46 @@ tags:        ["algorithm", "array"]
 ---
 
 ```java
-public class ArrayRotation {
+package array.max;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertArrayEquals;
+
+public class RotateArray {
     // Time: O(n), Space: O(1)
-    static void rotate(final int[] arr, final int d) {
-        int n = arr.length;
-        int rotation = d % n;
-        if (rotation == 0) {
+    static void rotateArr(int arr[], int d) {
+        if (arr.length == 0) {
             return;
         }
 
+        int n = arr.length;
+        int step = d % arr.length;
         int count = 0;
-        for (int start = 0; count < arr.length; start++) {
-            int currIdx = start;
-            int prev = arr[currIdx];
+
+        for (int start = 0; count < n; start++) {
+            int curr = start;
+            int prev = arr[curr];
             do {
-                int nextIdx = (currIdx - rotation + n) % n;
-                int temp = arr[nextIdx];
-                arr[nextIdx] = prev;
+                int next = (curr + n - step) % n;
+                int temp = arr[next];
+                arr[next] = prev;
                 prev = temp;
+                curr = next;
                 count++;
-                currIdx = nextIdx;
-            } while (currIdx != start);
+            } while (start != curr);
         }
     }
 
-    public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-        rotate(arr, 5);
-        System.out.println(Arrays.toString(arr));
+    @Test
+    public void test() {
+        int[] arr = new int[]{1, 2, 3, 4, 5};
+        rotateArr(arr, 2);
+        assertArrayEquals(new int[]{3, 4, 5, 1, 2}, arr);
+
+        int[] arr2 = new int[]{2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        rotateArr(arr2, 3);
+        assertArrayEquals(new int[]{8, 10, 12, 14, 16, 18, 20, 2, 4, 6}, arr2);
     }
 }
 ```

@@ -1,6 +1,6 @@
 ---
 title:       "Sorting - Merge sort"
-date:        2020-04-18T00:00:00+00:00
+date:        2020-04-16T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "sorting"]

@@ -7,6 +7,8 @@ tags:        ["algorithm", "stack"]
 ---
 
 ```java
+import java.util.Stack;
+
 public class BalancedParen {
     static boolean isPair(char a, char b) {
         if (a == '(' && b == ')' || a == '[' && b == ']' || a == '{' && b == '}') {

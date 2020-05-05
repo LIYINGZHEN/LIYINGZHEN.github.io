@@ -7,6 +7,8 @@ tags:        ["algorithm", "stack"]
 ---
 
 ```java
+import java.util.Stack;
+
 public class TwoStacks {
     int[] array;
     int idx1, idx2, cap;
