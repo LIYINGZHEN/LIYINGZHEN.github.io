@@ -1,5 +1,5 @@
 ---
-title:       "Linked List - Merge Sort"
+title:       "Linked List - Merge sort"
 date:        2020-04-22T00:00:00+00:00
 author:      "Max"
 published:   true

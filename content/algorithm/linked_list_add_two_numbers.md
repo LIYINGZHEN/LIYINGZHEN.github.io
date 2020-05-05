@@ -1,5 +1,5 @@
 ---
-title:       "Linked List - Add Two Numbers"
+title:       "Linked List - Add two numbers"
 date:        2020-04-25T00:00:00+00:00
 author:      "Max"
 published:   true

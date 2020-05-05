@@ -1,5 +1,5 @@
 ---
-title:       "Sorting - Merge Sort"
+title:       "Sorting - Merge sort"
 date:        2020-04-18T00:00:00+00:00
 author:      "Max"
 published:   true

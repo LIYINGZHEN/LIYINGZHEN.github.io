@@ -1,5 +1,5 @@
 ---
-title:       "Array - Find Pair In a Sorted Rotated Array"
+title:       "Array - Find pair in a sorted rotated array"
 date:        2020-04-20T00:00:00+00:00
 author:      "Max"
 published:   true

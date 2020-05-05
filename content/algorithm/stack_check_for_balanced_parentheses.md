@@ -1,5 +1,5 @@
 ---
-title:       "Stack - Check for Balanced Parentheses"
+title:       "Stack - Check for balanced parentheses"
 date:        2020-04-27T00:00:00+00:00
 author:      "Max"
 published:   true

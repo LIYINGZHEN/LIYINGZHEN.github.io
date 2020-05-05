@@ -1,5 +1,5 @@
 ---
-title:       "Stack - Implement Two Stacks In An Array"
+title:       "Stack - Implement two stacks in an array"
 date:        2020-04-28T00:00:00+00:00
 author:      "Max"
 published:   true

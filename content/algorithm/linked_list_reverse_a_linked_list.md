@@ -1,5 +1,5 @@
 ---
-title:       "Linked List - Reverse a Linked List"
+title:       "Linked List - Reverse a linked list"
 date:        2020-04-23T00:00:00+00:00
 author:      "Max"
 published:   true
