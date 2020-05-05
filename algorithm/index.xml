@@ -6,10 +6,19 @@
     <description>Recent content in Algorithms on Max Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack - Next greater element in an Array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</guid>
+      <description>import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.length == 0) { return; } int n = arr.length; Stack&amp;lt;Integer&amp;gt; s = new Stack&amp;lt;&amp;gt;(); int[] result = new int[n]; for (int i = n - 1; i &amp;gt;= 0; i--) { int data = arr[i]; if (!s.isEmpty() &amp;amp;&amp;amp; data &amp;gt; s.peek()) { s.pop(); } if (s.isEmpty()) { result[i] = -1; } else { result[i] = s.</description>
+    </item>
     
     <item>
       <title>Stack - Implement two stacks in an array</title>
@@ -17,7 +26,7 @@
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</guid>
-      <description>public class TwoStacks { int[] array; int idx1, idx2, cap; public TwoStacks(int cap) { this.array = new int[cap]; this.idx1 = -1; this.idx2 = cap; this.cap = cap; } public boolean isFull() { return this.idx1 == this.idx2 - 1; } public void push1(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.idx1++; this.array[this.idx1] = d; } public void push2(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.</description>
+      <description>import java.util.Stack; public class TwoStacks { int[] array; int idx1, idx2, cap; public TwoStacks(int cap) { this.array = new int[cap]; this.idx1 = -1; this.idx2 = cap; this.cap = cap; } public boolean isFull() { return this.idx1 == this.idx2 - 1; } public void push1(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.idx1++; this.array[this.idx1] = d; } public void push2(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.</description>
     </item>
     
     <item>
@@ -26,7 +35,7 @@
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_check_for_balanced_parentheses/</guid>
-      <description>public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.length == 0) { return true; } Stack&amp;lt;Character&amp;gt; temp = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; arr.length; i++) { char data = arr[i]; if (data == &amp;#39;(&amp;#39; || data == &amp;#39;[&amp;#39; || data == &amp;#39;{&amp;#39;) { temp.</description>
+      <description>import java.util.Stack; public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.length == 0) { return true; } Stack&amp;lt;Character&amp;gt; temp = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; arr.length; i++) { char data = arr[i]; if (data == &amp;#39;(&amp;#39; || data == &amp;#39;[&amp;#39; || data == &amp;#39;{&amp;#39;) { temp.</description>
     </item>
     
     <item>
