@@ -7,7 +7,7 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="public class ArrayRotation { // Time: O(n), Space: O(1)  static void rotate(final int[] arr, final int d) { int n = arr.length; int rotation = d % n; if (rotation == 0) { return; } int count = 0; for (int start = 0; count &amp;lt; arr.length; start&#43;&#43;) { int currIdx = start; int prev = arr[currIdx]; do { int nextIdx = (currIdx - rotation &#43; n) % n; int temp = arr[nextIdx]; arr[nextIdx] = prev; prev = temp; count&#43;&#43;; currIdx = nextIdx; } while (currIdx !" />
+    content="package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_rotate_an_array/" />
@@ -37,10 +37,10 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Rotate an array">
-<meta itemprop="description" content="public class ArrayRotation { // Time: O(n), Space: O(1)  static void rotate(final int[] arr, final int d) { int n = arr.length; int rotation = d % n; if (rotation == 0) { return; } int count = 0; for (int start = 0; count &lt; arr.length; start&#43;&#43;) { int currIdx = start; int prev = arr[currIdx]; do { int nextIdx = (currIdx - rotation &#43; n) % n; int temp = arr[nextIdx]; arr[nextIdx] = prev; prev = temp; count&#43;&#43;; currIdx = nextIdx; } while (currIdx !">
+<meta itemprop="description" content="package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !">
 <meta itemprop="datePublished" content="2020-04-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="118">
+<meta itemprop="wordCount" content="148">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -49,7 +49,7 @@
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Array - Rotate an array"/>
-<meta name="twitter:description" content="public class ArrayRotation { // Time: O(n), Space: O(1)  static void rotate(final int[] arr, final int d) { int n = arr.length; int rotation = d % n; if (rotation == 0) { return; } int count = 0; for (int start = 0; count &lt; arr.length; start&#43;&#43;) { int currIdx = start; int prev = arr[currIdx]; do { int nextIdx = (currIdx - rotation &#43; n) % n; int temp = arr[nextIdx]; arr[nextIdx] = prev; prev = temp; count&#43;&#43;; currIdx = nextIdx; } while (currIdx !"/>
+<meta name="twitter:description" content="package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !"/>
 
 
 
@@ -120,34 +120,46 @@
             
 
             <div class="post-content">
-                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArrayRotation</span> <span style="color:#f92672">{</span>
+                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RotateArray</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Time: O(n), Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rotate</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">int</span> rotation <span style="color:#f92672">=</span> d <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rotation <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rotateArr</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> arr<span style="color:#f92672">[],</span> <span style="color:#66d9ef">int</span> d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
 
+        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">int</span> step <span style="color:#f92672">=</span> d <span style="color:#f92672">%</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> count <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> start<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">int</span> currIdx <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">int</span> prev <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>currIdx<span style="color:#f92672">];</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> count <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> start<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> curr <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">int</span> prev <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>curr<span style="color:#f92672">];</span>
             <span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
-                <span style="color:#66d9ef">int</span> nextIdx <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>currIdx <span style="color:#f92672">-</span> rotation <span style="color:#f92672">+</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
-                <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>nextIdx<span style="color:#f92672">];</span>
-                arr<span style="color:#f92672">[</span>nextIdx<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> prev<span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">int</span> next <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>curr <span style="color:#f92672">+</span> n <span style="color:#f92672">-</span> step<span style="color:#f92672">)</span> <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>next<span style="color:#f92672">];</span>
+                arr<span style="color:#f92672">[</span>next<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> prev<span style="color:#f92672">;</span>
                 prev <span style="color:#f92672">=</span> temp<span style="color:#f92672">;</span>
+                curr <span style="color:#f92672">=</span> next<span style="color:#f92672">;</span>
                 count<span style="color:#f92672">++;</span>
-                currIdx <span style="color:#f92672">=</span> nextIdx<span style="color:#f92672">;</span>
-            <span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>currIdx <span style="color:#f92672">!=</span> start<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>start <span style="color:#f92672">!=</span> curr<span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 6<span style="color:#f92672">,</span> 7<span style="color:#f92672">,</span> 8<span style="color:#f92672">,</span> 9<span style="color:#f92672">,</span> 10<span style="color:#f92672">,</span> 11<span style="color:#f92672">,</span> 12<span style="color:#f92672">,</span> 13<span style="color:#f92672">};</span>
-        rotate<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> 5<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">));</span>
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">};</span>
+        rotateArr<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+        assertArrayEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 1<span style="color:#f92672">,</span> 2<span style="color:#f92672">},</span> arr<span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>2<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 6<span style="color:#f92672">,</span> 8<span style="color:#f92672">,</span> 10<span style="color:#f92672">,</span> 12<span style="color:#f92672">,</span> 14<span style="color:#f92672">,</span> 16<span style="color:#f92672">,</span> 18<span style="color:#f92672">,</span> 20<span style="color:#f92672">};</span>
+        rotateArr<span style="color:#f92672">(</span>arr2<span style="color:#f92672">,</span> 3<span style="color:#f92672">);</span>
+        assertArrayEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>8<span style="color:#f92672">,</span> 10<span style="color:#f92672">,</span> 12<span style="color:#f92672">,</span> 14<span style="color:#f92672">,</span> 16<span style="color:#f92672">,</span> 18<span style="color:#f92672">,</span> 20<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 6<span style="color:#f92672">},</span> arr2<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>

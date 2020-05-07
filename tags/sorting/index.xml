@@ -6,7 +6,7 @@
     <description>Recent content in sorting on Max Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Sorting - Merge sort</title>
       <link>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
       <description>import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
@@ -23,7 +23,7 @@
     <item>
       <title>Sorting - Sort an array of 0s, 1s and 2s</title>
       <link>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</guid>
       <description>public class Sort012 { static void swap(int[] arr, int a, int b) { int temp = arr[a]; arr[a] = arr[b]; arr[b] = temp; } static void sort012(int[] arr) { if (arr.length == 0) { return; } int i = 0, j = 0, k = arr.length - 1; while (j &amp;lt;= k) { if (arr[j] == 0) { swap(arr, i, j); i++; j++; } else if (arr[j] == 1) { j++; } else if (arr[j] == 2) { swap(arr, j, k); k--; } } } static void printArray(int[] arr) { if (arr.</description>
