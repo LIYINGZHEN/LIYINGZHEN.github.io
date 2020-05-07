@@ -120,12 +120,13 @@
     </item>
     
     <item>
-      <title>Array - Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]</title>
+      <title>Array - Maximum index</title>
       <link>https://www.maxlivinci.com/algorithm/array_maximum_index/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/array_maximum_index/</guid>
-      <description>package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math.</description>
+      <description>Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
+ package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math.</description>
     </item>
     
     <item>

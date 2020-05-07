@@ -7,7 +7,8 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math." />
+    content="Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
+ package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_maximum_index/" />
@@ -15,7 +16,7 @@
 
 <title>
     
-    Array - Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i] :: Max Li 
+    Array - Maximum index :: Max Li 
     
 </title>
 
@@ -36,11 +37,12 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]">
-<meta itemprop="description" content="package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math.">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Maximum index">
+<meta itemprop="description" content="Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]
+ package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math.">
 <meta itemprop="datePublished" content="2020-04-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="162">
+<meta itemprop="wordCount" content="177">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -48,8 +50,9 @@
 <meta itemprop="keywords" content="algorithm,array," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="Array - Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]"/>
-<meta name="twitter:description" content="package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math."/>
+<meta name="twitter:title" content="Array - Maximum index"/>
+<meta name="twitter:description" content="Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]
+ package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math."/>
 
 
 
@@ -115,12 +118,15 @@
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/array_maximum_index/">Array - Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]</a></h2>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/array_maximum_index/">Array - Maximum index</a></h2>
 
             
 
             <div class="post-content">
-                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
+                <blockquote>
+<p>Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
