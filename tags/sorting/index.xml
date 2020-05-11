@@ -17,7 +17,8 @@
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
-      <description>import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
+      <description>METHOD 1
+import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
     </item>
     
     <item>
@@ -26,7 +27,8 @@
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</guid>
-      <description>package sorting.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
+      <description>METHOD 1
+package sorting.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
     </item>
     
     <item>
@@ -37,7 +39,7 @@
       <guid>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</guid>
       <description>Given an array A[] consisting 0s, 1s and 2s. The task is to write a function that sorts the given array. The functions should put all 0s first, then all 1s and all 2s in last.
 Examples:
-Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2} public class Sort012 { static void swap(int[] arr, int a, int b) { int temp = arr[a]; arr[a] = arr[b]; arr[b] = temp; } static void sort012(int[] arr) { if (arr.</description>
+Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2} METHOD 1</description>
     </item>
     
     <item>

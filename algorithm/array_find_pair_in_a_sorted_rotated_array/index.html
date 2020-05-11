@@ -7,7 +7,8 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &amp;lt; n - 1; i&#43;&#43;) { if (arr[i] &amp;gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !" />
+    content="METHOD 1
+public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &amp;lt; n - 1; i&#43;&#43;) { if (arr[i] &amp;gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_find_pair_in_a_sorted_rotated_array/" />
@@ -37,10 +38,11 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Find pair in a sorted rotated array">
-<meta itemprop="description" content="public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &lt; n - 1; i&#43;&#43;) { if (arr[i] &gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !">
+<meta itemprop="description" content="METHOD 1
+public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &lt; n - 1; i&#43;&#43;) { if (arr[i] &gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !">
 <meta itemprop="datePublished" content="2020-04-20T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="172">
+<meta itemprop="wordCount" content="174">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -49,7 +51,8 @@
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Array - Find pair in a sorted rotated array"/>
-<meta name="twitter:description" content="public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &lt; n - 1; i&#43;&#43;) { if (arr[i] &gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !"/>
+<meta name="twitter:description" content="METHOD 1
+public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &lt; n - 1; i&#43;&#43;) { if (arr[i] &gt; arr[i &#43; 1]) { pivot = i; break; } } int l = (pivot &#43; 1) % n; int h = pivot; while (l !"/>
 
 
 
@@ -120,7 +123,8 @@
             
 
             <div class="post-content">
-                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PairsInSortedRotated</span> <span style="color:#f92672">{</span>
+                <p><strong>METHOD 1</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PairsInSortedRotated</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Time: O(n), Space: O(1)
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">findPair</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>

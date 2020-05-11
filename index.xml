@@ -17,7 +17,8 @@
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</guid>
-      <description>import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.length == 0) { return; } int n = arr.length; Stack&amp;lt;Integer&amp;gt; s = new Stack&amp;lt;&amp;gt;(); int[] result = new int[n]; for (int i = n - 1; i &amp;gt;= 0; i--) { int data = arr[i]; if (!s.isEmpty() &amp;amp;&amp;amp; data &amp;gt; s.peek()) { s.pop(); } if (s.isEmpty()) { result[i] = -1; } else { result[i] = s.</description>
+      <description>METHOD 1
+import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.length == 0) { return; } int n = arr.length; Stack&amp;lt;Integer&amp;gt; s = new Stack&amp;lt;&amp;gt;(); int[] result = new int[n]; for (int i = n - 1; i &amp;gt;= 0; i--) { int data = arr[i]; if (!s.isEmpty() &amp;amp;&amp;amp; data &amp;gt; s.peek()) { s.pop(); } if (s.</description>
     </item>
     
     <item>
@@ -26,7 +27,8 @@
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</guid>
-      <description>import java.util.Stack; public class TwoStacks { int[] array; int idx1, idx2, cap; public TwoStacks(int cap) { this.array = new int[cap]; this.idx1 = -1; this.idx2 = cap; this.cap = cap; } public boolean isFull() { return this.idx1 == this.idx2 - 1; } public void push1(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.idx1++; this.array[this.idx1] = d; } public void push2(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.</description>
+      <description>METHOD 1
+import java.util.Stack; public class TwoStacks { int[] array; int idx1, idx2, cap; public TwoStacks(int cap) { this.array = new int[cap]; this.idx1 = -1; this.idx2 = cap; this.cap = cap; } public boolean isFull() { return this.idx1 == this.idx2 - 1; } public void push1(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.idx1++; this.array[this.idx1] = d; } public void push2(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.</description>
     </item>
     
     <item>
@@ -35,7 +37,8 @@
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_check_for_balanced_parentheses/</guid>
-      <description>import java.util.Stack; public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.length == 0) { return true; } Stack&amp;lt;Character&amp;gt; temp = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; arr.length; i++) { char data = arr[i]; if (data == &amp;#39;(&amp;#39; || data == &amp;#39;[&amp;#39; || data == &amp;#39;{&amp;#39;) { temp.</description>
+      <description>METHOD 1
+import java.util.Stack; public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.length == 0) { return true; } Stack&amp;lt;Character&amp;gt; temp = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; arr.</description>
     </item>
     
     <item>
@@ -44,7 +47,8 @@
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/</guid>
-      <description>public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.next != null) { temp = temp.next; } temp.next = node; } } public void printList() { Node temp = head; while (temp != null) { System.</description>
+      <description>METHOD 1
+public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.next != null) { temp = temp.next; } temp.next = node; } } public void printList() { Node temp = head; while (temp !</description>
     </item>
     
     <item>
@@ -53,7 +57,8 @@
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</guid>
-      <description>public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 + getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data + &amp;#34; &amp;#34;); head = head.next; } System.out.println(&amp;#34;&amp;#34;); } Node reverse(final Node head) { if (head == null || head.</description>
+      <description>METHOD 1
+public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 + getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data + &amp;#34; &amp;#34;); head = head.next; } System.out.println(&amp;#34;&amp;#34;); } Node reverse(final Node head) { if (head == null || head.</description>
     </item>
     
     <item>
@@ -62,7 +67,8 @@
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</guid>
-      <description>public class ReverseInAlternateKPair { Node head; class Node { int data; Node next; Node(int d) {data = d; next = null; } } public void push(int new_data) { Node new_node = new Node(new_data); new_node.next = head; head = new_node; } void printList() { Node temp = head; while (temp != null) { System.out.print(temp.data + &amp;#34; &amp;#34;); temp = temp.next; } System.out.println(); } Node reverse(final Node head, final int k) { if (head.</description>
+      <description>METHOD 1
+public class ReverseInAlternateKPair { Node head; class Node { int data; Node next; Node(int d) {data = d; next = null; } } public void push(int new_data) { Node new_node = new Node(new_data); new_node.next = head; head = new_node; } void printList() { Node temp = head; while (temp != null) { System.out.print(temp.data + &amp;#34; &amp;#34;); temp = temp.next; } System.out.println(); } Node reverse(final Node head, final int k) { if (head.</description>
     </item>
     
     <item>
@@ -71,7 +77,8 @@
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</guid>
-      <description>public class RevertLinkedList { Node head; public class Node { int data; Node next; public Node (int d) { this.data = d; } } public void push(int data) { Node newHead = new Node(data); newHead.next = head; head = newHead; } public void printList(Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } // Time: O(n), Space: O(1)  public Node revertLinkedList(Node head) { if (head == null || head.</description>
+      <description>METHOD 1
+public class RevertLinkedList { Node head; public class Node { int data; Node next; public Node (int d) { this.data = d; } } public void push(int data) { Node newHead = new Node(data); newHead.next = head; head = newHead; } public void printList(Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } // Time: O(n), Space: O(1)  public Node revertLinkedList(Node head) { if (head == null || head.</description>
     </item>
     
     <item>
@@ -80,7 +87,8 @@
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</guid>
-      <description>public class MergeSort { Node head; public class Node { int data; Node next; public Node(int d) { this.data = d; } } public void printList(final Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } public void push(final int data) { Node newNode = new Node(data); newNode.next = head; head = newNode; } public Node merge(Node a, Node b) { if (a == null) { return b; } if (b == null) { return a; } Node newHead = null; if (a.</description>
+      <description>METHOD 1
+public class MergeSort { Node head; public class Node { int data; Node next; public Node(int d) { this.data = d; } } public void printList(final Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } public void push(final int data) { Node newNode = new Node(data); newNode.next = head; head = newNode; } public Node merge(Node a, Node b) { if (a == null) { return b; } if (b == null) { return a; } Node newHead = null; if (a.</description>
     </item>
     
     <item>
@@ -100,7 +108,8 @@ Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six 
       <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/array_find_pair_in_a_sorted_rotated_array/</guid>
-      <description>public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &amp;lt; n - 1; i++) { if (arr[i] &amp;gt; arr[i + 1]) { pivot = i; break; } } int l = (pivot + 1) % n; int h = pivot; while (l !</description>
+      <description>METHOD 1
+public class PairsInSortedRotated { // Time: O(n), Space: O(1)  static void findPair(int[] arr, int target) { if (arr.length == 0) { return; } int n = arr.length; int pivot = n - 1; for (int i = 0; i &amp;lt; n - 1; i++) { if (arr[i] &amp;gt; arr[i + 1]) { pivot = i; break; } } int l = (pivot + 1) % n; int h = pivot; while (l !</description>
     </item>
     
     <item>
@@ -109,7 +118,8 @@ Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six 
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/array_rotate_an_array/</guid>
-      <description>package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start++) { int curr = start; int prev = arr[curr]; do { int next = (curr + n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count++; } while (start !</description>
+      <description>METHOD 1
+package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start++) { int curr = start; int prev = arr[curr]; do { int next = (curr + n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count++; } while (start !</description>
     </item>
     
     <item>
@@ -118,7 +128,8 @@ Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six 
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/array_trapping_rain_water/</guid>
-      <description>package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.length == 0) { return 0; } int n = arr.length; int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE; int l = 0, h = n - 1; int trap = 0; while (l &amp;lt; h) { if (arr[l] &amp;lt; arr[h]) { if (arr[l] &amp;gt; leftMax) { leftMax = arr[l]; } else { trap += leftMax - arr[l]; } l++; } else { if (arr[h] &amp;gt; rightMax) { rightMax = arr[l]; } else { trap += rightMax - arr[h]; } h--; } } return trap; } @Test public void test() { assertEquals(2, maxWater(new int[]{2, 0, 2})); assertEquals(7, maxWater(new int[]{3, 0, 2, 0, 4})); assertEquals(6, maxWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); } } </description>
+      <description>METHOD 1
+package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.length == 0) { return 0; } int n = arr.length; int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE; int l = 0, h = n - 1; int trap = 0; while (l &amp;lt; h) { if (arr[l] &amp;lt; arr[h]) { if (arr[l] &amp;gt; leftMax) { leftMax = arr[l]; } else { trap += leftMax - arr[l]; } l++; } else { if (arr[h] &amp;gt; rightMax) { rightMax = arr[l]; } else { trap += rightMax - arr[h]; } h--; } } return trap; } @Test public void test() { assertEquals(2, maxWater(new int[]{2, 0, 2})); assertEquals(7, maxWater(new int[]{3, 0, 2, 0, 4})); assertEquals(6, maxWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); } } </description>
     </item>
     
     <item>
@@ -128,6 +139,7 @@ Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six 
       
       <guid>https://www.maxlivinci.com/algorithm/array_maximum_index/</guid>
       <description>Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
+METHOD 1
 package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math.</description>
     </item>
     
@@ -137,7 +149,8 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
-      <description>import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
+      <description>METHOD 1
+import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
     </item>
     
     <item>
@@ -146,7 +159,8 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</guid>
-      <description>package sorting.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
+      <description>METHOD 1
+package sorting.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
     </item>
     
     <item>
@@ -157,7 +171,7 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
       <guid>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</guid>
       <description>Given an array A[] consisting 0s, 1s and 2s. The task is to write a function that sorts the given array. The functions should put all 0s first, then all 1s and all 2s in last.
 Examples:
-Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2} public class Sort012 { static void swap(int[] arr, int a, int b) { int temp = arr[a]; arr[a] = arr[b]; arr[b] = temp; } static void sort012(int[] arr) { if (arr.</description>
+Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2} METHOD 1</description>
     </item>
     
     <item>

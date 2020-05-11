@@ -17,7 +17,8 @@
       <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/</guid>
-      <description>public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.next != null) { temp = temp.next; } temp.next = node; } } public void printList() { Node temp = head; while (temp != null) { System.</description>
+      <description>METHOD 1
+public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.next != null) { temp = temp.next; } temp.next = node; } } public void printList() { Node temp = head; while (temp !</description>
     </item>
     
     <item>
@@ -26,7 +27,8 @@
       <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</guid>
-      <description>public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 + getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data + &amp;#34; &amp;#34;); head = head.next; } System.out.println(&amp;#34;&amp;#34;); } Node reverse(final Node head) { if (head == null || head.</description>
+      <description>METHOD 1
+public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 + getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data + &amp;#34; &amp;#34;); head = head.next; } System.out.println(&amp;#34;&amp;#34;); } Node reverse(final Node head) { if (head == null || head.</description>
     </item>
     
     <item>
@@ -35,7 +37,8 @@
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</guid>
-      <description>public class ReverseInAlternateKPair { Node head; class Node { int data; Node next; Node(int d) {data = d; next = null; } } public void push(int new_data) { Node new_node = new Node(new_data); new_node.next = head; head = new_node; } void printList() { Node temp = head; while (temp != null) { System.out.print(temp.data + &amp;#34; &amp;#34;); temp = temp.next; } System.out.println(); } Node reverse(final Node head, final int k) { if (head.</description>
+      <description>METHOD 1
+public class ReverseInAlternateKPair { Node head; class Node { int data; Node next; Node(int d) {data = d; next = null; } } public void push(int new_data) { Node new_node = new Node(new_data); new_node.next = head; head = new_node; } void printList() { Node temp = head; while (temp != null) { System.out.print(temp.data + &amp;#34; &amp;#34;); temp = temp.next; } System.out.println(); } Node reverse(final Node head, final int k) { if (head.</description>
     </item>
     
     <item>
@@ -44,7 +47,8 @@
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</guid>
-      <description>public class RevertLinkedList { Node head; public class Node { int data; Node next; public Node (int d) { this.data = d; } } public void push(int data) { Node newHead = new Node(data); newHead.next = head; head = newHead; } public void printList(Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } // Time: O(n), Space: O(1)  public Node revertLinkedList(Node head) { if (head == null || head.</description>
+      <description>METHOD 1
+public class RevertLinkedList { Node head; public class Node { int data; Node next; public Node (int d) { this.data = d; } } public void push(int data) { Node newHead = new Node(data); newHead.next = head; head = newHead; } public void printList(Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } // Time: O(n), Space: O(1)  public Node revertLinkedList(Node head) { if (head == null || head.</description>
     </item>
     
     <item>
@@ -53,7 +57,8 @@
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</guid>
-      <description>public class MergeSort { Node head; public class Node { int data; Node next; public Node(int d) { this.data = d; } } public void printList(final Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } public void push(final int data) { Node newNode = new Node(data); newNode.next = head; head = newNode; } public Node merge(Node a, Node b) { if (a == null) { return b; } if (b == null) { return a; } Node newHead = null; if (a.</description>
+      <description>METHOD 1
+public class MergeSort { Node head; public class Node { int data; Node next; public Node(int d) { this.data = d; } } public void printList(final Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } public void push(final int data) { Node newNode = new Node(data); newNode.next = head; head = newNode; } public Node merge(Node a, Node b) { if (a == null) { return b; } if (b == null) { return a; } Node newHead = null; if (a.</description>
     </item>
     
   </channel>
