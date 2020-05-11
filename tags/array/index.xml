@@ -17,7 +17,9 @@
       <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/array_count_inversions_in_an_array/</guid>
-      <description>public class CountInversions { static int merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return 0; } int m = l + (h - l) / 2; int[] left = new int[m - l + 1]; int[] right = new int[h - m]; for (int i = 0; i &amp;lt; left.length; i++) { left[i] = arr[l + i]; } for (int i = 0; i &amp;lt; right.</description>
+      <description>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &amp;gt; a[j] and i &amp;lt; j
+Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).</description>
     </item>
     
     <item>

@@ -7,7 +7,9 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="import org.junit.Test; import static org.junit.Assert.assertEquals; public class InversionOfArray { static int merge(int[] arr, int l, int h) { int m = l &#43; (h - l) / 2; int[] leftCopy = new int[m - l &#43; 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i&#43;&#43;) { leftCopy[i] = arr[l &#43; i]; } for (int i = 0; i &amp;lt; rightCopy.length; i&#43;&#43;) { rightCopy[i] = arr[m &#43; 1 &#43; i]; } int i = 0, j = 0, k = l, count = 0; while (i &amp;lt; leftCopy." />
+    content="Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &amp;gt; a[j] and i &amp;lt; j
+Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1)." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/sorting_count_inversions/" />
@@ -37,10 +39,12 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Sorting - Count inversions">
-<meta itemprop="description" content="import org.junit.Test; import static org.junit.Assert.assertEquals; public class InversionOfArray { static int merge(int[] arr, int l, int h) { int m = l &#43; (h - l) / 2; int[] leftCopy = new int[m - l &#43; 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &lt; leftCopy.length; i&#43;&#43;) { leftCopy[i] = arr[l &#43; i]; } for (int i = 0; i &lt; rightCopy.length; i&#43;&#43;) { rightCopy[i] = arr[m &#43; 1 &#43; i]; } int i = 0, j = 0, k = l, count = 0; while (i &lt; leftCopy.">
-<meta itemprop="datePublished" content="2020-04-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="238">
+<meta itemprop="description" content="Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j
+Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).">
+<meta itemprop="datePublished" content="2020-04-13T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-13T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="335">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -49,12 +53,14 @@
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Sorting - Count inversions"/>
-<meta name="twitter:description" content="import org.junit.Test; import static org.junit.Assert.assertEquals; public class InversionOfArray { static int merge(int[] arr, int l, int h) { int m = l &#43; (h - l) / 2; int[] leftCopy = new int[m - l &#43; 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &lt; leftCopy.length; i&#43;&#43;) { leftCopy[i] = arr[l &#43; i]; } for (int i = 0; i &lt; rightCopy.length; i&#43;&#43;) { rightCopy[i] = arr[m &#43; 1 &#43; i]; } int i = 0, j = 0, k = l, count = 0; while (i &lt; leftCopy."/>
+<meta name="twitter:description" content="Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j
+Example: Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1)."/>
 
 
 
 
-<meta property="article:published_time" content="2020-04-14 00:00:00 &#43;0000 &#43;0000" />
+<meta property="article:published_time" content="2020-04-13 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -120,7 +126,20 @@
             
 
             <div class="post-content">
-                <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+                <p>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.</p>
+<p>Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j</p>
+<pre><code>Example:
+
+Input: arr[] = {8, 4, 2, 1}
+Output: 6
+
+Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).
+
+Input: arr[] = {3, 1, 2}
+Output: 2
+
+Explanation: Given array has two inversions: (3, 1), (3, 2)
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
 
