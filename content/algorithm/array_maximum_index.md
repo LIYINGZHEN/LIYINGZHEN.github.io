@@ -8,6 +8,8 @@ tags:        ["algorithm", "array"]
 
 Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
 
+**METHOD 1**
+
 ```java
 package array.max;
 

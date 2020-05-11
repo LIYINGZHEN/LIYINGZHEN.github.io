@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "sorting"]
 ---
 
+**METHOD 1**
+
 ```java
 import java.util.Arrays;
 

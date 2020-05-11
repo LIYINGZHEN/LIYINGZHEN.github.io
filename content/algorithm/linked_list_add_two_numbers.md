@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "linked-list"]
 ---
 
+**METHOD 1**
+
 ```java
 public class AddTwoNumbers {
     static Node head1, head2;

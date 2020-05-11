@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "array"]
 ---
 
+**METHOD 1**
+
 ```java
 package array.max;
 

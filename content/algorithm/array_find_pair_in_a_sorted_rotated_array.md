@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "array"]
 ---
 
+**METHOD 1**
+
 ```java
 public class PairsInSortedRotated {
     // Time: O(n), Space: O(1)

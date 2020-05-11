@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "stack"]
 ---
 
+**METHOD 1**
+
 ```java
 import java.util.Stack;
 

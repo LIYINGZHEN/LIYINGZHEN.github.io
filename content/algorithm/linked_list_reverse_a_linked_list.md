@@ -6,6 +6,8 @@ published:   true
 tags:        ["algorithm", "linked-list"]
 ---
 
+**METHOD 1**
+
 ```java
 public class RevertLinkedList {
     Node head;
