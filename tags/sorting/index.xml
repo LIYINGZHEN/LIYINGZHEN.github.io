@@ -29,5 +29,14 @@
       <description>public class Sort012 { static void swap(int[] arr, int a, int b) { int temp = arr[a]; arr[a] = arr[b]; arr[b] = temp; } static void sort012(int[] arr) { if (arr.length == 0) { return; } int i = 0, j = 0, k = arr.length - 1; while (j &amp;lt;= k) { if (arr[j] == 0) { swap(arr, i, j); i++; j++; } else if (arr[j] == 1) { j++; } else if (arr[j] == 2) { swap(arr, j, k); k--; } } } static void printArray(int[] arr) { if (arr.</description>
     </item>
     
+    <item>
+      <title>Sorting - Count inversions</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</guid>
+      <description>import org.junit.Test; import static org.junit.Assert.assertEquals; public class InversionOfArray { static int merge(int[] arr, int l, int h) { int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.length; i++) { rightCopy[i] = arr[m + 1 + i]; } int i = 0, j = 0, k = l, count = 0; while (i &amp;lt; leftCopy.</description>
+    </item>
+    
   </channel>
 </rss>

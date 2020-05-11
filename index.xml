@@ -148,6 +148,15 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
     </item>
     
     <item>
+      <title>Sorting - Count inversions</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</guid>
+      <description>import org.junit.Test; import static org.junit.Assert.assertEquals; public class InversionOfArray { static int merge(int[] arr, int l, int h) { int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.length; i++) { rightCopy[i] = arr[m + 1 + i]; } int i = 0, j = 0, k = l, count = 0; while (i &amp;lt; leftCopy.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://www.maxlivinci.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
