@@ -13,7 +13,7 @@ If n = 7 and k = 3, then the safe position is 4. The persons at positions 3, 6, 
 
 ---
 
-**METHOD 1**
+**METHOD 1 (Base 1)**
 
 ```java
 import org.junit.Test;
@@ -26,13 +26,42 @@ public class JosephusProblem {
         if (n == 1) {
             return 1;
         }
-        return (josephus(n - 1, k) + k - 1) % n + 1;
+        int nextRoundPos = josephus(n - 1, k);
+        int zeroBasePos = ((nextRoundPos - 1) + k) % n;
+        return zeroBasePos + 1;
     }
 
     @Test
     public void test() {
         assertEquals(3, josephus(5,2));
         assertEquals(4, josephus(7,3));
+        assertEquals(23, josephus(30,7));
+    }
+}
+```
+
+**METHOD 1 (Base 0)**
+
+```java
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class JosephusProblem {
+    // Time: O(n) ; Space: O(n)
+    static int josephus(int n, int k) {
+        if (n == 1) {
+            return 0;
+        }
+        int nextRoundPos = josephus(n - 1, k);
+        return (nextRoundPos + k) % n;
+    }
+
+    @Test
+    public void test() {
+        assertEquals(2, josephus(5,2));
+        assertEquals(3, josephus(7,3));
+        assertEquals(22, josephus(30,7));
     }
 }
 ```
