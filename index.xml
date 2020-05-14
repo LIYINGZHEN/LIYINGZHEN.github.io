@@ -6,10 +6,20 @@
     <description>Recent content on Max Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack - Largest rectangular area in a histogram</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</guid>
+      <description>Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit.
+For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)</description>
+    </item>
     
     <item>
       <title>Stack - Expression contains redundant bracket or not</title>
@@ -29,8 +39,9 @@ Input: ((a+b)) (a+(b)/c) (a+b*(c-d)) Output: Yes Yes No Explanation: 1. ((a+b)) 
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</guid>
-      <description>METHOD 1
-import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.length == 0) { return; } int n = arr.length; Stack&amp;lt;Integer&amp;gt; s = new Stack&amp;lt;&amp;gt;(); int[] result = new int[n]; for (int i = n - 1; i &amp;gt;= 0; i--) { int data = arr[i]; if (!s.isEmpty() &amp;amp;&amp;amp; data &amp;gt; s.peek()) { s.pop(); } if (s.</description>
+      <description>Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
+METHOD 1
+import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.</description>
     </item>
     
     <item>
