@@ -17,6 +17,8 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
 **METHOD 1**
 
 ```java
+package question_set.stack_set_3;
+
 import org.junit.Test;
 
 import java.util.Stack;
@@ -34,9 +36,7 @@ public class MaxArea {
         Stack<Integer> s = new Stack<>();
 
         // Find previous smaller element.
-        s.push(0);
-        left[0] = -1;
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
                 s.pop();
             }
@@ -49,9 +49,7 @@ public class MaxArea {
         }
 
         // Find next smaller element.
-        s.push(n - 1);
-        right[n - 1] = n;
-        for (int i = n - 2; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
             while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
                 s.pop();
             }

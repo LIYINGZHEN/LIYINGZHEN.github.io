@@ -19,8 +19,6 @@ Rotation of the above array by 2 will make array
 **METHOD 1**
 
 ```java
-package array.max;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

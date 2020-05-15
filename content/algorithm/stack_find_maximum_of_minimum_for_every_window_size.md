@@ -1,5 +1,5 @@
 ---
-title:       "Stack - Find maximum of minimum for every window size in a given array"
+title:       "Stack - Find maximum of minimum for every window size"
 date:        2020-05-03T00:00:00+00:00
 author:      "Max"
 published:   true
@@ -37,8 +37,6 @@ Similarly other elements of output are computed.
 **METHOD 1**
 
 ```java
-package question_set.stack_set_2;
-
 import org.junit.Test;
 
 import java.util.Stack;

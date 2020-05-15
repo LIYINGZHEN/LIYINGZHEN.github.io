@@ -28,8 +28,6 @@ We can trap 2 units of water in the middle gap.
 **METHOD 1**
 
 ```java
-package array.max;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
