@@ -17,8 +17,6 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
 **METHOD 1**
 
 ```java
-package question_set.stack_set_3;
-
 import org.junit.Test;
 
 import java.util.Stack;

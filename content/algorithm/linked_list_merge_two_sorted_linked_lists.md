@@ -1,20 +1,18 @@
 ---
-title:       "Linked List - Remove duplicates from a sorted linked list"
+title:       "Linked List - Merge two sorted linked lists"
 date:        2020-04-23T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]
 ---
 
-Write a `SortedMerge()` function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
+Write a `sortedMerge()` function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
 
 ---
 
 **METHOD 1 (Iteratively)**
 
 ```java
-package linkedlist.max;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -75,8 +73,6 @@ public class MergeTwoSortedLinkedLists {
 **METHOD 2 (Recursively)**
 
 ```java
-package linkedlist.max;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
