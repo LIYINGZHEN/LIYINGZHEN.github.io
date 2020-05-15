@@ -61,5 +61,16 @@ public class RevertLinkedList { Node head; public class Node { int data; Node ne
 public class MergeSort { Node head; public class Node { int data; Node next; public Node(int d) { this.data = d; } } public void printList(final Node head) { if (head == null) { System.out.println(&amp;#34;null&amp;#34;); return; } System.out.printf(&amp;#34;%s -&amp;gt; &amp;#34;, head.data); printList(head.next); } public void push(final int data) { Node newNode = new Node(data); newNode.next = head; head = newNode; } public Node merge(Node a, Node b) { if (a == null) { return b; } if (b == null) { return a; } Node newHead = null; if (a.</description>
     </item>
     
+    <item>
+      <title>Linked List - Insertion</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_insertion/</link>
+      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_insertion/</guid>
+      <description>Given a singly linked list, a position and an element, the task is to write a program to insert that element in a linked list at a given position.
+Examples: Input: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10, data = 2, position = 2 Output: 3-&amp;gt;2-&amp;gt;5-&amp;gt;8-&amp;gt;10 Input: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10, data = 11, position = 5 Output: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10-&amp;gt;11  METHOD 1
+public class Insertion { // Time : O(n) ; Space: O(1)  static void insert(LinkedList ll, int data, int pos) { int step = pos - 1; if (step &amp;lt; 0 || step &amp;gt; ll.</description>
+    </item>
+    
   </channel>
 </rss>
