@@ -7,8 +7,10 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data &#43; &amp;#34; &amp;#34;); head = head.next; } System.out.println(&amp;#34;&amp;#34;); } Node reverse(final Node head) { if (head == null || head." />
+    content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
+Examples :
+Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1
+public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/" />
@@ -38,11 +40,13 @@ public class AddTwoNumbers { static Node head1, head2; static class Node { int d
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Add two numbers">
-<meta itemprop="description" content="METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data &#43; &#34; &#34;); head = head.next; } System.out.println(&#34;&#34;); } Node reverse(final Node head) { if (head == null || head.">
+<meta itemprop="description" content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
+Examples :
+Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1
+public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head.">
 <meta itemprop="datePublished" content="2020-04-25T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="325">
+<meta itemprop="wordCount" content="391">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -51,8 +55,10 @@ public class AddTwoNumbers { static Node head1, head2; static class Node { int d
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Linked List - Add two numbers"/>
-<meta name="twitter:description" content="METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head.next); } void printList(Node head) { while (head != null) { System.out.print(head.data &#43; &#34; &#34;); head = head.next; } System.out.println(&#34;&#34;); } Node reverse(final Node head) { if (head == null || head."/>
+<meta name="twitter:description" content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
+Examples :
+Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1
+public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head."/>
 
 
 
@@ -123,7 +129,18 @@ public class AddTwoNumbers { static Node head1, head2; static class Node { int d
             
 
             <div class="post-content">
-                <p><strong>METHOD 1</strong></p>
+                <p>Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.</p>
+<p><strong>Examples :</strong></p>
+<pre><code>Input: List1: 5-&gt;6-&gt;3  // number 365
+       List2: 8-&gt;4-&gt;2 //  number 248
+Output: Resultant list: 3-&gt;1-&gt;6  // number 613
+
+
+Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6  // number 64957
+       List2: 8-&gt;4  // number 48
+Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6  // number 65005
+</code></pre><hr>
+<p><strong>METHOD 1</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddTwoNumbers</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> Node head1<span style="color:#f92672">,</span> head2<span style="color:#f92672">;</span>
 

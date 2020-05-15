@@ -6,10 +6,20 @@
     <description>Recent content in stack on Max Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack - K stacks in an array </title>
+      <link>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</guid>
+      <description>Create a data structure kStacks that represents k stacks. Implementation of kStacks should use only one array, i.e., k stacks should use the same array for storing elements. Following functions must be supported by kStacks.
+push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1</description>
+    </item>
     
     <item>
       <title>Stack - Largest rectangular area in a histogram</title>
@@ -40,7 +50,7 @@ Input: ((a+b)) (a+(b)/c) (a+b*(c-d)) Output: Yes Yes No Explanation: 1. ((a+b)) 
       
       <guid>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</guid>
       <description>Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
-METHOD 1
+ METHOD 1
 import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.</description>
     </item>
     
@@ -50,8 +60,9 @@ import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: 
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</guid>
-      <description>METHOD 1
-import java.util.Stack; public class TwoStacks { int[] array; int idx1, idx2, cap; public TwoStacks(int cap) { this.array = new int[cap]; this.idx1 = -1; this.idx2 = cap; this.cap = cap; } public boolean isFull() { return this.idx1 == this.idx2 - 1; } public void push1(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.idx1++; this.array[this.idx1] = d; } public void push2(int d) throws RuntimeException { if (isFull()) { throw new RuntimeException(&amp;#34;Stack Overflow&amp;#34;); } this.</description>
+      <description>Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.
+push1(int x) –&amp;gt; pushes x to first stack push2(int x) –&amp;gt; pushes x to second stack
+pop1() –&amp;gt; pops an element from first stack and return the popped element pop2() –&amp;gt; pops an element from second stack and return the popped element</description>
     </item>
     
     <item>
@@ -60,8 +71,10 @@ import java.util.Stack; public class TwoStacks { int[] array; int idx1, idx2, ca
       <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_check_for_balanced_parentheses/</guid>
-      <description>METHOD 1
-import java.util.Stack; public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.length == 0) { return true; } Stack&amp;lt;Character&amp;gt; temp = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; arr.</description>
+      <description>Given an expression string exp , write a program to examine whether the pairs and the orders of “{“,”}”,”(“,”)”,”[“,”]” are correct in exp.
+Example:
+Input: exp = “[()]{}{[()()]()}” Output: Balanced Input: exp = “[(])” Output: Not Balanced  METHOD 1
+import java.util.Stack; public class BalancedParen { static boolean isPair(char a, char b) { if (a == &amp;#39;(&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;)&amp;#39; || a == &amp;#39;[&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;]&amp;#39; || a == &amp;#39;{&amp;#39; &amp;amp;&amp;amp; b == &amp;#39;}&amp;#39;) { return true; } return false; } static boolean isBalance(char[] arr) { if (arr.</description>
     </item>
     
   </channel>

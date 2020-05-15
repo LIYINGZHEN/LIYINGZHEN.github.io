@@ -7,8 +7,10 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.length == 0) { return 0; } int n = arr.length; int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE; int l = 0, h = n - 1; int trap = 0; while (l &amp;lt; h) { if (arr[l] &amp;lt; arr[h]) { if (arr[l] &amp;gt; leftMax) { leftMax = arr[l]; } else { trap &#43;= leftMax - arr[l]; } l&#43;&#43;; } else { if (arr[h] &amp;gt; rightMax) { rightMax = arr[l]; } else { trap &#43;= rightMax - arr[h]; } h--; } } return trap; } @Test public void test() { assertEquals(2, maxWater(new int[]{2, 0, 2})); assertEquals(7, maxWater(new int[]{3, 0, 2, 0, 4})); assertEquals(6, maxWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); } } " />
+    content="Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Examples:
+Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
+package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_trapping_rain_water/" />
@@ -38,11 +40,13 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Trapping rain water">
-<meta itemprop="description" content="METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.length == 0) { return 0; } int n = arr.length; int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE; int l = 0, h = n - 1; int trap = 0; while (l &lt; h) { if (arr[l] &lt; arr[h]) { if (arr[l] &gt; leftMax) { leftMax = arr[l]; } else { trap &#43;= leftMax - arr[l]; } l&#43;&#43;; } else { if (arr[h] &gt; rightMax) { rightMax = arr[l]; } else { trap &#43;= rightMax - arr[h]; } h--; } } return trap; } @Test public void test() { assertEquals(2, maxWater(new int[]{2, 0, 2})); assertEquals(7, maxWater(new int[]{3, 0, 2, 0, 4})); assertEquals(6, maxWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); } } ">
+<meta itemprop="description" content="Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Examples:
+Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
+package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.">
 <meta itemprop="datePublished" content="2020-04-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="137">
+<meta itemprop="wordCount" content="190">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -51,8 +55,10 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
 <meta name="twitter:title" content="Array - Trapping rain water"/>
-<meta name="twitter:description" content="METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.length == 0) { return 0; } int n = arr.length; int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE; int l = 0, h = n - 1; int trap = 0; while (l &lt; h) { if (arr[l] &lt; arr[h]) { if (arr[l] &gt; leftMax) { leftMax = arr[l]; } else { trap &#43;= leftMax - arr[l]; } l&#43;&#43;; } else { if (arr[h] &gt; rightMax) { rightMax = arr[l]; } else { trap &#43;= rightMax - arr[h]; } h--; } } return trap; } @Test public void test() { assertEquals(2, maxWater(new int[]{2, 0, 2})); assertEquals(7, maxWater(new int[]{3, 0, 2, 0, 4})); assertEquals(6, maxWater(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1})); } } "/>
+<meta name="twitter:description" content="Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Examples:
+Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
+package array.max; import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr."/>
 
 
 
@@ -123,7 +129,16 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertE
             
 
             <div class="post-content">
-                <p><strong>METHOD 1</strong></p>
+                <p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.</p>
+<p><strong>Examples:</strong></p>
+<pre><code>Input: arr[]   = {2, 0, 2}
+Output: 2
+Explanation:
+The structure is like below
+</code></pre><p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200429012104/Untitled-Diagram711.png" alt=""></p>
+<pre><code>We can trap 2 units of water in the middle gap.
+</code></pre><hr>
+<p><strong>METHOD 1</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>

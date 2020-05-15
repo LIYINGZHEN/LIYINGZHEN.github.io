@@ -131,7 +131,7 @@ Input: ((a&#43;b)) (a&#43;(b)/c) (a&#43;b*(c-d)) Output: Yes Yes No Explanation:
             <div class="post-content">
                 <p>Given a string of balanced expression, find if it contains a redundant parenthesis or not. A set of parenthesis are redundant if same sub-expression is surrounded by unnecessary or multiple brackets.</p>
 <p>Note: Expression may contain <code>+</code>, <code>*</code>, <code>–</code> and <code>/</code> operators. Given expression is valid and there are no white spaces present.</p>
-<p>Example:</p>
+<p><strong>Example:</strong></p>
 <pre><code>Input:
 ((a+b))
 (a+(b)/c)
@@ -147,7 +147,8 @@ Explanation:
 surrounded by () which is redundant.
 3. (a+b*(c-d)) doesn't have any redundant or multiple
 brackets.
-</code></pre><p><strong>METHOD 1</strong></p>
+</code></pre><hr>
+<p><strong>METHOD 1</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> java.util.Stack<span style="color:#f92672">;</span>
