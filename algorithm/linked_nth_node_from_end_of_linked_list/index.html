@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="     &#34;Max&#34;">
+<meta name="description"
+    content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
+For example, if the input is below list and n = 3, then output is “B”
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &amp;lt; 1) { return Integer." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_nth_node_from_end_of_linked_list/" />
+
+
+<title>
+    
+    Linked List - Nth node from end of linked list :: Max Li 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://www.maxlivinci.com/main.min.94c394bd7d70b51441c665cf02c970563b921861bd1cd9cab4e40f1edb0defdc.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Nth node from end of linked list">
+<meta itemprop="description" content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
+For example, if the input is below list and n = 3, then output is “B”
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer.">
+<meta itemprop="datePublished" content="2020-04-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="184">
+<meta itemprop="image" content="https://www.maxlivinci.com"/>
+
+
+
+<meta itemprop="keywords" content="algorithm,linked-list," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.maxlivinci.com"/>
+
+<meta name="twitter:title" content="Linked List - Nth node from end of linked list"/>
+<meta name="twitter:description" content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
+For example, if the input is below list and n = 3, then output is “B”
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer."/>
+
+
+
+
+<meta property="article:published_time" content="2020-04-24 00:00:00 &#43;0000 &#43;0000" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd $HOME</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://www.maxlivinci.com/about">About</a></li><li><a href="https://www.maxlivinci.com/algorithm">Algorithm</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/linked_nth_node_from_end_of_linked_list/">Linked List - Nth node from end of linked list</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.</p>
+<p>For example, if the input is below list and n = 3, then output is “B”</p>
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png" alt=""></p>
+<hr>
+<p><strong>METHOD 1</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NthNodeFromEnd</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// Time: O(n) ; Space: O(1)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nthFromLast</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">// Check if value of n is not more than length of the linked list.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        Node curr <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>curr <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            curr <span style="color:#f92672">=</span> curr<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            len<span style="color:#f92672">++;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&gt;</span> len<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        Node slow <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        Node fast <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> n <span style="color:#f92672">!=</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            n<span style="color:#f92672">--;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>fast <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            slow <span style="color:#f92672">=</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+            fast <span style="color:#f92672">=</span> fast<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> slow<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        LinkedList ll <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+        ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>20<span style="color:#f92672">);</span>
+        ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+        ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>15<span style="color:#f92672">);</span>
+        ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>35<span style="color:#f92672">);</span>
+
+        assertEquals<span style="color:#f92672">(</span>20<span style="color:#f92672">,</span> nthFromLast<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">,</span> 1<span style="color:#f92672">));</span>
+        assertEquals<span style="color:#f92672">(</span>4<span style="color:#f92672">,</span> nthFromLast<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">,</span> 2<span style="color:#f92672">));</span>
+        assertEquals<span style="color:#f92672">(</span>15<span style="color:#f92672">,</span> nthFromLast<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">,</span> 3<span style="color:#f92672">));</span>
+        assertEquals<span style="color:#f92672">(</span>35<span style="color:#f92672">,</span> nthFromLast<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">,</span> 4<span style="color:#f92672">));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.maxlivinci.com/tags/algorithm">algorithm</a></span><span class="tag"><a href="https://www.maxlivinci.com/tags/linked-list">linked-list</a></span>
+  				</p>
+  			</div>
+
+        <script src="https://utteranc.es/client.js"
+              repo="LIYINGZHEN/liyingzhen.github.io"
+              issue-term="pathname"
+              theme="github-dark"
+              crossorigin="anonymous"
+              async>
+        </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span>Max Li</span>
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://www.maxlivinci.com/bundle.min.c3134e4a0a3d5ff628f7e932e4d6846626cad5e9457046b58e07c6036133ea0d788e9d330d51e709b43a7a8a22e1a4cf28aff9dbf27756a6a12b9c135260726a.js" integrity="sha512-wxNOSgo9X/Yo9&#43;ky5NaEZibK1elFcEa1jgfGA2Ez6g14jp0zDVHnCbQ6eooi4aTPKK/52/J3VqahK5wTUmByag=="></script>
+
+
+
+    </body>
+</html>
