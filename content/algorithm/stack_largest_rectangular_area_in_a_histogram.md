@@ -12,6 +12,8 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/histogram1.png)
 
+---
+
 **METHOD 1**
 
 ```java

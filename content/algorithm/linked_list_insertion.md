@@ -8,9 +8,9 @@ tags:        ["algorithm", "linked-list"]
 
 Given a singly linked list, a position and an element, the task is to write a program to insert that element in a linked list at a given position.
 
-```
-Examples:
+**Examples :**
 
+```
 Input: 3->5->8->10, data = 2, position = 2
 Output: 3->2->5->8->10
 

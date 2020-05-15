@@ -10,9 +10,9 @@ Inversion Count for an array indicates – how far (or close) the array is from 
 
 Formally speaking, two elements a[i] and a[j] form an inversion if a[i] > a[j] and i < j
 
-```
-Example:
+**Example:**
 
+```
 Input: arr[] = {8, 4, 2, 1}
 Output: 6
 
@@ -25,6 +25,8 @@ Output: 2
 Explanation: Given array has two inversions:
 (3, 1), (3, 2)
 ```
+
+---
 
 **METHOD 1**
 

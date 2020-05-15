@@ -10,7 +10,7 @@ Given a string of balanced expression, find if it contains a redundant parenthes
 
 Note: Expression may contain `+`, `*`, `–` and `/` operators. Given expression is valid and there are no white spaces present.
 
-Example:
+**Example:**
 
 ```
 Input:
@@ -29,6 +29,8 @@ surrounded by () which is redundant.
 3. (a+b*(c-d)) doesn't have any redundant or multiple
 brackets.
 ```
+
+---
 
 **METHOD 1**
 

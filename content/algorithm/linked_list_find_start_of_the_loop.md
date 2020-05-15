@@ -6,6 +6,22 @@ published:   true
 tags:        ["algorithm", "linked-list"]
 ---
 
+Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
+
+**Example :**
+
+```
+Input : Head of bellow linked list
+```
+
+![](http://www.geeksforgeeks.org/wp-content/uploads/2009/04/Linked-List-Loop.gif)
+
+```
+Output : Pointer to node 2
+```
+
+---
+
 **METHOD 1**
 
 ```java

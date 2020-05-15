@@ -6,6 +6,16 @@ published:   true
 tags:        ["algorithm", "array"]
 ---
 
+Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/simplearray.png)
+
+Rotation of the above array by 2 will make array
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/arrayRotation.png)
+
+---
+
 **METHOD 1**
 
 ```java

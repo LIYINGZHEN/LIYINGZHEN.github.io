@@ -6,6 +6,10 @@ published:   true
 tags:        ["algorithm", "linked-list"]
 ---
 
+Implement merge sort.
+
+---
+
 **METHOD 1**
 
 ```java
