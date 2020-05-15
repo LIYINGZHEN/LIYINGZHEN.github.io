@@ -12,7 +12,7 @@ For example if the linked list is `11->11->11->21->43->43->60` then removeDuplic
 
 ---
 
-**METHOD 1**
+**METHOD 1 (Iteratively)**
 
 ```java
 import org.junit.Test;
@@ -21,7 +21,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class RemoveDuplicateElement {
     // Time: O(n) ; Space: O(1)
-    static void removeI(Node head) {
+    static void removeDuplicate(Node head) {
         if (head == null) {
             return;
         }
@@ -37,26 +37,8 @@ public class RemoveDuplicateElement {
         }
     }
 
-    // Time: O(n) ; Space: O(n)
-    static void removeR(Node head) {
-        if (head == null) {
-            return;
-        }
-
-       if (head.next != null) {
-           if (head.data == head.next.data) {
-               head.next = head.next.next;
-               removeR(head);
-           } else {
-               removeR(head.next);
-           }
-       }
-    }
-
     @Test
     public void test() {
-        // Test iterative version.
-
         LinkedList ll = new LinkedList();
 
         ll.push(60);
@@ -68,12 +50,39 @@ public class RemoveDuplicateElement {
         ll.push(11);
         ll.push(11);
 
-        removeI(ll.head);
+        removeDuplicate(ll.head);
 
         assertArrayEquals(new int[]{11, 21, 43, 60}, ll.getList());
+    }
+}
+```
 
-        // Test recursive version.
+**METHOD 2 (Recursively)**
 
+```java
+import org.junit.Test;
+
+import static org.junit.Assert.assertArrayEquals;
+
+public class RemoveDuplicateElement {
+    // Time: O(n) ; Space: O(n)
+    static void removeDuplicate(Node head) {
+        if (head == null) {
+            return;
+        }
+
+       if (head.next != null) {
+           if (head.data == head.next.data) {
+               head.next = head.next.next;
+               removeDuplicate(head);
+           } else {
+               removeDuplicate(head.next);
+           }
+       }
+    }
+
+    @Test
+    public void test() {
         LinkedList ll2 = new LinkedList();
 
         ll2.push(60);
@@ -85,7 +94,7 @@ public class RemoveDuplicateElement {
         ll2.push(11);
         ll2.push(11);
 
-        removeR(ll2.head);
+        removeDuplicate(ll2.head);
 
         assertArrayEquals(new int[]{11, 21, 43, 60}, ll2.getList());
     }
