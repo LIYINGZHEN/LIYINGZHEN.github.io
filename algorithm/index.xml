@@ -6,10 +6,21 @@
     <description>Recent content in Algorithms on Max Li</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack - Find maximum of minimum for every window size in a given array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_find_maximum_of_minimum_for_every_window_size/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_find_maximum_of_minimum_for_every_window_size/</guid>
+      <description>Given an integer array of size n, find the maximum of the minimum’s of every window size in the array. Note that window size varies from 1 to n.
+Example:
+Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 First element in output indicates maximum of minimums of all windows of size 1. Minimums of windows of size 1 are {10}, {20}, {30}, {50}, {10}, {70} and {30}.</description>
+    </item>
     
     <item>
       <title>Stack - K stacks in an array </title>
@@ -18,7 +29,7 @@
       
       <guid>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</guid>
       <description>Create a data structure kStacks that represents k stacks. Implementation of kStacks should use only one array, i.e., k stacks should use the same array for storing elements. Following functions must be supported by kStacks.
-push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1</description>
+ push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1   METHOD 1</description>
     </item>
     
     <item>
@@ -61,8 +72,7 @@ import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: 
       
       <guid>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</guid>
       <description>Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.
-push1(int x) –&amp;gt; pushes x to first stack push2(int x) –&amp;gt; pushes x to second stack
-pop1() –&amp;gt; pops an element from first stack and return the popped element pop2() –&amp;gt; pops an element from second stack and return the popped element</description>
+ push1(int x) –&amp;gt; pushes x to first stack push2(int x) –&amp;gt; pushes x to second stack pop1() –&amp;gt; pops an element from first stack and return the popped element pop2() –&amp;gt; pops an element from second stack and return the popped element   METHOD 1</description>
     </item>
     
     <item>
