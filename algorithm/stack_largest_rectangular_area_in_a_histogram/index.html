@@ -42,7 +42,7 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
 For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)">
 <meta itemprop="datePublished" content="2020-05-01T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-05-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="259">
+<meta itemprop="wordCount" content="249">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -128,7 +128,9 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
 <p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/histogram1.png" alt=""></p>
 <hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> question_set.stack_set_3<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import</span> java.util.Stack<span style="color:#f92672">;</span>
 
@@ -145,9 +147,7 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
         Stack<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
 
         <span style="color:#75715e">// Find previous smaller element.
-</span><span style="color:#75715e"></span>        s<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
-        left<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> arr<span style="color:#f92672">[</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">()]</span> <span style="color:#f92672">&gt;=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
                 s<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
             <span style="color:#f92672">}</span>
@@ -160,9 +160,7 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
         <span style="color:#f92672">}</span>
 
         <span style="color:#75715e">// Find next smaller element.
-</span><span style="color:#75715e"></span>        s<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
-        right<span style="color:#f92672">[</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> n<span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> 2<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> n <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">()</span> <span style="color:#f92672">&amp;&amp;</span> arr<span style="color:#f92672">[</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">peek</span><span style="color:#f92672">()]</span> <span style="color:#f92672">&gt;=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
                 s<span style="color:#f92672">.</span><span style="color:#a6e22e">pop</span><span style="color:#f92672">();</span>
             <span style="color:#f92672">}</span>

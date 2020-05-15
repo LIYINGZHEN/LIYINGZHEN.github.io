@@ -30,7 +30,7 @@ import java.util.Arrays; public class MergeSort { public static void merge(int[]
       <guid>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</guid>
       <description>Implement Quicksort.
  METHOD 1
-package sorting.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
     </item>
     
     <item>

@@ -10,7 +10,7 @@
     content="Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
 Rotation of the above array by 2 will make array
  METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !" />
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_rotate_an_array/" />
@@ -43,10 +43,10 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertA
 <meta itemprop="description" content="Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
 Rotation of the above array by 2 will make array
  METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !">
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !">
 <meta itemprop="datePublished" content="2020-04-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="175">
+<meta itemprop="wordCount" content="173">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,7 +58,7 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertA
 <meta name="twitter:description" content="Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
 Rotation of the above array by 2 will make array
  METHOD 1
-package array.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !"/>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &lt; n; start&#43;&#43;) { int curr = start; int prev = arr[curr]; do { int next = (curr &#43; n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count&#43;&#43;; } while (start !"/>
 
 
 
@@ -135,9 +135,7 @@ package array.max; import org.junit.Test; import static org.junit.Assert.assertA
 <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/arrayRotation.png" alt=""></p>
 <hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
