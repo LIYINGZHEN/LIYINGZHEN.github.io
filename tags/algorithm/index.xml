@@ -125,14 +125,37 @@ public class ReverseInAlternateKPair { Node head; class Node { int data; Node ne
     
     <item>
       <title>Linked List - Remove duplicates from a sorted linked list</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates/</link>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_merge_two_sorted_linked_lists/</link>
       <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates/</guid>
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_two_sorted_linked_lists/</guid>
+      <description>Write a SortedMerge() function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
+ METHOD 1 (Iteratively)
+package linkedlist.max; import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeTwoSortedLinkedLists { // Time: O(n) ; Space: O(1)  static Node sortedMerge(Node headA, Node headB) { Node d = new Node(0); Node tail = d; Node currA = headA; Node currB = headB; while (currA !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Remove duplicates from a sorted linked list</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</guid>
       <description>Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
+ METHOD 1 (Iteratively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Remove duplicates from an unsorted linked list</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</guid>
+      <description>Write a removeDuplicates() function which takes a list and deletes any duplicate nodes from the list. The list is not sorted.
+For example if the linked list is 12-&amp;gt;11-&amp;gt;12-&amp;gt;21-&amp;gt;41-&amp;gt;43-&amp;gt;21 then removeDuplicates() should convert the list to 12-&amp;gt;11-&amp;gt;21-&amp;gt;41-&amp;gt;43.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeI(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
+import org.junit.Test; import java.util.HashSet; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicatesUnsorted { // Time: O(n) ; Space: O(n)  static void remove(Node head) { if (head == null) { return; } HashSet&amp;lt;Integer&amp;gt; h = new HashSet&amp;lt;&amp;gt;(); Node curr = head; Node prev = null; while (curr !</description>
     </item>
     
     <item>

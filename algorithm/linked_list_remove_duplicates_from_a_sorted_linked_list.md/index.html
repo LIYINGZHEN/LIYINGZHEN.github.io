@@ -9,11 +9,11 @@
 <meta name="description"
     content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeI(Node head) { if (head == null) { return; } Node curr = head; while (curr !" />
+ METHOD 1 (Iteratively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates/" />
+<link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/" />
 
 
 <title>
@@ -42,11 +42,11 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Remove duplicates from a sorted linked list">
 <meta itemprop="description" content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&gt;11-&gt;11-&gt;21-&gt;43-&gt;43-&gt;60 then removeDuplicates() should convert the list to 11-&gt;21-&gt;43-&gt;60.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeI(Node head) { if (head == null) { return; } Node curr = head; while (curr !">
+ METHOD 1 (Iteratively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !">
 <meta itemprop="datePublished" content="2020-04-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="199">
+<meta itemprop="wordCount" content="211">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -57,8 +57,8 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="twitter:title" content="Linked List - Remove duplicates from a sorted linked list"/>
 <meta name="twitter:description" content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&gt;11-&gt;11-&gt;21-&gt;43-&gt;43-&gt;60 then removeDuplicates() should convert the list to 11-&gt;21-&gt;43-&gt;60.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeI(Node head) { if (head == null) { return; } Node curr = head; while (curr !"/>
+ METHOD 1 (Iteratively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !"/>
 
 
 
@@ -124,7 +124,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates/">Linked List - Remove duplicates from a sorted linked list</a></h2>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/">Linked List - Remove duplicates from a sorted linked list</a></h2>
 
             
 
@@ -132,14 +132,14 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
                 <p>Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.</p>
 <p>For example if the linked list is <code>11-&gt;11-&gt;11-&gt;21-&gt;43-&gt;43-&gt;60</code> then removeDuplicates() should convert the list to <code>11-&gt;21-&gt;43-&gt;60</code>.</p>
 <hr>
-<p><strong>METHOD 1</strong></p>
+<p><strong>METHOD 1 (Iteratively)</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RemoveDuplicateElement</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Time: O(n) ; Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeI</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeDuplicate</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
@@ -155,26 +155,8 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeR</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-
-       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-           <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">==</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-               head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
-               removeR<span style="color:#f92672">(</span>head<span style="color:#f92672">);</span>
-           <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-               removeR<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
-           <span style="color:#f92672">}</span>
-       <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
     <span style="color:#a6e22e">@Test</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// Test iterative version.
-</span><span style="color:#75715e"></span>
         LinkedList ll <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
 
         ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>60<span style="color:#f92672">);</span>
@@ -186,12 +168,35 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
         ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>11<span style="color:#f92672">);</span>
         ll<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>11<span style="color:#f92672">);</span>
 
-        removeI<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">);</span>
+        removeDuplicate<span style="color:#f92672">(</span>ll<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">);</span>
 
         assertArrayEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>11<span style="color:#f92672">,</span> 21<span style="color:#f92672">,</span> 43<span style="color:#f92672">,</span> 60<span style="color:#f92672">},</span> ll<span style="color:#f92672">.</span><span style="color:#a6e22e">getList</span><span style="color:#f92672">());</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>METHOD 2 (Recursively)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
-        <span style="color:#75715e">// Test recursive version.
-</span><span style="color:#75715e"></span>
+<span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RemoveDuplicateElement</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeDuplicate</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">==</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+               head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
+               removeDuplicate<span style="color:#f92672">(</span>head<span style="color:#f92672">);</span>
+           <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+               removeDuplicate<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
+           <span style="color:#f92672">}</span>
+       <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
         LinkedList ll2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
 
         ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>60<span style="color:#f92672">);</span>
@@ -203,7 +208,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
         ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>11<span style="color:#f92672">);</span>
         ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">push</span><span style="color:#f92672">(</span>11<span style="color:#f92672">);</span>
 
-        removeR<span style="color:#f92672">(</span>ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">);</span>
+        removeDuplicate<span style="color:#f92672">(</span>ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">);</span>
 
         assertArrayEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>11<span style="color:#f92672">,</span> 21<span style="color:#f92672">,</span> 43<span style="color:#f92672">,</span> 60<span style="color:#f92672">},</span> ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">getList</span><span style="color:#f92672">());</span>
     <span style="color:#f92672">}</span>
