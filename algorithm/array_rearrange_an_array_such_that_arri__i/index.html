@@ -7,18 +7,17 @@
 <meta name="author"
     content="     &#34;Max&#34;">
 <meta name="description"
-    content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
-Example:
-Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number." />
+    content="Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
+Examples:
+Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_rearrange_an_array_so_that_arri_becomes_arrarri/" />
+<link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_rearrange_an_array_such_that_arri__i/" />
 
 
 <title>
     
-    Array - Rearrange an array so that arr[i] becomes arr[arr[i]] :: Max Li 
+    Array - Rearrange an array such that arr[i] = i :: Max Li 
     
 </title>
 
@@ -39,14 +38,13 @@ package array.max; import java.util.Arrays; public class Rearrange { static void
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
 <link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Rearrange an array so that arr[i] becomes arr[arr[i]]">
-<meta itemprop="description" content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
-Example:
-Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Rearrange an array such that arr[i] = i">
+<meta itemprop="description" content="Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
+Examples:
+Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1">
 <meta itemprop="datePublished" content="2020-04-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="259">
+<meta itemprop="wordCount" content="263">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -54,11 +52,10 @@ package array.max; import java.util.Arrays; public class Rearrange { static void
 <meta itemprop="keywords" content="algorithm,array," /><meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.maxlivinci.com"/>
 
-<meta name="twitter:title" content="Array - Rearrange an array so that arr[i] becomes arr[arr[i]]"/>
-<meta name="twitter:description" content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
-Example:
-Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number."/>
+<meta name="twitter:title" content="Array - Rearrange an array such that arr[i] = i"/>
+<meta name="twitter:description" content="Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
+Examples:
+Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1"/>
 
 
 
@@ -124,62 +121,59 @@ package array.max; import java.util.Arrays; public class Rearrange { static void
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/array_rearrange_an_array_so_that_arri_becomes_arrarri/">Array - Rearrange an array so that arr[i] becomes arr[arr[i]]</a></h2>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/algorithm/array_rearrange_an_array_such_that_arri__i/">Array - Rearrange an array such that arr[i] = i</a></h2>
 
             
 
             <div class="post-content">
-                <p>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.</p>
-<p><strong>Example:</strong></p>
-<pre><code>Input: arr[]  = {3, 2, 0, 1}
-Output: arr[] = {1, 0, 3, 2}
+                <p>Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.</p>
+<p><strong>Examples:</strong></p>
+<pre><code>Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1}
+Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9]
+
+Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8,
+              11, 10, 9, 5, 13, 16, 2, 14, 17, 4}
+Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 
+         11, 12, 13, 14, 15, 16, 17, 18, 19]
 </code></pre><hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> array.max<span style="color:#f92672">;</span>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.lang.reflect.Array<span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span>
 
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rearrange</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrange</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// The value we get module with n will be the original number.
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// The value we get devide by   n will be the result number.
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">// Input: arr[]  = {3, 2, 0, 1}
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// n = 4
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">// i = 0 =&gt; Output: arr[] = {3+4*1, 2, 0, 1}
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// i = 1 =&gt; Output: arr[] = {3+4*1, 2+4*0, 0, 1}
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// i = 2 =&gt; Output: arr[] = {3+4*1, 2+4*0, 0+4*3, 1}
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// i = 3 =&gt; Output: arr[] = {3+4*1, 2+4*0, 0+4*3, 1+4*2}
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">// Output: arr[] = {1, 0, 3, 2}
-</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RearrangeAnArray</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrange</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+
         <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
 
         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">int</span> position <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
-            <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>position<span style="color:#f92672">]</span> <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
-            arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> <span style="color:#f92672">(</span>value <span style="color:#f92672">*</span> n<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">%</span> n<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>number <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>number<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    arr<span style="color:#f92672">[</span>number<span style="color:#f92672">]</span> <span style="color:#f92672">-=</span> n<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                    arr<span style="color:#f92672">[</span>number<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> n<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
+
         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
             arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">/=</span> n<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrangeExtra</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> newArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">];</span>
 
         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-            newArray<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]];</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> 1 <span style="color:#f92672">||</span> arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                arr<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
         <span style="color:#f92672">}</span>
-
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>newArray<span style="color:#f92672">));</span>
     <span style="color:#f92672">}</span>
 
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>3<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 1<span style="color:#f92672">};</span>
+        <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>0<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 1<span style="color:#f92672">};</span>
         rearrange<span style="color:#f92672">(</span>arr<span style="color:#f92672">);</span>
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>arr<span style="color:#f92672">));</span>
     <span style="color:#f92672">}</span>
