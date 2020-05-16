@@ -1,5 +1,5 @@
 ---
-title:       "Array - Rearrange an array so that arr[i] becomes arr[arr[i]] with O(1) extra space"
+title:       "Array - Rearrange an array so that arr[i] becomes arr[arr[i]]"
 date:        2020-04-17T00:00:00+00:00
 author:      "Max"
 published:   true
