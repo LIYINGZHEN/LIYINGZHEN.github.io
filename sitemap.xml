@@ -63,7 +63,17 @@
   </url>
   
   <url>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_find_length_of_loop/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/</loc>
+    <lastmod>2020-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</loc>
     <lastmod>2020-04-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -84,6 +94,11 @@
   
   <url>
     <loc>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/algorithm/linked_list_rotate_a_linked_list/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
