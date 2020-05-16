@@ -30,42 +30,20 @@ Output: 1->NULL
 
 ---
 
-**METHOD 1**
+**METHOD 1 (Recursively)**
 
 ```java
-public class RevertLinkedList {
-    Node head;
+import org.junit.Test;
 
-    public class Node {
-        int data;
-        Node next;
-        public Node (int d) {
-            this.data = d;
-        }
-    }
+import static org.junit.Assert.assertArrayEquals;
 
-    public void push(int data) {
-        Node newHead = new Node(data);
-        newHead.next = head;
-        head = newHead;
-    }
-
-    public void printList(Node head) {
-        if (head == null) {
-            System.out.println("null");
-            return;
-        }
-        System.out.printf("%s -> ", head.data);
-        printList(head.next);
-    }
-
-    // Time: O(n), Space: O(1)
-    public Node revertLinkedList(Node head) {
+public class ReverseALinkedList {
+    static Node reverse(Node head) {
         if (head == null || head.next == null) {
             return head;
         }
 
-        Node newHead = revertLinkedList(head.next);
+        Node newHead = reverse(head.next);
 
         head.next.next = head;
         head.next = null;
@@ -73,17 +51,16 @@ public class RevertLinkedList {
         return newHead;
     }
 
-    public static void main(String[] args) {
-        RevertLinkedList i = new RevertLinkedList();
-        i.push(1);
-        i.push(2);
-        i.push(3);
-        i.push(4);
-        i.push(5);
+    @Test
+    public void test() {
+        LinkedList list = new LinkedList();
+        list.head = new Node(85);
+        list.head.next = new Node(15);
+        list.head.next.next = new Node(4);
+        list.head.next.next.next = new Node(20);
 
-        i.printList(i.head);
-        Node newHead = i.revertLinkedList(i.head);
-        i.printList(newHead);
+        list.head = reverse(list.head);
+        assertArrayEquals(new int[]{20, 4, 15, 85}, list.getList());
     }
 }
 ```
