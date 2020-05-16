@@ -129,8 +129,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <guid>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</guid>
       <description>Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
 Examples :
-Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 + getLength(head.</description>
+Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1 (Recursively)</description>
     </item>
     
     <item>
@@ -177,6 +176,17 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <description>Write a sortedMerge() function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
  METHOD 1 (Iteratively)
 import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeTwoSortedLinkedLists { // Time: O(n) ; Space: O(1)  static Node sortedMerge(Node headA, Node headB) { Node d = new Node(0); Node tail = d; Node currA = headA; Node currB = headB; while (currA !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Pairwise swap of nodes in LinkeList</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</guid>
+      <description>Given a singly linked list, write a function to swap elements pairwise.
+Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.next == null) { return head; } Node newHead = head.</description>
     </item>
     
     <item>

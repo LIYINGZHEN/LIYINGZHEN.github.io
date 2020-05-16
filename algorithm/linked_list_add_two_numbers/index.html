@@ -9,8 +9,7 @@
 <meta name="description"
     content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
 Examples :
-Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head." />
+Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1 (Recursively)" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/" />
@@ -42,11 +41,10 @@ public class AddTwoNumbers { static Node head1, head2; static class Node { int d
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Add two numbers">
 <meta itemprop="description" content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
 Examples :
-Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head.">
+Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1 (Recursively)">
 <meta itemprop="datePublished" content="2020-04-25T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-25T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="391">
+<meta itemprop="wordCount" content="237">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -57,8 +55,7 @@ public class AddTwoNumbers { static Node head1, head2; static class Node { int d
 <meta name="twitter:title" content="Linked List - Add two numbers"/>
 <meta name="twitter:description" content="Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
 Examples :
-Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1
-public class AddTwoNumbers { static Node head1, head2; static class Node { int data; Node next; Node(int d) { data = d; next = null; } } int getLength(Node head) { if (head == null) { return 0; } return 1 &#43; getLength(head."/>
+Input: List1: 5-&gt;6-&gt;3 // number 365 List2: 8-&gt;4-&gt;2 // number 248 Output: Resultant list: 3-&gt;1-&gt;6 // number 613 Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6 // number 64957 List2: 8-&gt;4 // number 48 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6 // number 65005  METHOD 1 (Recursively)"/>
 
 
 
@@ -140,117 +137,61 @@ Input: List1: 7-&gt;5-&gt;9-&gt;4-&gt;6  // number 64957
        List2: 8-&gt;4  // number 48
 Output: Resultant list: 5-&gt;0-&gt;0-&gt;5-&gt;6  // number 65005
 </code></pre><hr>
-<p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddTwoNumbers</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">static</span> Node head1<span style="color:#f92672">,</span> head2<span style="color:#f92672">;</span>
+<p><strong>METHOD 1 (Recursively)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
-    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">int</span> data<span style="color:#f92672">;</span>
-        Node next<span style="color:#f92672">;</span>
+<span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
-        Node<span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            data <span style="color:#f92672">=</span> d<span style="color:#f92672">;</span>
-            next <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getLength</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AddTwoNumbers</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">length</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">return</span> 1 <span style="color:#f92672">+</span> getLength<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> 1 <span style="color:#f92672">+</span> length<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">printList</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-            head <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    Node <span style="color:#a6e22e">reverse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> head<span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        Node newHead <span style="color:#f92672">=</span> reverse<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
-        head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span>
-        head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">return</span> newHead<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    Node <span style="color:#a6e22e">sum</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Node head1<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> Node head2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> head2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> head2<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> Node <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>Node headA<span style="color:#f92672">,</span> Node headB<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>length<span style="color:#f92672">(</span>headB<span style="color:#f92672">)</span> <span style="color:#f92672">&gt;</span> length<span style="color:#f92672">((</span>headA<span style="color:#f92672">)))</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> add<span style="color:#f92672">(</span>headB<span style="color:#f92672">,</span> headA<span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
 
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>getLength<span style="color:#f92672">(</span>head1<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> getLength<span style="color:#f92672">(</span>head2<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> addTwoLists<span style="color:#f92672">(</span>head2<span style="color:#f92672">,</span> head1<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> headA<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>headB <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            sum <span style="color:#f92672">+=</span> headB<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>
-
-        <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> head1<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head2 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            sum <span style="color:#f92672">+=</span> head2<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> sum <span style="color:#f92672">%</span> 10<span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span> carry <span style="color:#f92672">=</span> sum <span style="color:#f92672">/</span> 10<span style="color:#f92672">;</span>
-        head1<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> sum <span style="color:#f92672">%</span> 10<span style="color:#f92672">;</span>
+        headA<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> num<span style="color:#f92672">;</span>
 
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> carry <span style="color:#f92672">!=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>carry<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> carry<span style="color:#f92672">;</span>
-            head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> sum<span style="color:#f92672">(</span>head1<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">,</span> head2 <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> head2<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>headA<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>carry <span style="color:#f92672">!=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                headA<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>carry<span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+            headA<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">+=</span> carry<span style="color:#f92672">;</span>
+            headA<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> add<span style="color:#f92672">(</span>headA<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">,</span> headB <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">?</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">:</span> headB<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
         <span style="color:#f92672">}</span>
 
-        <span style="color:#66d9ef">return</span> head1<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> headA<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#75715e">// Time: O(n), Space: O(n)
-</span><span style="color:#75715e"></span>    Node <span style="color:#a6e22e">addTwoLists</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> Node head1<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> Node head2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> head2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head1 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> head2<span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head2 <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> head1<span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        LinkedList ll1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>7<span style="color:#f92672">);</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>9<span style="color:#f92672">);</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>6<span style="color:#f92672">);</span>
 
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>getLength<span style="color:#f92672">(</span>head1<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> getLength<span style="color:#f92672">(</span>head2<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> addTwoLists<span style="color:#f92672">(</span>head2<span style="color:#f92672">,</span> head1<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
+        LinkedList ll2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+        ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>8<span style="color:#f92672">);</span>
+        ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>4<span style="color:#f92672">);</span>
 
-        Node rHead1 <span style="color:#f92672">=</span> reverse<span style="color:#f92672">(</span>head1<span style="color:#f92672">);</span>
-        Node rHead2 <span style="color:#f92672">=</span> reverse<span style="color:#f92672">(</span>head2<span style="color:#f92672">);</span>
+        ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span> <span style="color:#f92672">=</span> add<span style="color:#f92672">(</span>ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">,</span> ll2<span style="color:#f92672">.</span><span style="color:#a6e22e">head</span><span style="color:#f92672">);</span>
 
-        <span style="color:#66d9ef">return</span> reverse<span style="color:#f92672">(</span>sum<span style="color:#f92672">(</span>rHead1<span style="color:#f92672">,</span> rHead2<span style="color:#f92672">));</span>
-    <span style="color:#f92672">}</span>
-
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        AddTwoNumbers list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> AddTwoNumbers<span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// creating first list
-</span><span style="color:#75715e"></span>        list<span style="color:#f92672">.</span><span style="color:#a6e22e">head1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>9<span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">head1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>9<span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">head1</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>9<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;First List is &#34;</span><span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">printList</span><span style="color:#f92672">(</span>head1<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// creating seconnd list
-</span><span style="color:#75715e"></span>        list<span style="color:#f92672">.</span><span style="color:#a6e22e">head2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">head2</span><span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Node<span style="color:#f92672">(</span>8<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Second List is &#34;</span><span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">printList</span><span style="color:#f92672">(</span>head2<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// add the two lists and see the result
-</span><span style="color:#75715e"></span>        Node rs <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">addTwoLists</span><span style="color:#f92672">(</span>head1<span style="color:#f92672">,</span> head2<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Resultant List is &#34;</span><span style="color:#f92672">);</span>
-        list<span style="color:#f92672">.</span><span style="color:#a6e22e">printList</span><span style="color:#f92672">(</span>rs<span style="color:#f92672">);</span>
+        assertArrayEquals<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]{</span>5<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> 5<span style="color:#f92672">,</span> 6<span style="color:#f92672">},</span> ll1<span style="color:#f92672">.</span><span style="color:#a6e22e">getList</span><span style="color:#f92672">());</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div>
