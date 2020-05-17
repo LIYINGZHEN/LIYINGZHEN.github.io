@@ -8,10 +8,9 @@
     content="     &#34;Max&#34;">
 <meta name="description"
     content="Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 then output should be 3.
- If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6 then output should be 4.
-METHOD 1
+ METHOD 1 (If there are even nodes, return first middle element)
  This is much useful in merge sort.
- import org.junit.Test; import static org." />
+ import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindMiddle { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_find_the_middle_node/" />
@@ -42,13 +41,12 @@ METHOD 1
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Find the middle of a given linked list">
 <meta itemprop="description" content="Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5 then output should be 3.
- If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6 then output should be 4.
-METHOD 1
+ METHOD 1 (If there are even nodes, return first middle element)
  This is much useful in merge sort.
- import org.junit.Test; import static org.">
+ import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindMiddle { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.">
 <meta itemprop="datePublished" content="2020-04-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="239">
+<meta itemprop="wordCount" content="193">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,10 +56,9 @@ METHOD 1
 
 <meta name="twitter:title" content="Linked List - Find the middle of a given linked list"/>
 <meta name="twitter:description" content="Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5 then output should be 3.
- If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6 then output should be 4.
-METHOD 1
+ METHOD 1 (If there are even nodes, return first middle element)
  This is much useful in merge sort.
- import org.junit.Test; import static org."/>
+ import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindMiddle { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head."/>
 
 
 
@@ -134,8 +131,7 @@ METHOD 1
             <div class="post-content">
                 <p>Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5 then output should be 3.</p>
 <hr>
-<p>If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6 then output should be 4.</p>
-<p><strong>METHOD 1</strong></p>
+<p><strong>METHOD 1 (If there are even nodes, return first middle element)</strong></p>
 <blockquote>
 <p>This is much useful in merge sort.</p>
 </blockquote>
@@ -174,8 +170,7 @@ METHOD 1
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 
-</code></pre></div><p>If there are even nodes, then there would be two middle nodes, we want to print second middle element. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6 then output should be 4.</p>
-<p><strong>METHOD 2</strong></p>
+</code></pre></div><p><strong>METHOD 2 (If there are even nodes, return second middle element)</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>

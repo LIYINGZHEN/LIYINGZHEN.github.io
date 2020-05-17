@@ -41,10 +41,9 @@ public class FindStartNodeInLoop{ private Node head; private static class Node {
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_find_the_middle_node/</guid>
       <description>Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 then output should be 3.
- If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6 then output should be 4.
-METHOD 1
+ METHOD 1 (If there are even nodes, return first middle element)
  This is much useful in merge sort.
- import org.junit.Test; import static org.</description>
+ import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindMiddle { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.</description>
     </item>
     
     <item>
