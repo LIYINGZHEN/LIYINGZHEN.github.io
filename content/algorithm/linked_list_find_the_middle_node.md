@@ -10,9 +10,7 @@ Given a singly linked list, find middle of the linked list. For example, if give
 
 ---
 
-If there are even nodes, then there would be two middle nodes, we want to print first middle element. For example, if given linked list is 1->2->3->4->5->6 then output should be 4.
-
-**METHOD 1**
+**METHOD 1 (If there are even nodes, return first middle element)**
 
 > This is much useful in merge sort.
 
@@ -54,9 +52,8 @@ public class FindMiddle {
 
 ```
 
-If there are even nodes, then there would be two middle nodes, we want to print second middle element. For example, if given linked list is 1->2->3->4->5->6 then output should be 4.
 
-**METHOD 2**
+**METHOD 2 (If there are even nodes, return second middle element)**
 
 ```java
 import org.junit.Test;
