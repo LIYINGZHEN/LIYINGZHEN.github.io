@@ -23,6 +23,17 @@ Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 F
     </item>
     
     <item>
+      <title>Stack - Implement Stack using Queues</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</guid>
+      <description>We are given a Queue data structure that supports standard operations like enqueue() and dequeue(). We need to implement a Stack data structure using only instances of Queue and queue operations allowed on the instances.
+ METHOD 1 (Reorganize while pushing)
+import org.junit.Test; import java.util.LinkedList; import java.util.Queue; import static org.junit.Assert.assertEquals; public class StackUsingTwoQueues { class Stack { Queue&amp;lt;Integer&amp;gt; q1; Queue&amp;lt;Integer&amp;gt; q2; Stack() { q1 = new LinkedList&amp;lt;&amp;gt;(); q2 = new LinkedList&amp;lt;&amp;gt;(); } void push(int ele) { while (!</description>
+    </item>
+    
+    <item>
       <title>Stack - K stacks in an array </title>
       <link>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</link>
       <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
