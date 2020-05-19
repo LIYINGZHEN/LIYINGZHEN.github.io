@@ -25,6 +25,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
+ * Complexity : time: O(2^n) ; space: O(n)
+ */
+
 public class TowerOfHanoi {
     // Time: O(2^n)
     static int towerOfHanoi(int n, char from, char to, char aux) {

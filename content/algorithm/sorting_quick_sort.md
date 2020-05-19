@@ -17,6 +17,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/quick-sort/
+ * Complexity : time: O(nlogn) ; space: O(1)
+ *            : In-Place ; Not-Stable
+ */
+
 public class QuickSort {
     static void swap(int[] arr, int a, int b) {
         int temp = arr[b];
@@ -41,8 +48,6 @@ public class QuickSort {
         return p;
     }
 
-    // Time: O(nlogn) ; Space: O(1)
-    // In-place
     static void quickSort(int[] arr, int l, int h) {
         if (l >= h) {
             return;

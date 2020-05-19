@@ -23,22 +23,25 @@ import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 
-public class MaxArea {
-    // Time: O(n) ; Space: O(n)
-    static int findMaxArea(int[] arr) {
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/largest-rectangle-under-histogram/
+ * Complexity : time: O(n) ; space: O(n)
+ */
+
+public class MaximumRectangularAreas {
+    static int getMaxArea(int[] arr) {
         int n = arr.length;
-
-        int[] left = new int[n];
-        int[] right = new int[n];
-
         Stack<Integer> s = new Stack<>();
+        int[] preSmaller = new int[n];
+        int[] nextSmaller = new int[n];
 
-        // Find previous smaller element.
-        for (int i = 0; i < n; i++) {
-            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+        for (int i = 0 ; i < n; i++) {
+            int num = arr[i];
+            while (!s.isEmpty() && num <= arr[s.peek()]) {
                 s.pop();
             }
-            left[i] = s.isEmpty() ? -1 : s.peek();
+            preSmaller[i] = s.isEmpty() ? -1 : s.peek();
             s.push(i);
         }
 
@@ -46,19 +49,18 @@ public class MaxArea {
             s.pop();
         }
 
-        // Find next smaller element.
-        for (int i = n - 1; i >= 0; i--) {
-            while (!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+        for (int i = n - 1 ; i >= 0; i--) {
+            int num = arr[i];
+            while (!s.isEmpty() && num <= arr[s.peek()]) {
                 s.pop();
             }
-            right[i] = s.isEmpty() ? n : s.peek();
+            nextSmaller[i] = s.isEmpty() ? n : s.peek();
             s.push(i);
         }
 
-        int maxArea = Integer.MIN_VALUE;
+        int maxArea = 0;
         for (int i = 0; i < n; i++) {
-            int height = arr[i];
-            maxArea = Math.max(maxArea, height * (right[i] - left[i] - 1));
+            maxArea = Math.max(maxArea, arr[i] * (nextSmaller[i] - preSmaller[i] - 1));
         }
 
         return maxArea;
@@ -66,8 +68,8 @@ public class MaxArea {
 
     @Test
     public void test() {
-        assertEquals(12, findMaxArea(new int[]{6, 2, 5, 4, 5, 1, 6}));
-        assertEquals(10, findMaxArea(new int[]{2, 1, 5, 6, 2, 3}));
+        assertEquals(12, getMaxArea(new int[]{6, 2, 5, 4, 5, 1, 6}));
+        assertEquals(10, getMaxArea(new int[]{2, 1, 5, 6, 2, 3}));
     }
 }
 ```

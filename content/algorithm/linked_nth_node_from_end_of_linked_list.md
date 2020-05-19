@@ -21,8 +21,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+ * Complexity : time: O(n) ; space: O(1)
+ */
+
 public class NthNodeFromEnd {
-    // Time: O(n) ; Space: O(1)
     static int nthFromLast(Node head, int n) {
         if (n < 1) {
             return Integer.MAX_VALUE;

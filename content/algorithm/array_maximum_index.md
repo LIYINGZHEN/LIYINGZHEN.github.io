@@ -17,8 +17,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
+ * Complexity : time: O(n) ; space: O(n)
+ */
+
 public class MaximumIndex {
-    // Time: O(n) ; Space: O(n)
     static int maximun(int[] arr) {
         if (arr.length == 0) {
             return -1;
