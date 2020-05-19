@@ -10,7 +10,7 @@
     content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
 For example, if the input is below list and n = 3, then output is “B”
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &amp;lt; 1) { return Integer." />
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class NthNodeFromEnd { static int nthFromLast(Node head, int n) { if (n &amp;lt; 1) { return Integer." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_nth_node_from_end_of_linked_list/" />
@@ -43,10 +43,10 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 <meta itemprop="description" content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
 For example, if the input is below list and n = 3, then output is “B”
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer.">
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class NthNodeFromEnd { static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer.">
 <meta itemprop="datePublished" content="2020-04-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="184">
+<meta itemprop="wordCount" content="196">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,7 +58,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 <meta name="twitter:description" content="Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
 For example, if the input is below list and n = 3, then output is “B”
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer."/>
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class NthNodeFromEnd { static int nthFromLast(Node head, int n) { if (n &lt; 1) { return Integer."/>
 
 
 
@@ -138,9 +138,14 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(1)
+</span><span style="color:#75715e"> */</span>
+
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NthNodeFromEnd</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// Time: O(n) ; Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nthFromLast</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nthFromLast</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MAX_VALUE</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>

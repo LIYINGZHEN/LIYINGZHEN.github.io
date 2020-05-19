@@ -9,7 +9,7 @@
 <meta name="description"
     content="Implement Quicksort.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr." />
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/quick-sort/ * Complexity : time: O(nlogn) ; space: O(1) * : In-Place ; Not-Stable */ public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/sorting_quick_sort/" />
@@ -41,10 +41,10 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Sorting - Quick sort">
 <meta itemprop="description" content="Implement Quicksort.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &lt; h) { if (arr[i] &lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.">
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/quick-sort/ * Complexity : time: O(nlogn) ; space: O(1) * : In-Place ; Not-Stable */ public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &lt; h) { if (arr[i] &lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } static void quickSort(int[] arr, int l, int h) { if (l &gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.">
 <meta itemprop="datePublished" content="2020-04-15T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-15T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="144">
+<meta itemprop="wordCount" content="159">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -55,7 +55,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="twitter:title" content="Sorting - Quick sort"/>
 <meta name="twitter:description" content="Implement Quicksort.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &lt; h) { if (arr[i] &lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } // Time: O(nlogn) ; Space: O(1)  // In-place  static void quickSort(int[] arr, int l, int h) { if (l &gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr."/>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/quick-sort/ * Complexity : time: O(nlogn) ; space: O(1) * : In-Place ; Not-Stable */ public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &lt; h) { if (arr[i] &lt; pivot) { swap(arr, i, p); p&#43;&#43;; } i&#43;&#43;; } swap(arr, i, p); return p; } static void quickSort(int[] arr, int l, int h) { if (l &gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p &#43; 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr."/>
 
 
 
@@ -133,6 +133,13 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/quick-sort/
+</span><span style="color:#75715e"> * Complexity : time: O(nlogn) ; space: O(1)
+</span><span style="color:#75715e"> *            : In-Place ; Not-Stable
+</span><span style="color:#75715e"> */</span>
+
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QuickSort</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>b<span style="color:#f92672">];</span>
@@ -157,9 +164,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
         <span style="color:#66d9ef">return</span> p<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#75715e">// Time: O(nlogn) ; Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// In-place
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quickSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> l<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quickSort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> l<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>l <span style="color:#f92672">&gt;=</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>

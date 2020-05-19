@@ -9,7 +9,7 @@
 <meta name="description"
     content="Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &amp;gt;= 0; i--) { int num = arr[i]; if (num &amp;gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &amp;lt; n &amp;amp;&amp;amp; j &amp;lt; n) { int num = arr[i]; if (num &amp;lt; maxFromTheRight[j]) { maxDiff = Math." />
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/ * Complexity : time: O(n) ; space: O(n) */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_maximum_index/" />
@@ -41,10 +41,10 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Array - Maximum index">
 <meta itemprop="description" content="Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math.">
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/ * Complexity : time: O(n) ; space: O(n) */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.">
 <meta itemprop="datePublished" content="2020-04-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="177">
+<meta itemprop="wordCount" content="189">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -55,7 +55,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 <meta name="twitter:title" content="Array - Maximum index"/>
 <meta name="twitter:description" content="Given an array arr[], find the maximum j – i such that arr[j] &gt; arr[i]
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class MaximumIndex { // Time: O(n) ; Space: O(n)  static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.MIN_VALUE; for (int i = n - 1; i &gt;= 0; i--) { int num = arr[i]; if (num &gt; max) { max = num; } maxFromTheRight[i] = max; } int i = 0, j = 0, maxDiff = -1; while (i &lt; n &amp;&amp; j &lt; n) { int num = arr[i]; if (num &lt; maxFromTheRight[j]) { maxDiff = Math."/>
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/ * Complexity : time: O(n) ; space: O(n) */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer."/>
 
 
 
@@ -133,9 +133,14 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(n)
+</span><span style="color:#75715e"> */</span>
+
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MaximumIndex</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maximun</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maximun</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>

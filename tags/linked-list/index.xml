@@ -77,7 +77,7 @@ Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 /
       <description>Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
 For example, if the input is below list and n = 3, then output is “B”
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class NthNodeFromEnd { // Time: O(n) ; Space: O(1)  static int nthFromLast(Node head, int n) { if (n &amp;lt; 1) { return Integer.</description>
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class NthNodeFromEnd { static int nthFromLast(Node head, int n) { if (n &amp;lt; 1) { return Integer.</description>
     </item>
     
     <item>
