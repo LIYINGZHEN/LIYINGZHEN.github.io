@@ -9,7 +9,7 @@
 <meta name="description"
     content="Given a singly linked list, write a function to swap elements pairwise.
 Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.next == null) { return head; } Node newHead = head." />
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/" />
@@ -41,10 +41,10 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Pairwise swap of nodes in LinkeList">
 <meta itemprop="description" content="Given a singly linked list, write a function to swap elements pairwise.
 Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;NULL Output : 2-&gt;1-&gt;4-&gt;3-&gt;6-&gt;5-&gt;NULL Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output : 2-&gt;1-&gt;4-&gt;3-&gt;5-&gt;NULL Input : 1-&gt;NULL Output : 1-&gt;NULL  METHOD 1 (Recursively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.next == null) { return head; } Node newHead = head.">
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.">
 <meta itemprop="datePublished" content="2020-04-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="112">
+<meta itemprop="wordCount" content="130">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -55,7 +55,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="twitter:title" content="Linked List - Pairwise swap of nodes in LinkeList"/>
 <meta name="twitter:description" content="Given a singly linked list, write a function to swap elements pairwise.
 Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6-&gt;NULL Output : 2-&gt;1-&gt;4-&gt;3-&gt;6-&gt;5-&gt;NULL Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL Output : 2-&gt;1-&gt;4-&gt;3-&gt;5-&gt;NULL Input : 1-&gt;NULL Output : 1-&gt;NULL  METHOD 1 (Recursively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.next == null) { return head; } Node newHead = head."/>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head."/>
 
 
 
@@ -141,6 +141,11 @@ Output : 1-&gt;NULL
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(n)
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PairwiseSwap</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// Time: O(n) ; Space: O(n)
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> Node <span style="color:#a6e22e">pairWiseSwap</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>

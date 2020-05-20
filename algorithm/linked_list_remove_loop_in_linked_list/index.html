@@ -9,7 +9,7 @@
 <meta name="description"
     content="Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !" />
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/" />
@@ -41,10 +41,10 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="theme-color" content="#252627"><meta itemprop="name" content="Linked List - Remove loop in Linked List">
 <meta itemprop="description" content="Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !">
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !">
 <meta itemprop="datePublished" content="2020-04-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="188">
+<meta itemprop="wordCount" content="206">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -55,7 +55,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="twitter:title" content="Linked List - Remove loop in Linked List"/>
 <meta name="twitter:description" content="Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !"/>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !"/>
 
 
 
@@ -134,6 +134,11 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(1)
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RemoveLoop</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">detectAndRemoveLoop</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>

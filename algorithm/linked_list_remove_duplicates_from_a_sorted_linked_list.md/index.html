@@ -10,7 +10,7 @@
     content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
  METHOD 1 (Iteratively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !" />
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/" />
@@ -43,10 +43,10 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta itemprop="description" content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&gt;11-&gt;11-&gt;21-&gt;43-&gt;43-&gt;60 then removeDuplicates() should convert the list to 11-&gt;21-&gt;43-&gt;60.
  METHOD 1 (Iteratively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !">
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !">
 <meta itemprop="datePublished" content="2020-04-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="211">
+<meta itemprop="wordCount" content="223">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,7 +58,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 <meta name="twitter:description" content="Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&gt;11-&gt;11-&gt;21-&gt;43-&gt;43-&gt;60 then removeDuplicates() should convert the list to 11-&gt;21-&gt;43-&gt;60.
  METHOD 1 (Iteratively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !"/>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !"/>
 
 
 
@@ -137,9 +137,13 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertArrayEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(1)
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RemoveDuplicateElement</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// Time: O(n) ; Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeDuplicate</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeDuplicate</span><span style="color:#f92672">(</span>Node head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>

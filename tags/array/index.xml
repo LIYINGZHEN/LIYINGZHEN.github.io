@@ -55,7 +55,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 Examples:
 Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
+/** * Author : Max * Question : https://www.geeksforgeeks.org/trapping-rain-water/ * Complexity : time: O(n) ; space: O(1) */ import org.</description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author
       <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
+package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
     </item>
     
     <item>

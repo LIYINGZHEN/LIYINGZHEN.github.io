@@ -10,7 +10,7 @@
     content="Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
 Example :
 Input : Head of bellow linked list Output : Pointer to node 2  METHOD 1
-public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp." />
+/** * Author : Max * Question : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/" />
@@ -43,10 +43,10 @@ public class FindStartNodeInLoop{ private Node head; private static class Node {
 <meta itemprop="description" content="Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
 Example :
 Input : Head of bellow linked list Output : Pointer to node 2  METHOD 1
-public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.">
+/** * Author : Max * Question : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.">
 <meta itemprop="datePublished" content="2020-04-26T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-26T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="246">
+<meta itemprop="wordCount" content="264">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,7 +58,7 @@ public class FindStartNodeInLoop{ private Node head; private static class Node {
 <meta name="twitter:description" content="Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
 Example :
 Input : Head of bellow linked list Output : Pointer to node 2  METHOD 1
-public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp."/>
+/** * Author : Max * Question : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this."/>
 
 
 
@@ -136,7 +136,12 @@ public class FindStartNodeInLoop{ private Node head; private static class Node {
 <pre><code>Output : Pointer to node 2
 </code></pre><hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FindStartNodeInLoop</span><span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(1)
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FindStartNodeInLoop</span><span style="color:#f92672">{</span>
     <span style="color:#66d9ef">private</span> Node head<span style="color:#f92672">;</span>
 
     <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Node</span> <span style="color:#f92672">{</span>

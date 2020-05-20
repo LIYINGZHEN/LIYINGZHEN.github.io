@@ -46,7 +46,7 @@ Example:
 Input: ((a&#43;b)) (a&#43;(b)/c) (a&#43;b*(c-d)) Output: Yes Yes No Explanation: 1. ((a&#43;b)) can reduced to (a&#43;b), this Redundant 2.">
 <meta itemprop="datePublished" content="2020-04-30T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="231">
+<meta itemprop="wordCount" content="243">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -155,9 +155,13 @@ brackets.
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/expression-contains-redundant-bracket-not/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(n)
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RedundantBracket</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isRedundant</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">isRedundant</span><span style="color:#f92672">(</span>String s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         Stack<span style="color:#f92672">&lt;</span>Character<span style="color:#f92672">&gt;</span> st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Stack<span style="color:#f92672">&lt;&gt;();</span>
         <span style="color:#66d9ef">char</span><span style="color:#f92672">[]</span> str <span style="color:#f92672">=</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">toCharArray</span><span style="color:#f92672">();</span>
 

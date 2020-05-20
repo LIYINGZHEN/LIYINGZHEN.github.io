@@ -10,7 +10,7 @@
     content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number." />
+package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://www.maxlivinci.com/algorithm/array_rearrange_an_array_so_that_arri_becomes_arrarri/" />
@@ -43,10 +43,10 @@ package array.max; import java.util.Arrays; public class Rearrange { static void
 <meta itemprop="description" content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.">
+package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.">
 <meta itemprop="datePublished" content="2020-04-17T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-17T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="259">
+<meta itemprop="wordCount" content="271">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -58,7 +58,7 @@ package array.max; import java.util.Arrays; public class Rearrange { static void
 <meta name="twitter:description" content="Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number."/>
+package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number."/>
 
 
 
@@ -139,6 +139,11 @@ Output: arr[] = {1, 0, 3, 2}
 
 <span style="color:#f92672">import</span> java.util.Arrays<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/rearrange-given-array-place/
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(n)
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rearrange</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrange</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#75715e">// The value we get module with n will be the original number.
@@ -166,8 +171,7 @@ Output: arr[] = {1, 0, 3, 2}
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
 
-    <span style="color:#75715e">// Time: O(n) ; Space: O(n)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrangeExtra</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">rearrangeExtra</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
         <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> newArray <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">];</span>
 

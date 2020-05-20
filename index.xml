@@ -100,6 +100,15 @@ Input: ((a+b)) (a+(b)/c) (a+b*(c-d)) Output: Yes Yes No Explanation: 1. ((a+b)) 
     </item>
     
     <item>
+      <title>Stack - Iterative Tower of Hanoi</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_tower_of_hanoi/</link>
+      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_tower_of_hanoi/</guid>
+      <description>Tower of Hanoi is a mathematical puzzle. It consists of three poles and a number of disks of different sizes which can slide onto any poles. The puzzle starts with the disk in a neat stack in ascending order of size in one pole, the smallest at the top thus making a conical shape. The objective of the puzzle is to move all the disks from one pole (say ‘source pole’) to another pole (say ‘destination pole’) with the help of the third pole (say auxiliary pole).</description>
+    </item>
+    
+    <item>
       <title>Stack - Next greater element in an array</title>
       <link>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
@@ -171,7 +180,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; public class
       <description>Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
 Example :
 Input : Head of bellow linked list Output : Pointer to node 2  METHOD 1
-public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.data = d; } } public void addToTheLast(Node node) { if (head == null) { head = node; } else { Node temp = head; while (temp.</description>
+/** * Author : Max * Question : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.</description>
     </item>
     
     <item>
@@ -194,7 +203,7 @@ public class FindStartNodeInLoop{ private Node head; private static class Node {
       <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</guid>
       <description>Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !</description>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !</description>
     </item>
     
     <item>
@@ -262,7 +271,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <guid>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</guid>
       <description>Given a singly linked list, write a function to swap elements pairwise.
 Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.next == null) { return head; } Node newHead = head.</description>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.</description>
     </item>
     
     <item>
@@ -274,7 +283,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <description>Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
 For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
  METHOD 1 (Iteratively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicateElement { // Time: O(n) ; Space: O(1)  static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
     </item>
     
     <item>
@@ -367,7 +376,7 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 Examples:
 Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
+/** * Author : Max * Question : https://www.geeksforgeeks.org/trapping-rain-water/ * Complexity : time: O(n) ; space: O(1) */ import org.</description>
     </item>
     
     <item>
@@ -390,7 +399,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author
       <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
+package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
     </item>
     
     <item>
