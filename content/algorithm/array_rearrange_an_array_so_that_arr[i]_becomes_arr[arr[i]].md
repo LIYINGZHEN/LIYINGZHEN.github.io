@@ -24,6 +24,11 @@ package array.max;
 
 import java.util.Arrays;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/rearrange-given-array-place/
+ * Complexity : time: O(n) ; space: O(n)
+ */
 public class Rearrange {
     static void rearrange(int[] arr) {
         // The value we get module with n will be the original number.
@@ -51,7 +56,6 @@ public class Rearrange {
         }
     }
 
-    // Time: O(n) ; Space: O(n)
     static void rearrangeExtra(int[] arr) {
         int n = arr.length;
         int[] newArray = new int[n];

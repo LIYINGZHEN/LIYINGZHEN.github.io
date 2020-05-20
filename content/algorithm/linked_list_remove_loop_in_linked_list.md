@@ -19,6 +19,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
+ * Complexity : time: O(n) ; space: O(1)
+ */
 public class RemoveLoop {
     static boolean detectAndRemoveLoop(Node head) {
         if (head == null) {

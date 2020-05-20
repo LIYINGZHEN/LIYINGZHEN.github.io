@@ -41,8 +41,12 @@ import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/expression-contains-redundant-bracket-not/
+ * Complexity : time: O(n) ; space: O(n)
+ */
 public class RedundantBracket {
-    // Time: O(n) ; Space: O(n)
     static boolean isRedundant(String s) {
         Stack<Character> st = new Stack<>();
         char[] str = s.toCharArray();

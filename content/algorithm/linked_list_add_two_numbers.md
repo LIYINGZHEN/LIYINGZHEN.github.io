@@ -30,6 +30,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
+ * Complexity : // Time: O(n) ; Space: O(n)
+ */
 public class AddTwoNumbers {
     static int length(Node head) {
         if (head == null) {
@@ -38,7 +43,6 @@ public class AddTwoNumbers {
         return 1 + length(head.next);
     }
 
-    // Time: O(n) ; Space: O(n)
     static Node add(Node headA, Node headB) {
         if (length(headB) > length((headA))) {
             return add(headB, headA);

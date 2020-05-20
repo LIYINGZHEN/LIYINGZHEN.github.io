@@ -25,6 +25,11 @@ Output : Pointer to node 2
 **METHOD 1**
 
 ```java
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/
+ * Complexity : time: O(n) ; space: O(1)
+ */
 public class FindStartNodeInLoop{
     private Node head;
 

@@ -19,8 +19,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/
+ * Complexity : time: O(n) ; space: O(1)
+ */
 public class RemoveDuplicateElement {
-    // Time: O(n) ; Space: O(1)
     static void removeDuplicate(Node head) {
         if (head == null) {
             return;

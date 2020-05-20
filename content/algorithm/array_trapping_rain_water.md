@@ -28,6 +28,11 @@ We can trap 2 units of water in the middle gap.
 **METHOD 1**
 
 ```java
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/trapping-rain-water/
+ * Complexity : time: O(n) ; space: O(1)
+ */
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

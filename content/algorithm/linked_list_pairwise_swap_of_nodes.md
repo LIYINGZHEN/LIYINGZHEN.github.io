@@ -28,6 +28,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
+ * Complexity : time: O(n) ; space: O(n)
+ */
 public class PairwiseSwap {
     // Time: O(n) ; Space: O(n)
     static Node pairWiseSwap(Node head) {
