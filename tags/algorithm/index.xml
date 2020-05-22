@@ -65,6 +65,18 @@ Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 F
     </item>
     
     <item>
+      <title>Stack - Check if two expressions with brackets are same</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_check_if_two_expressions_with_brackets_are_same/</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/stack_check_if_two_expressions_with_brackets_are_same/</guid>
+      <description>Given two expressions in the form of strings. The task is to compare them and check if they are similar. Expressions consist of lowercase alphabets, ‘+’, ‘-‘ and ‘( )’.
+Examples:
+Input : exp1 = &amp;quot;-(a+b+c)&amp;quot; exp2 = &amp;quot;-a-b-c&amp;quot; Output : Yes Input : exp1 = &amp;quot;-(c+b+a)&amp;quot; exp2 = &amp;quot;-c-b-a&amp;quot; Output : Yes Input : exp1 = &amp;quot;a-b-(c-d)&amp;quot; exp2 = &amp;quot;a-b-c-d&amp;quot; Output : No  METHOD 1
+package vishwa.class_2020_05_20; import org.</description>
+    </item>
+    
+    <item>
       <title>Stack - Delete middle element of a stack</title>
       <link>https://www.maxlivinci.com/algorithm/stack_delete_middle_element/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
