@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linked-list on Max Li</title>
+    <title>linked-list on Maxlivinci.com</title>
     <link>https://www.maxlivinci.com/tags/linked-list/</link>
-    <description>Recent content in linked-list on Max Li</description>
+    <description>Recent content in linked-list on Maxlivinci.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
@@ -123,64 +124,6 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
       <description>Given a singly linked list, write a function to swap elements pairwise.
 Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
 import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Remove duplicates from a sorted linked list</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</guid>
-      <description>Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
-For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
- METHOD 1 (Iteratively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Remove duplicates from an unsorted linked list</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</guid>
-      <description>Write a removeDuplicates() function which takes a list and deletes any duplicate nodes from the list. The list is not sorted.
-For example if the linked list is 12-&amp;gt;11-&amp;gt;12-&amp;gt;21-&amp;gt;41-&amp;gt;43-&amp;gt;21 then removeDuplicates() should convert the list to 12-&amp;gt;11-&amp;gt;21-&amp;gt;41-&amp;gt;43.
- METHOD 1
-import org.junit.Test; import java.util.HashSet; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicatesUnsorted { // Time: O(n) ; Space: O(n)  static void remove(Node head) { if (head == null) { return; } HashSet&amp;lt;Integer&amp;gt; h = new HashSet&amp;lt;&amp;gt;(); Node curr = head; Node prev = null; while (curr !</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Reverse a linked list</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</guid>
-      <description>Given pointer to the head node of a linked list, the task is to reverse the linked list. We need to reverse the list by changing links between nodes.
-Examples :
-Input: Head of following linked list 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL Output: Linked list should be changed to, 4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Input: Head of following linked list 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: Linked list should be changed to, 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Input: NULL Output: NULL Input: 1-&amp;gt;NULL Output: 1-&amp;gt;NULL  METHOD 1 (Recursively)</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Merge sort</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</guid>
-      <description>Implement merge sort.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeSort { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.next; while (fast != null &amp;amp;&amp;amp; fast.next != null) { fast = fast.next.next; slow = slow.next; } return slow; } static Node merge(Node headA, Node headB) { if (headA == null &amp;amp;&amp;amp; headB == null) { return null; } if (headA == null) { return headB; } if (headB == null) { return headA; } if (headA.</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Insertion</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_insertion/</link>
-      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_insertion/</guid>
-      <description>Given a singly linked list, a position and an element, the task is to write a program to insert that element in a linked list at a given position.
-Examples :
-Input: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10, data = 2, position = 2 Output: 3-&amp;gt;2-&amp;gt;5-&amp;gt;8-&amp;gt;10 Input: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10, data = 11, position = 5 Output: 3-&amp;gt;5-&amp;gt;8-&amp;gt;10-&amp;gt;11  METHOD 1
-public class Insertion { // Time : O(n) ; Space: O(1)  static void insert(LinkedList ll, int data, int pos) { int step = pos - 1; if (step &amp;lt; 0 || step &amp;gt; ll.</description>
     </item>
     
   </channel>
