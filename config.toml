@@ -1,5 +1,5 @@
 baseURL = "https://www.maxlivinci.com"
-title   = "Maxlivinci.com"
+title   = "Max Li"
 languageCode = "en-us"
 theme = "hello-friend-ng"
 
@@ -58,7 +58,7 @@ disableHugoGeneratorInject = false
   keywords = ""
   images = [""]
 
-  homeSubtitle = "Hello Friend NG"
+  homeSubtitle = ""
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
   # gitUrl = ""
@@ -93,10 +93,6 @@ disableHugoGeneratorInject = false
     # logoCursorColor    = "#67a2c9"
     # Set to a valid CSS time value to change the animation duration, "0s" to disable.
     # logoCursorAnimate  = "2s"
-
-  [params.portrait]
-    path = "/img/image.jpg"
-    alt = "Portrait"
 
   # Social icons
   [[params.social]]
