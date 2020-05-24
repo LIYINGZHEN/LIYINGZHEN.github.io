@@ -87,6 +87,14 @@
             </div>
         {{ end }}
 
+        <script src="https://utteranc.es/client.js"
+            repo="LIYINGZHEN/liyingzhen.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+        </script>
+
         {{- if .Site.DisqusShortname }}
             <div id="comments" class="thin">
                 {{ template "_internal/disqus.html" . }}
