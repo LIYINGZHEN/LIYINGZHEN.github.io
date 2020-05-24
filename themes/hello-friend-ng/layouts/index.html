@@ -1,11 +1,14 @@
 {{ define "main" }}
     <main aria-role="main">
         <div>
-            <div style="display: flex;flex-direction: column;justify-content: center;text-align: center;align-items: center;margin-bottom: -30px;">
-                <h1>{{ .Site.Title }}</h1>
-            </div>
+            {{ if .Site.Params.portrait.path }}
+               <img src="{{ .Site.Params.portrait.path }}" class="circle" alt="{{ .Site.Params.portrait.alt }}" />
+            {{ end }}
 
-            <p>Senior Software Engineer</p>
+            <h1>{{ .Site.Title }}</h1>
+            {{- with .Site.Params.homeSubtitle }}
+                <p>{{.}}</p>
+            {{- end }}
 
             {{- with .Site.Params.social }}
                 <div>
