@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Merge two sorted linked lists"
-date:        2020-04-23T00:00:00+00:00
+date:        2020-04-07T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]

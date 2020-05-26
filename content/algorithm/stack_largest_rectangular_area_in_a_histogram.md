@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Largest rectangular area in a histogram"
-date:        2020-05-01T00:00:00+00:00
+date:        2020-05-12T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Find the middle of a given linked list"
-date:        2020-04-26T00:00:00+00:00
+date:        2020-04-04T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]
@@ -19,6 +19,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list
+ * Complexity : Time: O(n) ; Space: O(1)
+ */
 public class FindMiddle {
     static Node findMiddle(Node head) {
         if (head == null) {

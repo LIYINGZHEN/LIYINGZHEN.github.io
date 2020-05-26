@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Insertion"
-date:        2020-04-21T00:00:00+00:00
+date:        2020-04-05T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]

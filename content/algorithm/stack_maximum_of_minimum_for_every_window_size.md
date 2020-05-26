@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Maximum of minimum for every window size"
-date:        2020-05-01T00:00:00+00:00
+date:        2020-05-13T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

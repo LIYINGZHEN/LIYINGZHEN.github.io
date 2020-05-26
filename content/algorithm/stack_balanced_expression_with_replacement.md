@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Balanced expression with replacement"
-date:        2020-04-27T00:00:00+00:00
+date:        2020-05-01T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

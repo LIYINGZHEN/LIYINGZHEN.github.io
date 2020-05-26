@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Remove duplicates from an unsorted linked list"
-date:        2020-04-23T00:00:00+00:00
+date:        2020-04-10T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]

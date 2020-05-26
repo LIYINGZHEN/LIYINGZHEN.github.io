@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Delete middle element of a stack"
-date:        2020-04-30T00:00:00+00:00
+date:        2020-05-04T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

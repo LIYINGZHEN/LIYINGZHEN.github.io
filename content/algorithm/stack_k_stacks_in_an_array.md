@@ -1,6 +1,6 @@
 ---
 title:       "Stack - K stacks in an array "
-date:        2020-05-02T00:00:00+00:00
+date:        2020-05-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Next greater element in an array"
-date:        2020-04-29T00:00:00+00:00
+date:        2020-05-16T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

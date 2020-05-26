@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Check for balanced parentheses"
-date:        2020-04-27T00:00:00+00:00
+date:        2020-05-02T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Evaluation of Postfix Expression"
-date:        2020-04-30T00:00:00+00:00
+date:        2020-05-05T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

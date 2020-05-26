@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Find length of Loop"
-date:        2020-04-26T00:00:00+00:00
+date:        2020-04-02T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]
@@ -19,6 +19,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Author     : Max
+ * Question   : https://www.geeksforgeeks.org/find-length-of-loop-in-a-linked-list-using-map
+ * Complexity : Time: O(n) ; Space: O(1)
+ */
 public class FindLengthOfLoop {
     static int countNodesinLoop(Node head) {
         if (head == null) {

@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Expression contains redundant bracket or not"
-date:        2020-04-30T00:00:00+00:00
+date:        2020-05-06T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]

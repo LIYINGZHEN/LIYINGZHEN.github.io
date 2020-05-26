@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Add two numbers"
-date:        2020-04-25T00:00:00+00:00
+date:        2020-04-01T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]
@@ -33,7 +33,7 @@ import static org.junit.Assert.assertArrayEquals;
 /**
  * Author     : Max
  * Question   : https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/
- * Complexity : // Time: O(n) ; Space: O(n)
+ * Complexity : Time: O(n) ; Space: O(n)
  */
 public class AddTwoNumbers {
     static int length(Node head) {

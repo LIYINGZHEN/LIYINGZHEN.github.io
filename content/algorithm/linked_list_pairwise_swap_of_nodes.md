@@ -1,6 +1,6 @@
 ---
 title:       "Linked List - Pairwise swap of nodes in LinkeList"
-date:        2020-04-23T00:00:00+00:00
+date:        2020-04-08T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "linked-list"]

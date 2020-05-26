@@ -1,6 +1,6 @@
 ---
 title:       "Stack - Implement two stacks in an array"
-date:        2020-04-28T00:00:00+00:00
+date:        2020-05-10T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "stack"]
