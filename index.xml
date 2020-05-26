@@ -7,69 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Stack - Find maximum of minimum for every window size</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_find_maximum_of_minimum_for_every_window_size/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      <title>Queue - Implement k queues in an array</title>
+      <link>https://www.maxlivinci.com/algorithm/queue_implement_k_queues_in_an_array/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_find_maximum_of_minimum_for_every_window_size/</guid>
-      <description>Given an integer array of size n, find the maximum of the minimum’s of every window size in the array. Note that window size varies from 1 to n.
-Example:
-Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 First element in output indicates maximum of minimums of all windows of size 1. Minimums of windows of size 1 are {10}, {20}, {30}, {50}, {10}, {70} and {30}.</description>
+      <guid>https://www.maxlivinci.com/algorithm/queue_implement_k_queues_in_an_array/</guid>
+      <description>Create a data structure kQueues that represents k queues. Implementation of kQueues should use only one array, i.e., k queues should use the same array for storing elements. Following functions must be supported by kQueues.
+ enqueue(int x, int qn) –&amp;gt; adds x to queue number ‘qn’ where qn is from 0 to k-1 dequeue(int qn) –&amp;gt; deletes an element from queue number ‘qn’ where qn is from 0 to k-1   METHOD 1</description>
     </item>
     
     <item>
-      <title>Stack - Implement Stack using Queues</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_form_minimum_number_from_given_sequence/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Iterative Tower of Hanoi</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_tower_of_hanoi/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_form_minimum_number_from_given_sequence/</guid>
-      <description>Given a pattern containing only I’s and D’s. I for increasing and D for decreasing. Devise an algorithm to print the minimum number following that pattern. Digits from 1-9 and digits can’t repeat.
-Examples:
-Input: D Output: 21 Input: I Output: 12 Input: DD Output: 321 Input: II Output: 123 Input: DIDI Output: 21435 Input: IIDDD Output: 126543 Input: DDIDDIID Output: 321654798  METHOD 1
-import org.junit.Test; import java.util.Stack; import static org.</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_tower_of_hanoi/</guid>
+      <description>Tower of Hanoi is a mathematical puzzle. It consists of three poles and a number of disks of different sizes which can slide onto any poles. The puzzle starts with the disk in a neat stack in ascending order of size in one pole, the smallest at the top thus making a conical shape. The objective of the puzzle is to move all the disks from one pole (say ‘source pole’) to another pole (say ‘destination pole’) with the help of the third pole (say auxiliary pole).</description>
     </item>
     
     <item>
-      <title>Stack - Implement Stack using Queues</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</link>
-      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Next greater element in an array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_the_stock_span_problem/</link>
+      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</guid>
-      <description>We are given a Queue data structure that supports standard operations like enqueue() and dequeue(). We need to implement a Stack data structure using only instances of Queue and queue operations allowed on the instances.
- METHOD 1 (Reorganize while pushing)
-import org.junit.Test; import java.util.LinkedList; import java.util.Queue; import static org.junit.Assert.assertEquals; public class StackUsingTwoQueues { class Stack { Queue&amp;lt;Integer&amp;gt; q1; Queue&amp;lt;Integer&amp;gt; q2; Stack() { q1 = new LinkedList&amp;lt;&amp;gt;(); q2 = new LinkedList&amp;lt;&amp;gt;(); } void push(int ele) { while (!</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_the_stock_span_problem/</guid>
+      <description>The stock span problem is a financial problem where we have a series of n daily price quotes for a stock and we need to calculate span of stock’s price for all n days. The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day, for which the price of the stock on the current day is less than or equal to its price on the given day.</description>
     </item>
     
     <item>
-      <title>Stack - K stacks in an array </title>
-      <link>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</link>
-      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Next greater element in an array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_the_celebrity_problem/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</guid>
-      <description>Create a data structure kStacks that represents k stacks. Implementation of kStacks should use only one array, i.e., k stacks should use the same array for storing elements. Following functions must be supported by kStacks.
- push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1   METHOD 1</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_the_celebrity_problem/</guid>
+      <description>In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes, (s)he doesn’t know anyone in the party. We can only ask questions like “does A know B? “. Find the stranger (celebrity) in the minimum number of questions.
+We can describe the problem input as an array of numbers/characters representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns true if A knows B, false otherwise.</description>
     </item>
     
     <item>
-      <title>Stack - Largest rectangular area in a histogram</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Next greater element in an array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</link>
+      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</guid>
-      <description>Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit.
-For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_next_greater_element/</guid>
+      <description>Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
+ METHOD 1
+import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.</description>
     </item>
     
     <item>
       <title>Stack - Maximum of minimum for every window size</title>
       <link>https://www.maxlivinci.com/algorithm/stack_maximum_of_minimum_for_every_window_size/</link>
-      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/stack_maximum_of_minimum_for_every_window_size/</guid>
       <description>Given an integer array of size n, find the maximum of the minimum’s of every window size in the array. Note that window size varies from 1 to n.
@@ -78,50 +73,44 @@ Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 F
     </item>
     
     <item>
-      <title>Stack - Check if two expressions with brackets are same</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_check_if_two_expressions_with_brackets_are_same/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Largest rectangular area in a histogram</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_check_if_two_expressions_with_brackets_are_same/</guid>
-      <description>Given two expressions in the form of strings. The task is to compare them and check if they are similar. Expressions consist of lowercase alphabets, ‘+’, ‘-‘ and ‘( )’.
-Examples:
-Input : exp1 = &amp;quot;-(a+b+c)&amp;quot; exp2 = &amp;quot;-a-b-c&amp;quot; Output : Yes Input : exp1 = &amp;quot;-(c+b+a)&amp;quot; exp2 = &amp;quot;-c-b-a&amp;quot; Output : Yes Input : exp1 = &amp;quot;a-b-(c-d)&amp;quot; exp2 = &amp;quot;a-b-c-d&amp;quot; Output : No  METHOD 1
-package vishwa.class_2020_05_20; import org.</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_largest_rectangular_area_in_a_histogram/</guid>
+      <description>Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit.
+For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)</description>
     </item>
     
     <item>
-      <title>Stack - Delete middle element of a stack</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_delete_middle_element/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Stack - K stacks in an array </title>
+      <link>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</link>
+      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_delete_middle_element/</guid>
-      <description>Given a stack with push(), pop(), empty() operations, delete middle of it without using any additional data structure.
-Example:
-Input : Stack[] = [1, 2, 3, 4, 5] Output : Stack[] = [1, 2, 4, 5] Input : Stack[] = [1, 2, 3, 4, 5, 6] Output : Stack[] = [1, 2, 4, 5, 6]  METHOD 1 (Iterative)
-import org.junit.Test; import java.util.Stack; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_k_stacks_in_an_array/</guid>
+      <description>Create a data structure kStacks that represents k stacks. Implementation of kStacks should use only one array, i.e., k stacks should use the same array for storing elements. Following functions must be supported by kStacks.
+ push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1   METHOD 1</description>
     </item>
     
     <item>
-      <title>Stack - Evaluation of Postfix Expression</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_evaluation_of_postfix_expression/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Implement two stacks in an array</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_evaluation_of_postfix_expression/</guid>
-      <description>Evaluation of Postfix Expression.
-METHOD 1
-import org.junit.Test; import java.util.Stack; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/ * Complexity : time: O(n) ; space: O(n) */ public class EvaluationOfPostfixExpression { static int evaluatePostfix(String exp) { char[] charArr = exp.toCharArray(); Stack&amp;lt;Integer&amp;gt; s = new Stack&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; charArr.length; i++) { char c = charArr[i]; if (Character.isDigit(c)) { s.push(c - &amp;#39;0&amp;#39;); } else { int val1 = s.</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_implement_two_stacks_in_an_array/</guid>
+      <description>Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.
+ push1(int x) –&amp;gt; pushes x to first stack push2(int x) –&amp;gt; pushes x to second stack pop1() –&amp;gt; pops an element from first stack and return the popped element pop2() –&amp;gt; pops an element from second stack and return the popped element   METHOD 1</description>
     </item>
     
     <item>
-      <title>Stack - Expression contains redundant bracket or not</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_expression_contains_redundant_bracket_or_not/</link>
-      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Stack - Implement Stack using Queues</title>
+      <link>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/stack_expression_contains_redundant_bracket_or_not/</guid>
-      <description>Given a string of balanced expression, find if it contains a redundant parenthesis or not. A set of parenthesis are redundant if same sub-expression is surrounded by unnecessary or multiple brackets.
-Note: Expression may contain +, *, – and / operators. Given expression is valid and there are no white spaces present.
-Example:
-Input: ((a+b)) (a+(b)/c) (a+b*(c-d)) Output: Yes Yes No Explanation: 1. ((a+b)) can reduced to (a+b), this Redundant 2.</description>
+      <guid>https://www.maxlivinci.com/algorithm/stack_implement_stack_using_queues/</guid>
+      <description>We are given a Queue data structure that supports standard operations like enqueue() and dequeue(). We need to implement a Stack data structure using only instances of Queue and queue operations allowed on the instances.
+ METHOD 1 (Reorganize while pushing)
+import org.junit.Test; import java.util.LinkedList; import java.util.Queue; import static org.junit.Assert.assertEquals; public class StackUsingTwoQueues { class Stack { Queue&amp;lt;Integer&amp;gt; q1; Queue&amp;lt;Integer&amp;gt; q2; Stack() { q1 = new LinkedList&amp;lt;&amp;gt;(); q2 = new LinkedList&amp;lt;&amp;gt;(); } void push(int ele) { while (!</description>
     </item>
     
   </channel>

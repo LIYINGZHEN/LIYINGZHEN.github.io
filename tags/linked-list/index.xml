@@ -7,72 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 26 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Linked List - Find length of Loop</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_find_length_of_loop/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_find_length_of_loop/</guid>
-      <description>Write a function detectAndCountLoop() that checks whether a given Linked List contains loop and if loop is present then returns count of nodes in loop. For example, loop is present in below linked list and length of loop is 4. If loop is not present, then function should return 0.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindLengthOfLoop { static int countNodesinLoop(Node head) { if (head == null) { return 0; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Find start of the loop</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_find_start_of_the_loop/</guid>
-      <description>Write a function findFirstLoopNode() that checks whether a given Linked List contains loop. If loop is present then it returns point to first node of loop. Else it returns NULL.
-Example :
-Input : Head of bellow linked list Output : Pointer to node 2  METHOD 1
-/** * Author : Max * Question : https://www.geeksforgeeks.org/find-first-node-of-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class FindStartNodeInLoop{ private Node head; private static class Node { private int data; private Node next; Node(int d) { this.</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Find the middle of a given linked list</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_find_the_middle_node/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_find_the_middle_node/</guid>
-      <description>Given a singly linked list, find middle of the linked list. For example, if given linked list is 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5 then output should be 3.
- METHOD 1 (If there are even nodes, return first middle element)
- This is much useful in merge sort.
- import org.junit.Test; import static org.junit.Assert.assertEquals; public class FindMiddle { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Remove loop in Linked List</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</link>
-      <pubDate>Sun, 26 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</guid>
-      <description>Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !</description>
-    </item>
-    
-    <item>
-      <title>Linked List - Add two numbers</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</link>
-      <pubDate>Sat, 25 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_add_two_numbers/</guid>
-      <description>Given two numbers represented by two lists, write a function that returns the sum list. The sum list is list representation of the addition of two input numbers.
-Examples :
-Input: List1: 5-&amp;gt;6-&amp;gt;3 // number 365 List2: 8-&amp;gt;4-&amp;gt;2 // number 248 Output: Resultant list: 3-&amp;gt;1-&amp;gt;6 // number 613 Input: List1: 7-&amp;gt;5-&amp;gt;9-&amp;gt;4-&amp;gt;6 // number 64957 List2: 8-&amp;gt;4 // number 48 Output: Resultant list: 5-&amp;gt;0-&amp;gt;0-&amp;gt;5-&amp;gt;6 // number 65005  METHOD 1 (Recursively)</description>
-    </item>
-    
-    <item>
       <title>Linked List - Nth node from end of linked list</title>
       <link>https://www.maxlivinci.com/algorithm/linked_nth_node_from_end_of_linked_list/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_nth_node_from_end_of_linked_list/</guid>
       <description>Given a Linked List and a number n, write a function that returns the value at the n’th node from the end of the Linked List.
@@ -82,9 +25,20 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author
     </item>
     
     <item>
+      <title>Linked List - Rotate a Linked List</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_rotate_a_linked_list/</link>
+      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_rotate_a_linked_list/</guid>
+      <description>Given a singly linked list, rotate the linked list counter-clockwise by k nodes. Where k is a given positive integer. For example, if the given linked list is 10-&amp;gt;20-&amp;gt;30-&amp;gt;40-&amp;gt;50-&amp;gt;60 and k is 4, the list should be modified to 50-&amp;gt;60-&amp;gt;10-&amp;gt;20-&amp;gt;30-&amp;gt;40. Assume that k is smaller than the count of nodes in linked list.
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateALinkedList { // Time: O(n) ; Space: O(1)  static Node rotate(Node head, int k) { if (head == null) { return null; } int n = 0; Node temp = head; while (temp !</description>
+    </item>
+    
+    <item>
       <title>Linked List - Reverse every alternate k nodes</title>
       <link>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_every_alternate_k_nodes/</guid>
       <description>Given a linked list, write a function to reverse every alternate k nodes (where k is an input to the function) in an efficient way. Give the complexity of your algorithm.
@@ -94,20 +48,66 @@ public class ReverseInAlternateKPair { Node head; class Node { int data; Node ne
     </item>
     
     <item>
-      <title>Linked List - Rotate a Linked List</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_rotate_a_linked_list/</link>
-      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Linked List - Reverse a linked list</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_rotate_a_linked_list/</guid>
-      <description>Given a singly linked list, rotate the linked list counter-clockwise by k nodes. Where k is a given positive integer. For example, if the given linked list is 10-&amp;gt;20-&amp;gt;30-&amp;gt;40-&amp;gt;50-&amp;gt;60 and k is 4, the list should be modified to 50-&amp;gt;60-&amp;gt;10-&amp;gt;20-&amp;gt;30-&amp;gt;40. Assume that k is smaller than the count of nodes in linked list.
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_reverse_a_linked_list/</guid>
+      <description>Given pointer to the head node of a linked list, the task is to reverse the linked list. We need to reverse the list by changing links between nodes.
+Examples :
+Input: Head of following linked list 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL Output: Linked list should be changed to, 4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Input: Head of following linked list 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output: Linked list should be changed to, 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;NULL Input: NULL Output: NULL Input: 1-&amp;gt;NULL Output: 1-&amp;gt;NULL  METHOD 1 (Recursively)</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Remove loop in Linked List</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_loop_in_linked_list/</guid>
+      <description>Write a function detectAndRemoveLoop() that checks whether a given Linked List contains loop and if loop is present then removes the loop and returns true. If the list doesn’t contain loop then it returns false. Below diagram shows a linked list with a loop. detectAndRemoveLoop() must change the below list to 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL.
  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateALinkedList { // Time: O(n) ; Space: O(1)  static Node rotate(Node head, int k) { if (head == null) { return null; } int n = 0; Node temp = head; while (temp !</description>
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveLoop { static boolean detectAndRemoveLoop(Node head) { if (head == null) { return false; } Node slow = head, fast = head; boolean hasLoop = false; while (fast !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Remove duplicates from an unsorted linked list</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_an_unsorted_linked_list/</guid>
+      <description>Write a removeDuplicates() function which takes a list and deletes any duplicate nodes from the list. The list is not sorted.
+For example if the linked list is 12-&amp;gt;11-&amp;gt;12-&amp;gt;21-&amp;gt;41-&amp;gt;43-&amp;gt;21 then removeDuplicates() should convert the list to 12-&amp;gt;11-&amp;gt;21-&amp;gt;41-&amp;gt;43.
+ METHOD 1
+import org.junit.Test; import java.util.HashSet; import static org.junit.Assert.assertArrayEquals; public class RemoveDuplicatesUnsorted { // Time: O(n) ; Space: O(n)  static void remove(Node head) { if (head == null) { return; } HashSet&amp;lt;Integer&amp;gt; h = new HashSet&amp;lt;&amp;gt;(); Node curr = head; Node prev = null; while (curr !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Remove duplicates from a sorted linked list</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_remove_duplicates_from_a_sorted_linked_list.md/</guid>
+      <description>Write a function which takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
+For example if the linked list is 11-&amp;gt;11-&amp;gt;11-&amp;gt;21-&amp;gt;43-&amp;gt;43-&amp;gt;60 then removeDuplicates() should convert the list to 11-&amp;gt;21-&amp;gt;43-&amp;gt;60.
+ METHOD 1 (Iteratively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/remove-duplicates-from-a-sorted-linked-list/ * Complexity : time: O(n) ; space: O(1) */ public class RemoveDuplicateElement { static void removeDuplicate(Node head) { if (head == null) { return; } Node curr = head; while (curr !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Pairwise swap of nodes in LinkeList</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</guid>
+      <description>Given a singly linked list, write a function to swap elements pairwise.
+Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.</description>
     </item>
     
     <item>
       <title>Linked List - Merge two sorted linked lists</title>
       <link>https://www.maxlivinci.com/algorithm/linked_list_merge_two_sorted_linked_lists/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_two_sorted_linked_lists/</guid>
       <description>Write a sortedMerge() function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
@@ -116,14 +116,14 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public 
     </item>
     
     <item>
-      <title>Linked List - Pairwise swap of nodes in LinkeList</title>
-      <link>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</link>
-      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      <title>Linked List - Merge sort</title>
+      <link>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/linked_list_pairwise_swap_of_nodes/</guid>
-      <description>Given a singly linked list, write a function to swap elements pairwise.
-Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;6-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;6-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL Output : 2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5-&amp;gt;NULL Input : 1-&amp;gt;NULL Output : 1-&amp;gt;NULL  METHOD 1 (Recursively)
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/ * Complexity : time: O(n) ; space: O(n) */ public class PairwiseSwap { // Time: O(n) ; Space: O(n)  static Node pairWiseSwap(Node head) { if (head == null || head.</description>
+      <guid>https://www.maxlivinci.com/algorithm/linked_list_merge_sort/</guid>
+      <description>Implement merge sort.
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeSort { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.next; while (fast != null &amp;amp;&amp;amp; fast.next != null) { fast = fast.next.next; slow = slow.next; } return slow; } static Node merge(Node headA, Node headB) { if (headA == null &amp;amp;&amp;amp; headB == null) { return null; } if (headA == null) { return headB; } if (headB == null) { return headA; } if (headA.</description>
     </item>
     
   </channel>
