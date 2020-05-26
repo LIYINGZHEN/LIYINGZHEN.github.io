@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,18 +15,9 @@
     <item>
       <title>algorithm</title>
       <link>https://www.maxlivinci.com/tags/algorithm/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>queue</title>
-      <link>https://www.maxlivinci.com/tags/queue/</link>
-      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/tags/queue/</guid>
       <description></description>
     </item>
     
