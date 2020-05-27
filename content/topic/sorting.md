@@ -1,6 +1,6 @@
 ---
-title:       "Storting questions"
-date:        2020-05-27T03:00:00+00:00
+title:       "Storting"
+date:        2020-01-01T03:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm-topic", "storting"]
