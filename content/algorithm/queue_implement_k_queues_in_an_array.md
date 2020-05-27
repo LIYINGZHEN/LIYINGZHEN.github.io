@@ -1,6 +1,6 @@
 ---
 title:       "Queue - Implement k queues in an array"
-date:        2020-06-01T00:00:00+00:00
+date:        2020-06-03T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "queue"]
