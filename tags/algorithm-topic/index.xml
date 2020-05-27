@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>algorithm-topic on Max Li</title>
+    <link>https://www.maxlivinci.com/tags/algorithm-topic/</link>
+    <description>Recent content in algorithm-topic on Max Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 27 May 2020 07:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.maxlivinci.com/tags/algorithm-topic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tree questions</title>
+      <link>https://www.maxlivinci.com/topic/_8_tree/</link>
+      <pubDate>Wed, 27 May 2020 07:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_8_tree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Queue questions</title>
+      <link>https://www.maxlivinci.com/topic/_7_queue/</link>
+      <pubDate>Wed, 27 May 2020 06:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_7_queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stack questions</title>
+      <link>https://www.maxlivinci.com/topic/_6_stack/</link>
+      <pubDate>Wed, 27 May 2020 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_6_stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linked List questions</title>
+      <link>https://www.maxlivinci.com/topic/_5_linked_list/</link>
+      <pubDate>Wed, 27 May 2020 04:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_5_linked_list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Storting questions</title>
+      <link>https://www.maxlivinci.com/topic/_4_sorting/</link>
+      <pubDate>Wed, 27 May 2020 03:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_4_sorting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Searching questions</title>
+      <link>https://www.maxlivinci.com/topic/_3_searching/</link>
+      <pubDate>Wed, 27 May 2020 02:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_3_searching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Array questions</title>
+      <link>https://www.maxlivinci.com/topic/_2_array/</link>
+      <pubDate>Wed, 27 May 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_2_array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recursion questions</title>
+      <link>https://www.maxlivinci.com/topic/_1_recursion/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/_1_recursion/</guid>
+      <description> Tower of Hanoi Josephus Problem  </description>
+    </item>
+    
+  </channel>
+</rss>

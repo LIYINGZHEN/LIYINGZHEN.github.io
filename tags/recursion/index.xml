@@ -14,28 +14,28 @@
     
     <item>
       <title>Recursion questions</title>
-      <link>https://www.maxlivinci.com/algorithm/_1_recursion/</link>
+      <link>https://www.maxlivinci.com/topic/_1_recursion/</link>
       <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/_1_recursion/</guid>
+      <guid>https://www.maxlivinci.com/topic/_1_recursion/</guid>
       <description> Tower of Hanoi Josephus Problem  </description>
     </item>
     
     <item>
       <title>Recursion - Josephus problem</title>
-      <link>https://www.maxlivinci.com/algorithm/recursion_josephus_problem/</link>
+      <link>https://www.maxlivinci.com/question/recursion_josephus_problem/</link>
       <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/recursion_josephus_problem/</guid>
+      <guid>https://www.maxlivinci.com/question/recursion_josephus_problem/</guid>
       <description>There are n people standing in a circle waiting to be executed. The counting out begins at some point in the circle and proceeds around the circle in a fixed direction. In each step, a certain number of people are skipped and the next person is executed. The elimination proceeds around the circle (which is becoming smaller and smaller as the executed people are removed), until only the last person remains, who is given freedom.</description>
     </item>
     
     <item>
       <title>Recursion - Tower of hanoi</title>
-      <link>https://www.maxlivinci.com/algorithm/recursion_tower_of_hanoi/</link>
+      <link>https://www.maxlivinci.com/question/recursion_tower_of_hanoi/</link>
       <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/recursion_tower_of_hanoi/</guid>
+      <guid>https://www.maxlivinci.com/question/recursion_tower_of_hanoi/</guid>
       <description>The Tower of Hanoi is a mathematical game or puzzle. It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
 The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:</description>
     </item>

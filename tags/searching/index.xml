@@ -14,19 +14,19 @@
     
     <item>
       <title>Searching questions</title>
-      <link>https://www.maxlivinci.com/algorithm/_3_searching/</link>
+      <link>https://www.maxlivinci.com/topic/_3_searching/</link>
       <pubDate>Wed, 27 May 2020 02:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/_3_searching/</guid>
+      <guid>https://www.maxlivinci.com/topic/_3_searching/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Searching - Maximum water that can be stored between two buildings</title>
-      <link>https://www.maxlivinci.com/algorithm/searching_maximum_water_that_can_be_stored_between_two_buildings/</link>
+      <link>https://www.maxlivinci.com/question/searching_maximum_water_that_can_be_stored_between_two_buildings/</link>
       <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.maxlivinci.com/algorithm/searching_maximum_water_that_can_be_stored_between_two_buildings/</guid>
+      <guid>https://www.maxlivinci.com/question/searching_maximum_water_that_can_be_stored_between_two_buildings/</guid>
       <description>Given an integer array which represents the heights of N buildings, the task is to delete N-2 buildings such that the water that can be trapped between the remaining two building is maximum. Please note that the total water trapped between two buildings is gap between them (number of buildings removed) multiplied by height of the smaller building.
 Examples:
 Input: arr[] = {1, 3, 4} Output: 1 We have to calculate the maximum water that can be stored between any 2 buildings.</description>
