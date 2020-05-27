@@ -1,6 +1,6 @@
 ---
 title:       "Sorting - Count inversions"
-date:        2020-04-13T00:00:00+00:00
+date:        2020-03-01T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "sorting"]
@@ -35,6 +35,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Question   : https://www.geeksforgeeks.org/counting-inversions/
+ * Complexity : Time: O(nlogn) ; Space: O(n)
+ * Author     : Max
+ */
 public class InversionOfArray {
     static int merge(int[] arr, int l, int h) {
         int m = l + (h - l) / 2;

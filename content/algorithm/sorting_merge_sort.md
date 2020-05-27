@@ -1,6 +1,6 @@
 ---
 title:       "Sorting - Merge sort"
-date:        2020-04-16T00:00:00+00:00
+date:        2020-03-02T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "sorting"]
@@ -15,6 +15,11 @@ Implement merge sort.
 ```java
 import java.util.Arrays;
 
+/**
+ * Question   : https://www.geeksforgeeks.org/counting-inversions/
+ * Complexity : Time: O(nlogn) ; Space: O(n)
+ * Author     : Max
+ */
 public class MergeSort {
     public static void merge(int[] arr, int l, int h) {
         if (l >= h) {

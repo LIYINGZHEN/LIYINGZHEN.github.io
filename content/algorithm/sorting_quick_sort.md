@@ -1,6 +1,6 @@
 ---
 title:       "Sorting - Quick sort"
-date:        2020-04-15T00:00:00+00:00
+date:        2020-03-04T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "sorting"]
@@ -18,12 +18,11 @@ import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
 
 /**
- * Author     : Max
  * Question   : https://www.geeksforgeeks.org/quick-sort/
  * Complexity : time: O(nlogn) ; space: O(1)
+ * Author     : Max
  *            : In-Place ; Not-Stable
  */
-
 public class QuickSort {
     static void swap(int[] arr, int a, int b) {
         int temp = arr[b];

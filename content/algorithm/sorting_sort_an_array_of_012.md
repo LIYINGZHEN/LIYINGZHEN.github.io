@@ -1,6 +1,6 @@
 ---
 title:       "Sorting - Sort an array of 0s, 1s and 2s"
-date:        2020-04-14T00:00:00+00:00
+date:        2020-03-05T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "sorting"]
@@ -23,6 +23,11 @@ Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
 **METHOD 1**
 
 ```java
+/**
+ * Question   : https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s
+ * Complexity : time: O(n) ; space: O(1)
+ * Author     : Max
+ */
 public class Sort012 {
     static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
