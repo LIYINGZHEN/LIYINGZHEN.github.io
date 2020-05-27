@@ -1,6 +1,6 @@
 ---
 title:       "Queue - Implement k queues in an array"
-date:        2020-06-03T00:00:00+00:00
+date:        2020-06-04T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "queue"]
@@ -21,8 +21,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Author     : Max
  * Question   : https://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/
+ * Author     : Max
  */
 public class KQueues {
     class Queue {

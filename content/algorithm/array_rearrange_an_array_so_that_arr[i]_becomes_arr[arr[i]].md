@@ -20,8 +20,6 @@ Output: arr[] = {1, 0, 3, 2}
 **METHOD 1**
 
 ```java
-package array.max;
-
 import java.util.Arrays;
 
 /**

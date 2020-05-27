@@ -1,6 +1,6 @@
 ---
 title:       "Queue - Implementation of deque using doubly linked list"
-date:        2020-06-02T00:00:00+00:00
+date:        2020-06-03T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "queue"]
@@ -35,8 +35,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Author     : Max
  * Question   : https://www.geeksforgeeks.org/implementation-deque-using-doubly-linked-list/
+ * Author     : Max
  */
 public class QueueDoublyLinkedList {
     static class Node {

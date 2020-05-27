@@ -1,6 +1,6 @@
 ---
 title:       "Queue - Implementation of deque using circular array"
-date:        2020-06-01T00:00:00+00:00
+date:        2020-06-02T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "queue"]
@@ -28,15 +28,13 @@ In addition to above operations, following operations are also supported
 **METHOD 1**
 
 ```java
-package question_set.queue_set_1;
-
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 /**
- * Author     : Max
  * Question   : https://www.geeksforgeeks.org/implementation-deque-using-circular-array/
+ * Author     : Max
  */
 public class QueueCircularArray {
     class Queue {

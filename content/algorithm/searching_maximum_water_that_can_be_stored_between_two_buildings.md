@@ -35,9 +35,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Author     : Max
  * Question   : https://www.geeksforgeeks.org/maximum-water-that-can-be-stored-between-two-buildings/
  * Complexity : time: O(n) ; space: O(n)
+ * Author     : Max
  */
 public class MaximumWater {
     static int findMax(int[] arr) {

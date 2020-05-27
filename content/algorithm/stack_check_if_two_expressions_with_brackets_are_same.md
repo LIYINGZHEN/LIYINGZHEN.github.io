@@ -29,8 +29,6 @@ Output : No
 **METHOD 1**
 
 ```java
-package vishwa.class_2020_05_20;
-
 import org.junit.Test;
 
 import java.util.Stack;
