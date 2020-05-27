@@ -7,37 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/sorting/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Sorting - Merge sort</title>
-      <link>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</link>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
-      <description>Implement merge sort.
- METHOD 1
-import java.util.Arrays; public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.length; i++) { leftCopy[i] = arr[l + i]; } for (int i = 0; i &amp;lt; rightCopy.</description>
-    </item>
-    
-    <item>
-      <title>Sorting - Quick sort</title>
-      <link>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</guid>
-      <description>Implement Quicksort.
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/quick-sort/ * Complexity : time: O(nlogn) ; space: O(1) * : In-Place ; Not-Stable */ public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
-    </item>
-    
-    <item>
       <title>Sorting - Sort an array of 0s, 1s and 2s</title>
       <link>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</link>
-      <pubDate>Tue, 14 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/</guid>
       <description>Given an array A[] consisting 0s, 1s and 2s. The task is to write a function that sorts the given array. The functions should put all 0s first, then all 1s and all 2s in last.
@@ -46,9 +24,31 @@ Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1
     </item>
     
     <item>
+      <title>Sorting - Quick sort</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_quick_sort/</guid>
+      <description>Implement Quicksort.
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Question : https://www.geeksforgeeks.org/quick-sort/ * Complexity : time: O(nlogn) ; space: O(1) * Author : Max * : In-Place ; Not-Stable */ public class QuickSort { static void swap(int[] arr, int a, int b) { int temp = arr[b]; arr[b] = arr[a]; arr[a] = temp; } static int partiton(int[] arr, int l, int h) { int pivot = arr[h]; int i = l, p = l; while (i &amp;lt; h) { if (arr[i] &amp;lt; pivot) { swap(arr, i, p); p++; } i++; } swap(arr, i, p); return p; } static void quickSort(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int p = partiton(arr, l, h); quickSort(arr, l, p - 1); quickSort(arr, p + 1, h); } @Test public void test() { int[] arr = {5, 4, 3, 2, 1}; quickSort(arr, 0, arr.</description>
+    </item>
+    
+    <item>
+      <title>Sorting - Merge sort</title>
+      <link>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/sorting_merge_sort/</guid>
+      <description>Implement merge sort.
+ METHOD 1
+import java.util.Arrays; /** * Question : https://www.geeksforgeeks.org/counting-inversions/ * Complexity : Time: O(nlogn) ; Space: O(n) * Author : Max */ public class MergeSort { public static void merge(int[] arr, int l, int h) { if (l &amp;gt;= h) { return; } int m = l + (h - l) / 2; int[] leftCopy = new int[m - l + 1]; int[] rightCopy = new int[h - m]; for (int i = 0; i &amp;lt; leftCopy.</description>
+    </item>
+    
+    <item>
       <title>Sorting - Count inversions</title>
       <link>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</link>
-      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/algorithm/sorting_count_inversions/</guid>
       <description>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.

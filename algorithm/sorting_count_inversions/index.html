@@ -49,9 +49,9 @@ Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversion
 Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j
 Example:
 Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).">
-<meta itemprop="datePublished" content="2020-04-13T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="337">
+<meta itemprop="datePublished" content="2020-03-01T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-01T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="355">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -76,15 +76,15 @@ Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversion
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.maxlivinci.com/algorithm/sorting_count_inversions/" />
 <meta property="og:image" content="https://www.maxlivinci.com"/>
-<meta property="article:published_time" content="2020-04-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-13T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-01T00:00:00+00:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-04-13 00:00:00 &#43;0000 &#43;0000" />
+    <meta property="article:published_time" content="2020-03-01 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -175,6 +175,11 @@ Explanation: Given array has two inversions:
 
 <span style="color:#f92672">import static</span> org.junit.Assert.assertEquals<span style="color:#f92672">;</span>
 
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/counting-inversions/
+</span><span style="color:#75715e"> * Complexity : Time: O(nlogn) ; Space: O(n)
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InversionOfArray</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> l<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>h <span style="color:#f92672">-</span> l<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>

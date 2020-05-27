@@ -47,9 +47,9 @@ Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1
 <meta itemprop="description" content="Given an array A[] consisting 0s, 1s and 2s. The task is to write a function that sorts the given array. The functions should put all 0s first, then all 1s and all 2s in last.
 Examples:
 Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1} Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}  METHOD 1">
-<meta itemprop="datePublished" content="2020-04-14T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-14T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="223">
+<meta itemprop="datePublished" content="2020-03-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-03-05T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="241">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -72,15 +72,15 @@ Input: {0, 1, 2, 0, 1, 2} Output: {0, 0, 1, 1, 2, 2} Input: {0, 1, 1, 0, 1, 2, 1
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.maxlivinci.com/algorithm/sorting_sort_an_array_of_012/" />
 <meta property="og:image" content="https://www.maxlivinci.com"/>
-<meta property="article:published_time" content="2020-04-14T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-14T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-03-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-05T00:00:00+00:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-04-14 00:00:00 &#43;0000 &#43;0000" />
+    <meta property="article:published_time" content="2020-03-05 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -160,7 +160,12 @@ Input: {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
 Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
 </code></pre><hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sort012</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Question   : https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s
+</span><span style="color:#75715e"> * Complexity : time: O(n) ; space: O(1)
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Sort012</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">swap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">int</span> temp <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>a<span style="color:#f92672">];</span>
         arr<span style="color:#f92672">[</span>a<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> arr<span style="color:#f92672">[</span>b<span style="color:#f92672">];</span>
