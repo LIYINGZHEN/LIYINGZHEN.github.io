@@ -122,6 +122,10 @@ disableHugoGeneratorInject = false
     name       = "About"
     url        = "/about"
   [[menu.main]]
-    identifier = "algorithm"
-    name       = "Algorithm"
-    url        = "/algorithm"
+    identifier = "topic"
+    name       = "Algorithm Topics"
+    url        = "/algorithm/topic"
+  [[menu.main]]
+    identifier = "question"
+    name       = "Algorithm Questions"
+    url        = "/algorithm/question"
