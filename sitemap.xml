@@ -4,37 +4,12 @@
   
   <url>
     <loc>https://www.maxlivinci.com/tags/algorithm/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/algorithm-topic/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.maxlivinci.com/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/topic/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/topic/tree/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.maxlivinci.com/tags/tree/</loc>
-    <lastmod>2020-05-27T07:00:00+00:00</lastmod>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -49,6 +24,11 @@
   
   <url>
     <loc>https://www.maxlivinci.com/question/stack_tower_of_hanoi/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/tags/</loc>
     <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -300,6 +280,26 @@
   <url>
     <loc>https://www.maxlivinci.com/question/sorting_count_inversions/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/tags/algorithm-topic/</loc>
+    <lastmod>2020-01-01T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/topic/</loc>
+    <lastmod>2020-01-01T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/topic/tree/</loc>
+    <lastmod>2020-01-01T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.maxlivinci.com/tags/tree/</loc>
+    <lastmod>2020-01-01T07:00:00+00:00</lastmod>
   </url>
   
   <url>
