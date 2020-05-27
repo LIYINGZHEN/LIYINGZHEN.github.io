@@ -79,7 +79,7 @@ import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author
       <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
 Example:
 Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-package array.max; import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
+import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
     </item>
     
     <item>
