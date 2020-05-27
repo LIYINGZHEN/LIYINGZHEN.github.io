@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2020 05:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack questions</title>
+      <link>https://www.maxlivinci.com/algorithm/_6_stack/</link>
+      <pubDate>Wed, 27 May 2020 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/algorithm/_6_stack/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Stack - Iterative Tower of Hanoi</title>
@@ -101,18 +110,6 @@ For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4
       <description>We are given a Queue data structure that supports standard operations like enqueue() and dequeue(). We need to implement a Stack data structure using only instances of Queue and queue operations allowed on the instances.
  METHOD 1 (Reorganize while pushing)
 import org.junit.Test; import java.util.LinkedList; import java.util.Queue; import static org.junit.Assert.assertEquals; public class StackUsingTwoQueues { class Stack { Queue&amp;lt;Integer&amp;gt; q1; Queue&amp;lt;Integer&amp;gt; q2; Stack() { q1 = new LinkedList&amp;lt;&amp;gt;(); q2 = new LinkedList&amp;lt;&amp;gt;(); } void push(int ele) { while (!</description>
-    </item>
-    
-    <item>
-      <title>Stack - Implement Stack using Queues</title>
-      <link>https://www.maxlivinci.com/algorithm/stack_form_minimum_number_from_given_sequence/</link>
-      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/algorithm/stack_form_minimum_number_from_given_sequence/</guid>
-      <description>Given a pattern containing only I’s and D’s. I for increasing and D for decreasing. Devise an algorithm to print the minimum number following that pattern. Digits from 1-9 and digits can’t repeat.
-Examples:
-Input: D Output: 21 Input: I Output: 12 Input: DD Output: 321 Input: II Output: 123 Input: DIDI Output: 21435 Input: IIDDD Output: 126543 Input: DDIDDIID Output: 321654798  METHOD 1
-import org.junit.Test; import java.util.Stack; import static org.</description>
     </item>
     
   </channel>
