@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Recursion questions</title>
-      <link>https://www.maxlivinci.com/topic/recursion/</link>
-      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/topic/recursion/</guid>
-      <description> Tower of Hanoi Josephus Problem  </description>
-    </item>
     
     <item>
       <title>Recursion - Josephus problem</title>
@@ -38,6 +29,15 @@
       <guid>https://www.maxlivinci.com/question/recursion_tower_of_hanoi/</guid>
       <description>The Tower of Hanoi is a mathematical game or puzzle. It consists of three rods and a number of disks of different sizes, which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.
 The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:</description>
+    </item>
+    
+    <item>
+      <title>Recursion</title>
+      <link>https://www.maxlivinci.com/topic/recursion/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/topic/recursion/</guid>
+      <description> Tower of Hanoi Josephus Problem  </description>
     </item>
     
   </channel>

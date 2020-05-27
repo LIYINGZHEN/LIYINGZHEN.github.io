@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 27 May 2020 04:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Linked List questions</title>
-      <link>https://www.maxlivinci.com/topic/linked_list/</link>
-      <pubDate>Wed, 27 May 2020 04:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/topic/linked_list/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Linked List - Nth node from end of linked list</title>
@@ -122,6 +113,17 @@ import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * A
       <description>Write a sortedMerge() function that takes two lists, each of which is sorted in increasing order, and merges the two together into one list which is in increasing order.
  METHOD 1 (Iteratively)
 import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeTwoSortedLinkedLists { // Time: O(n) ; Space: O(1)  static Node sortedMerge(Node headA, Node headB) { Node d = new Node(0); Node tail = d; Node currA = headA; Node currB = headB; while (currA !</description>
+    </item>
+    
+    <item>
+      <title>Linked List - Merge sort</title>
+      <link>https://www.maxlivinci.com/question/linked_list_merge_sort/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/linked_list_merge_sort/</guid>
+      <description>Implement merge sort.
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class MergeSort { static Node findMiddle(Node head) { if (head == null) { return null; } Node slow = head, fast = head.next; while (fast != null &amp;amp;&amp;amp; fast.next != null) { fast = fast.next.next; slow = slow.next; } return slow; } static Node merge(Node headA, Node headB) { if (headA == null &amp;amp;&amp;amp; headB == null) { return null; } if (headA == null) { return headB; } if (headB == null) { return headA; } if (headA.</description>
     </item>
     
   </channel>
