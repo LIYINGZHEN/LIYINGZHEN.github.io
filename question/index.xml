@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/question/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Array - Spiral Matrix</title>
+      <link>https://www.maxlivinci.com/question/2020_06_10_array_spiral_matrix/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_10_array_spiral_matrix/</guid>
+      <description>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+Example 1:
+Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2:
+Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  METHOD 1
+package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Maximum of all subarrays of size k</title>
+      <link>https://www.maxlivinci.com/question/queue_maximum_of_all_subarrays_of_size_k/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_maximum_of_all_subarrays_of_size_k/</guid>
+      <description>Given an array and an integer K, find the maximum for each and every contiguous subarray of size k.
+Examples :
+Input: arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}, K = 3 Output: 3 3 4 5 5 5 6 Explanation: Maximum of 1, 2, 3 is 3 Maximum of 2, 3, 1 is 3 Maximum of 3, 1, 4 is 4 Maximum of 1, 4, 5 is 5 Maximum of 4, 5, 2 is 5 Maximum of 5, 2, 3 is 5 Maximum of 2, 3, 6 is 6 Input: arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}, K = 4 Output: 10 10 10 15 15 90 90 Explanation: Maximum of first 4 elements is 10, similarly for next 4 elements (i.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implement k queues in an array</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_k_queues_in_an_array/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_k_queues_in_an_array/</guid>
+      <description>Create a data structure kQueues that represents k queues. Implementation of kQueues should use only one array, i.e., k queues should use the same array for storing elements. Following functions must be supported by kQueues.
+ enqueue(int x, int qn) –&amp;gt; adds x to queue number ‘qn’ where qn is from 0 to k-1 dequeue(int qn) –&amp;gt; deletes an element from queue number ‘qn’ where qn is from 0 to k-1   METHOD 1</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implementation of deque using doubly linked list</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</guid>
+      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends. In previous post Implementation of Deque using circular array has been discussed. Now in this post we see how we implement Deque using Doubly Linked List.
+Operations on Deque :
+Mainly the following four basic operations are performed on queue :
+ insertFront() : Adds an item at the front of Deque.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implementation of deque using circular array</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</guid>
+      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.In previous post we had discussed introduction of deque. Now in this post we see how we implement deque Using circular array. Operations on Deque:
+Mainly the following four basic operations are performed on queue:
+ insetFront(): Adds an item at the front of Deque. insertRear(): Adds an item at the rear of Deque.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Generate binary number</title>
+      <link>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</guid>
+      <description>Given a number n, write a function that generates and prints all binary numbers with decimal values from 1 to n.
+Examples:
+Input: n = 2 Output: 1, 10 Input: n = 5 Output: 1, 10, 11, 100, 101  METHOD 1
+import org.junit.Test; import java.util.LinkedList; import java.util.Queue; /** * Question : https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/ * Complexity : Time: O(n) ; Space: O(n) * Author : Max */ public class GenerateBinaryNumbers { static void generate(int n) { Queue&amp;lt;String&amp;gt; q = new LinkedList&amp;lt;&amp;gt;(); q.</description>
+    </item>
     
     <item>
       <title>Stack - Iterative Tower of Hanoi</title>
@@ -49,70 +118,6 @@ We can describe the problem input as an array of numbers/characters representing
       <description>Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
  METHOD 1
 import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.</description>
-    </item>
-    
-    <item>
-      <title>Stack - Maximum of minimum for every window size</title>
-      <link>https://www.maxlivinci.com/question/stack_maximum_of_minimum_for_every_window_size/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_maximum_of_minimum_for_every_window_size/</guid>
-      <description>Given an integer array of size n, find the maximum of the minimum’s of every window size in the array. Note that window size varies from 1 to n.
-Example:
-Input: arr[] = {10, 20, 30, 50, 10, 70, 30} Output: 70, 30, 20, 10, 10, 10, 10 First element in output indicates maximum of minimums of all windows of size 1. Minimums of windows of size 1 are {10}, {20}, {30}, {50}, {10}, {70} and {30}.</description>
-    </item>
-    
-    <item>
-      <title>Stack - Largest rectangular area in a histogram</title>
-      <link>https://www.maxlivinci.com/question/stack_largest_rectangular_area_in_a_histogram/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_largest_rectangular_area_in_a_histogram/</guid>
-      <description>Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit.
-For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red)</description>
-    </item>
-    
-    <item>
-      <title>Stack - K stacks in an array </title>
-      <link>https://www.maxlivinci.com/question/stack_k_stacks_in_an_array/</link>
-      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_k_stacks_in_an_array/</guid>
-      <description>Create a data structure kStacks that represents k stacks. Implementation of kStacks should use only one array, i.e., k stacks should use the same array for storing elements. Following functions must be supported by kStacks.
- push(int x, int sn) –&amp;gt; pushes x to stack number ‘sn’ where sn is from 0 to k-1 pop(int sn) –&amp;gt; pops an element from stack number ‘sn’ where sn is from 0 to k-1   METHOD 1</description>
-    </item>
-    
-    <item>
-      <title>Stack - Implement two stacks in an array</title>
-      <link>https://www.maxlivinci.com/question/stack_implement_two_stacks_in_an_array/</link>
-      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_implement_two_stacks_in_an_array/</guid>
-      <description>Create a data structure twoStacks that represents two stacks. Implementation of twoStacks should use only one array, i.e., both stacks should use the same array for storing elements. Following functions must be supported by twoStacks.
- push1(int x) –&amp;gt; pushes x to first stack push2(int x) –&amp;gt; pushes x to second stack pop1() –&amp;gt; pops an element from first stack and return the popped element pop2() –&amp;gt; pops an element from second stack and return the popped element   METHOD 1</description>
-    </item>
-    
-    <item>
-      <title>Stack - Implement Stack using Queues</title>
-      <link>https://www.maxlivinci.com/question/stack_implement_stack_using_queues/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_implement_stack_using_queues/</guid>
-      <description>We are given a Queue data structure that supports standard operations like enqueue() and dequeue(). We need to implement a Stack data structure using only instances of Queue and queue operations allowed on the instances.
- METHOD 1 (Reorganize while pushing)
-import org.junit.Test; import java.util.LinkedList; import java.util.Queue; import static org.junit.Assert.assertEquals; public class StackUsingTwoQueues { class Stack { Queue&amp;lt;Integer&amp;gt; q1; Queue&amp;lt;Integer&amp;gt; q2; Stack() { q1 = new LinkedList&amp;lt;&amp;gt;(); q2 = new LinkedList&amp;lt;&amp;gt;(); } void push(int ele) { while (!</description>
-    </item>
-    
-    <item>
-      <title>Stack - Implement Stack using Queues</title>
-      <link>https://www.maxlivinci.com/question/stack_form_minimum_number_from_given_sequence/</link>
-      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_form_minimum_number_from_given_sequence/</guid>
-      <description>Given a pattern containing only I’s and D’s. I for increasing and D for decreasing. Devise an algorithm to print the minimum number following that pattern. Digits from 1-9 and digits can’t repeat.
-Examples:
-Input: D Output: 21 Input: I Output: 12 Input: DD Output: 321 Input: II Output: 123 Input: DIDI Output: 21435 Input: IIDDD Output: 126543 Input: DDIDDIID Output: 321654798  METHOD 1
-import org.junit.Test; import java.util.Stack; import static org.</description>
     </item>
     
   </channel>

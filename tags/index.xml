@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,27 @@
     <item>
       <title>algorithm</title>
       <link>https://www.maxlivinci.com/tags/algorithm/</link>
-      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>array</title>
+      <link>https://www.maxlivinci.com/tags/array/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/tags/array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>queue</title>
+      <link>https://www.maxlivinci.com/tags/queue/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/tags/queue/</guid>
       <description></description>
     </item>
     
@@ -27,15 +45,6 @@
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/tags/stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>array</title>
-      <link>https://www.maxlivinci.com/tags/array/</link>
-      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/tags/array/</guid>
       <description></description>
     </item>
     
@@ -90,15 +99,6 @@
       <pubDate>Wed, 01 Jan 2020 07:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/tags/tree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>queue</title>
-      <link>https://www.maxlivinci.com/tags/queue/</link>
-      <pubDate>Wed, 01 Jan 2020 06:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/tags/queue/</guid>
       <description></description>
     </item>
     

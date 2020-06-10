@@ -7,10 +7,66 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 01 Jan 2020 06:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/queue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Queue - Maximum of all subarrays of size k</title>
+      <link>https://www.maxlivinci.com/question/queue_maximum_of_all_subarrays_of_size_k/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_maximum_of_all_subarrays_of_size_k/</guid>
+      <description>Given an array and an integer K, find the maximum for each and every contiguous subarray of size k.
+Examples :
+Input: arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}, K = 3 Output: 3 3 4 5 5 5 6 Explanation: Maximum of 1, 2, 3 is 3 Maximum of 2, 3, 1 is 3 Maximum of 3, 1, 4 is 4 Maximum of 1, 4, 5 is 5 Maximum of 4, 5, 2 is 5 Maximum of 5, 2, 3 is 5 Maximum of 2, 3, 6 is 6 Input: arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13}, K = 4 Output: 10 10 10 15 15 90 90 Explanation: Maximum of first 4 elements is 10, similarly for next 4 elements (i.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implement k queues in an array</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_k_queues_in_an_array/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_k_queues_in_an_array/</guid>
+      <description>Create a data structure kQueues that represents k queues. Implementation of kQueues should use only one array, i.e., k queues should use the same array for storing elements. Following functions must be supported by kQueues.
+ enqueue(int x, int qn) –&amp;gt; adds x to queue number ‘qn’ where qn is from 0 to k-1 dequeue(int qn) –&amp;gt; deletes an element from queue number ‘qn’ where qn is from 0 to k-1   METHOD 1</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implementation of deque using doubly linked list</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</link>
+      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</guid>
+      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends. In previous post Implementation of Deque using circular array has been discussed. Now in this post we see how we implement Deque using Doubly Linked List.
+Operations on Deque :
+Mainly the following four basic operations are performed on queue :
+ insertFront() : Adds an item at the front of Deque.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Implementation of deque using circular array</title>
+      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</link>
+      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</guid>
+      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.In previous post we had discussed introduction of deque. Now in this post we see how we implement deque Using circular array. Operations on Deque:
+Mainly the following four basic operations are performed on queue:
+ insetFront(): Adds an item at the front of Deque. insertRear(): Adds an item at the rear of Deque.</description>
+    </item>
+    
+    <item>
+      <title>Queue - Generate binary number</title>
+      <link>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</guid>
+      <description>Given a number n, write a function that generates and prints all binary numbers with decimal values from 1 to n.
+Examples:
+Input: n = 2 Output: 1, 10 Input: n = 5 Output: 1, 10, 11, 100, 101  METHOD 1
+import org.junit.Test; import java.util.LinkedList; import java.util.Queue; /** * Question : https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/ * Complexity : Time: O(n) ; Space: O(n) * Author : Max */ public class GenerateBinaryNumbers { static void generate(int n) { Queue&amp;lt;String&amp;gt; q = new LinkedList&amp;lt;&amp;gt;(); q.</description>
+    </item>
     
     <item>
       <title>Queue</title>

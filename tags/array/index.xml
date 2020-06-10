@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 21 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Array - Spiral Matrix</title>
+      <link>https://www.maxlivinci.com/question/2020_06_10_array_spiral_matrix/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_10_array_spiral_matrix/</guid>
+      <description>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+Example 1:
+Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2:
+Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  METHOD 1
+package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
+    </item>
     
     <item>
       <title>Array - Count inversions</title>
@@ -99,7 +112,7 @@ Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6
       <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/topic/array/</guid>
-      <description></description>
+      <description> Spiral Matrix  </description>
     </item>
     
   </channel>
