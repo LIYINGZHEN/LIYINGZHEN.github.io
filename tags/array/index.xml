@@ -26,6 +26,18 @@ package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity
     </item>
     
     <item>
+      <title>Array - Trapping rain water</title>
+      <link>https://www.maxlivinci.com/question/2020_06_10_array_trapping_rain_water/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_10_array_trapping_rain_water/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Examples:
+Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
+    </item>
+    
+    <item>
       <title>Array - Count inversions</title>
       <link>https://www.maxlivinci.com/question/array_count_inversions_in_an_array/</link>
       <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
@@ -58,18 +70,6 @@ Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10
 Rotation of the above array by 2 will make array
  METHOD 1
 import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start++) { int curr = start; int prev = arr[curr]; do { int next = (curr + n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count++; } while (start !</description>
-    </item>
-    
-    <item>
-      <title>Array - Trapping rain water</title>
-      <link>https://www.maxlivinci.com/question/array_trapping_rain_water/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_trapping_rain_water/</guid>
-      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
-Examples:
-Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
-/** * Author : Max * Question : https://www.geeksforgeeks.org/trapping-rain-water/ * Complexity : time: O(n) ; space: O(1) */ import org.</description>
     </item>
     
     <item>
@@ -112,7 +112,7 @@ Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6
       <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/topic/array/</guid>
-      <description> Spiral Matrix  </description>
+      <description> Trapping rain water Spiral Matrix  </description>
     </item>
     
   </channel>

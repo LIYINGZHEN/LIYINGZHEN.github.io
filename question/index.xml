@@ -26,6 +26,18 @@ package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity
     </item>
     
     <item>
+      <title>Array - Trapping rain water</title>
+      <link>https://www.maxlivinci.com/question/2020_06_10_array_trapping_rain_water/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_10_array_trapping_rain_water/</guid>
+      <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+Examples:
+Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
+    </item>
+    
+    <item>
       <title>Queue - Maximum of all subarrays of size k</title>
       <link>https://www.maxlivinci.com/question/queue_maximum_of_all_subarrays_of_size_k/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
@@ -107,17 +119,6 @@ import org.junit.Test; import java.util.LinkedList; import java.util.Queue; /** 
       <guid>https://www.maxlivinci.com/question/stack_the_celebrity_problem/</guid>
       <description>In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes, (s)he doesn’t know anyone in the party. We can only ask questions like “does A know B? “. Find the stranger (celebrity) in the minimum number of questions.
 We can describe the problem input as an array of numbers/characters representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns true if A knows B, false otherwise.</description>
-    </item>
-    
-    <item>
-      <title>Stack - Next greater element in an array</title>
-      <link>https://www.maxlivinci.com/question/stack_next_greater_element/</link>
-      <pubDate>Thu, 14 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_next_greater_element/</guid>
-      <description>Given an array, print the Next Greater Element (NGE) for every element. The Next greater Element for an element x is the first greater element on the right side of x in array. Elements for which no greater element exist, consider next greater element as -1.
- METHOD 1
-import java.util.Stack; public class NextGreaterElement { // Time: O(n), Space: O(n)  static void printNGE(int[] arr) { if (arr == null || arr.</description>
     </item>
     
   </channel>
