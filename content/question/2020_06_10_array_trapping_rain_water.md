@@ -1,6 +1,6 @@
 ---
 title:       "Array - Trapping rain water"
-date:        2020-04-18T00:00:00+00:00
+date:        2020-06-10T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -28,15 +28,15 @@ We can trap 2 units of water in the middle gap.
 **METHOD 1**
 
 ```java
-/**
- * Author     : Max
- * Question   : https://www.geeksforgeeks.org/trapping-rain-water/
- * Complexity : time: O(n) ; space: O(1)
- */
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Question   : Trapping rain water
+ * Complexity : Time: O(n) ; Space: O(1)
+ * Author     : Max
+ */
 public class TrappingRainWater {
     static int maxWater(int[] arr) {
         if (arr.length == 0) {

@@ -6,4 +6,5 @@ published:   true
 tags:        ["algorithm-topic", "array"]
 ---
 
-1. [Spiral Matrix](../../question/2020_06_10_array_spiral_matrix)
+1. [Trapping rain water](../../question/2020_06_10_array_trapping_rain_water)
+2. [Spiral Matrix](../../question/2020_06_10_array_spiral_matrix)
