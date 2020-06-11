@@ -1,6 +1,6 @@
 ---
 title:       "Array - Rotate an array"
-date:        2020-04-19T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -23,8 +23,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
+/**
+ * Question   : Rotate an array
+ * Complexity : Time: O(n) ; Space: O(1)
+ * Time       : 2020/06/11
+ * Author     : Max
+ */
 public class RotateArray {
-    // Time: O(n), Space: O(1)
     static void rotateArr(int arr[], int d) {
         if (arr.length == 0) {
             return;

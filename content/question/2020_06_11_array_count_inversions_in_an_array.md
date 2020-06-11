@@ -1,6 +1,6 @@
 ---
 title:       "Array - Count inversions"
-date:        2020-04-21T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -31,6 +31,12 @@ Explanation: Given array has two inversions:
 **METHOD 1**
 
 ```java
+/**
+ * Question   : Count inversions
+ * Complexity : Time: O(m*n) ; Space: O(1)
+ * Time       : 2020/06/11
+ * Author     : Max
+ */
 public class CountInversions {
     static int merge(int[] arr, int l, int h) {
         if (l >= h) {

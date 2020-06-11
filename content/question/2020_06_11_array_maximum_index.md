@@ -1,6 +1,6 @@
 ---
 title:       "Array - Maximum index"
-date:        2020-04-17T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -18,11 +18,11 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * Question   : Maximum index
+ * Complexity : Time: O(n) ; Space: O(n)
+ * Time       : 2020/06/11
  * Author     : Max
- * Question   : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
- * Complexity : time: O(n) ; space: O(n)
  */
-
 public class MaximumIndex {
     static int maximun(int[] arr) {
         if (arr.length == 0) {

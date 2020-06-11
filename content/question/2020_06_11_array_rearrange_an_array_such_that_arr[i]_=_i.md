@@ -1,6 +1,6 @@
 ---
 title:       "Array - Rearrange an array such that arr[i] = i"
-date:        2020-04-17T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -28,6 +28,12 @@ Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+/**
+ * Question   : Rearrange an array such that arr[i] = i
+ * Complexity : Time: O(n) ; Space: O(1)
+ * Time       : 2020/06/11
+ * Author     : Max
+ */
 public class RearrangeAnArray {
     public static void rearrange(int[] arr) {
         if (arr == null || arr.length == 0) {

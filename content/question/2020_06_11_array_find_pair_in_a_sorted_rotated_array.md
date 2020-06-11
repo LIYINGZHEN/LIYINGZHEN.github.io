@@ -1,6 +1,6 @@
 ---
 title:       "Array - Find pair in a sorted rotated array"
-date:        2020-04-20T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -29,8 +29,13 @@ There is no pair with sum 45.
 **METHOD 1**
 
 ```java
+/**
+ * Question   : Find pair in a sorted rotated array
+ * Complexity : Time: O(n) ; Space: O(1)
+ * Time       : 2020/06/11
+ * Author     : Max
+ */
 public class PairsInSortedRotated {
-    // Time: O(n), Space: O(1)
     static void findPair(int[] arr, int target) {
         if (arr.length == 0) {
             return;

@@ -1,6 +1,6 @@
 ---
 title:       "Array - Rearrange an array so that arr[i] becomes arr[arr[i]]"
-date:        2020-04-17T00:00:00+00:00
+date:        2020-06-11T00:00:00+00:00
 author:      "Max"
 published:   true
 tags:        ["algorithm", "array"]
@@ -23,9 +23,10 @@ Output: arr[] = {1, 0, 3, 2}
 import java.util.Arrays;
 
 /**
+ * Question   : Rearrange an array so that arr[i] becomes arr[arr[i]]
+ * Complexity : Time: O(n) ; Space: O(n)
+ * Time       : 2020/06/11
  * Author     : Max
- * Question   : https://www.geeksforgeeks.org/rearrange-given-array-place/
- * Complexity : time: O(n) ; space: O(n)
  */
 public class Rearrange {
     static void rearrange(int[] arr) {
