@@ -12,7 +12,7 @@ Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversion
 <meta name="keywords" content=", algorithm, array" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="#252627" />
-<link rel="canonical" href="https://www.maxlivinci.com/question/array_count_inversions_in_an_array/" />
+<link rel="canonical" href="https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/" />
 
 
     <title>
@@ -49,9 +49,9 @@ Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversion
 Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j
 Example:
 Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).">
-<meta itemprop="datePublished" content="2020-04-21T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="322">
+<meta itemprop="datePublished" content="2020-06-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="345">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -74,17 +74,17 @@ Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j
 Example:
 Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maxlivinci.com/question/array_count_inversions_in_an_array/" />
+<meta property="og:url" content="https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/" />
 <meta property="og:image" content="https://www.maxlivinci.com"/>
-<meta property="article:published_time" content="2020-04-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-21T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-04-21 00:00:00 &#43;0000 &#43;0000" />
+    <meta property="article:published_time" content="2020-06-11 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -150,7 +150,7 @@ Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversion
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://www.maxlivinci.com/question/array_count_inversions_in_an_array/">Array - Count inversions</a></h2>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/">Array - Count inversions</a></h2>
 
             
 
@@ -171,7 +171,13 @@ Explanation: Given array has two inversions:
 (3, 1), (3, 2)
 </code></pre><hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountInversions</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Question   : Count inversions
+</span><span style="color:#75715e"> * Complexity : Time: O(m*n) ; Space: O(1)
+</span><span style="color:#75715e"> * Time       : 2020/06/11
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountInversions</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">merge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> l<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>l <span style="color:#f92672">&gt;=</span> h<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>

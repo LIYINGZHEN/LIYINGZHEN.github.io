@@ -11,7 +11,7 @@ Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10
 <meta name="keywords" content=", algorithm, array" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="#252627" />
-<link rel="canonical" href="https://www.maxlivinci.com/question/array_find_pair_in_a_sorted_rotated_array/" />
+<link rel="canonical" href="https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/" />
 
 
     <title>
@@ -47,9 +47,9 @@ Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10
 <meta itemprop="description" content="Given an array that is sorted and then rotated around an unknown point. Find if the array has a pair with a given sum ‘x’. It may be assumed that all elements in the array are distinct.
 Examples :
 Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10) with sum 16 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 35 Output: true There is a pair (26, 9) with sum 35 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 45 Output: false There is no pair with sum 45.">
-<meta itemprop="datePublished" content="2020-04-20T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-04-20T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="280">
+<meta itemprop="datePublished" content="2020-06-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-06-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="303">
 <meta itemprop="image" content="https://www.maxlivinci.com"/>
 
 
@@ -70,17 +70,17 @@ Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10
 Examples :
 Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10) with sum 16 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 35 Output: true There is a pair (26, 9) with sum 35 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 45 Output: false There is no pair with sum 45." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.maxlivinci.com/question/array_find_pair_in_a_sorted_rotated_array/" />
+<meta property="og:url" content="https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/" />
 <meta property="og:image" content="https://www.maxlivinci.com"/>
-<meta property="article:published_time" content="2020-04-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-20T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
 
 
 
 
 
 
-    <meta property="article:published_time" content="2020-04-20 00:00:00 &#43;0000 &#43;0000" />
+    <meta property="article:published_time" content="2020-06-11 00:00:00 &#43;0000 &#43;0000" />
 
 
 
@@ -146,7 +146,7 @@ Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10
         </div>
 
         <article>
-            <h2 class="post-title"><a href="https://www.maxlivinci.com/question/array_find_pair_in_a_sorted_rotated_array/">Array - Find pair in a sorted rotated array</a></h2>
+            <h2 class="post-title"><a href="https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/">Array - Find pair in a sorted rotated array</a></h2>
 
             
 
@@ -166,9 +166,14 @@ Output: false
 There is no pair with sum 45.
 </code></pre><hr>
 <p><strong>METHOD 1</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PairsInSortedRotated</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// Time: O(n), Space: O(1)
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">findPair</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Question   : Find pair in a sorted rotated array
+</span><span style="color:#75715e"> * Complexity : Time: O(n) ; Space: O(1)
+</span><span style="color:#75715e"> * Time       : 2020/06/11
+</span><span style="color:#75715e"> * Author     : Max
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PairsInSortedRotated</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">findPair</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
             <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
         <span style="color:#f92672">}</span>

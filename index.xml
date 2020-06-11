@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Array - Count inversions</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/</guid>
+      <description>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &amp;gt; a[j] and i &amp;lt; j
+Example:
+Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).</description>
+    </item>
+    
+    <item>
+      <title>Array - Find pair in a sorted rotated array</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/</guid>
+      <description>Given an array that is sorted and then rotated around an unknown point. Find if the array has a pair with a given sum ‘x’. It may be assumed that all elements in the array are distinct.
+Examples :
+Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10) with sum 16 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 35 Output: true There is a pair (26, 9) with sum 35 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 45 Output: false There is no pair with sum 45.</description>
+    </item>
+    
+    <item>
+      <title>Array - Maximum index</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_maximum_index/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_maximum_index/</guid>
+      <description>Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Maximum index * Complexity : Time: O(n) ; Space: O(n) * Time : 2020/06/11 * Author : Max */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.</description>
+    </item>
+    
+    <item>
+      <title>Array - Rearrange an array so that arr[i] becomes arr[arr[i]]</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_so_that_arri_becomes_arrarri/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_so_that_arri_becomes_arrarri/</guid>
+      <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
+Example:
+Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
+import java.util.Arrays; /** * Question : Rearrange an array so that arr[i] becomes arr[arr[i]] * Complexity : Time: O(n) ; Space: O(n) * Time : 2020/06/11 * Author : Max */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
+    </item>
+    
+    <item>
+      <title>Array - Rearrange an array such that arr[i] = i</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_such_that_arri__i/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_such_that_arri__i/</guid>
+      <description>Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
+Examples:
+Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1</description>
+    </item>
+    
+    <item>
+      <title>Array - Rotate an array</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rotate_an_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rotate_an_array/</guid>
+      <description>Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
+Rotation of the above array by 2 will make array
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Question : Rotate an array * Complexity : Time: O(n) ; Space: O(1) * Time : 2020/06/11 * Author : Max */ public class RotateArray { static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.</description>
+    </item>
     
     <item>
       <title>Array - Spiral Matrix</title>
@@ -22,7 +91,7 @@
 Example 1:
 Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2:
 Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  METHOD 1
-package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
+package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Time : 2020/06/10 * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
     </item>
     
     <item>
@@ -34,7 +103,7 @@ package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity
       <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 Examples:
 Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Time : 2020/06/10 * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
     </item>
     
     <item>
@@ -56,69 +125,6 @@ Input: arr[] = {1, 2, 3, 1, 4, 5, 2, 3, 6}, K = 3 Output: 3 3 4 5 5 5 6 Explanat
       <guid>https://www.maxlivinci.com/question/queue_implement_k_queues_in_an_array/</guid>
       <description>Create a data structure kQueues that represents k queues. Implementation of kQueues should use only one array, i.e., k queues should use the same array for storing elements. Following functions must be supported by kQueues.
  enqueue(int x, int qn) –&amp;gt; adds x to queue number ‘qn’ where qn is from 0 to k-1 dequeue(int qn) –&amp;gt; deletes an element from queue number ‘qn’ where qn is from 0 to k-1   METHOD 1</description>
-    </item>
-    
-    <item>
-      <title>Queue - Implementation of deque using doubly linked list</title>
-      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</link>
-      <pubDate>Wed, 03 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_doubly_linked_list/</guid>
-      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends. In previous post Implementation of Deque using circular array has been discussed. Now in this post we see how we implement Deque using Doubly Linked List.
-Operations on Deque :
-Mainly the following four basic operations are performed on queue :
- insertFront() : Adds an item at the front of Deque.</description>
-    </item>
-    
-    <item>
-      <title>Queue - Implementation of deque using circular array</title>
-      <link>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</link>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/queue_implement_deque_using_circular_array/</guid>
-      <description>Deque or Double Ended Queue is a generalized version of Queue data structure that allows insert and delete at both ends.In previous post we had discussed introduction of deque. Now in this post we see how we implement deque Using circular array. Operations on Deque:
-Mainly the following four basic operations are performed on queue:
- insetFront(): Adds an item at the front of Deque. insertRear(): Adds an item at the rear of Deque.</description>
-    </item>
-    
-    <item>
-      <title>Queue - Generate binary number</title>
-      <link>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/queue_generate_binary_numbers/</guid>
-      <description>Given a number n, write a function that generates and prints all binary numbers with decimal values from 1 to n.
-Examples:
-Input: n = 2 Output: 1, 10 Input: n = 5 Output: 1, 10, 11, 100, 101  METHOD 1
-import org.junit.Test; import java.util.LinkedList; import java.util.Queue; /** * Question : https://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/ * Complexity : Time: O(n) ; Space: O(n) * Author : Max */ public class GenerateBinaryNumbers { static void generate(int n) { Queue&amp;lt;String&amp;gt; q = new LinkedList&amp;lt;&amp;gt;(); q.</description>
-    </item>
-    
-    <item>
-      <title>Stack - Iterative Tower of Hanoi</title>
-      <link>https://www.maxlivinci.com/question/stack_tower_of_hanoi/</link>
-      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_tower_of_hanoi/</guid>
-      <description>Tower of Hanoi is a mathematical puzzle. It consists of three poles and a number of disks of different sizes which can slide onto any poles. The puzzle starts with the disk in a neat stack in ascending order of size in one pole, the smallest at the top thus making a conical shape. The objective of the puzzle is to move all the disks from one pole (say ‘source pole’) to another pole (say ‘destination pole’) with the help of the third pole (say auxiliary pole).</description>
-    </item>
-    
-    <item>
-      <title>Stack - Next greater element in an array</title>
-      <link>https://www.maxlivinci.com/question/stack_the_stock_span_problem/</link>
-      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_the_stock_span_problem/</guid>
-      <description>The stock span problem is a financial problem where we have a series of n daily price quotes for a stock and we need to calculate span of stock’s price for all n days. The span Si of the stock’s price on a given day i is defined as the maximum number of consecutive days just before the given day, for which the price of the stock on the current day is less than or equal to its price on the given day.</description>
-    </item>
-    
-    <item>
-      <title>Stack - Next greater element in an array</title>
-      <link>https://www.maxlivinci.com/question/stack_the_celebrity_problem/</link>
-      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/stack_the_celebrity_problem/</guid>
-      <description>In a party of N people, only one person is known to everyone. Such a person may be present in the party, if yes, (s)he doesn’t know anyone in the party. We can only ask questions like “does A know B? “. Find the stranger (celebrity) in the minimum number of questions.
-We can describe the problem input as an array of numbers/characters representing persons in the party. We also have a hypothetical function HaveAcquaintance(A, B) which returns true if A knows B, false otherwise.</description>
     </item>
     
   </channel>

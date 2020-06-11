@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.maxlivinci.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Array - Count inversions</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_count_inversions_in_an_array/</guid>
+      <description>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &amp;gt; a[j] and i &amp;lt; j
+Example:
+Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).</description>
+    </item>
+    
+    <item>
+      <title>Array - Find pair in a sorted rotated array</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_find_pair_in_a_sorted_rotated_array/</guid>
+      <description>Given an array that is sorted and then rotated around an unknown point. Find if the array has a pair with a given sum ‘x’. It may be assumed that all elements in the array are distinct.
+Examples :
+Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10) with sum 16 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 35 Output: true There is a pair (26, 9) with sum 35 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 45 Output: false There is no pair with sum 45.</description>
+    </item>
+    
+    <item>
+      <title>Array - Maximum index</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_maximum_index/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_maximum_index/</guid>
+      <description>Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Maximum index * Complexity : Time: O(n) ; Space: O(n) * Time : 2020/06/11 * Author : Max */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.</description>
+    </item>
+    
+    <item>
+      <title>Array - Rearrange an array so that arr[i] becomes arr[arr[i]]</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_so_that_arri_becomes_arrarri/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_so_that_arri_becomes_arrarri/</guid>
+      <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
+Example:
+Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
+import java.util.Arrays; /** * Question : Rearrange an array so that arr[i] becomes arr[arr[i]] * Complexity : Time: O(n) ; Space: O(n) * Time : 2020/06/11 * Author : Max */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
+    </item>
+    
+    <item>
+      <title>Array - Rearrange an array such that arr[i] = i</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_such_that_arri__i/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rearrange_an_array_such_that_arri__i/</guid>
+      <description>Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
+Examples:
+Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1</description>
+    </item>
+    
+    <item>
+      <title>Array - Rotate an array</title>
+      <link>https://www.maxlivinci.com/question/2020_06_11_array_rotate_an_array/</link>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.maxlivinci.com/question/2020_06_11_array_rotate_an_array/</guid>
+      <description>Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
+Rotation of the above array by 2 will make array
+ METHOD 1
+import org.junit.Test; import static org.junit.Assert.assertArrayEquals; /** * Question : Rotate an array * Complexity : Time: O(n) ; Space: O(1) * Time : 2020/06/11 * Author : Max */ public class RotateArray { static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.</description>
+    </item>
     
     <item>
       <title>Array - Spiral Matrix</title>
@@ -22,7 +91,7 @@
 Example 1:
 Input: [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] Output: [1,2,3,6,9,8,7,4,5] Example 2:
 Input: [ [1, 2, 3, 4], [5, 6, 7, 8], [9,10,11,12] ] Output: [1,2,3,4,8,12,11,10,9,5,6,7]  METHOD 1
-package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
+package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity : Time: O(m*n) ; Space: O(1) * Time : 2020/06/10 * Author : Max */ public class SpiralMatrix { static void print(int[][] matrix) { int rowsCount = matrix.</description>
     </item>
     
     <item>
@@ -34,76 +103,7 @@ package test; import org.junit.Test; /** * Question : Spiral Matrix * Complexity
       <description>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 Examples:
 Input: arr[] = {2, 0, 2} Output: 2 Explanation: The structure is like below We can trap 2 units of water in the middle gap.  METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
-    </item>
-    
-    <item>
-      <title>Array - Count inversions</title>
-      <link>https://www.maxlivinci.com/question/array_count_inversions_in_an_array/</link>
-      <pubDate>Tue, 21 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_count_inversions_in_an_array/</guid>
-      <description>Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
-Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &amp;gt; a[j] and i &amp;lt; j
-Example:
-Input: arr[] = {8, 4, 2, 1} Output: 6 Explanation: Given array has six inversions: (8,4), (4,2),(8,2), (8,1), (4,1), (2,1).</description>
-    </item>
-    
-    <item>
-      <title>Array - Find pair in a sorted rotated array</title>
-      <link>https://www.maxlivinci.com/question/array_find_pair_in_a_sorted_rotated_array/</link>
-      <pubDate>Mon, 20 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_find_pair_in_a_sorted_rotated_array/</guid>
-      <description>Given an array that is sorted and then rotated around an unknown point. Find if the array has a pair with a given sum ‘x’. It may be assumed that all elements in the array are distinct.
-Examples :
-Input: arr[] = {11, 15, 6, 8, 9, 10}, x = 16 Output: true There is a pair (6, 10) with sum 16 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 35 Output: true There is a pair (26, 9) with sum 35 Input: arr[] = {11, 15, 26, 38, 9, 10}, x = 45 Output: false There is no pair with sum 45.</description>
-    </item>
-    
-    <item>
-      <title>Array - Rotate an array</title>
-      <link>https://www.maxlivinci.com/question/array_rotate_an_array/</link>
-      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_rotate_an_array/</guid>
-      <description>Write a function rotate(ar[], d, n) that rotates arr[] of size n by d elements.
-Rotation of the above array by 2 will make array
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertArrayEquals; public class RotateArray { // Time: O(n), Space: O(1)  static void rotateArr(int arr[], int d) { if (arr.length == 0) { return; } int n = arr.length; int step = d % arr.length; int count = 0; for (int start = 0; count &amp;lt; n; start++) { int curr = start; int prev = arr[curr]; do { int next = (curr + n - step) % n; int temp = arr[next]; arr[next] = prev; prev = temp; curr = next; count++; } while (start !</description>
-    </item>
-    
-    <item>
-      <title>Array - Maximum index</title>
-      <link>https://www.maxlivinci.com/question/array_maximum_index/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_maximum_index/</guid>
-      <description>Given an array arr[], find the maximum j – i such that arr[j] &amp;gt; arr[i]
- METHOD 1
-import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Author : Max * Question : https://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/ * Complexity : time: O(n) ; space: O(n) */ public class MaximumIndex { static int maximun(int[] arr) { if (arr.length == 0) { return -1; } int n = arr.length; int[] maxFromTheRight = new int[n]; int max = Integer.</description>
-    </item>
-    
-    <item>
-      <title>Array - Rearrange an array so that arr[i] becomes arr[arr[i]]</title>
-      <link>https://www.maxlivinci.com/question/array_rearrange_an_array_so_that_arri_becomes_arrarri/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_rearrange_an_array_so_that_arri_becomes_arrarri/</guid>
-      <description>Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
-Example:
-Input: arr[] = {3, 2, 0, 1} Output: arr[] = {1, 0, 3, 2}  METHOD 1
-import java.util.Arrays; /** * Author : Max * Question : https://www.geeksforgeeks.org/rearrange-given-array-place/ * Complexity : time: O(n) ; space: O(n) */ public class Rearrange { static void rearrange(int[] arr) { // The value we get module with n will be the original number.</description>
-    </item>
-    
-    <item>
-      <title>Array - Rearrange an array such that arr[i] = i</title>
-      <link>https://www.maxlivinci.com/question/array_rearrange_an_array_such_that_arri__i/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.maxlivinci.com/question/array_rearrange_an_array_such_that_arri__i/</guid>
-      <description>Given an array of elements of length N, ranging from 0 to N – 1. All elements may not be present in the array. If element is not present then there will be -1 present in the array. Rearrange the array such that A[i] = i and if i is not present, display -1 at that place.
-Examples:
-Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6, -1, -1, 9] Input : arr = {19, 7, 0, 3, 18, 15, 12, 6, 1, 8, 11, 10, 9, 5, 13, 16, 2, 14, 17, 4} Output : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]  METHOD 1</description>
+import org.junit.Test; import static org.junit.Assert.assertEquals; /** * Question : Trapping rain water * Complexity : Time: O(n) ; Space: O(1) * Time : 2020/06/10 * Author : Max */ public class TrappingRainWater { static int maxWater(int[] arr) { if (arr.</description>
     </item>
     
     <item>
@@ -112,7 +112,7 @@ Input : arr = {-1, -1, 6, 1, 9, 3, 2, -1, 4, -1} Output : [-1, 1, 2, 3, 4, -1, 6
       <pubDate>Wed, 01 Jan 2020 01:00:00 +0000</pubDate>
       
       <guid>https://www.maxlivinci.com/topic/array/</guid>
-      <description> Trapping rain water Spiral Matrix  </description>
+      <description> Trapping rain water Spiral Matrix Count inversions Find pair in a sorted rotated array Maximum index Rearrange an array so that arr[i] becomes arr[arr[i]] Rearrange an array such that arr[i] = i Rotate an array  </description>
     </item>
     
   </channel>
